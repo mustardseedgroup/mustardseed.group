@@ -1,0 +1,64 @@
+name: Generate content drafts
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Validate only; do not create drafts or PR"
+        required: true
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Collect public update files
+        env:
+          DRY_RUN: ${{ inputs.dry_run }}
+          GH_TOKEN: ${{ secrets.SOURCE_REPO_TOKEN || github.token }}
+          SOURCE_REPO_TOKEN: ${{ secrets.SOURCE_REPO_TOKEN }}
+        run: npm run content:drafts -- --dry-run=${{ inputs.dry_run }}
+
+      - name: Upload safety report
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-drafts-safety-report
+          path: content-drafts-safety-report.md
+
+      - name: Create pull request
+        if: ${{ inputs.dry_run == 'false' }}
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: content/generated-drafts
+          title: "Create public content draft updates"
+          commit-message: "Create public content draft updates"
+          body: |
+            Generated draft MDX files from approved public update files.
+
+            Review the safety report before moving any draft into `content/blog/`.
+          labels: content-draft
+          assignees: chikoshire
+          add-paths: |
+            content/drafts
+            content-drafts-safety-report.md

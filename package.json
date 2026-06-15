@@ -5,15 +5,26 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "pages:build": "opennextjs-cloudflare build",
+    "pages:preview": "npm run pages:build && wrangler pages dev .open-next/assets",
+    "pages:deploy": "npm run pages:build && wrangler pages deploy .open-next/assets --project-name mustardseed-group",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "content:drafts": "tsx scripts/collect-public-updates.ts"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
     "next": "16.2.9",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "resend": "^6.12.4",
+    "yaml": "^2.9.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.19.11",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -21,6 +32,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "tsx": "^4.22.4",
+    "typescript": "^5",
+    "wrangler": "^4.100.0"
   }
 }

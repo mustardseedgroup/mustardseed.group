@@ -1,0 +1,19 @@
+{
+  "sources": [
+    {
+      "repo": "mustardseedgroup/orbit",
+      "enabled": true,
+      "allowedTypes": ["feature", "release", "maintenance"]
+    },
+    {
+      "repo": "mustardseedgroup/cheekygains",
+      "enabled": true,
+      "allowedTypes": ["feature", "release"]
+    },
+    {
+      "repo": "Benediction-Lab/benediction-lab",
+      "enabled": true,
+      "allowedTypes": ["research", "experiment"]
+    }
+  ]
+}

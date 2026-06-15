@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "mustardseed-group",
+  "compatibility_date": "2026-06-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "pages_build_output_dir": ".open-next/assets",
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://mustardseed.group"
+  }
+}

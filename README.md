@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mustard Seed Group Website
 
-## Getting Started
+Public website for Mustard Seed Group.
 
-First, run the development server:
+Mustard Seed Group is the parent company behind a portfolio of businesses, products, research initiatives and experiments focused on increasing human capability through technology, systems, research and creativity.
+
+## Stack
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- MDX content files
+- Cloudflare Pages
+- Wrangler
+- OpenNext for Cloudflare
+- Cloudflare Turnstile
+- Resend
+- Cloudflare Web Analytics
+
+No database, CMS, user accounts, comments, newsletter platform or authentication.
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content
 
-## Learn More
+Content is stored as MDX:
 
-To learn more about Next.js, take a look at the following resources:
+```text
+content/blog/
+content/research/
+content/companies/
+content/pages/
+content/drafts/
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Copy `.env.example` to `.env.local` for local development.
 
-## Deploy on Vercel
+```text
+NEXT_PUBLIC_SITE_URL
+NEXT_PUBLIC_TURNSTILE_SITE_KEY
+TURNSTILE_SECRET_KEY
+RESEND_API_KEY
+CONTACT_TO_EMAIL
+NEXT_PUBLIC_CF_WEB_ANALYTICS_TOKEN
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+```
+
+## Cloudflare Pages
+
+Build command:
+
+```bash
+npm run pages:build
+```
+
+Deploy command:
+
+```bash
+npm run pages:deploy
+```
+
+Output directory:
+
+```text
+.open-next/assets
+```
+
+## Security Boundary
+
+This repository must not contain Orbit source code, Orion source code, runbooks, agent logic, lead scoring, memory systems, internal workflows, UI kits, design systems, client projects or proprietary implementations.
