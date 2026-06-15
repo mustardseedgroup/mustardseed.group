@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/brand-logo";
 
 const nav = [
   { href: "/ecosystem", label: "Ecosystem" },
@@ -11,10 +12,10 @@ const nav = [
 export function SiteShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
-      <header className="sticky top-0 z-40 border-b border-[var(--line)] bg-[rgba(251,250,247,0.88)] backdrop-blur-xl">
+      <header className="sticky top-0 z-40 border-b border-[var(--line)] bg-[rgba(232,230,223,0.88)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
           <Link href="/" className="focus-ring font-medium tracking-tight">
-            Mustard Seed Group
+            <BrandLogo brand="msg" className="text-base md:text-lg" />
           </Link>
           <nav className="hidden items-center gap-8 text-sm text-[var(--muted)] md:flex">
             {nav.map((item) => (
@@ -39,10 +40,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <footer className="bg-[#0b0b09] text-[#fbfaf7]">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:px-8">
           <div>
-            <div className="mb-7 flex h-14 w-14 items-center justify-center rounded-full border border-[#fbfaf7]/30 font-serif text-2xl">
-              ms
+            <div className="mb-7 flex h-14 w-14 items-center justify-center bg-[#fbfaf7] text-[#c69386]">
+              <span className="font-mono text-3xl font-bold leading-none tracking-[-0.18em]">MS</span>
             </div>
-            <p className="font-medium">Mustard Seed Group</p>
+            <BrandLogo brand="msg" className="text-2xl" />
             <p className="mt-4 max-w-sm text-sm leading-6 text-[#c8c0b2]">
               Building systems that increase human capability.
             </p>

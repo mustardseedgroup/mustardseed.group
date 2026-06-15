@@ -1,14 +1,15 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/brand-logo";
 import { EcosystemMap } from "@/components/ecosystem-map";
 import { SiteShell } from "@/components/site-shell";
 import { getFeatured } from "@/lib/content";
 
 const ecosystem = [
-  ["Benediction Lab", "Research lab exploring AI systems, memory, human behaviour, agentic operating systems and future products.", "/companies/benediction-lab"],
-  ["Orbit", "AI operating system for business, turning prospects into launched products through agents, workflows and execution systems.", "/companies/orbit"],
-  ["All Purpose", "Consumer ecosystem focused on performance, creativity, culture and personal development.", "/companies/all-purpose"],
-  ["TUXX", "Custom AI systems and internal software for ambitious organisations.", "/companies/tuxx"],
-  ["Chiko Shire", "Founder and operator behind the ecosystem.", "/companies/chiko-shire"],
+  { brand: "benediction" as const, title: "Benediction Lab", copy: "Research lab exploring AI systems, memory, human behaviour, agentic operating systems and future products.", href: "/companies/benediction-lab" },
+  { brand: "orbit" as const, title: "Orbit", copy: "AI operating system for business, turning prospects into launched products through agents, workflows and execution systems.", href: "/companies/orbit" },
+  { brand: "all-purpose" as const, title: "All Purpose", copy: "Consumer ecosystem focused on performance, creativity, culture and personal development.", href: "/companies/all-purpose" },
+  { brand: "tuxx" as const, title: "TUXX", copy: "Custom AI systems and internal software for ambitious organisations.", href: "/companies/tuxx" },
+  { brand: "msg" as const, title: "Chiko Shire", copy: "Founder and operator behind the ecosystem.", href: "/companies/chiko-shire" },
 ];
 
 const focus = [
@@ -35,9 +36,10 @@ const thesis = [
 ];
 
 const activeProducts = [
-  ["CG", "CheekyGains", "Human performance platform for training, nutrition and accountability.", "/companies/all-purpose"],
-  ["N", "Naira", "AI performance coach inside CheekyGains.", "/companies/all-purpose"],
-  ["H", "Horizon", "Tools and systems for planning and executing a better future.", "/companies/all-purpose"],
+  { brand: "cheekygains" as const, title: "CheekyGains", copy: "Human performance platform for training, nutrition and accountability.", href: "/companies/all-purpose" },
+  { brand: "naira" as const, title: "Naira", copy: "AI performance coach inside CheekyGains.", href: "/companies/all-purpose" },
+  { brand: "horizon" as const, title: "Horizon", copy: "Tools and systems for planning and executing a better future.", href: "/companies/all-purpose" },
+  { brand: "pattern-up" as const, title: "Pattern Up", copy: "A TUXX sub-product for repeatable client delivery patterns.", href: "/companies/tuxx" },
 ];
 
 export default function Home() {
@@ -133,10 +135,13 @@ export default function Home() {
               </Link>
             </div>
             <div className="divide-y divide-[var(--line)] border-y border-[var(--line)]">
-              {ecosystem.map(([title, copy, href]) => (
-                <Link key={title} href={href} className="group grid gap-6 py-8 md:grid-cols-[0.45fr_1fr_auto] md:items-center">
-                  <h3 className="text-2xl">{title}</h3>
-                  <p className="max-w-3xl text-lg leading-8 text-[var(--muted)]">{copy}</p>
+              {ecosystem.map((item) => (
+                <Link key={item.title} href={item.href} className="group grid gap-6 py-8 md:grid-cols-[0.3fr_0.35fr_1fr_auto] md:items-center">
+                  <div className="flex min-h-16 items-center">
+                    <BrandLogo brand={item.brand} />
+                  </div>
+                  <h3 className="text-2xl">{item.title}</h3>
+                  <p className="max-w-3xl text-lg leading-8 text-[var(--muted)]">{item.copy}</p>
                   <span className="text-sm text-[var(--accent)] transition group-hover:translate-x-1">Explore</span>
                 </Link>
               ))}
@@ -221,14 +226,14 @@ export default function Home() {
             <div>
               <h2 className="font-serif text-5xl font-medium leading-none md:text-6xl">Featured Products</h2>
               <div className="mt-10 divide-y divide-[var(--line)] border-y border-[var(--line)]">
-                {activeProducts.map(([mark, title, copy, href]) => (
-                  <Link key={title} href={href} className="grid gap-5 py-7 md:grid-cols-[4rem_1fr_auto] md:items-center">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-lg border border-[var(--line)] bg-[var(--background)] font-serif text-2xl">
-                      {mark}
+                {activeProducts.map((item) => (
+                  <Link key={item.title} href={item.href} className="grid gap-5 py-7 md:grid-cols-[5rem_1fr_auto] md:items-center">
+                    <div className="flex h-16 w-16 items-center justify-center overflow-hidden bg-[#f4f1ea]">
+                      <BrandLogo brand={item.brand} />
                     </div>
                     <div>
-                      <h3 className="text-2xl">{title}</h3>
-                      <p className="mt-3 leading-7 text-[var(--muted)]">{copy}</p>
+                      <h3 className="text-2xl">{item.title}</h3>
+                      <p className="mt-3 leading-7 text-[var(--muted)]">{item.copy}</p>
                     </div>
                     <span className="text-sm">View</span>
                   </Link>
