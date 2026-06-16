@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { ContentList } from "@/components/content-list";
-import { PageHero } from "@/components/page-hero";
+import { EditorialHeader, SectionIntro, StoryCard } from "@/components/editorial";
 import { SiteShell } from "@/components/site-shell";
 import { getCollection } from "@/lib/content";
 
@@ -9,38 +8,69 @@ export const metadata: Metadata = {
   description: "Research notes, product updates, founder letters and experiments from across Mustard Seed Group.",
 };
 
+const streams = [
+  ["Founder letters", "Notes on the thesis, direction and operating philosophy of the group."],
+  ["Product updates", "Public-safe updates from Orbit, All Purpose, TUXX and related products."],
+  ["Research notes", "Public writing from Benediction Lab and Orion-facing research."],
+  ["Experiments", "Selected concepts, prototypes and lessons that can be discussed publicly."],
+] as const;
+
 export default function BlogPage() {
   const entries = getCollection("blog");
+  const featured = entries[0];
 
   return (
     <SiteShell>
       <main>
-        <PageHero title="Updates" summary="Research notes, product updates, founder letters and experiments from across the ecosystem." />
-        <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8">
-          <div className="grid gap-px bg-[var(--line)] md:grid-cols-4">
-            {[
-              ["Founder letters", "Notes on the thesis, direction and operating philosophy of the group."],
-              ["Product updates", "Public-safe updates from Orbit, All Purpose, TUXX and related products."],
-              ["Research notes", "Public writing from Benediction Lab and Orion-facing research."],
-              ["Experiments", "Selected concepts and prototypes that are safe to discuss publicly."],
-            ].map(([title, copy]) => (
-              <div key={title} className="min-h-60 bg-[#fbfaf7] p-6">
-                <h2 className="text-2xl">{title}</h2>
-                <p className="mt-12 text-sm leading-7 text-[var(--muted)]">{copy}</p>
+        <EditorialHeader
+          kicker="Updates"
+          title="Public notes from across the group."
+          summary="A live surface for founder letters, research notes, product updates and selected experiments."
+        />
+
+        {featured ? (
+          <section className="mx-auto grid max-w-7xl gap-10 px-5 pb-24 md:grid-cols-[0.55fr_1.45fr] md:px-8">
+            <SectionIntro kicker="Latest" title="Recent writing." />
+            <div className="grid gap-5 md:grid-cols-2">
+              <StoryCard entry={featured} href={`/blog/${featured.slug}`} featured />
+              <div className="grid gap-5">
+                {entries.slice(1).map((entry) => (
+                  <StoryCard key={entry.slug} entry={entry} href={`/blog/${entry.slug}`} />
+                ))}
               </div>
-            ))}
+            </div>
+          </section>
+        ) : null}
+
+        <section className="content-band">
+          <div className="mx-auto grid max-w-7xl gap-10 px-5 py-24 md:grid-cols-[0.55fr_1.45fr] md:px-8">
+            <SectionIntro kicker="Streams" title="What gets shared publicly." />
+            <div className="editorial-grid md:grid-cols-4">
+              {streams.map(([title, copy]) => (
+                <div key={title} className="editorial-panel min-h-72">
+                  <h2 className="text-2xl">{title}</h2>
+                  <p className="mt-16 text-sm leading-7 text-[var(--muted)]">{copy}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
-        <section className="border-y border-[var(--line)] bg-[#ffffff]">
-          <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-[0.55fr_1.45fr] md:px-8">
-            <h2 className="font-serif text-5xl leading-none md:text-6xl">Public by design.</h2>
-            <p className="max-w-3xl text-lg leading-9 text-[var(--muted)]">
-              Updates are written for public understanding. They avoid private source code, internal prompts, runbooks, lead intelligence, client workflows and proprietary execution logic.
-            </p>
+
+        <section className="mx-auto max-w-7xl px-5 py-24 md:px-8">
+          <div className="grid gap-10 md:grid-cols-[0.55fr_1.45fr]">
+            <SectionIntro
+              kicker="Editorial standard"
+              title="Useful, restrained, public-safe."
+              summary="Updates should help people understand the institution without revealing private code, prompts, client information or internal commercial execution logic."
+            />
+            <div className="editorial-grid md:grid-cols-3">
+              {["British English", "No fake claims", "No private systems"].map((item) => (
+                <div key={item} className="editorial-panel min-h-48">
+                  <h2 className="text-3xl">{item}</h2>
+                </div>
+              ))}
+            </div>
           </div>
-        </section>
-        <section className="mx-auto max-w-7xl px-5 pb-24 md:px-8">
-          <ContentList entries={entries} basePath="/blog" />
         </section>
       </main>
     </SiteShell>
