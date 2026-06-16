@@ -13,6 +13,7 @@ export type ContentEntry = {
   status?: string;
   featured?: boolean;
   category?: string;
+  thumbnail?: string;
   tags: string[];
   body: string;
 };
@@ -47,6 +48,7 @@ export function getCollection(collection: Collection): ContentEntry[] {
         status: data.status,
         featured: Boolean(data.featured),
         category: data.category,
+        thumbnail: data.thumbnail,
         tags: Array.isArray(data.tags) ? data.tags : [],
         body: content,
       };

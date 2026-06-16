@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { formatDisplayDate, SectionIntro } from "@/components/editorial";
 import { SiteShell } from "@/components/site-shell";
@@ -24,10 +25,25 @@ function articleHref(entry: ContentEntry) {
 
 function UpdateArtwork({ entry, size = "standard" }: { entry: ContentEntry; size?: "standard" | "large" }) {
   const tone = entry.collection === "research" ? "research" : "companies";
+  const heightClass = size === "large" ? "min-h-[28rem]" : "min-h-64";
+
+  if (entry.thumbnail) {
+    return (
+      <div className={`relative overflow-hidden border border-[var(--soft-line)] bg-[#efebe2] ${heightClass}`}>
+        <Image
+          src={entry.thumbnail}
+          alt=""
+          fill
+          sizes={size === "large" ? "(min-width: 768px) 56vw, 100vw" : "(min-width: 768px) 33vw, 100vw"}
+          className="object-cover transition duration-300 group-hover:scale-[1.015]"
+        />
+      </div>
+    );
+  }
 
   return (
     <div
-      className={`art-card relative flex items-end justify-between overflow-hidden p-5 ${size === "large" ? "min-h-[28rem]" : "min-h-64"}`}
+      className={`art-card relative flex items-end justify-between overflow-hidden p-5 ${heightClass}`}
       data-tone={tone}
     >
       <div className="relative z-10 max-w-[14rem]">
