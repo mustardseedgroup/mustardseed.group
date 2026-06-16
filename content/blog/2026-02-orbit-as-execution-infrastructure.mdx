@@ -19,7 +19,7 @@ tags:
 
 There is a moment in the life of any serious product when the question shifts. It stops being "can this do the thing?" and becomes "what breaks if this goes away?"
 
-That second question is the infrastructure question. It is the question you earn the right to ask only after the product has been load-bearing long enough for someone to notice. Orbit crossed that threshold sometime in the past few months. The useful thing, in February 2026, is to think clearly about what that means — and what it demands.
+That second question is the infrastructure question. It is the question you earn the right to ask only after the product has been load-bearing long enough for someone to notice. Orbit crossed that threshold sometime in the past few months. The useful thing, in February 2026, is to think clearly about what that means. And what it demands.
 
 ## The difference between a tool and a system
 
@@ -27,19 +27,19 @@ A tool is optional. You reach for it when it helps and put it down when it does 
 
 Most software described as a "business operating system" is, in practice, a tool. It sits in the background of the actual work. People use it inconsistently, skip it under pressure, and treat it as an accountability mechanism at best. That is a legitimate product category. It is not what Orbit is trying to be.
 
-The commercial operating loop — generating leads, qualifying them, turning them into active engagements, managing those engagements through to delivery, and capturing what was learned — is a sequence that breaks in predictable places. It breaks where handoffs are informal. It breaks where memory lives in individual heads rather than in the system. It breaks where recovery from a missed step requires someone to manually reconstruct context. Orbit exists specifically to hold that loop together. That is a structural role, not a convenience one.
+The commercial operating loop, generating leads, qualifying them, turning them into active engagements, managing those engagements through to delivery, and capturing what was learned, is a sequence that breaks in predictable places. It breaks where handoffs are informal. It breaks where memory lives in individual heads rather than in the system. It breaks where recovery from a missed step requires someone to manually reconstruct context. Orbit exists specifically to hold that loop together. That is a structural role, not a convenience one.
 
 ## What infrastructure actually demands
 
 Infrastructure has properties that nice-to-have tools do not need. They are worth naming plainly.
 
-**Reliability without conditions.** A nice-to-have tool is allowed to be flaky. People route around it. Infrastructure does not get that tolerance. When the system that holds your commercial pipeline goes down, or returns inconsistent state, or quietly drops context, the damage is not inconvenience — it is operational degradation. The bar for uptime, data integrity, and consistency is higher for load-bearing systems than it is for supplemental ones. That bar has to be designed in, not bolted on.
+**Reliability without conditions.** A nice-to-have tool is allowed to be flaky. People route around it. Infrastructure does not get that tolerance. When the system that holds your commercial pipeline goes down, or returns inconsistent state, or quietly drops context, the damage is not inconvenience, but operational degradation. The bar for uptime, data integrity, and consistency is higher for load-bearing systems than it is for supplemental ones. That bar has to be designed in, not bolted on.
 
-**Memory that persists and can be audited.** A business operating system that forgets is not a business operating system. It is a glorified dashboard. Real memory means knowing what was said to which prospect and when, what commitments were made during an engagement, what the team decided and why, and what happened the last time a comparable situation arose. It also means that record being retrievable — not just present in a log somewhere, but surfaced in a way that is usable when it matters. Orbit's memory architecture is not incidental to what it does. It is the product.
+**Memory that persists and can be audited.** A business operating system that forgets is not a business operating system. It is a glorified dashboard. Real memory means knowing what was said to which prospect and when, what commitments were made during an engagement, what the team decided and why, and what happened the last time a comparable situation arose. It also means that record being retrievable: not just present in a log somewhere, but surfaced in a way that is usable when it matters. Orbit's memory architecture is not incidental to what it does. It is the product.
 
-**A permission structure worth trusting.** When a system becomes load-bearing, more people touch it and more decisions flow through it. That means the boundaries between what different people can see, change, and act on become consequential. A permission structure built casually — roles added as they were needed, access granted on request without much deliberation — tends to become an unmaintainable tangle. Infrastructure-grade permissions are designed to reflect how the organisation actually operates, not how it operated when the system was first set up.
+**A permission structure worth trusting.** When a system becomes load-bearing, more people touch it and more decisions flow through it. That means the boundaries between what different people can see, change, and act on become consequential. A permission structure built casually, roles added as they were needed, access granted on request without much deliberation, tends to become an unmaintainable tangle. Infrastructure-grade permissions are designed to reflect how the organisation actually operates, not how it operated when the system was first set up.
 
-**Recovery that does not require heroics.** Things go wrong. A lead gets logged incorrectly. A stage gets advanced before it should have been. Someone deletes a record they should not have. In a casual tool, you shrug and move on. In infrastructure, the system needs to support recovery — which means tracking state changes, surfacing what changed and when, and making it possible to correct course without manual reconstruction. Audit trails are not primarily about accountability. They are about restorability.
+**Recovery that does not require heroics.** Things go wrong. A lead gets logged incorrectly. A stage gets advanced before it should have been. Someone deletes a record they should not have. In a casual tool, you shrug and move on. In infrastructure, the system needs to support recovery: tracking state changes, surfacing what changed and when, and making it possible to correct course without manual reconstruction. Audit trails are not primarily about accountability. They are about restorability.
 
 **Enough legibility that people trust it.** A system people do not trust is a system they work around. And working around a system that is supposed to be load-bearing is the worst of both worlds: you carry the overhead of the system's existence without getting the benefit of its structure. Trust, in an operational system, comes from legibility. People need to understand what the system is doing, what state it thinks things are in, and why. That is not a documentation problem. It is a design problem.
 
@@ -53,17 +53,17 @@ Those decisions are expensive in the short term. They slow down feature velocity
 
 ## Where Orion sits in this
 
-Orbit is not an AI product in the way that term is typically deployed — not a chatbot wrapper, not a summarisation layer, not a model with a thin interface over it. The AI layer powering Orbit's intelligence is Orion, and Orion's role is specifically to make the operating loop more capable without making it more opaque.
+Orbit is not an AI product in the way that term is typically deployed: not a chatbot wrapper, not a summarisation layer, not a model with a thin interface over it. The AI layer powering Orbit's intelligence is Orion, and Orion's role is specifically to make the operating loop more capable without making it more opaque.
 
 That distinction matters. One of the consistent failure modes in AI-augmented products is that the AI layer becomes a black box that the rest of the system defers to without understanding. Decisions get made, leads get scored, context gets surfaced, and no one can explain the basis for any of it. That is not infrastructure-grade behaviour. Infrastructure needs to be auditable.
 
-The work on Orion through this period has been oriented around keeping the intelligence layer coherent with the audit requirements of the surrounding system. Context retrieved and surfaced by Orion needs to be traceable. Decisions influenced by Orion's reasoning need to be legible to the person using the system. That is harder than it sounds — it requires thinking carefully about what the system exposes, and at what level of detail — but it is the right constraint to work within.
+The work on Orion through this period has been oriented around keeping the intelligence layer coherent with the audit requirements of the surrounding system. Context retrieved and surfaced by Orion needs to be traceable. Decisions influenced by Orion's reasoning need to be legible to the person using the system. That is harder than it sounds: it requires thinking carefully about what the system exposes, and at what level of detail, but it is the right constraint to work within.
 
 ## The TUXX relationship
 
-TUXX, as the services and custom systems arm of the portfolio, operates in an interesting relationship with Orbit's infrastructure ambitions. TUXX work tends to surface the places where the operating loop breaks in practice — the edge cases that live client engagements reveal that would not have been obvious in product development alone.
+TUXX, as the services and custom systems arm of the portfolio, operates in an interesting relationship with Orbit's infrastructure ambitions. TUXX work tends to surface the places where the operating loop breaks in practice: the edge cases that live client engagements reveal that would not have been obvious in product development alone.
 
-The honest version of that relationship is less tidy than it might sound in a portfolio document. Services work is fast and specific. Product work is slower and general. The pattern transfer between them is not automatic — it requires someone to deliberately extract what a live constraint implies for the product, rather than just solving the constraint for the immediate client and moving on. Getting that transfer working well is a discipline, not a consequence of having both in the same portfolio.
+The honest version of that relationship is less tidy than it might sound in a portfolio document. Services work is fast and specific. Product work is slower and general. The pattern transfer between them is not automatic: it requires someone to deliberately extract what a live constraint implies for the product, rather than just solving the constraint for the immediate client and moving on. Getting that transfer working well is a discipline, not a consequence of having both in the same portfolio.
 
 But when it does work, it is genuinely valuable. Real operational friction, encountered in a real commercial environment, with real consequences for getting it wrong, is a better test of infrastructure assumptions than anything you can construct internally.
 
@@ -71,7 +71,7 @@ But when it does work, it is genuinely valuable. Real operational friction, enco
 
 The useful product question in February 2026 is not "what can we build?" It is "where is the friction repeating?" Repeated friction is a signal. It tells you where teams lose momentum, where people abandon the system under pressure, and where a better structural choice would change the outcome.
 
-The answer, for Orbit, is increasingly not in the visible surface of the product — the workflows, the views, the way information is presented. It is in the substrate: the reliability of the memory layer, the coherence of the permission structure, the robustness of recovery mechanisms, the legibility of what the system is doing and why.
+The answer, for Orbit, is increasingly not in the visible surface of the product: the workflows, the views, the way information is presented. It is in the substrate: the reliability of the memory layer, the coherence of the permission structure, the robustness of recovery mechanisms, the legibility of what the system is doing and why.
 
 Infrastructure is not dramatic. It does not announce itself. It just holds the weight, consistently, without requiring the team to think about it. That is the right goal. The product that earns trust quietly is the product that becomes genuinely load-bearing. And load-bearing is where the work has always been pointing.
 

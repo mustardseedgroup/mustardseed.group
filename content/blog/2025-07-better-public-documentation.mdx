@@ -24,7 +24,7 @@ Not through deliberate deception. Through selection. Through omission. Through t
 
 The result is documentation that reads like marketing copy wearing a technical disguise. It tells you what a product does in its best possible state. It does not tell you what happens when the edge case hits, what isn't built yet, or where the system currently requires a workaround. It pretends certainty where the actual state is in motion.
 
-People can usually tell. They read it, note the suspiciously polished surface, and weight it accordingly — which means they trust it less, not more. The performance of confidence undermines the actual confidence that honest documentation could create.
+People can usually tell. They read it, note the suspiciously polished surface, and weight it accordingly, which means they trust it less, not more. The performance of confidence undermines the actual confidence that honest documentation could create.
 
 This is not an argument for writing pessimistic documentation. It is an argument for writing honest documentation. Those are meaningfully different things.
 
@@ -34,27 +34,27 @@ The common model treats documentation as a support function. You build a thing, 
 
 That model produces documentation that reflects the end of the queue: written under time pressure, incomplete, technically accurate at the point of writing but stale within weeks, disconnected from how the product actually develops. It captures a snapshot and then slowly drifts from the reality it was meant to describe.
 
-The better model treats documentation as a surface for institutional memory. Not what we shipped. What we know. What we've learned. What we believe the system is capable of, and under what conditions. That kind of documentation doesn't go stale in the same way, because it isn't just describing a snapshot — it's describing understanding. Understanding can be updated continuously rather than replaced wholesale.
+The better model treats documentation as a surface for institutional memory. Not what we shipped. What we know. What we've learned. What we believe the system is capable of, and under what conditions. That kind of documentation doesn't go stale in the same way, because it isn't just describing a snapshot, but it's describing understanding. Understanding can be updated continuously rather than replaced wholesale.
 
 This distinction matters more as systems become more complex. A simple feature list can be kept current with a changelog. A set of principles, constraints, architectural decisions, and known limitations requires something more continuous, more reflective, and more deliberate to maintain. The more complex the system, the more the documentation becomes a genuine epistemic asset rather than a reference manual.
 
 ## Public-safe does not mean vague
 
-There is a version of honest documentation that overcorrects into vagueness. Everything is kept at a level of abstraction so high that it's technically accurate but practically useless. "We use AI to power intelligent workflows" communicates nothing. It is the documentation equivalent of a press release — it says something without saying anything.
+There is a version of honest documentation that overcorrects into vagueness. Everything is kept at a level of abstraction so high that it's technically accurate but practically useless. "We use AI to power intelligent workflows" communicates nothing. It is the documentation equivalent of a press release: it says something without saying anything.
 
-Public-safe and vague are not the same thing. What needs to be kept private are the implementation specifics — the schemas, the logic, the client configurations, the internal reasoning structures that constitute genuine competitive advantage. What should be public is clear: what the product does, what it doesn't do, what it's designed for, and what it's being built toward.
+Public-safe and vague are not the same thing. What needs to be kept private are the implementation specifics: the schemas, the logic, the client configurations, the internal reasoning structures that constitute genuine competitive advantage. What should be public is clear: what the product does, what it doesn't do, what it's designed for, and what it's being built toward.
 
-Drawing that line requires judgement, not a blanket policy of saying as little as possible. And it requires trusting that people reading your documentation are capable of working with accurate information rather than needing to be protected from it. Users who encounter honest boundaries — "this is what the system handles; this is what it doesn't" — gain something useful. Users who encounter studied vagueness gain nothing.
+Drawing that line requires judgement, not a blanket policy of saying as little as possible. And it requires trusting that people reading your documentation are capable of working with accurate information rather than needing to be protected from it. Users who encounter honest boundaries: "this is what the system handles; this is what it doesn't". They gain something useful. Users who encounter studied vagueness gain nothing.
 
 ## The B2B documentation gap
 
-B2B software has a particular documentation problem. It tends to produce two things: dense technical reference material aimed at developers integrating the product, and high-level marketing content aimed at buyers evaluating it. The gap between those two — the actual operating documentation for the people who use the software every day — is frequently empty.
+B2B software has a particular documentation problem. It tends to produce two things: dense technical reference material aimed at developers integrating the product, and high-level marketing content aimed at buyers evaluating it. The gap between those two, the actual operating documentation for the people who use the software every day, is frequently empty.
 
 Orbit is a B2B SaaS operating system. Its scope is broad: it covers the commercial workflow from first contact with a potential client through to a launched product. That breadth means the documentation challenge is not trivial. There are distinct modes of use, distinct user types, distinct stages in the workflow where different parts of the product become relevant. Someone in the early stages of pipeline management is navigating a different surface to someone coordinating the delivery of a live product engagement.
 
 Getting that right in documentation requires treating it as a design problem, not a writing problem. The architecture of what gets documented, and in what order, and at what level of detail, matters as much as the quality of any individual piece. The table of contents is itself a product decision.
 
-What we are working toward is documentation that a new user can actually orient themselves with — that tells them where they are in the workflow, what Orbit is handling, what it expects from them, and where the current boundaries of the system sit. Not a glossy product tour. An honest operating guide. The gap between those two is where most B2B software documentation currently lives, and it is not a comfortable place to leave people.
+What we are working toward is documentation that a new user can actually orient themselves with: that tells them where they are in the workflow, what Orbit is handling, what it expects from them, and where the current boundaries of the system sit. Not a glossy product tour. An honest operating guide. The gap between those two is where most B2B software documentation currently lives, and it is not a comfortable place to leave people.
 
 ## The intelligence layer and what to say about it
 
@@ -66,11 +66,11 @@ The worst outcome for a product with genuine AI capability is documentation that
 
 ## Research, services, and the harder edges
 
-Benediction Lab is MSG's research function. It works on agents, memory systems, GUI control, and autonomous product development. Documenting research is different from documenting product — the relationship between what is being explored and what is publicly shareable is genuinely more constrained.
+Benediction Lab is MSG's research function. It works on agents, memory systems, GUI control, and autonomous product development. Documenting research is different from documenting product: the relationship between what is being explored and what is publicly shareable is genuinely more constrained.
 
 The approach here is different by design. Research documentation, where it exists publicly, should be honest about what is being studied and why, without exposing methodology or intermediate findings that have not been validated. It should say: here is the problem we are working on, here is why it matters, here is the shape of what we expect to learn. It should not say: here is how we are solving it, here is our current architecture, here is what has worked and what hasn't.
 
-That boundary is sustainable because it is honest. We are not pretending to have nothing to say. We are being clear about what we can say at this stage. That is a meaningful difference — and readers with any familiarity with research-stage work understand it.
+That boundary is sustainable because it is honest. We are not pretending to have nothing to say. We are being clear about what we can say at this stage. That is a meaningful difference, and readers with any familiarity with research-stage work understand it.
 
 TUXX, the services division, has a different documentation obligation again. Custom AI systems and internal software built for clients cannot be documented at the client level for obvious reasons. But the patterns that emerge from that work can and should be. Pattern Up, the sub-product under TUXX, exists partly to make those patterns explicit and transferable. What we learn from building custom systems in live environments is genuinely valuable, and documentation is one of the mechanisms through which it becomes value rather than remaining locked inside individual engagements.
 
@@ -78,7 +78,7 @@ TUXX, the services division, has a different documentation obligation again. Cus
 
 It would be easy to frame better documentation as something to invest in later, once the products are more mature, once there is more to document, once there is more bandwidth. That framing is wrong for a specific reason.
 
-Documentation is not a record of a mature institution. It is one of the mechanisms through which an institution becomes mature. The discipline of writing clearly about what a system does, what it doesn't do, and what it is being built toward forces a clarity of thinking that benefits the product directly. The act of documenting is not separate from the act of building — it is part of the same loop. You often discover that you cannot document a thing cleanly because you have not yet understood it cleanly. That discovery is useful.
+Documentation is not a record of a mature institution. It is one of the mechanisms through which an institution becomes mature. The discipline of writing clearly about what a system does, what it doesn't do, and what it is being built toward forces a clarity of thinking that benefits the product directly. The act of documenting is not separate from the act of building: it is part of the same loop. You often discover that you cannot document a thing cleanly because you have not yet understood it cleanly. That discovery is useful.
 
 An institution that cannot explain itself in public is an institution that has not yet fully understood itself. Good documentation is one of the ways you find out.
 
@@ -88,6 +88,6 @@ The standard is not comprehensiveness. A complete record of everything would be 
 
 That means no marketing copy dressed as technical documentation. No capability claims that outrun what the system actually does. No vague aspirational language that papers over genuine incompleteness. And no excessive hedging that makes the actual capability invisible.
 
-It means writing about Orbit, Orion, TUXX, Benediction Lab, CheekyGains, Naira, and the broader MSG portfolio as they actually are in July 2025 — with what is built, what is in progress, and what the constraints are. Not as they might be described to a press contact. Not as a funding narrative. As they are.
+It means writing about Orbit, Orion, TUXX, Benediction Lab, CheekyGains, Naira, and the broader MSG portfolio as they actually are in July 2025: with what is built, what is in progress, and what the constraints are. Not as they might be described to a press contact. Not as a funding narrative. As they are.
 
-Public documentation of this quality is harder to produce and harder to maintain than the alternatives. It requires discipline about what to say and what to withhold, and a genuine willingness to name limitations alongside capabilities. But the trust it builds — accumulated incrementally over time, in public — is one of the more durable institutional assets there is. It compounds in a way that polished vagueness never does.
+Public documentation of this quality is harder to produce and harder to maintain than the alternatives. It requires discipline about what to say and what to withhold, and a genuine willingness to name limitations alongside capabilities. But the trust it builds, accumulated incrementally over time, in public, is one of the more durable institutional assets there is. It compounds in a way that polished vagueness never does.

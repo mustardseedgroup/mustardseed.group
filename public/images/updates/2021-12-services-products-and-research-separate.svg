@@ -1,24 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Services, products and research separate</title>
   <desc id="desc">Year-end separation of services, products and research</desc>
-  <rect width="1200" height="630" fill="#e8e6df"/>
-  <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
-  <rect x="72" y="76" width="170" height="46" fill="#c69386" opacity="0.18" stroke="#c69386" stroke-width="1"/>
-  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">FOUNDER LETTER</text>
-  <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">DEC 2021</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Services, products</text>
-  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">and research</text>
-  <text x="72" y="388" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">separate</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Year-end separation of services, products and</text>
   
-    <circle cx="880" cy="315" r="150" fill="none" stroke="#c8c3b7" stroke-width="2"/>
-    <path d="M880 455 C775 385 790 235 880 180 C970 235 985 385 880 455Z" fill="#c69386" opacity="0.12" stroke="#c69386" stroke-width="3"/>
-    <path d="M880 455 V180" stroke="#0b0b09" stroke-width="2"/>
-    <circle cx="880" cy="315" r="16" fill="#0b0b09"/>
-    <circle cx="805" cy="370" r="8" fill="#0b0b09"/>
-    <circle cx="955" cy="370" r="8" fill="#0b0b09"/>
+  <defs>
+    <radialGradient id="glow" cx="44%" cy="9%" r="80%">
+      <stop offset="0%" stop-color="#3977ff" stop-opacity="0.42"/>
+      <stop offset="48%" stop-color="#f0e6df" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#f0e6df"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#fbfaf7" stop-opacity="0.64"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#0b0b09" flood-opacity="0.17"/>
+    </filter>
+    
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.83" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.056999999999999995"/></feComponentTransfer>
+    </filter>
+  </defs>
   
-  <line x1="624" y1="94" x2="624" y2="536" stroke="#c8c3b7" stroke-width="1"/>
-  <rect x="868" y="498" width="86" height="58" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
-  <text x="889" y="535" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#c69386">MS</text>
+    <rect width="1200" height="630" fill="#f0e6df"/>
+    <rect width="1200" height="630" fill="url(#glow)" opacity="0.74"/>
+    <rect width="1200" height="630" filter="url(#grain)" opacity="0.66"/>
+  
+      <rect x="80" y="70" width="1040" height="490" rx="42" fill="url(#glow)" filter="url(#shadow)"/>
+      <rect x="132" y="132" width="236" height="132" rx="30" fill="#11110f" opacity="0.9"/><rect x="462" y="132" width="236" height="132" rx="30" fill="#fbfaf7" opacity="0.92"/><rect x="792" y="132" width="236" height="132" rx="30" fill="#11110f" opacity="0.9"/><rect x="132" y="322" width="236" height="132" rx="30" fill="#fbfaf7" opacity="0.92"/><rect x="462" y="322" width="236" height="132" rx="30" fill="#11110f" opacity="0.9"/><rect x="792" y="322" width="236" height="132" rx="30" fill="#fbfaf7" opacity="0.92"/>
+      <path d="M250 264 C390 112 502 420 650 286 S860 152 994 324" stroke="#c69386" stroke-width="8" fill="none"/>
+    
+  
+    <g transform="translate(990 486)">
+      <rect width="110" height="74" rx="0" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
+      <text x="22" y="48" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#c69386">MSG</text>
+    </g>
 </svg>

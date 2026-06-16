@@ -1,23 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">GPT-3 and product imagination</title>
   <desc id="desc">GPT-3 expands the idea of software that can be instructed rather than only configured.</desc>
-  <rect width="1200" height="630" fill="#e8e6df"/>
-  <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
-  <rect x="72" y="76" width="170" height="46" fill="#8c877e" opacity="0.18" stroke="#8c877e" stroke-width="1"/>
-  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">RESEARCH</text>
-  <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">MAY 2020</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">GPT-3 and product</text>
-  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">imagination</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">GPT-3 expands the idea of software that can be</text>
   
-      <circle cx="880" cy="315" r="190" fill="none" stroke="#8c877e" stroke-width="2" opacity="0.32"/>
-      <circle cx="880" cy="315" r="112" fill="none" stroke="#c8c3b7" stroke-width="2"/>
-      <path d="M690 315 C755 170 1010 170 1070 315 C1010 460 755 460 690 315Z" fill="none" stroke="#c69386" stroke-width="3" opacity="0.65"/>
-      <circle cx="880" cy="315" r="18" fill="#0b0b09"/>
-      <circle cx="715" cy="315" r="10" fill="#0b0b09"/>
-      <circle cx="1045" cy="315" r="10" fill="#0b0b09"/>
+  <defs>
+    <radialGradient id="glow" cx="74%" cy="36%" r="80%">
+      <stop offset="0%" stop-color="#ef5da8" stop-opacity="0.42"/>
+      <stop offset="48%" stop-color="#e7ecff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#e7ecff"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#fbfaf7" stop-opacity="0.64"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#0b0b09" flood-opacity="0.17"/>
+    </filter>
     
-  <line x1="624" y1="94" x2="624" y2="536" stroke="#c8c3b7" stroke-width="1"/>
-  <rect x="868" y="498" width="86" height="58" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
-  <text x="889" y="535" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#c69386">MS</text>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.83" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.056999999999999995"/></feComponentTransfer>
+    </filter>
+  </defs>
+  
+      <rect width="1200" height="630" fill="#e7ecff"/>
+      <circle cx="319" cy="128" r="360" fill="#ef5da8" opacity="0.42"/>
+      <circle cx="969" cy="387" r="330" fill="#3977ff" opacity="0.26"/>
+      <rect width="1200" height="630" fill="url(#glow)" opacity="0.54"/>
+      <rect width="1200" height="630" filter="url(#grain)" opacity="0.8"/>
+  
+      <rect x="82" y="70" width="1036" height="490" rx="44" fill="url(#glow)" filter="url(#shadow)"/>
+      <path d="M120 428 C288 218 402 502 564 256 S862 66 1084 330" fill="none" stroke="#3977ff" stroke-width="14" opacity="0.55"/>
+      <path d="M168 214 C338 96 420 314 584 226 S836 132 1010 214" fill="none" stroke="#fbfaf7" stroke-width="9" opacity="0.76"/>
+      <rect x="459" y="436" width="34" height="18" rx="9" fill="#ef5da8" opacity="0.18"/><rect x="526" y="123" width="62" height="28" rx="9" fill="#0b0b09" opacity="0.31"/><rect x="593" y="170" width="90" height="38" rx="9" fill="#ef5da8" opacity="0.44"/><rect x="660" y="217" width="118" height="18" rx="9" fill="#0b0b09" opacity="0.5700000000000001"/><rect x="727" y="264" width="34" height="28" rx="9" fill="#ef5da8" opacity="0.7"/><rect x="794" y="311" width="62" height="38" rx="9" fill="#0b0b09" opacity="0.18"/><rect x="861" y="358" width="90" height="18" rx="9" fill="#ef5da8" opacity="0.31"/><rect x="928" y="405" width="118" height="28" rx="9" fill="#0b0b09" opacity="0.44"/><rect x="995" y="452" width="34" height="38" rx="9" fill="#ef5da8" opacity="0.5700000000000001"/><rect x="192" y="139" width="62" height="18" rx="9" fill="#0b0b09" opacity="0.7"/><rect x="259" y="186" width="90" height="28" rx="9" fill="#ef5da8" opacity="0.18"/><rect x="326" y="233" width="118" height="38" rx="9" fill="#0b0b09" opacity="0.31"/><rect x="393" y="280" width="34" height="18" rx="9" fill="#ef5da8" opacity="0.44"/><rect x="460" y="327" width="62" height="28" rx="9" fill="#0b0b09" opacity="0.5700000000000001"/><rect x="527" y="374" width="90" height="38" rx="9" fill="#ef5da8" opacity="0.7"/><rect x="594" y="421" width="118" height="18" rx="9" fill="#0b0b09" opacity="0.18"/><rect x="661" y="468" width="34" height="28" rx="9" fill="#ef5da8" opacity="0.31"/><rect x="728" y="155" width="62" height="38" rx="9" fill="#0b0b09" opacity="0.44"/><rect x="795" y="202" width="90" height="18" rx="9" fill="#ef5da8" opacity="0.5700000000000001"/><rect x="862" y="249" width="118" height="28" rx="9" fill="#0b0b09" opacity="0.7"/><rect x="929" y="296" width="34" height="38" rx="9" fill="#ef5da8" opacity="0.18"/><rect x="996" y="343" width="62" height="18" rx="9" fill="#0b0b09" opacity="0.31"/>
+    
+  
+    <g transform="translate(990 486)">
+      <rect width="110" height="74" rx="0" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
+      <text x="22" y="48" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#3977ff">MSG</text>
+    </g>
 </svg>

@@ -1,23 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Owning the control plane</title>
   <desc id="desc">Owning the interface where work is directed</desc>
-  <rect width="1200" height="630" fill="#e8e6df"/>
-  <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
-  <rect x="72" y="76" width="170" height="46" fill="#c69386" opacity="0.18" stroke="#c69386" stroke-width="1"/>
-  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">FOUNDER LETTER</text>
-  <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">NOV 2019</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Owning the control</text>
-  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">plane</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Owning the interface where work is directed</text>
   
-    <circle cx="880" cy="315" r="150" fill="none" stroke="#c8c3b7" stroke-width="2"/>
-    <path d="M880 455 C775 385 790 235 880 180 C970 235 985 385 880 455Z" fill="#c69386" opacity="0.12" stroke="#c69386" stroke-width="3"/>
-    <path d="M880 455 V180" stroke="#0b0b09" stroke-width="2"/>
-    <circle cx="880" cy="315" r="16" fill="#0b0b09"/>
-    <circle cx="805" cy="370" r="8" fill="#0b0b09"/>
-    <circle cx="955" cy="370" r="8" fill="#0b0b09"/>
+  <defs>
+    <radialGradient id="glow" cx="37%" cy="-5%" r="80%">
+      <stop offset="0%" stop-color="#ff4f64" stop-opacity="0.42"/>
+      <stop offset="48%" stop-color="#edf0f6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#edf0f6"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#fbfaf7" stop-opacity="0.64"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#0b0b09" flood-opacity="0.17"/>
+    </filter>
+    
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.76" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.069"/></feComponentTransfer>
+    </filter>
+  </defs>
   
-  <line x1="624" y1="94" x2="624" y2="536" stroke="#c8c3b7" stroke-width="1"/>
-  <rect x="868" y="498" width="86" height="58" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
-  <text x="889" y="535" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#c69386">MS</text>
+      <rect width="1200" height="630" fill="#0b0b09"/>
+      <rect width="1200" height="630" fill="url(#glow)" opacity="0.42"/>
+      <rect width="1200" height="630" filter="url(#grain)" opacity="0.7"/>
+  
+      <rect x="108" y="86" width="984" height="458" rx="38" fill="url(#glow)" filter="url(#shadow)"/>
+      <circle cx="600" cy="315" r="136" fill="#fbfaf7" opacity="0.88"/>
+      <path d="M600 315 L898.5 332.0" stroke="#0b0b09" stroke-width="3" opacity="0.34"/><circle cx="898.5" cy="332.0" r="26" fill="#ff4f64" opacity="0.86"/><path d="M600 315 L789.9 446.6" stroke="#0b0b09" stroke-width="3" opacity="0.34"/><circle cx="789.9" cy="446.6" r="34" fill="#3977ff" opacity="0.86"/><path d="M600 315 L570.0 484.2" stroke="#0b0b09" stroke-width="3" opacity="0.34"/><circle cx="570.0" cy="484.2" r="42" fill="#ff4f64" opacity="0.86"/><path d="M600 315 L367.7 422.6" stroke="#0b0b09" stroke-width="3" opacity="0.34"/><circle cx="367.7" cy="422.6" r="26" fill="#3977ff" opacity="0.86"/><path d="M600 315 L301.5 298.0" stroke="#0b0b09" stroke-width="3" opacity="0.34"/><circle cx="301.5" cy="298.0" r="34" fill="#ff4f64" opacity="0.86"/><path d="M600 315 L410.1 183.4" stroke="#0b0b09" stroke-width="3" opacity="0.34"/><circle cx="410.1" cy="183.4" r="42" fill="#3977ff" opacity="0.86"/><path d="M600 315 L630.0 145.8" stroke="#0b0b09" stroke-width="3" opacity="0.34"/><circle cx="630.0" cy="145.8" r="26" fill="#ff4f64" opacity="0.86"/><path d="M600 315 L832.3 207.4" stroke="#0b0b09" stroke-width="3" opacity="0.34"/><circle cx="832.3" cy="207.4" r="34" fill="#3977ff" opacity="0.86"/>
+      <circle cx="600" cy="315" r="42" fill="#11110f"/>
+    
+  
+    <g transform="translate(990 486)">
+      <rect width="110" height="74" rx="0" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
+      <text x="22" y="48" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#3977ff">MSG</text>
+    </g>
 </svg>

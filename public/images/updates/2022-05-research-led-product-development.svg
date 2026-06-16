@@ -1,24 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Research-led product development</title>
   <desc id="desc">Research guiding product direction</desc>
-  <rect width="1200" height="630" fill="#e8e6df"/>
-  <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
-  <rect x="72" y="76" width="170" height="46" fill="#8c877e" opacity="0.18" stroke="#8c877e" stroke-width="1"/>
-  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">RESEARCH</text>
-  <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">MAY 2022</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Research-led</text>
-  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">product</text>
-  <text x="72" y="388" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">development</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Research guiding product direction</text>
   
-      <circle cx="880" cy="315" r="190" fill="none" stroke="#8c877e" stroke-width="2" opacity="0.32"/>
-      <circle cx="880" cy="315" r="112" fill="none" stroke="#c8c3b7" stroke-width="2"/>
-      <path d="M690 315 C755 170 1010 170 1070 315 C1010 460 755 460 690 315Z" fill="none" stroke="#c69386" stroke-width="3" opacity="0.65"/>
-      <circle cx="880" cy="315" r="18" fill="#0b0b09"/>
-      <circle cx="715" cy="315" r="10" fill="#0b0b09"/>
-      <circle cx="1045" cy="315" r="10" fill="#0b0b09"/>
+  <defs>
+    <radialGradient id="glow" cx="71%" cy="32%" r="80%">
+      <stop offset="0%" stop-color="#3977ff" stop-opacity="0.42"/>
+      <stop offset="48%" stop-color="#eee9df" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#eee9df"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#fbfaf7" stop-opacity="0.64"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#0b0b09" flood-opacity="0.17"/>
+    </filter>
     
-  <line x1="624" y1="94" x2="624" y2="536" stroke="#c8c3b7" stroke-width="1"/>
-  <rect x="868" y="498" width="86" height="58" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
-  <text x="889" y="535" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#c69386">MS</text>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.045"/></feComponentTransfer>
+    </filter>
+  </defs>
+  
+      <rect width="1200" height="630" fill="#eee9df"/>
+      <path d="M0 0V630 M52 0V630 M104 0V630 M156 0V630 M208 0V630 M260 0V630 M312 0V630 M364 0V630 M416 0V630 M468 0V630 M520 0V630 M572 0V630 M624 0V630 M676 0V630 M728 0V630 M780 0V630 M832 0V630 M884 0V630 M936 0V630 M988 0V630 M1040 0V630 M1092 0V630 M1144 0V630 M1196 0V630 M0 0H1200 M0 52H1200 M0 104H1200 M0 156H1200 M0 208H1200 M0 260H1200 M0 312H1200 M0 364H1200 M0 416H1200 M0 468H1200 M0 520H1200 M0 572H1200 M0 624H1200" stroke="#c8c3b7" stroke-width="1" opacity="0.46"/>
+      <rect width="1200" height="630" fill="url(#glow)" opacity="0.56"/>
+      <rect width="1200" height="630" filter="url(#grain)" opacity="0.75"/>
+  
+    <rect x="132" y="134" width="936" height="312" rx="36" fill="url(#panel)" stroke="#c8c3b7" filter="url(#shadow)"/>
+    <circle cx="308" cy="290" r="92" fill="none" stroke="#c69386" stroke-width="8"/>
+    <path d="M258 290 H358 M308 240 V340" stroke="#3977ff" stroke-width="7"/>
+    <rect x="500" y="210" width="420" height="28" rx="14" fill="#0b0b09" opacity="0.82"/>
+    <rect x="500" y="278" width="300" height="28" rx="14" fill="#c69386" opacity="0.82"/>
+    <rect x="500" y="346" width="360" height="28" rx="14" fill="#3977ff" opacity="0.82"/>
+  
+  
+    <g transform="translate(990 486)">
+      <rect width="110" height="74" rx="0" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
+      <text x="22" y="48" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#c69386">MSG</text>
+    </g>
 </svg>

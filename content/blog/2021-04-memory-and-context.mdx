@@ -70,13 +70,13 @@ Explicit memory can be wrong if the user set it incorrectly. It can be stale if 
 
 Implicit context is harder to audit. The system's behaviour shifts gradually as its sense of the context develops, but the mechanism is not always visible to the user. That opacity is a real product risk. Users who cannot understand why the system is behaving a certain way will eventually distrust it, even if the behaviour is technically good.
 
-The right architecture probably needs both — explicit memory for things that should be stated clearly, implicit context for things that emerge through use — with enough transparency that a user can interrogate either layer when something feels wrong.
+The right architecture probably needs both, explicit memory for things that should be stated clearly, implicit context for things that emerge through use, with enough transparency that a user can interrogate either layer when something feels wrong.
 
 ## Where Orion enters the thinking
 
 At MSG, this question has direct operational relevance. Orion is the intelligence layer underneath Orbit, and memory is central to what Orion is being built to do.
 
-The commercial work Orbit supports is not a series of isolated tasks. It is a continuous thread: leads being tracked, proposals being developed, relationships being maintained, products being built and adjusted. The context of any given moment is shaped by everything that came before it. A system that cannot hold and use that context intelligently is not an operating system — it is a fancy search bar.
+The commercial work Orbit supports is not a series of isolated tasks. It is a continuous thread: leads being tracked, proposals being developed, relationships being maintained, products being built and adjusted. The context of any given moment is shaped by everything that came before it. A system that cannot hold and use that context intelligently is not an operating system, but a fancy search bar.
 
 Getting memory right for Orion means making concrete decisions about the distinctions above. What should be stored explicitly and surfaced on demand? What should be inferred from patterns and applied quietly? Where should the system ask rather than assume? These are not solved problems. They are active research questions with real product consequences.
 
@@ -84,7 +84,7 @@ The thinking here draws on early work at Benediction Lab, where memory systems, 
 
 ## The enterprise layer is arriving
 
-April 2021 is also the month when the phrase "enterprise AI" is beginning to carry real weight rather than just aspiration. Large organisations are moving beyond pilots. They are starting to deploy AI-assisted tools into real workflows — sales, legal review, document summarisation, customer support.
+April 2021 is also the month when the phrase "enterprise AI" is beginning to carry real weight rather than just aspiration. Large organisations are moving beyond pilots. They are starting to deploy AI-assisted tools into real workflows: sales, legal review, document summarisation, customer support.
 
 The memory problem is acute at enterprise scale. Individual users can sometimes compensate for memory failures by carrying context manually. Teams cannot do this reliably. Organisations cannot do this at all without significant overhead.
 
@@ -98,12 +98,12 @@ This is not wrong, but it is incomplete. Retrieval solves part of the problem. S
 
 The question worth sitting with through 2021 is not how much context a system can hold but how well it uses what it has.
 
-A small, well-curated context is often more useful than a large, undifferentiated one. The system that knows the five things that actually matter to this task — and knows why they matter — will outperform a system drowning in every document it has ever been given access to.
+A small, well-curated context is often more useful than a large, undifferentiated one. The system that knows the five things that actually matter to this task, and knows why they matter, will outperform a system drowning in every document it has ever been given access to.
 
 This implies that memory architecture is not just an infrastructure problem. It is a reasoning problem. The system needs some model of relevance, salience, and purpose. Without that, more memory is just more noise.
 
 What makes this hard, and what makes it interesting, is that the model of relevance is not fixed. It changes with the work, with the user, with the moment. A useful memory layer has to be dynamic in how it surfaces things, not just comprehensive in what it stores.
 
-Building towards that is not a short-term project. But it is the right project. Systems that solve the memory problem — not as a retrieval feature but as a genuine operating capability — will be meaningfully more useful than those that treat each session as a blank slate. The gap between those two kinds of systems is already visible. It will widen considerably as AI tooling matures and user expectations rise.
+Building towards that is not a short-term project. But it is the right project. Systems that solve the memory problem, not as a retrieval feature but as a genuine operating capability, will be meaningfully more useful than those that treat each session as a blank slate. The gap between those two kinds of systems is already visible. It will widen considerably as AI tooling matures and user expectations rise.
 
 The product question is how to close that gap systematically rather than session by session.

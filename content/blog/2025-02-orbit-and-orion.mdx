@@ -22,9 +22,9 @@ tags:
 
 There is a temptation, when you have two products with related names, to let the relationship stay vague. To let the branding do the heavy lifting and spare the reader the actual explanation. We are not going to do that here.
 
-Orbit and Orion are two distinct things that are built to work as one. Understanding why they are separate — and why that separation matters — is the most useful place to start.
+Orbit and Orion are two distinct things that are built to work as one. Understanding why they are separate, and why that separation matters, is the most useful place to start.
 
-Orbit is an operating surface. It is the place where commercial work happens: leads, relationships, briefs, timelines, delivery, review, close. The full loop of taking a business from interested prospect to launched product. Not a CRM — that framing undersells what it is and misses the point entirely. A CRM tracks people. Orbit tracks momentum. It is concerned with what is moving, what has stalled, what needs attention, and what the next committed action is.
+Orbit is an operating surface. It is the place where commercial work happens: leads, relationships, briefs, timelines, delivery, review, close. The full loop of taking a business from interested prospect to launched product. Not a CRM. That framing undersells what it is and misses the point entirely. A CRM tracks people. Orbit tracks momentum. It is concerned with what is moving, what has stalled, what needs attention, and what the next committed action is.
 
 Orion is the intelligence layer underneath it. It handles memory, reasoning, context, and the kind of commercial judgment that a plain database cannot supply. Where Orbit is the surface you work on, Orion is what makes that surface responsive to the work being done on it.
 
@@ -40,29 +40,29 @@ A database stores state. It answers questions about what is recorded. Ask it who
 
 What Orion adds is context-awareness. Not "what is recorded" but "what does this mean given everything else that is true right now." Who was the last person you spoke to, in the context of where the deal sits, what was agreed in the prior session, what the client's stated constraints are, and what the realistic next step looks like given all of that together. The difference between a lookup and a judgement.
 
-This is harder to build than it sounds. Context-awareness requires that information be held in a form that reasoning can operate on — not just stored, but understood well enough to be retrieved at the right moment for the right reason. Memory systems in AI are still a genuinely open research problem in early 2025. The architectures that work well for one type of task tend to degrade for another. The tradeoffs are real and the stakes in a commercial product are high, because bad memory is worse than no memory: it produces confident wrong answers, and confident wrong answers erode trust faster than uncertainty does.
+This is harder to build than it sounds. Context-awareness requires that information be held in a form that reasoning can operate on: not just stored, but understood well enough to be retrieved at the right moment for the right reason. Memory systems in AI are still a genuinely open research problem in early 2025. The architectures that work well for one type of task tend to degrade for another. The tradeoffs are real and the stakes in a commercial product are high, because bad memory is worse than no memory: it produces confident wrong answers, and confident wrong answers erode trust faster than uncertainty does.
 
-Benediction Lab, our research division, is working through these questions. The problems it is investigating — memory, agents, autonomous product behaviour — are not abstract. They feed directly into what Orion needs to do. Research and product in this case are not separate tracks running in parallel; they are the same track moving at different speeds.
+Benediction Lab, our research division, is working through these questions. The problems it is investigating, memory, agents, autonomous product behaviour, are not abstract. They feed directly into what Orion needs to do. Research and product in this case are not separate tracks running in parallel; they are the same track moving at different speeds.
 
 ## The shape of commercial judgment
 
 There is a phrase we use internally that is worth making public: commercial judgment.
 
-It does not mean telling people what to do. It means having enough understanding of a business situation — the people involved, the constraints on the table, the history of the relationship, the nature of the work — to be useful in a moment that requires more than a lookup.
+It does not mean telling people what to do. It means having enough understanding of a business situation, the people involved, the constraints on the table, the history of the relationship, the nature of the work, to be useful in a moment that requires more than a lookup.
 
 A lot of AI product development in the current period tries to solve this with language. The model is good at generating text, so the product becomes a text-generation surface. Summaries, drafts, suggested replies. These are genuinely useful capabilities. But they do not constitute commercial judgment, because they operate on isolated inputs rather than on accumulated context.
 
-What Orion is trying to build is the kind of accumulated context that allows inference to be applied correctly. Not inference in a vacuum — inference about this deal, this client, this stage, this constraint, given everything that has come before. That requires memory that is structured for reasoning, not just retrieval. And it requires that the system understand commercial categories well enough to know what kind of reasoning to apply.
+What Orion is trying to build is the kind of accumulated context that allows inference to be applied correctly. Not inference in a vacuum. Inference about this deal, this client, this stage, this constraint, given everything that has come before. That requires memory that is structured for reasoning, not just retrieval. And it requires that the system understand commercial categories well enough to know what kind of reasoning to apply.
 
-This is where the architecture distinction between Orbit and Orion earns its keep. Orbit is the commercial surface. It knows what is happening. Orion is the reasoning layer. It knows what to make of it. Keeping these separate means each can be improved independently — the surface can evolve without breaking the intelligence, and the intelligence can be upgraded without rebuilding the interface.
+This is where the architecture distinction between Orbit and Orion earns its keep. Orbit is the commercial surface. It knows what is happening. Orion is the reasoning layer. It knows what to make of it. Keeping these separate means each can be improved independently: the surface can evolve without breaking the intelligence, and the intelligence can be upgraded without rebuilding the interface.
 
 ## The operating loop
 
 Here is the thing about B2B commercial work that most software tools underestimate: it is not a linear process.
 
-The conventional picture of a commercial workflow — lead, qualify, propose, close, deliver — describes the shape of a deal in retrospect. It does not describe what it feels like to be inside one. Inside a deal, things move, stall, reverse, restart, branch and converge. A promising lead goes quiet for six weeks and then resurfaces with an entirely different brief. A project that was fully scoped gets repriced halfway through. A relationship that seemed closed turns into a referral network.
+The conventional picture of a commercial workflow, lead, qualify, propose, close, deliver, describes the shape of a deal in retrospect. It does not describe what it feels like to be inside one. Inside a deal, things move, stall, reverse, restart, branch and converge. A promising lead goes quiet for six weeks and then resurfaces with an entirely different brief. A project that was fully scoped gets repriced halfway through. A relationship that seemed closed turns into a referral network.
 
-Software built on a linear model cannot hold this complexity. It organises things by stage and then loses track of them when the stage stops matching reality. The result is that the tool gets abandoned in favour of a combination of email threads, calendar entries, and shared documents — which is to say, in favour of no tool at all.
+Software built on a linear model cannot hold this complexity. It organises things by stage and then loses track of them when the stage stops matching reality. The result is that the tool gets abandoned in favour of a combination of email threads, calendar entries, and shared documents, which is to say, in favour of no tool at all.
 
 Orbit's operating surface is designed to hold that complexity without flattening it. Orion's role within that surface is to keep the operating loop coherent even when reality diverges from the initial model. Which it will. It always does.
 
@@ -70,9 +70,9 @@ This is not a utopian claim. We are not describing a system that resolves all co
 
 ## Why the names matter
 
-We chose names with intentional weight. Orbit is about movement around a centre — the centre being the client relationship, the deal in progress, the product being built. Not chaotic movement, not aimless drifting, but structured circulation with a clear gravitational point. It implies that the work has a shape, that things are in relationship to each other, that position within the system matters.
+We chose names with intentional weight. Orbit is about movement around a centre: the centre being the client relationship, the deal in progress, the product being built. Not chaotic movement, not aimless drifting, but structured circulation with a clear gravitational point. It implies that the work has a shape, that things are in relationship to each other, that position within the system matters.
 
-Orion is a constellation — a pattern of distinct points that form a coherent shape only when you know how to read them. Intelligence is like that. Individual pieces of information are not intelligence. The pattern they form, when you know how to hold them together, is. Orion is named for the idea that the value is in the relationship between the points, not in any single point alone.
+Orion is a constellation: a pattern of distinct points that form a coherent shape only when you know how to read them. Intelligence is like that. Individual pieces of information are not intelligence. The pattern they form, when you know how to hold them together, is. Orion is named for the idea that the value is in the relationship between the points, not in any single point alone.
 
 These are not marketing names. They are working descriptions of what the two systems actually do.
 
@@ -80,9 +80,9 @@ These are not marketing names. They are working descriptions of what the two sys
 
 From a public perspective, what Orbit and Orion represent is a bet on architecture over features.
 
-The temptation in product development — and it is a very strong temptation in the current AI moment — is to add capabilities as fast as possible and call the accumulation a product. Ship the summary feature. Ship the suggested reply. Ship the auto-draft. Call it AI-powered. Move on.
+The temptation in product development, and it is a very strong temptation in the current AI moment, is to add capabilities as fast as possible and call the accumulation a product. Ship the summary feature. Ship the suggested reply. Ship the auto-draft. Call it AI-powered. Move on.
 
-We are not doing that. What we are building is a substrate — a properly-structured operating surface with a properly-structured intelligence layer underneath it — because we believe that capabilities layered onto a weak substrate do not compound. They accumulate as debt. You get a feature-rich product that becomes harder to use the more of it you use, because no one piece was designed with knowledge of the others.
+We are not doing that. What we are building is a substrate, a properly-structured operating surface with a properly-structured intelligence layer underneath it, because we believe that capabilities layered onto a weak substrate do not compound. They accumulate as debt. You get a feature-rich product that becomes harder to use the more of it you use, because no one piece was designed with knowledge of the others.
 
 The slower path is to build the architecture first and let the capabilities emerge from it. It is slower in the short term. It is the only approach that produces something genuinely better over time.
 

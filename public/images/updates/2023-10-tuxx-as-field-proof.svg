@@ -1,22 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">TUXX as field proof</title>
   <desc id="desc">Services as proof for product ideas</desc>
-  <rect width="1200" height="630" fill="#e8e6df"/>
-  <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
-  <rect x="72" y="76" width="170" height="46" fill="#0b0b09" opacity="0.18" stroke="#0b0b09" stroke-width="1"/>
-  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">PRODUCT</text>
-  <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">OCT 2023</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">TUXX as field</text>
-  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">proof</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Services as proof for product ideas</text>
   
-      <path d="M670 170 H1100 M670 250 H1100 M670 330 H1100 M670 410 H1100 M720 130 V460 M820 130 V460 M920 130 V460 M1020 130 V460" stroke="#c8c3b7" stroke-width="2"/>
-      <rect x="740" y="210" width="140" height="120" fill="#0b0b09" opacity="0.12" stroke="#0b0b09" stroke-width="2"/>
-      <rect x="920" y="290" width="110" height="90" fill="#c69386" opacity="0.18" stroke="#c69386" stroke-width="2"/>
-      <circle cx="740" cy="410" r="14" fill="#0b0b09"/>
-      <circle cx="1035" cy="185" r="14" fill="#0b0b09"/>
+  <defs>
+    <radialGradient id="glow" cx="33%" cy="32%" r="80%">
+      <stop offset="0%" stop-color="#3977ff" stop-opacity="0.42"/>
+      <stop offset="48%" stop-color="#f0e6df" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#f0e6df"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#fbfaf7" stop-opacity="0.64"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#0b0b09" flood-opacity="0.17"/>
+    </filter>
     
-  <line x1="624" y1="94" x2="624" y2="536" stroke="#c8c3b7" stroke-width="1"/>
-  <rect x="868" y="498" width="86" height="58" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
-  <text x="889" y="535" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#c69386">MS</text>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.069"/></feComponentTransfer>
+    </filter>
+  </defs>
+  
+    <rect width="1200" height="630" fill="#f0e6df"/>
+    <rect width="1200" height="630" fill="url(#glow)" opacity="0.74"/>
+    <rect width="1200" height="630" filter="url(#grain)" opacity="0.66"/>
+  
+      <rect x="108" y="92" width="984" height="446" rx="36" fill="#fbfaf7" filter="url(#shadow)"/>
+      <path d="M180 414 H1026" stroke="#0b0b09" stroke-width="5"/>
+      <circle cx="210" cy="318" r="24" fill="#c69386" opacity="0.84"/><circle cx="306" cy="347" r="36" fill="#3977ff" opacity="0.84"/><circle cx="402" cy="376" r="48" fill="#0b0b09" opacity="0.84"/><circle cx="498" cy="225" r="24" fill="#c69386" opacity="0.84"/><circle cx="594" cy="254" r="36" fill="#3977ff" opacity="0.84"/><circle cx="690" cy="283" r="48" fill="#0b0b09" opacity="0.84"/><circle cx="786" cy="312" r="24" fill="#c69386" opacity="0.84"/><circle cx="882" cy="341" r="36" fill="#3977ff" opacity="0.84"/><circle cx="978" cy="370" r="48" fill="#0b0b09" opacity="0.84"/>
+      <path d="M210 400 C334 236 450 452 578 286 S802 196 978 346" stroke="#c69386" stroke-width="7" fill="none" opacity="0.76"/>
+    
+  
+    <g transform="translate(990 486)">
+      <rect width="110" height="74" rx="0" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
+      <text x="22" y="48" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#c69386">MSG</text>
+    </g>
 </svg>

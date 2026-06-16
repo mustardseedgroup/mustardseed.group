@@ -1,24 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Tools for people who want to execute</title>
   <desc id="desc">The early need for tools that help people move</desc>
-  <rect width="1200" height="630" fill="#e8e6df"/>
-  <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
-  <rect x="72" y="76" width="170" height="46" fill="#c69386" opacity="0.18" stroke="#c69386" stroke-width="1"/>
-  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">FOUNDER LETTER</text>
-  <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">MAR 2015</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Tools for people</text>
-  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">who want to</text>
-  <text x="72" y="388" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">execute</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">The early need for tools that help people move</text>
   
-    <circle cx="880" cy="315" r="150" fill="none" stroke="#c8c3b7" stroke-width="2"/>
-    <path d="M880 455 C775 385 790 235 880 180 C970 235 985 385 880 455Z" fill="#c69386" opacity="0.12" stroke="#c69386" stroke-width="3"/>
-    <path d="M880 455 V180" stroke="#0b0b09" stroke-width="2"/>
-    <circle cx="880" cy="315" r="16" fill="#0b0b09"/>
-    <circle cx="805" cy="370" r="8" fill="#0b0b09"/>
-    <circle cx="955" cy="370" r="8" fill="#0b0b09"/>
+  <defs>
+    <radialGradient id="glow" cx="27%" cy="35%" r="80%">
+      <stop offset="0%" stop-color="#7ccf78" stop-opacity="0.42"/>
+      <stop offset="48%" stop-color="#edf2e6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#edf2e6"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#fbfaf7" stop-opacity="0.64"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#0b0b09" flood-opacity="0.17"/>
+    </filter>
+    
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.76" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.069"/></feComponentTransfer>
+    </filter>
+  </defs>
   
-  <line x1="624" y1="94" x2="624" y2="536" stroke="#c8c3b7" stroke-width="1"/>
-  <rect x="868" y="498" width="86" height="58" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
-  <text x="889" y="535" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#c69386">MS</text>
+      <rect width="1200" height="630" fill="#edf2e6"/>
+      <path d="M0 0V630 M54 0V630 M108 0V630 M162 0V630 M216 0V630 M270 0V630 M324 0V630 M378 0V630 M432 0V630 M486 0V630 M540 0V630 M594 0V630 M648 0V630 M702 0V630 M756 0V630 M810 0V630 M864 0V630 M918 0V630 M972 0V630 M1026 0V630 M1080 0V630 M1134 0V630 M1188 0V630 M0 0H1200 M0 54H1200 M0 108H1200 M0 162H1200 M0 216H1200 M0 270H1200 M0 324H1200 M0 378H1200 M0 432H1200 M0 486H1200 M0 540H1200 M0 594H1200" stroke="#c8c3b7" stroke-width="1" opacity="0.46"/>
+      <rect width="1200" height="630" fill="url(#glow)" opacity="0.56"/>
+      <rect width="1200" height="630" filter="url(#grain)" opacity="0.75"/>
+  
+      <rect x="96" y="90" width="1008" height="450" rx="0" fill="#fbfaf7" stroke="#c8c3b7" filter="url(#shadow)"/>
+      <path d="M164 168 H1036 M164 462 H1036" stroke="#0b0b09" stroke-width="4"/>
+      <rect x="178" y="216" width="64" height="38" rx="10" fill="#0b0b09" opacity="0.9"/><rect x="284" y="216" width="64" height="38" rx="10" fill="#c8c3b7" opacity="0.62"/><rect x="390" y="216" width="64" height="38" rx="10" fill="#c8c3b7" opacity="0.62"/><rect x="496" y="216" width="64" height="38" rx="10" fill="#7ccf78" opacity="0.9"/><rect x="602" y="216" width="64" height="38" rx="10" fill="#0b0b09" opacity="0.62"/><rect x="708" y="216" width="64" height="38" rx="10" fill="#c8c3b7" opacity="0.62"/><rect x="814" y="216" width="64" height="38" rx="10" fill="#7ccf78" opacity="0.9"/><rect x="920" y="216" width="64" height="38" rx="10" fill="#c8c3b7" opacity="0.62"/><rect x="178" y="282" width="64" height="38" rx="10" fill="#0b0b09" opacity="0.62"/><rect x="284" y="282" width="64" height="38" rx="10" fill="#7ccf78" opacity="0.9"/><rect x="390" y="282" width="64" height="38" rx="10" fill="#c8c3b7" opacity="0.62"/><rect x="496" y="282" width="64" height="38" rx="10" fill="#c8c3b7" opacity="0.62"/><rect x="602" y="282" width="64" height="38" rx="10" fill="#0b0b09" opacity="0.9"/><rect x="708" y="282" width="64" height="38" rx="10" fill="#c8c3b7" opacity="0.62"/><rect x="814" y="282" width="64" height="38" rx="10" fill="#c8c3b7" opacity="0.62"/><rect x="920" y="282" width="64" height="38" rx="10" fill="#7ccf78" opacity="0.9"/><rect x="178" y="348" width="64" height="38" rx="10" fill="#0b0b09" opacity="0.62"/><rect x="284" y="348" width="64" height="38" rx="10" fill="#c8c3b7" opacity="0.62"/><rect x="390" y="348" width="64" height="38" rx="10" fill="#7ccf78" opacity="0.9"/><rect x="496" y="348" width="64" height="38" rx="10" fill="#c8c3b7" opacity="0.62"/><rect x="602" y="348" width="64" height="38" rx="10" fill="#0b0b09" opacity="0.62"/><rect x="708" y="348" width="64" height="38" rx="10" fill="#7ccf78" opacity="0.9"/><rect x="814" y="348" width="64" height="38" rx="10" fill="#c8c3b7" opacity="0.62"/><rect x="920" y="348" width="64" height="38" rx="10" fill="#c8c3b7" opacity="0.62"/>
+    
+  
+    <g transform="translate(990 486)">
+      <rect width="110" height="74" rx="0" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
+      <text x="22" y="48" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#0b0b09">MSG</text>
+    </g>
 </svg>

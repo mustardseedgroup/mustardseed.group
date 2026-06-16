@@ -1,24 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">The rise of practical automation</title>
   <desc id="desc">Automation becoming a practical operating question</desc>
-  <rect width="1200" height="630" fill="#e8e6df"/>
-  <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
-  <rect x="72" y="76" width="170" height="46" fill="#8c877e" opacity="0.18" stroke="#8c877e" stroke-width="1"/>
-  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">RESEARCH</text>
-  <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">FEB 2017</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">The rise of</text>
-  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">practical</text>
-  <text x="72" y="388" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">automation</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Automation becoming a practical operating</text>
   
-      <circle cx="880" cy="315" r="190" fill="none" stroke="#8c877e" stroke-width="2" opacity="0.32"/>
-      <circle cx="880" cy="315" r="112" fill="none" stroke="#c8c3b7" stroke-width="2"/>
-      <path d="M690 315 C755 170 1010 170 1070 315 C1010 460 755 460 690 315Z" fill="none" stroke="#c69386" stroke-width="3" opacity="0.65"/>
-      <circle cx="880" cy="315" r="18" fill="#0b0b09"/>
-      <circle cx="715" cy="315" r="10" fill="#0b0b09"/>
-      <circle cx="1045" cy="315" r="10" fill="#0b0b09"/>
+  <defs>
+    <radialGradient id="glow" cx="34%" cy="74%" r="80%">
+      <stop offset="0%" stop-color="#7ccf78" stop-opacity="0.42"/>
+      <stop offset="48%" stop-color="#e9e6ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#e9e6ff"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#fbfaf7" stop-opacity="0.64"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#0b0b09" flood-opacity="0.17"/>
+    </filter>
     
-  <line x1="624" y1="94" x2="624" y2="536" stroke="#c8c3b7" stroke-width="1"/>
-  <rect x="868" y="498" width="86" height="58" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
-  <text x="889" y="535" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#c69386">MS</text>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.83" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.081"/></feComponentTransfer>
+    </filter>
+  </defs>
+  
+      <rect width="1200" height="630" fill="#0b0b09"/>
+      <rect width="1200" height="630" fill="url(#glow)" opacity="0.42"/>
+      <rect width="1200" height="630" filter="url(#grain)" opacity="0.7"/>
+  
+      <rect x="98" y="82" width="1004" height="466" rx="38" fill="#11110f" filter="url(#shadow)"/>
+      <rect x="168" y="132" width="360" height="330" rx="28" fill="#fbfaf7" opacity="0.96"/>
+      <rect x="574" y="96" width="412" height="260" rx="34" fill="#8a63ff" opacity="0.92"/>
+      <path d="M202 216 H450 M202 276 H382 M202 336 H474" stroke="#11110f" stroke-width="16" stroke-linecap="round" opacity="0.75"/>
+      <path d="M636 178 C704 102 808 288 916 176 M636 272 C744 360 820 168 936 286" fill="none" stroke="#fbfaf7" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="638" cy="440" r="46" fill="#7ccf78"/><circle cx="742" cy="440" r="46" fill="#fbfaf7"/><circle cx="846" cy="440" r="46" fill="#8a63ff"/>
+    
+  
+    <g transform="translate(990 486)">
+      <rect width="110" height="74" rx="0" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
+      <text x="22" y="48" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#8a63ff">MSG</text>
+    </g>
 </svg>

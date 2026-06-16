@@ -1,23 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Agents and the control plane</title>
   <desc id="desc">Agents needing clear control planes</desc>
-  <rect width="1200" height="630" fill="#e8e6df"/>
-  <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
-  <rect x="72" y="76" width="170" height="46" fill="#8c877e" opacity="0.18" stroke="#8c877e" stroke-width="1"/>
-  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">RESEARCH</text>
-  <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">JAN 2024</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Agents and the</text>
-  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">control plane</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Agents needing clear control planes</text>
   
-      <circle cx="880" cy="315" r="190" fill="none" stroke="#8c877e" stroke-width="2" opacity="0.32"/>
-      <circle cx="880" cy="315" r="112" fill="none" stroke="#c8c3b7" stroke-width="2"/>
-      <path d="M690 315 C755 170 1010 170 1070 315 C1010 460 755 460 690 315Z" fill="none" stroke="#c69386" stroke-width="3" opacity="0.65"/>
-      <circle cx="880" cy="315" r="18" fill="#0b0b09"/>
-      <circle cx="715" cy="315" r="10" fill="#0b0b09"/>
-      <circle cx="1045" cy="315" r="10" fill="#0b0b09"/>
+  <defs>
+    <radialGradient id="glow" cx="37%" cy="70%" r="80%">
+      <stop offset="0%" stop-color="#ff4f64" stop-opacity="0.42"/>
+      <stop offset="48%" stop-color="#edf0f6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#edf0f6"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#fbfaf7" stop-opacity="0.64"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#0b0b09" flood-opacity="0.17"/>
+    </filter>
     
-  <line x1="624" y1="94" x2="624" y2="536" stroke="#c8c3b7" stroke-width="1"/>
-  <rect x="868" y="498" width="86" height="58" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
-  <text x="889" y="535" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#c69386">MS</text>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.76" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.069"/></feComponentTransfer>
+    </filter>
+  </defs>
+  
+      <rect width="1200" height="630" fill="#0b0b09"/>
+      <rect width="1200" height="630" fill="url(#glow)" opacity="0.42"/>
+      <rect width="1200" height="630" filter="url(#grain)" opacity="0.7"/>
+  
+    <rect x="104" y="82" width="992" height="466" rx="40" fill="#11110f" filter="url(#shadow)"/>
+    <circle cx="600" cy="315" r="90" fill="#fbfaf7"/>
+    <circle cx="600" cy="315" r="32" fill="#3977ff"/>
+    <path d="M600 315 H256 M600 315 H944 M600 315 V152 M600 315 V478" stroke="#fbfaf7" stroke-width="5" opacity="0.7"/>
+    <circle cx="256" cy="315" r="42" fill="#ff4f64"/>
+    <circle cx="944" cy="315" r="42" fill="#3977ff"/>
+    <circle cx="600" cy="152" r="32" fill="#7ccf78"/>
+    <circle cx="600" cy="478" r="32" fill="#f2b84b"/>
+    <path d="M380 206 C450 98 754 98 824 206 M382 424 C454 532 746 532 822 424" fill="none" stroke="#ff4f64" stroke-width="4" stroke-dasharray="12 18"/>
+  
+  
+    <g transform="translate(990 486)">
+      <rect width="110" height="74" rx="0" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
+      <text x="22" y="48" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#3977ff">MSG</text>
+    </g>
 </svg>

@@ -20,7 +20,7 @@ tags:
 
 ## The gap between research and product is a design problem
 
-Most organisations treat research and product as two distinct activities that occasionally share findings. Research produces papers, experiments, frameworks. Product produces features, interfaces, workflows. The transfer between them is mediated by documentation, quarterly reviews, product briefs — processes designed to translate output across an organisational gap.
+Most organisations treat research and product as two distinct activities that occasionally share findings. Research produces papers, experiments, frameworks. Product produces features, interfaces, workflows. The transfer between them is mediated by documentation, quarterly reviews, product briefs: processes designed to translate output across an organisational gap.
 
 The gap itself is rarely questioned. It is just assumed: research lives over there, product lives over here, and the challenge is to move things efficiently from one side to the other.
 
@@ -30,11 +30,11 @@ Orion is the clearest example of what this looks like in practice.
 
 ## What Orion is, before what it does
 
-Orion is the AI intelligence layer inside Orbit. It is also an ongoing research project sitting inside Benediction Lab. These two facts are not in tension — they are the same fact described from different vantage points.
+Orion is the AI intelligence layer inside Orbit. It is also an ongoing research project sitting inside Benediction Lab. These two facts are not in tension, but are the same fact described from different vantage points.
 
 From the Orbit side, Orion is what makes the product more than a structured database. Orbit is a B2B operating system covering the full workflow from initial lead to launched product. That workflow involves enormous amounts of context: relationships, history, intent, timing, priority. No team can hold all of it in working memory simultaneously. Orion is the system that holds and interprets that context so the product can surface the right information, prompt the right action, and avoid burying the operator under noise.
 
-From the Benediction Lab side, Orion is an active investigation into how AI systems can handle memory, reasoning, and tool orchestration at a level that is genuinely useful — not demonstrated in a controlled environment, but deployed in a real commercial product with real stakes.
+From the Benediction Lab side, Orion is an active investigation into how AI systems can handle memory, reasoning, and tool orchestration at a level that is genuinely useful, not demonstrated in a controlled environment, but deployed in a real commercial product with real stakes.
 
 This dual nature is the architecture. Research that never touches live conditions stays theoretical. Product that never draws on serious research stays shallow. Orion is the mechanism that keeps the two grounded in each other.
 
@@ -44,15 +44,15 @@ In September 2023, the AI landscape is producing increasingly capable foundation
 
 This matters for how to think about Orion's position.
 
-The naive interpretation of the intelligence layer is that it sits between the model and the user interface — it calls the model, formats the output, returns a result. This is technically accurate and completely insufficient. A production intelligence layer operating inside a real workflow has to solve problems that benchmarks and demos do not surface: how does the system behave when context is incomplete? How does it handle contradictory signals? When should it act on inferred intent, and when should it ask? What does a partial failure look like, and how does it degrade gracefully?
+The naive interpretation of the intelligence layer is that it sits between the model and the user interface: it calls the model, formats the output, returns a result. This is technically accurate and completely insufficient. A production intelligence layer operating inside a real workflow has to solve problems that benchmarks and demos do not surface: how does the system behave when context is incomplete? How does it handle contradictory signals? When should it act on inferred intent, and when should it ask? What does a partial failure look like, and how does it degrade gracefully?
 
 These are not questions that can be answered by studying model release notes. They require live experimentation inside conditions that actually constrain the system.
 
-Benediction Lab's research focus — agents, memory systems, GUI control, autonomous product development — is not chosen arbitrarily. It maps precisely onto the problems that building Orion at production quality requires solving.
+Benediction Lab's research focus, agents, memory systems, GUI control, autonomous product development, is not chosen arbitrarily. It maps precisely onto the problems that building Orion at production quality requires solving.
 
 ## Research that earns its position through use
 
-There is a version of research that never really connects to anything — it is valuable intellectually but is not accountable to a real external test. There is also a version of product development that moves quickly but runs shallow, borrowing from available tools without deeply understanding them. Both patterns produce work that fails when conditions get hard.
+There is a version of research that never really connects to anything: it is valuable intellectually but is not accountable to a real external test. There is also a version of product development that moves quickly but runs shallow, borrowing from available tools without deeply understanding them. Both patterns produce work that fails when conditions get hard.
 
 The design principle at MSG is that research earns its position through demonstrated usefulness in the product, and the product earns its intelligence layer through genuine research rigour. Neither side can coast on the other.
 
@@ -68,13 +68,13 @@ Orion is not a chatbot interface bolted onto Orbit. Adding a chat box to a busin
 
 Orion is not an agent that autonomously manages the business for the user. The promise of full autonomous commercial operation may be directionally true eventually, but it is not a design principle to build toward prematurely. The current architecture is about augmenting operator judgement, not replacing it. The human still makes the consequential decisions. Orion makes those decisions better-informed and better-timed.
 
-Orion is not a feature. This is perhaps the most important distinction for how to think about what Benediction Lab is building. A feature is additive — you could remove it and the product would still function, just with reduced capability. An intelligence layer is structural. If you removed the memory, context-handling, and reasoning functions that Orion provides, Orbit would not be the same product with one less feature. It would be a different kind of product entirely.
+Orion is not a feature. This is perhaps the most important distinction for how to think about what Benediction Lab is building. A feature is additive: you could remove it and the product would still function, just with reduced capability. An intelligence layer is structural. If you removed the memory, context-handling, and reasoning functions that Orion provides, Orbit would not be the same product with one less feature. It would be a different kind of product entirely.
 
 This is why the research investment is not a marginal bet. It is foundational to what Orbit is supposed to be.
 
 ## The pace problem
 
-Building a serious intelligence layer inside a product that needs to work reliably for commercial users, during a period when the underlying model capabilities are shifting rapidly — this creates a specific kind of tension.
+Building a serious intelligence layer inside a product that needs to work reliably for commercial users, during a period when the underlying model capabilities are shifting rapidly: this creates a specific kind of tension.
 
 Moving too slowly means the research falls behind the public frontier and Orion becomes a systems-integration exercise rather than a genuine capability project. Moving too quickly means the product surface becomes unstable as the intelligence layer changes underneath users who have built workflows around it.
 
@@ -86,7 +86,7 @@ This distinction is partly architectural and partly cultural. The architecture h
 
 One way to describe the relationship is this: Orbit is currently the primary external test environment for the research that Benediction Lab is running through Orion. It is not the end goal of the research.
 
-The research question — how do AI systems handle memory, context, tool use, and planning in conditions where accuracy and reliability matter — is bigger than any single product. But working inside a real product is what keeps that question honest. It prevents the research from drifting toward capability demonstrations that look impressive but do not translate to useful behaviour under constraint.
+The research question, how do AI systems handle memory, context, tool use, and planning in conditions where accuracy and reliability matter, is bigger than any single product. But working inside a real product is what keeps that question honest. It prevents the research from drifting toward capability demonstrations that look impressive but do not translate to useful behaviour under constraint.
 
 The discipline of building something that commercial users actually depend on is one of the few reliable forcing functions for this kind of work. You cannot simulate the pressure of a real product in a lab environment. You have to build in the wild.
 

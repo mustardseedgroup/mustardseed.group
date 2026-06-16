@@ -1,23 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">GPT-4 and complex work</title>
   <desc id="desc">GPT-4 raises the ceiling for reasoning, planning and product assistance.</desc>
-  <rect width="1200" height="630" fill="#e8e6df"/>
-  <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
-  <rect x="72" y="76" width="170" height="46" fill="#8c877e" opacity="0.18" stroke="#8c877e" stroke-width="1"/>
-  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">RESEARCH</text>
-  <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">MAR 2023</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">GPT-4 and complex</text>
-  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">work</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">GPT-4 raises the ceiling for reasoning, planning</text>
   
-      <circle cx="880" cy="315" r="190" fill="none" stroke="#8c877e" stroke-width="2" opacity="0.32"/>
-      <circle cx="880" cy="315" r="112" fill="none" stroke="#c8c3b7" stroke-width="2"/>
-      <path d="M690 315 C755 170 1010 170 1070 315 C1010 460 755 460 690 315Z" fill="none" stroke="#c69386" stroke-width="3" opacity="0.65"/>
-      <circle cx="880" cy="315" r="18" fill="#0b0b09"/>
-      <circle cx="715" cy="315" r="10" fill="#0b0b09"/>
-      <circle cx="1045" cy="315" r="10" fill="#0b0b09"/>
+  <defs>
+    <radialGradient id="glow" cx="27%" cy="-18%" r="80%">
+      <stop offset="0%" stop-color="#ef5da8" stop-opacity="0.42"/>
+      <stop offset="48%" stop-color="#e7ecff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#e7ecff"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#fbfaf7" stop-opacity="0.64"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#0b0b09" flood-opacity="0.17"/>
+    </filter>
     
-  <line x1="624" y1="94" x2="624" y2="536" stroke="#c8c3b7" stroke-width="1"/>
-  <rect x="868" y="498" width="86" height="58" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
-  <text x="889" y="535" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#c69386">MS</text>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.76" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.045"/></feComponentTransfer>
+    </filter>
+  </defs>
+  
+      <rect width="1200" height="630" fill="#e7ecff"/>
+      <circle cx="382" cy="81" r="360" fill="#ef5da8" opacity="0.42"/>
+      <circle cx="512" cy="213" r="330" fill="#3977ff" opacity="0.26"/>
+      <rect width="1200" height="630" fill="url(#glow)" opacity="0.54"/>
+      <rect width="1200" height="630" filter="url(#grain)" opacity="0.8"/>
+  
+    <rect x="78" y="68" width="1044" height="494" rx="42" fill="url(#glow)" filter="url(#shadow)"/>
+    <path d="M140 420 C280 140 420 520 590 272 S920 96 1070 350" fill="none" stroke="#ef5da8" stroke-width="7" opacity="0.78"/>
+    <path d="M180 180 C360 350 520 140 720 300 S910 476 1050 180" fill="none" stroke="#ffffff" stroke-width="5" opacity="0.62"/>
+    <circle cx="120" cy="108" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="191" cy="108" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="262" cy="108" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="333" cy="108" r="16" fill="#3977ff" opacity="0.9"/><circle cx="404" cy="108" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="475" cy="108" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="546" cy="108" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="127" cy="178" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="198" cy="178" r="16" fill="#3977ff" opacity="0.9"/><circle cx="269" cy="178" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="340" cy="178" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="411" cy="178" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="482" cy="178" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="553" cy="178" r="16" fill="#3977ff" opacity="0.9"/><circle cx="134" cy="248" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="205" cy="248" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="260" cy="248" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="331" cy="248" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="402" cy="248" r="16" fill="#3977ff" opacity="0.9"/><circle cx="473" cy="248" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="544" cy="248" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="125" cy="318" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="196" cy="318" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="267" cy="318" r="16" fill="#3977ff" opacity="0.9"/><circle cx="338" cy="318" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="409" cy="318" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="480" cy="318" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="551" cy="318" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="132" cy="388" r="16" fill="#3977ff" opacity="0.9"/><circle cx="203" cy="388" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="274" cy="388" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="345" cy="388" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="400" cy="388" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="471" cy="388" r="16" fill="#3977ff" opacity="0.9"/><circle cx="542" cy="388" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="123" cy="458" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="194" cy="458" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="265" cy="458" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="336" cy="458" r="16" fill="#3977ff" opacity="0.9"/><circle cx="407" cy="458" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="478" cy="458" r="8" fill="#0b0b09" opacity="0.38"/><circle cx="549" cy="458" r="8" fill="#0b0b09" opacity="0.38"/>
+  
+  
+    <g transform="translate(990 486)">
+      <rect width="110" height="74" rx="0" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
+      <text x="22" y="48" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#3977ff">MSG</text>
+    </g>
 </svg>

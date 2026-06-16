@@ -1,21 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Consumer products and creative culture</title>
   <desc id="desc">All Purpose products across performance and culture</desc>
-  <rect width="1200" height="630" fill="#e8e6df"/>
-  <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
-  <rect x="72" y="76" width="170" height="46" fill="#6f6a61" opacity="0.18" stroke="#6f6a61" stroke-width="1"/>
-  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">CULTURE</text>
-  <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">SEPT 2024</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Consumer products</text>
-  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">and creative</text>
-  <text x="72" y="388" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">culture</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">All Purpose products across performance and</text>
   
-      <path d="M660 260 C730 180 800 340 875 260 S1025 180 1095 260" fill="none" stroke="#6f6a61" stroke-width="4"/>
-      <path d="M660 340 C730 260 800 420 875 340 S1025 260 1095 340" fill="none" stroke="#c69386" stroke-width="3" opacity="0.75"/>
-      <path d="M660 420 C730 340 800 500 875 420 S1025 340 1095 420" fill="none" stroke="#c8c3b7" stroke-width="3"/>
+  <defs>
+    <radialGradient id="glow" cx="71%" cy="44%" r="80%">
+      <stop offset="0%" stop-color="#8a63ff" stop-opacity="0.42"/>
+      <stop offset="48%" stop-color="#f6e7ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#f6e7ff"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#fbfaf7" stop-opacity="0.64"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#0b0b09" flood-opacity="0.17"/>
+    </filter>
     
-  <line x1="624" y1="94" x2="624" y2="536" stroke="#c8c3b7" stroke-width="1"/>
-  <rect x="868" y="498" width="86" height="58" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
-  <text x="889" y="535" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#c69386">MS</text>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.045"/></feComponentTransfer>
+    </filter>
+  </defs>
+  
+      <rect width="1200" height="630" fill="#f6e7ff"/>
+      <circle cx="386" cy="232" r="360" fill="#8a63ff" opacity="0.42"/>
+      <circle cx="995" cy="426" r="330" fill="#ef5da8" opacity="0.26"/>
+      <rect width="1200" height="630" fill="url(#glow)" opacity="0.54"/>
+      <rect width="1200" height="630" filter="url(#grain)" opacity="0.8"/>
+  
+      <rect x="74" y="74" width="1052" height="482" rx="44" fill="url(#glow)" filter="url(#shadow)"/>
+      <rect x="180" y="130" width="278" height="352" rx="48" fill="#fbfaf7" opacity="0.92"/>
+      <circle cx="314" cy="306" r="84" fill="#ef5da8" opacity="0.88"/>
+      <rect x="532" y="168" width="470" height="86" rx="43" fill="#11110f" opacity="0.9"/>
+      <rect x="532" y="292" width="360" height="86" rx="43" fill="#8a63ff" opacity="0.82"/>
+      <rect x="532" y="416" width="430" height="46" rx="23" fill="#fbfaf7" opacity="0.82"/>
+    
+  
+    <g transform="translate(990 486)">
+      <rect width="110" height="74" rx="0" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
+      <text x="22" y="48" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#ef5da8">MSG</text>
+    </g>
 </svg>

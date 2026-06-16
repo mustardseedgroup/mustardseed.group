@@ -1,22 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">The holding thesis</title>
   <desc id="desc">Mustard Seed Group as the holding thesis</desc>
-  <rect width="1200" height="630" fill="#e8e6df"/>
-  <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
-  <rect x="72" y="76" width="170" height="46" fill="#c69386" opacity="0.18" stroke="#c69386" stroke-width="1"/>
-  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">FOUNDER LETTER</text>
-  <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">JAN 2026</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">The holding thesis</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Mustard Seed Group as the holding thesis</text>
   
-    <circle cx="880" cy="315" r="150" fill="none" stroke="#c8c3b7" stroke-width="2"/>
-    <path d="M880 455 C775 385 790 235 880 180 C970 235 985 385 880 455Z" fill="#c69386" opacity="0.12" stroke="#c69386" stroke-width="3"/>
-    <path d="M880 455 V180" stroke="#0b0b09" stroke-width="2"/>
-    <circle cx="880" cy="315" r="16" fill="#0b0b09"/>
-    <circle cx="805" cy="370" r="8" fill="#0b0b09"/>
-    <circle cx="955" cy="370" r="8" fill="#0b0b09"/>
+  <defs>
+    <radialGradient id="glow" cx="37%" cy="52%" r="80%">
+      <stop offset="0%" stop-color="#0b0b09" stop-opacity="0.42"/>
+      <stop offset="48%" stop-color="#e8e6df" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#e8e6df"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#fbfaf7" stop-opacity="0.64"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#0b0b09" flood-opacity="0.17"/>
+    </filter>
+    
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.76" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.069"/></feComponentTransfer>
+    </filter>
+  </defs>
   
-  <line x1="624" y1="94" x2="624" y2="536" stroke="#c8c3b7" stroke-width="1"/>
-  <rect x="868" y="498" width="86" height="58" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
-  <text x="889" y="535" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#c69386">MS</text>
+    <rect width="1200" height="630" fill="#e8e6df"/>
+    <rect width="1200" height="630" fill="url(#glow)" opacity="0.74"/>
+    <rect width="1200" height="630" filter="url(#grain)" opacity="0.66"/>
+  
+      <rect x="118" y="86" width="964" height="458" rx="0" fill="#fbfaf7" stroke="#c8c3b7" filter="url(#shadow)"/>
+      <path d="M600 128 V502 M236 315 H964" stroke="#0b0b09" stroke-width="4" opacity="0.42"/>
+      <rect x="236" y="164" width="180" height="112" rx="0" fill="#c69386" opacity="0.78"/>
+      <rect x="784" y="164" width="180" height="112" rx="0" fill="#0b0b09" opacity="0.78"/>
+      <rect x="236" y="354" width="180" height="112" rx="0" fill="#11110f" opacity="0.9"/>
+      <rect x="784" y="354" width="180" height="112" rx="0" fill="#fbfaf7" stroke="#0b0b09" stroke-width="4"/>
+      <circle cx="600" cy="315" r="74" fill="#fbfaf7" stroke="#c69386" stroke-width="6"/>
+    
+  
+    <g transform="translate(990 486)">
+      <rect width="110" height="74" rx="0" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
+      <text x="22" y="48" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#c69386">MSG</text>
+    </g>
 </svg>
