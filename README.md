@@ -63,24 +63,24 @@ NEXT_PUBLIC_CF_WEB_ANALYTICS_TOKEN
 npm run build
 ```
 
-## Cloudflare Pages
+## Cloudflare
 
 Build command:
 
 ```bash
-npm run pages:build
+npm run cloudflare:build
 ```
 
 Deploy command:
 
 ```bash
-npm run pages:deploy
+npm run cloudflare:deploy
 ```
 
-Output directory:
+Preview command:
 
-```text
-.open-next/assets
+```bash
+npm run cloudflare:preview
 ```
 
 ## Security Boundary

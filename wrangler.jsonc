@@ -1,9 +1,23 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "mustardseed-group",
+  "main": ".open-next/worker.js",
   "compatibility_date": "2026-06-15",
   "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": ".open-next/assets",
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "routes": [
+    {
+      "pattern": "mustardseed.group",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.mustardseed.group",
+      "custom_domain": true
+    }
+  ],
   "vars": {
     "NEXT_PUBLIC_SITE_URL": "https://mustardseed.group"
   }
