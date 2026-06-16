@@ -55,6 +55,24 @@ Do not publish private implementation details, internal roadmaps, client data, r
   - Use for November 2022 public product shift.
 - OpenAI GPT-4 announcement: https://openai.com/index/gpt-4-research/
   - Use for March 2023 model-capability context.
+- OpenAI CLIP: https://openai.com/index/clip/
+  - Use for multimodal search and language/image context.
+- OpenAI DALL-E: https://openai.com/index/dall-e/
+  - Use for early generative image/product imagination context.
+- OpenAI Codex: https://openai.com/index/openai-codex/
+  - Use for code models and software-building workflows.
+- OpenAI Whisper: https://openai.com/index/whisper/
+  - Use for speech recognition, voice interfaces and coaching/product logging context.
+- Stability AI Stable Diffusion public release: https://stability.ai/news/stable-diffusion-public-release
+  - Use for open generative image models and creative tooling context.
+- Meta Llama: https://ai.meta.com/llama/
+  - Use for open-weight model, local experimentation and ownership context.
+- Anthropic Claude 3 family: https://www.anthropic.com/news/claude-3-family
+  - Use for model capability, long-context and reasoning context.
+- Google Gemini 1.5: https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/
+  - Use for long-context and multimodal product context.
+- OpenAI Sora: https://openai.com/index/sora/
+  - Use for video generation and broader multimodal model-stack context.
 - Stanford AI Index: https://hai.stanford.edu/ai-index
   - Use for broad adoption and industry trend context.
 - Stanford AI Index 2025 report: https://hai.stanford.edu/ai-index/2025-ai-index-report

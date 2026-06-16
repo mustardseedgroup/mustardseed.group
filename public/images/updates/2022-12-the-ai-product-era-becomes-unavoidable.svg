@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">December 2022: The AI product era becomes unavoidable</title>
-  <desc id="desc">A historical MSG archive draft on year-end note on AI moving into products.</desc>
+  <desc id="desc">Year-end note on AI moving into products</desc>
   <rect width="1200" height="630" fill="#e8e6df"/>
   <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
   <rect x="72" y="76" width="170" height="46" fill="#c69386" opacity="0.18" stroke="#c69386" stroke-width="1"/>
@@ -9,7 +9,7 @@
   <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">The AI product era</text>
   <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">becomes</text>
   <text x="72" y="388" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">unavoidable</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">year-end note on AI moving into products.</text>
+  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Year-end note on AI moving into products</text>
   
     <circle cx="880" cy="315" r="150" fill="none" stroke="#c8c3b7" stroke-width="2"/>
     <path d="M880 455 C775 385 790 235 880 180 C970 235 985 385 880 455Z" fill="#c69386" opacity="0.12" stroke="#c69386" stroke-width="3"/>

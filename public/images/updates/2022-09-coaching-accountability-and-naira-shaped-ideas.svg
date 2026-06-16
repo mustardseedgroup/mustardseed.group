@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">September 2022: Coaching, accountability and Naira-shaped ideas</title>
-  <desc id="desc">A historical MSG archive draft on AI coaching as a performance interface.</desc>
+  <title id="title">September 2022: Whisper, voice and coaching interfaces</title>
+  <desc id="desc">Speech models make coaching, logging and reflection feel less like form-filling.</desc>
   <rect width="1200" height="630" fill="#e8e6df"/>
   <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
   <rect x="72" y="76" width="170" height="46" fill="#c69386" opacity="0.18" stroke="#c69386" stroke-width="1"/>
   <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">PERFORMANCE</text>
   <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">SEPT 2022</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Coaching,</text>
-  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">accountability and</text>
-  <text x="72" y="388" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Naira-shaped ideas</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">AI coaching as a performance interface.</text>
+  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Whisper, voice and</text>
+  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">coaching</text>
+  <text x="72" y="388" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">interfaces</text>
+  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Speech models make coaching, logging and</text>
   
       <path d="M660 340 C730 220 790 465 850 320 S975 180 1090 300" fill="none" stroke="#c69386" stroke-width="4"/>
       <path d="M660 390 C760 300 830 455 920 345 S1020 300 1090 365" fill="none" stroke="#c8c3b7" stroke-width="3"/>

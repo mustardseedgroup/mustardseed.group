@@ -16,6 +16,7 @@
     "typecheck": "tsc --noEmit",
     "content:drafts": "tsx scripts/collect-public-updates.ts",
     "content:archive": "tsx scripts/generate-historical-archive.ts",
+    "content:enrich": "tsx scripts/enrich-update-articles.ts",
     "content:thumbnails": "tsx scripts/generate-update-thumbnails.ts"
   },
   "dependencies": {

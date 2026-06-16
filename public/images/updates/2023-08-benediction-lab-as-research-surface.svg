@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">August 2023: Benediction Lab as research surface</title>
-  <desc id="desc">A historical MSG archive draft on Benediction Lab as the public research home.</desc>
+  <title id="title">August 2023: Llama and the open model question</title>
+  <desc id="desc">Open-weight models change how builders think about ownership, control and experimentation.</desc>
   <rect width="1200" height="630" fill="#e8e6df"/>
   <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
   <rect x="72" y="76" width="170" height="46" fill="#8c877e" opacity="0.18" stroke="#8c877e" stroke-width="1"/>
   <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">RESEARCH</text>
   <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">AUG 2023</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Benediction Lab as</text>
-  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">research surface</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Benediction Lab as the public research home.</text>
+  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Llama and the open</text>
+  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">model question</text>
+  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Open-weight models change how builders think</text>
   
       <circle cx="880" cy="315" r="190" fill="none" stroke="#8c877e" stroke-width="2" opacity="0.32"/>
       <circle cx="880" cy="315" r="112" fill="none" stroke="#c8c3b7" stroke-width="2"/>

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">October 2016: The value of constraints</title>
-  <desc id="desc">A historical MSG archive draft on constraint as a design tool.</desc>
+  <desc id="desc">Constraint as a design tool</desc>
   <rect width="1200" height="630" fill="#e8e6df"/>
   <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
   <rect x="72" y="76" width="170" height="46" fill="#c69386" opacity="0.18" stroke="#c69386" stroke-width="1"/>
@@ -8,7 +8,7 @@
   <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">OCT 2016</text>
   <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">The value of</text>
   <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">constraints</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">constraint as a design tool.</text>
+  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Constraint as a design tool</text>
   
     <circle cx="880" cy="315" r="150" fill="none" stroke="#c8c3b7" stroke-width="2"/>
     <path d="M880 455 C775 385 790 235 880 180 C970 235 985 385 880 455Z" fill="#c69386" opacity="0.12" stroke="#c69386" stroke-width="3"/>

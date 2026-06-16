@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">February 2019: GPT-2 and the public AI conversation</title>
-  <desc id="desc">A historical MSG archive draft on GPT-2 changing expectations around generated language.</desc>
+  <desc id="desc">GPT-2 made generated language feel less like a demo and more like a coming interface shift.</desc>
   <rect width="1200" height="630" fill="#e8e6df"/>
   <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
   <rect x="72" y="76" width="170" height="46" fill="#8c877e" opacity="0.18" stroke="#8c877e" stroke-width="1"/>
@@ -9,7 +9,7 @@
   <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">GPT-2 and the</text>
   <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">public AI</text>
   <text x="72" y="388" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">conversation</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">GPT-2 changing expectations around generated</text>
+  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">GPT-2 made generated language feel less like a</text>
   
       <circle cx="880" cy="315" r="190" fill="none" stroke="#8c877e" stroke-width="2" opacity="0.32"/>
       <circle cx="880" cy="315" r="112" fill="none" stroke="#c8c3b7" stroke-width="2"/>

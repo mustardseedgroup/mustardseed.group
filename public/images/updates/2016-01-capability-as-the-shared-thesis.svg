@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">January 2016: Capability as the shared thesis</title>
-  <desc id="desc">A historical MSG archive draft on capability as the common thread.</desc>
+  <desc id="desc">Capability as the common thread</desc>
   <rect width="1200" height="630" fill="#e8e6df"/>
   <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
   <rect x="72" y="76" width="170" height="46" fill="#c69386" opacity="0.18" stroke="#c69386" stroke-width="1"/>
@@ -8,7 +8,7 @@
   <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">JAN 2016</text>
   <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Capability as the</text>
   <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">shared thesis</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">capability as the common thread.</text>
+  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Capability as the common thread</text>
   
     <circle cx="880" cy="315" r="150" fill="none" stroke="#c8c3b7" stroke-width="2"/>
     <path d="M880 455 C775 385 790 235 880 180 C970 235 985 385 880 455Z" fill="#c69386" opacity="0.12" stroke="#c69386" stroke-width="3"/>

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">March 2024: Orbit as a business operating system</title>
-  <desc id="desc">A historical MSG archive draft on Orbit as the business execution surface.</desc>
+  <desc id="desc">Orbit as the business execution surface</desc>
   <rect width="1200" height="630" fill="#e8e6df"/>
   <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
   <rect x="72" y="76" width="170" height="46" fill="#0b0b09" opacity="0.18" stroke="#0b0b09" stroke-width="1"/>
@@ -9,7 +9,7 @@
   <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Orbit as a</text>
   <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">business operating</text>
   <text x="72" y="388" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">system</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Orbit as the business execution surface.</text>
+  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Orbit as the business execution surface</text>
   
       <path d="M670 170 H1100 M670 250 H1100 M670 330 H1100 M670 410 H1100 M720 130 V460 M820 130 V460 M920 130 V460 M1020 130 V460" stroke="#c8c3b7" stroke-width="2"/>
       <rect x="740" y="210" width="140" height="120" fill="#0b0b09" opacity="0.12" stroke="#0b0b09" stroke-width="2"/>

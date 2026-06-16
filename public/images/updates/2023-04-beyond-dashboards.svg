@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">April 2023: Beyond dashboards</title>
-  <desc id="desc">A historical MSG archive draft on businesses needing execution systems, not only dashboards.</desc>
+  <desc id="desc">Businesses needing execution systems, not only dashboards</desc>
   <rect width="1200" height="630" fill="#e8e6df"/>
   <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
   <rect x="72" y="76" width="170" height="46" fill="#0b0b09" opacity="0.18" stroke="#0b0b09" stroke-width="1"/>
   <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">PRODUCT</text>
   <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">APR 2023</text>
   <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Beyond dashboards</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">businesses needing execution systems, not only</text>
+  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Businesses needing execution systems, not only</text>
   
       <path d="M670 170 H1100 M670 250 H1100 M670 330 H1100 M670 410 H1100 M720 130 V460 M820 130 V460 M920 130 V460 M1020 130 V460" stroke="#c8c3b7" stroke-width="2"/>
       <rect x="740" y="210" width="140" height="120" fill="#0b0b09" opacity="0.12" stroke="#0b0b09" stroke-width="2"/>

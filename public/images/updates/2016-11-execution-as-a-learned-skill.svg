@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">November 2016: Execution as a learned skill</title>
-  <desc id="desc">A historical MSG archive draft on execution as trained behaviour.</desc>
+  <desc id="desc">Execution as trained behaviour</desc>
   <rect width="1200" height="630" fill="#e8e6df"/>
   <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
   <rect x="72" y="76" width="170" height="46" fill="#c69386" opacity="0.18" stroke="#c69386" stroke-width="1"/>
@@ -8,7 +8,7 @@
   <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">NOV 2016</text>
   <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Execution as a</text>
   <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">learned skill</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">execution as trained behaviour.</text>
+  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Execution as trained behaviour</text>
   
       <path d="M660 340 C730 220 790 465 850 320 S975 180 1090 300" fill="none" stroke="#c69386" stroke-width="4"/>
       <path d="M660 390 C760 300 830 455 920 345 S1020 300 1090 365" fill="none" stroke="#c8c3b7" stroke-width="3"/>

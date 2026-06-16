@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">April 2018: Creative culture as product surface</title>
-  <desc id="desc">A historical MSG archive draft on creative culture as a place for product thinking.</desc>
+  <desc id="desc">Creative culture as a place for product thinking</desc>
   <rect width="1200" height="630" fill="#e8e6df"/>
   <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
   <rect x="72" y="76" width="170" height="46" fill="#6f6a61" opacity="0.18" stroke="#6f6a61" stroke-width="1"/>
@@ -8,7 +8,7 @@
   <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">APR 2018</text>
   <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Creative culture</text>
   <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">as product surface</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">creative culture as a place for product</text>
+  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Creative culture as a place for product thinking</text>
   
       <path d="M660 260 C730 180 800 340 875 260 S1025 180 1095 260" fill="none" stroke="#6f6a61" stroke-width="4"/>
       <path d="M660 340 C730 260 800 420 875 340 S1025 260 1095 340" fill="none" stroke="#c69386" stroke-width="3" opacity="0.75"/>
