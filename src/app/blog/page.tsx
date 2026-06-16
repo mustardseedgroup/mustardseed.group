@@ -128,14 +128,14 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                   aria-current={active ? "page" : undefined}
                   href={filterHref(filter.slug)}
                   key={filter.slug}
-                  className={`rounded-full border px-5 py-2 text-sm ${
+                  className={`inline-flex min-h-10 items-center gap-2 rounded-full border px-5 py-2 text-sm leading-none ${
                     active
-                      ? "border-[var(--foreground)] bg-[var(--foreground)] text-[#fbfaf7]"
+                      ? "border-[var(--clay)] bg-[var(--clay)] text-[var(--foreground)]"
                       : "border-[var(--soft-line)] text-[var(--muted)] transition hover:border-[var(--foreground)] hover:text-[var(--foreground)]"
                   }`}
                 >
                   {filter.label}
-                  <span className="ml-2 opacity-60">{filterCounts.get(filter.slug) ?? 0}</span>
+                  <span className="opacity-65">{filterCounts.get(filter.slug) ?? 0}</span>
                 </Link>
               );
             })}
