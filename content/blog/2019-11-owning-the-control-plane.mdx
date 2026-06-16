@@ -19,11 +19,11 @@ tags:
 
 ## Where decisions live
 
-There is a surface in every system where decisions are made and actions are directed. Not where work happens — where work is *orchestrated*. Call it the control plane.
+There is a surface in every system where decisions are made and actions are directed. Not where work happens. Where work is *orchestrated*. Call it the control plane.
 
 In an aircraft, the control plane is the cockpit. The engines, landing gear, and navigation instruments are all subordinate to it. The cockpit does not do the flying; it coordinates the systems that do. Its value is not its own output but its position relative to everything else.
 
-In enterprise software, the control plane has traditionally been fragmented. Decisions about sales live in one system. Decisions about delivery live in another. Decisions about resource allocation live in a spreadsheet that one person owns and nobody else fully understands. The result is not coordination — it is the appearance of coordination, with real coordination happening in someone's head, or in a meeting, or across a chain of messages.
+In enterprise software, the control plane has traditionally been fragmented. Decisions about sales live in one system. Decisions about delivery live in another. Decisions about resource allocation live in a spreadsheet that one person owns and nobody else fully understands. The result is not coordination, but the appearance of coordination, with real coordination happening in someone's head, or in a meeting, or across a chain of messages.
 
 This fragmentation is not an accident. Systems get built to solve one problem at a time. A CRM solves contact management. A project tool solves task tracking. An invoicing tool solves billing. Each is purpose-built, and each is coherent on its own terms. But no single system sits above the others. No single surface says: here is the full commercial picture, here is what needs to happen, here is who is doing what and why.
 
@@ -33,31 +33,31 @@ The control plane is unowned. That absence is the product opportunity.
 
 Most software products are tools. A tool does a specific thing. You pick it up, you use it, you put it down. The value is in the action it enables.
 
-A system is different. A system holds state. It accumulates context over time. It allows different participants to orient themselves against a shared picture of reality. It does not just enable individual actions — it coordinates sequences of actions across people, processes and time.
+A system is different. A system holds state. It accumulates context over time. It allows different participants to orient themselves against a shared picture of reality. It does not just enable individual actions: it coordinates sequences of actions across people, processes and time.
 
-The CRM as a category was meant to be a system in this sense. Customer relationship management implies a full-picture view of the commercial relationship, not just a database of contacts. But in practice, most CRMs became sophisticated address books with reporting bolted on. The control plane — the surface where commercial decisions are actually made — never fully moved into them.
+The CRM as a category was meant to be a system in this sense. Customer relationship management implies a full-picture view of the commercial relationship, not just a database of contacts. But in practice, most CRMs became sophisticated address books with reporting bolted on. The control plane, the surface where commercial decisions are actually made, never fully moved into them.
 
 What typically happened instead is that the CRM became one input among many. Someone would pull data from it, combine it with pipeline information, layer in delivery status, and then do the actual reasoning somewhere outside the tool. The tool tracked inputs; the human synthesised outputs; the decision lived in neither place.
 
-The commercial operating surface — the control plane — remained, effectively, a person.
+The commercial operating surface, the control plane, remained, effectively, a person.
 
 ## Why this matters now
 
 In November 2019, the AI capabilities that would later make reasoning systems genuinely useful are still early. But the architectural question is already visible: as more of cognition gets delegated to software, where does the delegation surface sit?
 
-If you are a tool — a single-purpose application that does one thing — you receive inputs and produce outputs. You are used. You do not orchestrate.
+If you are a tool, a single-purpose application that does one thing, you receive inputs and produce outputs. You are used. You do not orchestrate.
 
-If you own the control plane, the situation is different. You are the surface that other tools report to. You are where decisions get made, where priorities get set, where context is held. When intelligence gets layered in, it gets layered in at the point where decisions are made — which means it gets layered in at you.
+If you own the control plane, the situation is different. You are the surface that other tools report to. You are where decisions get made, where priorities get set, where context is held. When intelligence gets layered in, it gets layered in at the point where decisions are made, which means it gets layered in at you.
 
 This is not an abstract positioning argument. It is a structural one. The system that holds the control plane is not just one tool among many. It is the system that defines what all the other tools are doing and why.
 
-Owning that surface is a different kind of ambition than building a better feature set. It requires holding more context, coordinating more complexity, and accepting more responsibility for outcomes — not just individual actions.
+Owning that surface is a different kind of ambition than building a better feature set. It requires holding more context, coordinating more complexity, and accepting more responsibility for outcomes, not just individual actions.
 
 ## What we are building toward
 
-Orbit is not being built as another CRM, or another project management tool, or another pipeline tracker. It is being built as the operating surface for commercial execution — the place where the full lead-to-launched-product workflow lives in one coherent picture.
+Orbit is not being built as another CRM, or another project management tool, or another pipeline tracker. It is being built as the operating surface for commercial execution: the place where the full lead-to-launched-product workflow lives in one coherent picture.
 
-That means: how a lead becomes a client, how a client engagement gets scoped and delivered, how a project moves from kicked off to completed, how invoices follow deliverables, how the knowledge from one engagement informs the next. Not isolated records — a continuous, navigable picture of commercial reality.
+That means: how a lead becomes a client, how a client engagement gets scoped and delivered, how a project moves from kicked off to completed, how invoices follow deliverables, how the knowledge from one engagement informs the next. Not isolated records. A continuous, navigable picture of commercial reality.
 
 This is harder to build than a tool. A tool has a clear scope. The control plane scope is, by design, broader than any one function. That breadth is the point: the value is in the coordination, not the individual capability.
 
@@ -69,11 +69,11 @@ The test is always: does this move the surface where the decision gets made? If 
 
 There is a reason the control plane is unowned: it is genuinely difficult to build. Every additional function that gets pulled into a single operating surface increases the coordination burden. More context means more things to hold correctly. More functions mean more potential for incoherence. The complexity scales non-linearly.
 
-This is also why, once a system achieves meaningful coverage of the control plane, it becomes structurally difficult to displace. The switching cost is not about features — it is about context. If a system has accumulated a year of commercial history, relationship context, project records and delivery data, replacing it means either migrating all of that or starting from scratch. Neither is appealing.
+This is also why, once a system achieves meaningful coverage of the control plane, it becomes structurally difficult to displace. The switching cost is not about features: it is about context. If a system has accumulated a year of commercial history, relationship context, project records and delivery data, replacing it means either migrating all of that or starting from scratch. Neither is appealing.
 
 The moat in operating systems is not performance. It is accumulated context held in the right place.
 
-That accumulation takes time to build and requires real usage to fill. The system has to be genuinely useful at each stage before the full picture is complete — otherwise nobody uses it long enough to build the context. This is the design challenge: create a surface that is immediately valuable in a narrow way, and progressively more valuable as it accumulates wider context.
+That accumulation takes time to build and requires real usage to fill. The system has to be genuinely useful at each stage before the full picture is complete, otherwise nobody uses it long enough to build the context. This is the design challenge: create a surface that is immediately valuable in a narrow way, and progressively more valuable as it accumulates wider context.
 
 ## The intelligence layer
 
@@ -83,12 +83,12 @@ At the moment, the answer is mostly speculative. The capabilities are not yet ma
 
 The intelligence layer is not a separate product. It is a capability that belongs inside the operating surface. It reads the context that the operating surface has accumulated. It returns reasoning and direction at the point where decisions are made. It enhances the control plane rather than routing around it.
 
-This is part of why Orion — the intelligence layer we are developing — is being built in direct relation to Orbit, not as a standalone product. Intelligence without context is just noise. Context without intelligence is just data. The value is in the combination: context held in the right place, with reasoning available at the moment decisions are made.
+This is part of why Orion, the intelligence layer we are developing, is being built in direct relation to Orbit, not as a standalone product. Intelligence without context is just noise. Context without intelligence is just data. The value is in the combination: context held in the right place, with reasoning available at the moment decisions are made.
 
 ## Closing note
 
 The portfolio only makes sense when the centre is clear. Benediction Lab explores what becomes possible at the edges of AI capability. TUXX tests patterns in live environments. Orbit holds the commercial operating surface where those patterns eventually need to land.
 
-The ambition is not to build the most features, or to move the fastest, or to raise the most. It is to own the surface where work is directed — and to build that surface well enough that everything else can be coordinated from it.
+The ambition is not to build the most features, or to move the fastest, or to raise the most. It is to own the surface where work is directed, and to build that surface well enough that everything else can be coordinated from it.
 
 The control plane is unowned. That is where we are building.

@@ -24,11 +24,11 @@ There is a question underneath the AI product conversation that almost nobody is
 
 This sounds like an engineering question. It is actually a product question, and under that, an organisational one.
 
-Every AI system in use today has some relationship to context. The model receives a window of information — some text, some history, some instruction — and it produces a response based on that window. The window closes. The next interaction opens a new one. Whatever was not explicitly passed back in is gone.
+Every AI system in use today has some relationship to context. The model receives a window of information, some text, some history, some instruction, and it produces a response based on that window. The window closes. The next interaction opens a new one. Whatever was not explicitly passed back in is gone.
 
 This works well enough for isolated tasks. It breaks down quickly for ongoing work.
 
-If you are using a language model to help draft a client proposal, and you have spent three sessions refining the positioning, the tone, the specific language the client responded well to — none of that is automatically available in session four. You either rebuild it manually each time, or the quality degrades, or you stop using the tool because the cognitive overhead is too high.
+If you are using a language model to help draft a client proposal, and you have spent three sessions refining the positioning, the tone, the specific language the client responded well to: none of that is automatically available in session four. You either rebuild it manually each time, or the quality degrades, or you stop using the tool because the cognitive overhead is too high.
 
 That degradation is not a model failure. It is a memory architecture failure. And it is the main reason AI tools that impress in demos underperform in daily operational use.
 
@@ -36,17 +36,17 @@ That degradation is not a model failure. It is a memory architecture failure. An
 
 The technical framing for this problem in early 2021 is context windows. Models can only attend to so much text at once. Make the window too small, and the model loses track of earlier work. Make it larger, and inference becomes expensive and slow.
 
-This is a real constraint, and it shapes everything. But the economic argument about window size misses something important. Even if context windows grow significantly — and they will — the question of *what to put in them* remains. Longer windows do not eliminate the curation problem. They defer it.
+This is a real constraint, and it shapes everything. But the economic argument about window size misses something important. Even if context windows grow significantly, and they will, the question of *what to put in them* remains. Longer windows do not eliminate the curation problem. They defer it.
 
 When a system can technically hold one hundred pages of context, the question becomes: whose hundred pages? Which conversations? Which decisions? Which background documents? Which institutional norms?
 
-A longer window creates more surface area for noise. The signal question — what actually matters to this task, this person, this moment — does not get easier. It gets harder to answer sloppily.
+A longer window creates more surface area for noise. The signal question, what actually matters to this task, this person, this moment, does not get easier. It gets harder to answer sloppily.
 
 This is where the product design challenge becomes genuinely interesting. Memory is not just storage. It is selection. And selection requires a model of what the work actually is.
 
 ## What organisations lose when systems forget
 
-There is an organisational cost to memory failure that is rarely quantified. Every time a knowledge worker re-explains context to a tool, to a colleague, to a system — time is spent re-establishing ground that was already covered. This is friction most people have learned to live with because they have never experienced the alternative.
+There is an organisational cost to memory failure that is rarely quantified. Every time a knowledge worker re-explains context to a tool, to a colleague, to a system: time is spent re-establishing ground that was already covered. This is friction most people have learned to live with because they have never experienced the alternative.
 
 The alternative is a system with genuine persistent understanding of the work. Not just keyword retrieval from a database, but something closer to how a trusted colleague operates. A colleague who knows your standards, your history with a client, your current priorities, the decisions you made last month and why.
 
@@ -62,7 +62,7 @@ There is a useful distinction to draw between what a system knows because it was
 
 Explicit memory is declarative. A user writes a note. A document is uploaded. An instruction is set. The system holds it and refers to it. This is manageable, predictable, and easy to audit.
 
-Implicit context is different. It is built from patterns across interactions. The system learns — or should learn — that this user prefers shorter outputs, that this type of task usually leads to a revision cycle, that this particular phrase has meant something specific in previous conversations. No single explicit instruction covers any of that. It emerges through use.
+Implicit context is different. It is built from patterns across interactions. The system learns, or should learn, that this user prefers shorter outputs, that this type of task usually leads to a revision cycle, that this particular phrase has meant something specific in previous conversations. No single explicit instruction covers any of that. It emerges through use.
 
 Both kinds of memory matter, but they operate differently, and they carry different risks.
 

@@ -20,79 +20,85 @@ tags:
   - performance
 ---
 
-## The moment that gets lost
+## The problem is not the knowledge
 
-There is a specific moment in performance that is notoriously hard to capture. Not the workout itself. Not the weigh-in. Not the Sunday evening intention-setting. It is the moment between stimulus and decision — the thirty seconds before someone picks up their phone, walks to the kitchen, skips the session, or pushes through. That moment carries real information. It is where the actual gap between intention and behaviour lives.
+Ask most AI coaching products what they are building and they will tell you: an intelligent system that knows a great deal about fitness, nutrition, recovery, and human performance. The knowledge base is impressive. The reasoning is articulate. The system can tell you the difference between progressive overload and periodisation, explain the mechanisms of sleep debt, or lay out a sensible framework for navigating a caloric deficit whilst maintaining muscle.
 
-Most coaching tools miss it entirely. By design, almost. The feedback loop works like this: something happens, time passes, the user opens an app, enters data, and the system processes the entry. The entry is almost always a simplified, retrospective account of what occurred. The emotional texture is gone. The context is gone. What remains is a number, a checkbox, or a few words typed into a log field.
+None of that is the hard part.
 
-This is the form-filling problem. And it is not a small one. It shapes what coaching software can actually do.
+The hard part is knowing who you are talking to — specifically, not categorically — and knowing what they actually need to hear at this particular moment in their particular week. That is a different problem entirely. And it is the one that most coaching software has not seriously addressed.
 
-## Whisper arrives
-
-In September 2022, OpenAI released Whisper — a general-purpose speech recognition model trained on a large and diverse corpus of audio. The technical headline was accuracy across accents, languages, and recording conditions. But the more interesting property, for our purposes, was something quieter: it made transcription feel like a reasonable building block rather than a fragile integration.
-
-Before robust speech-to-text, voice input in consumer software was either a novelty or a liability. The error rate was high enough that it created more friction than it removed. Correcting a misheard sentence is more annoying than typing it in the first place. The result was that voice remained a feature nobody actually trusted.
-
-What Whisper signals is a different order of reliability. When transcription works well enough that users stop thinking about it, the modality changes from a technical curiosity into an actual interface layer. Voice becomes something a product can be designed around, not something bolted onto an existing design after the fact.
-
-That distinction matters for performance coaching in particular.
+This is where the thinking around Naira sat in September 2022: not on what the system knows, but on what the system can see.
 
 ## What coaching actually requires
 
-The word "coaching" is used loosely in the wellness software space. Most products that call themselves coaching apps are delivering personalisation at best and content libraries at worst. A tailored training plan is not coaching. A push notification reminding you to drink water is not coaching. A conversational interface that answers fitness questions is closer, but still not it.
+There is a category of insight that coaching textbooks call "individualisation." It is the recognition that two people can share identical goals, identical schedules, identical bodies on paper, and still need entirely different interventions. One person needs permission to rest. Another needs confrontation. One needs a smaller target so that their next success is achievable. Another needs a harder one because they have been coasting.
 
-Coaching, in the meaningful sense, requires a model of the person. Not a demographic profile or a set of stated goals — those are inputs. What coaching requires is an understanding of this person's specific standards, their recent history, their current physical and psychological state, and — critically — where they typically fall short and why.
+The individualisation problem cannot be solved by a knowledge base, however comprehensive. It requires a model of the person: their history, their standards, their current state, and — this is the part that is genuinely hard — the specific patterns in which they tend to fall short.
 
-That last element is the hardest to capture in software. The patterns of failure are individual. One person consistently trains hard but under-recovers. Another person has strong discipline from Monday to Thursday and then loses structure at the weekend. A third manages food well during low-stress weeks and completely abandons the pattern under pressure. The right coaching response to each of these situations is completely different, and it cannot be inferred from generic category membership.
+Those patterns are not the same as failure frequency. Someone who trains consistently for three weeks and then collapses at week four is a different person from someone who trains intermittently but maintains a floor. Someone who eats well under routine conditions but abandons the pattern when travelling is a different design challenge from someone who struggles most on Thursdays, specifically when a particular work pressure arrives. A coach who has worked with a person for long enough knows these things. Most coaching software does not know them at all.
 
-Building a system that can offer useful feedback at the right moment — specific, timely, calibrated to the person rather than the population — is the actual design problem.
+What software knows instead is what was entered. And what gets entered is usually a cleaned-up retrospective version of what actually happened. A number. A checkbox. A few words written after the fact, when the emotional texture of the moment has already faded.
+
+## The moment that gets missed
+
+There is a specific moment in performance that is extremely hard to capture in software. Not the workout. Not the weigh-in. Not the weekly review. It is the moment of decision — the thirty seconds before someone puts on their shoes or decides not to, reaches for the useful thing or the comfortable one, texts a friend or opens Instagram.
+
+That moment carries real information. It is where the actual gap between intention and behaviour lives. It is where the person's internal state is most legible: the quality of their sleep, the pressure they are under, the thing they said to themselves to justify the choice they were already leaning towards.
+
+If you could capture that moment — not interpret it yet, just capture it — you would have something meaningful to work with. A coach who receives that information can give calibrated feedback. A system that receives it can start to build the kind of model that makes calibrated feedback possible.
+
+The form-filling paradigm does not capture this moment. By the time someone opens an app and types a log entry, the moment is gone. The entry they write is a summary, not a signal.
+
+## Whisper and a different kind of input
+
+In September 2022, OpenAI released Whisper — a speech recognition model trained on a large, diverse corpus of audio across many languages and recording conditions. The technical story was accuracy and robustness. The more significant thing, for how we were thinking about CheekyGains at the time, was that it made voice input credible as a building block.
+
+Before accurate speech-to-text, voice in consumer software was either a novelty or an engineering liability. Error rates were high enough that the correction overhead cancelled out the benefit. The result was that voice remained a feature nobody actually designed around — it was bolted on, optional, usually used by nobody.
+
+When transcription becomes reliable enough that users stop thinking about it, the modality changes. Voice becomes an interface layer rather than a parlour trick. And that matters for performance coaching in a specific way: it changes what inputs are realistic to expect from people in the moments that actually matter.
+
+Someone who has just had a hard session, or who is standing in the kitchen deciding whether to prepare food or order in, or who is lying in bed trying to assess how they feel — that person is not going to open an app and fill in a structured form. But they might say something out loud. Especially if they believe something useful will happen as a result.
+
+"I slept badly, I've got a full day, I'm supposed to train this afternoon but I don't want to" — that sentence takes five seconds to speak. It is not something anyone types into a logging field. And it contains exactly the kind of information a performance coach would want: current state, competing pressures, the fact that the person is still in enough contact with their intention that they reached for the system at all.
+
+What matters is what happens next.
 
 ## Naira as a design challenge
 
-Naira is the AI performance coach inside CheekyGains. The name is straightforward; the design challenge is not.
+Naira is the AI performance coach inside CheekyGains. The name is simple. The design problem is not.
 
-The tempting architecture for an AI coach is a language model with a comprehensive fitness knowledge base and a chat interface. Ask Naira a question, get an informed answer. That is a reasonable starting point, but it solves the wrong problem. Most of the time, the person does not have a question. They have a situation. And the situation is not well-structured enough to ask about.
+The tempting architecture is a language model with a well-organised fitness knowledge base, wrapped in a conversational interface. Ask Naira a question, get an informed answer. That is functional. It is also missing the point.
 
-This is where voice becomes genuinely important, and where Whisper's arrival in the research landscape mattered to how we were thinking about CheekyGains at this point in the year.
+The person does not usually have a well-formed question. They have a situation. And the situation is messy, pressured, incompletely articulated, and often not the situation they think it is. What looks like a motivation problem is frequently a recovery problem. What looks like a discipline problem is frequently a target-setting problem. What looks like inconsistency is frequently a structural problem in how the week is designed.
 
-If someone can speak to the system — briefly, imperfectly, in whatever words come naturally — the quality of the captured context goes up substantially. "I slept badly, I'm behind at work, I'm supposed to train today but I don't want to" is not something anyone types into a log field. It is something someone might say out loud. And it contains exactly the kind of information a coach would want: current state, competing demands, resistance, and the fact that the person is still in enough proximity to the decision that they reached for the system at all.
+A system that waits to be asked questions will be answered when things are calm and settled — exactly when coaching is least necessary. What is needed instead is a system that can receive imprecise, pressured, natural-language input at the moments when things are not settled, and respond in a way that is specific to the person and useful to the situation.
 
-The question is what the system does with it.
+That is a harder architecture. It requires the system to maintain a model of the person over time — their standards, their history, the patterns in which they tend to struggle — and to use that model to interpret what is being shared right now. It requires knowing when to push back and when to give permission. It requires distinguishing between a pattern that needs confrontation and a single difficult day that needs acknowledgement.
 
-## The accountability gap
+Generic motivational content — the kind that fills the gap when a system does not have enough context to say anything specific — is not neutral. It actively damages trust. If someone shares that they are struggling and the system responds with a variation of "you've got this," they learn that the system does not understand them. After a few of those interactions, they stop sharing. The system loses access to exactly the inputs it needs to get better.
 
-Accountability is another word that gets used loosely. In the consumer fitness space it often means a streak counter, a progress ring, or a social feature where friends can see your workouts. These are not accountability. They are gamification adjacent to the idea of accountability.
+## Accountability without the metaphors
 
-Real accountability involves a standard that was set, behaviour that departed from it, and a response to that departure that is calibrated to the person and the circumstances. It requires specificity. "You said you would train five days this week. You trained three. What happened on Wednesday and Friday?" is an accountability conversation. A broken streak is a UI metaphor for one.
+Accountability is used loosely in the consumer fitness space. It tends to mean streak counters, progress rings, leaderboards, or social features where friends can see your activity. These are not accountability. They are gamification that borrows the language of accountability.
 
-The gap between these two things is where most coaching software lives. It knows that a logged workout happened. It does not know what the week felt like, what trade-offs were made, what the person was deciding against when they decided not to train. It cannot have a calibrated response to something it does not know.
+Real accountability is more specific and less comfortable. It involves a standard that was set, behaviour that departed from it, and a response to that departure that is calibrated to the circumstances. "You committed to training five days this week. You trained three. What happened on Wednesday?" is an accountability conversation. A broken ring is a UI metaphor for the idea of one.
 
-Voice input, if it is low-friction enough to be used in the actual moments of decision, starts to close this gap. Not because transcription is the same as understanding, but because the raw material for understanding gets captured rather than lost.
+The gap between these two things is where most coaching software lives. The system knows that a logged workout happened or did not. It does not know what the week felt like from the inside, what was traded off against the session, what the person told themselves to justify the decision. It cannot have a calibrated response to information it never received.
 
-## The responsibility that follows
+Voice input, used consistently at the actual moments of decision, starts to close this gap. Not because a transcription is equivalent to understanding — it is not — but because the raw material for understanding gets captured rather than lost. The system has something real to work with. And over time, across many such moments, it can start to see the patterns that a human coach would see.
 
-There is a design responsibility that comes with this territory.
+## The responsibility that comes with this access
 
-A system that meets people in their uncertain, pressured, or compromised moments has to be careful about what it does with that access. The goal of a performance coach is to help someone act in accordance with their own standards — not to optimise a metric, not to increase session frequency at the cost of everything else, not to generate data for its own sake.
+A system that meets people in their uncertain, pressured, or compromised moments has a specific responsibility. It has access to states that most software never sees. That access is only warranted if the system does something useful with it.
 
-This means the coach has to be useful, bounded, and honest. Useful: the response should actually help with the situation rather than offer generic encouragement. Bounded: the system should know what it can and cannot assess from a voice note and operate within those limits. Honest: if someone is clearly in a state where rest is the right answer, the coach should say so, even if that means a missed session that damages a streak.
+Useful means specific. A response that could have been generated for anyone is not useful to the person who shared something particular. It is noise dressed up as support. The bar for an AI coach is not being encouraging. It is being calibrated — which requires having enough of a model of the person that what you say is actually for them.
 
-Generic motivational content — the kind that fills the space when a system does not have enough context to say something specific — is not neutral. It erodes trust faster than silence. If a person shares that they are struggling and the system responds with a variation of "you've got this," they learn quickly that the system does not actually understand them. After a few of those interactions, they stop sharing.
+This was the design problem in September 2022. Not "can we build a coach that knows about fitness?" but "can we build a coach that knows about this person?" The infrastructure for better inputs was arriving. The harder question was what the system would do with them.
 
-The bar for an AI coach is not answering fitness questions correctly. It is maintaining enough of a model of the person that the feedback it offers feels like it was meant for them.
+Naira is an attempt to take that question seriously. Not in the product-marketing sense — not "personalised AI coaching" as a feature description — but in the sense of actually building something that earns trust by being specific, bounded, and honest enough to be worth talking to.
 
-## What this period was actually about
-
-In September 2022, the infrastructure around voice input was becoming credible in a way it had not been before. That is what Whisper represented to us, separate from its technical merits as a transcription model.
-
-The coaching design problem — how to capture context that normally gets lost, how to build a model of a specific person rather than a generalised user, how to offer feedback that is timed and calibrated rather than generic — is not a voice problem. Voice is a surface. The underlying problem is representational and architectural.
-
-But surfaces matter. A coaching system that requires form-filling will get form-filling data. A coaching system that can receive a thirty-second voice note after a difficult session will get something closer to the truth. And the closer the input is to the truth, the more possible it becomes to actually help.
-
-Naira is an attempt to build something worth talking to. Not in the conversational novelty sense. In the sense that when a person reaches for it at a difficult moment, it has something useful to offer.
-
-That is a high bar. The work in this period was about understanding where the bar actually sits, and what it would take to meet it.
+That is a high bar. This period of work was about understanding where the bar actually sits, and what it would take to consistently meet it.
 
 ---
 
