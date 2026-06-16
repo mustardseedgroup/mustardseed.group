@@ -19,9 +19,9 @@ tags:
 
 ## What organisations do with context
 
-Every organisation has a version of the same meeting. Someone walks into a room — new to the project, new to the relationship, or simply returning after three weeks away — and spends the first twenty minutes being caught up. Not on decisions. On context. On the logic behind the decisions, the conversations that shaped them, the constraints that were never written down.
+Every organisation has a version of the same meeting. Someone walks into a room, new to the project, new to the relationship, or simply returning after three weeks away, and spends the first twenty minutes being caught up. Not on decisions. On context. On the logic behind the decisions, the conversations that shaped them, the constraints that were never written down.
 
-This is not a failure of communication. It is a failure of memory. The organisation forgot, so the people inside it have to remember on its behalf — in real time, at the cost of attention and momentum.
+This is not a failure of communication. It is a failure of memory. The organisation forgot, so the people inside it have to remember on its behalf, in real time, at the cost of attention and momentum.
 
 The strange thing is how accepted this is. The re-explanation meeting. The onboarding document that goes stale before it is finished. The context that lives only in the head of the one person who was there. We have built elaborate workflows around the assumption that institutional memory is mostly unavailable, and so we compensate with repetition. We re-explain. We reconstruct. We ask again.
 
@@ -29,9 +29,9 @@ The question worth sitting with is not how to document more. It is why systems a
 
 ## The leak
 
-Energy is the wrong word for what organisations lose through repeated explanation, but it is close enough to be useful. The more precise word is attention — and attention, unlike money, cannot be recovered. When a capable person spends forty minutes reconstructing the background of a project that already exists somewhere in a shared folder, or in someone's email, or in their own memory from six months ago, that is not inefficiency in the accounting sense. It is a kind of structural waste that compounds over time without appearing on any balance sheet.
+Energy is the wrong word for what organisations lose through repeated explanation, but it is close enough to be useful. The more precise word is attention, and attention, unlike money, cannot be recovered. When a capable person spends forty minutes reconstructing the background of a project that already exists somewhere in a shared folder, or in someone's email, or in their own memory from six months ago, that is not inefficiency in the accounting sense. It is a kind of structural waste that compounds over time without appearing on any balance sheet.
 
-Organisations that grow quickly tend to develop this problem faster than organisations that grow slowly. Each new person added to a team multiplies the surface area across which context must travel. The original understanding — the reason the thing was built the way it was, the constraint that shaped the product, the conversation that changed direction — does not scale with headcount. It dilutes.
+Organisations that grow quickly tend to develop this problem faster than organisations that grow slowly. Each new person added to a team multiplies the surface area across which context must travel. The original understanding, the reason the thing was built the way it was, the constraint that shaped the product, the conversation that changed direction, does not scale with headcount. It dilutes.
 
 The conventional response is documentation. Write it down, keep it somewhere findable, update it when things change. This is not wrong. But it is insufficient, because the problem is not that information is absent. It is that information exists in a form that cannot be retrieved usefully in the moment it is needed.
 
@@ -43,13 +43,13 @@ That is still a human doing the job of a system.
 
 Genuine institutional memory has three properties that filing systems almost never provide.
 
-The first is continuity. Memory is not a snapshot. It is a thread — a record of how things were, how they changed, and why. A document captures a state. Memory captures the path that led to that state. The distinction matters enormously when someone is trying to understand whether a decision is still valid or whether the circumstances that justified it have shifted.
+The first is continuity. Memory is not a snapshot. It is a thread: a record of how things were, how they changed, and why. A document captures a state. Memory captures the path that led to that state. The distinction matters enormously when someone is trying to understand whether a decision is still valid or whether the circumstances that justified it have shifted.
 
-The second is accessibility. Memory that cannot be found quickly enough to be useful is not functioning memory. The relevant question is not whether the information exists but whether it can surface at the right moment — during the meeting, before the call, in the minute before a decision is made. Speed of retrieval determines whether memory actually changes behaviour.
+The second is accessibility. Memory that cannot be found quickly enough to be useful is not functioning memory. The relevant question is not whether the information exists but whether it can surface at the right moment: during the meeting, before the call, in the minute before a decision is made. Speed of retrieval determines whether memory actually changes behaviour.
 
-The third is relevance. Raw information retrieval is not memory. Memory filters. It surfaces what matters for the current moment and suppresses what does not. A system that returns everything it knows is not helping anyone think — it is creating a new search problem on top of the original one.
+The third is relevance. Raw information retrieval is not memory. Memory filters. It surfaces what matters for the current moment and suppresses what does not. A system that returns everything it knows is not helping anyone think. It is creating a new search problem on top of the original one.
 
-These three properties — continuity, accessibility, relevance — are difficult to achieve simultaneously. Achieving one tends to compromise the others. Continuity creates large, rich records that are slow to retrieve. Fast retrieval systems tend to flatten context, sacrificing continuity for speed. Relevance filtering is hard because relevance changes depending on who is asking and why.
+These three properties, continuity, accessibility, and relevance, are difficult to achieve simultaneously. Achieving one tends to compromise the others. Continuity creates large, rich records that are slow to retrieve. Fast retrieval systems tend to flatten context, sacrificing continuity for speed. Relevance filtering is hard because relevance changes depending on who is asking and why.
 
 Software has not solved this. Most tools solve one property and ignore the other two. Wikis offer continuity but poor relevance. Search tools offer fast retrieval but poor continuity. Neither surfaces the right context at the right moment without a human mediating the process.
 
@@ -57,23 +57,33 @@ Software has not solved this. Most tools solve one property and ignore the other
 
 The deeper issue is that most software is not designed to remember at all. It is designed to record, which is a different thing.
 
-A CRM records contacts and deal stages. An email client records correspondence. A project management tool records tasks and comments. These are all logs — accurate accounts of what happened, written to be queried by a human. They are not memory systems. They do not connect across themselves. They do not surface relevant context when it becomes relevant. They do not distinguish between what matters and what is noise.
+A CRM records contacts and deal stages. An email client records correspondence. A project management tool records tasks and comments. These are all logs: accurate accounts of what happened, written to be queried by a human. They are not memory systems. They do not connect across themselves. They do not surface relevant context when it becomes relevant. They do not distinguish between what matters and what is noise.
 
-When someone sits down to make a decision in the context of a project, they typically draw on at least four or five distinct systems simultaneously — email, notes, project tools, previous documents, memory of conversations — and synthesise them manually. The synthesis is the cognitive work, and software has largely left that work entirely to the human.
+When someone sits down to make a decision in the context of a project, they typically draw on at least four or five distinct systems simultaneously, email, notes, project tools, previous documents, memory of conversations, and synthesise them manually. The synthesis is the cognitive work, and software has largely left that work entirely to the human.
 
 This is a design assumption more than a technical limitation. The assumption is that humans are the right agents for integrating context across systems, and that software's job is to store and surface information cleanly at the point of request. That assumption has been stable for long enough that most interface design treats it as a given.
 
 It is worth questioning whether it should continue to be.
 
+## Forgetting by design, forgetting by neglect
+
+There is a distinction that does not get made often enough: the difference between forgetting by design and forgetting by neglect.
+
+Forgetting by neglect is what most organisations do. Context accumulates, tools multiply, no one takes responsibility for what the system should know, and so the system ends up knowing nothing useful. The information is technically in there, somewhere, distributed across a dozen tools in a dozen formats, retrievable by someone patient enough to go looking. This kind of forgetting is usually treated as a resource problem: if only there were time to keep things updated, if only the documentation were better. But the problem is structural. Individual effort cannot fix a system that was not designed to remember.
+
+Forgetting by design is something different. It is the deliberate choice about what a system should hold, for how long, and in what form. A system that retains everything indefinitely is not the same as a system with good memory. It may be worse. Information that no longer applies, context that has expired, decisions made under constraints that have since changed: these can be actively misleading. Good memory is curated, not merely stored.
+
+The question of expiry is rarely asked. How long is a client brief still relevant? At what point does a piece of strategic context become noise? When does a decision log stop being a useful record and start being an archive that no one should rely on? These are design questions, not database questions. They require thinking about how time changes the value of information.
+
 ## The question of who holds what
 
 Not all memory should be held by the same system or the same person. This is obvious when stated plainly but rarely designed for in practice.
 
-Some context belongs to a person — understanding of a specific relationship, judgement about a client's real priorities, intuition built up through experience. That kind of memory is legitimate to leave in human hands. It is personal, nuanced, and changes with each encounter.
+Some context belongs to a person: understanding of a specific relationship, judgement about a client's real priorities, intuition built up through experience. That kind of memory is legitimate to leave in human hands. It is personal, nuanced, and changes with each encounter.
 
-Some context belongs to the organisation — the decisions made and why, the direction that was set and the logic behind it, the constraints that shape what is possible. This kind of memory is institutional. It should not be locked in one person's head. When that person leaves, takes a break, or simply is not in the room, the organisation should not have to start again.
+Some context belongs to the organisation: the decisions made and why, the direction that was set and the logic behind it, the constraints that shape what is possible. This kind of memory is institutional. It should not be locked in one person's head. When that person leaves, takes a break, or simply is not in the room, the organisation should not have to start again.
 
-Some context belongs to the system — what happened when, in what order, at what stage of what process. This is transactional memory. It is the most straightforward to capture and the most underused. Systems that know their own history are genuinely more useful than systems that do not, and yet most software products treat each session as a fresh start.
+Some context belongs to the system: what happened when, in what order, at what stage of what process. This is transactional memory. It is the most straightforward to capture and the most underused. Systems that know their own history are genuinely more useful than systems that do not, and yet most software products treat each session as a fresh start.
 
 The question of what should be remembered, by whom, for how long, is a design question. It does not have a universal answer. But it has to be asked deliberately, because the default is always forgetting.
 
@@ -81,11 +91,21 @@ The question of what should be remembered, by whom, for how long, is a design qu
 
 September 2017 is not the beginning of thinking about memory in software. The problem has been recognisable for years. What is shifting is the plausibility of doing something about it.
 
-The techniques that make contextual retrieval possible — embedding representations of meaning rather than just indexing keywords, connecting information across sources rather than within single systems, surfacing relevance based on current context rather than explicit queries — are becoming more tractable. The underlying research is moving. The gap between what is theoretically possible and what a product team can reasonably build is narrowing.
+The techniques that make contextual retrieval possible, embedding representations of meaning rather than just indexing keywords, connecting information across sources rather than within single systems, surfacing relevance based on current context rather than explicit queries, are becoming more tractable. The underlying research is moving. The gap between what is theoretically possible and what a product team can reasonably build is narrowing.
 
-This matters to how we think about Orion. The initial conception of Orion is partly a research question about what a genuine memory layer would look like — not for a consumer app, but for an operating system built for professional and commercial contexts. What does it mean for a system to know what matters, for whom, and when? What are the right boundaries between human memory and system memory? What should never be delegated to a machine?
+This matters to how we think about Orion. The initial conception of Orion is partly a research question about what a genuine memory layer would look like, not for a consumer app, but for an operating system built for professional and commercial contexts. What does it mean for a system to know what matters, for whom, and when? What are the right boundaries between human memory and system memory? What should never be delegated to a machine?
 
-These are not AI questions in the narrow sense of the term. They are questions about how systems relate to time, to history, and to the humans working through them.
+These are not AI questions in the narrow sense of the term. They are questions about how systems relate to time, to history, and to the humans working through them. The reason Benediction Lab exists as a distinct research surface is partly because those questions require a different pace and posture than product development. You cannot answer them by shipping features. You have to think about them carefully first.
+
+## Memory and the shape of the system
+
+One thing worth naming explicitly: the memory problem changes what a product's surface should look like.
+
+If the system remembers nothing, the user interface has to carry everything: every relevant field, every piece of context, every option, because the user cannot trust that the system will recall what was agreed or what already happened. This is why most B2B software interfaces are dense. They are compensating for a system with no memory by putting everything visible at once.
+
+If the system remembers well, the interface can be different. It can be calm. It can surface the one thing that matters right now, because it knows the history around that thing. It can ask a targeted question rather than demanding a full form. It can anticipate what the user needs based on what has already happened, rather than requiring the user to navigate through a representation of the state of the world.
+
+This is not just a design preference. It is a consequence of the memory architecture. The two are connected. Which means that thinking carefully about what a system should remember is also thinking carefully about what the user experience can be.
 
 ## A working position
 
@@ -93,6 +113,6 @@ Institutional memory is currently one of the most expensive hidden costs in orga
 
 The answer is not more documentation. Documentation without retrieval and relevance is just a quieter form of forgetting.
 
-The answer is systems that remember with continuity, that surface context when it becomes relevant, and that understand the difference between what a person needs to know and what merely exists on record.
+The answer is systems that remember with continuity, that surface context when it becomes relevant, that understand the difference between what a person needs to know and what merely exists on record, and that have been designed with a clear view of what should expire, what should persist, and where the line sits between machine memory and human judgement.
 
-Building that is hard. The hardest part is not the technology. It is the decision about what memory should feel like — what it surfaces, how it presents itself, what it elides, and when it steps back entirely. That design problem is where the real work is, and it is one we intend to stay close to.
+Building that is hard. The hardest part is not the technology. It is the decision about what memory should feel like: what it surfaces, how it presents itself, what it elides, and when it steps back entirely. That design problem is where the real work is, and it is one we intend to stay close to.

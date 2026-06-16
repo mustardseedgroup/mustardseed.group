@@ -17,24 +17,75 @@ tags:
   - '2024'
   - research
 ---
-## The model layer is changing
 
-January 2024 is a useful point to look at the model layer rather than only the product layer. The public AI conversation is moving quickly, but the deeper pattern is slower: models are becoming a new kind of infrastructure.
+## The question nobody is asking clearly enough
 
-That does not mean every company needs to talk about models. It means every serious product company has to understand what models make possible, what they make fragile and where the human still needs control.
+By January 2024, the serious question in AI product development is no longer whether language models can reason. That argument is largely settled — not in the academic sense, but in the practical sense. Enough things work well enough often enough that the more urgent questions have shifted upstream.
 
-## What changes for MSG
+The question that matters now is: who is in charge when the model acts?
 
-For Orbit, models influence how work is understood, summarised and moved forward. For Orion, they influence memory, planning and tool use. For TUXX, they influence how quickly custom systems can be designed and delivered. For CheekyGains and Naira, they influence coaching, reflection and accountability.
+Autonomous agents are becoming a real product category. Not demos. Not research papers. Not carefully edited YouTube videos. Real products being built, tested and, in some cases, deployed against real workflows. The ability to give a model a goal, a set of tools and the authority to work towards that goal without human approval at every step — that is now a plausible architecture, not a theoretical one.
 
-The model is not the product. It is one layer inside the product.
+Which means the control plane question is no longer abstract. It has to be answered before you ship, not after something goes wrong.
 
-## The operating question
+## Autonomous versus directed — a distinction that matters
 
-The practical question is what the system should know, what it should do, what it should ask permission for and what it should never touch.
+There is a tendency to talk about "agents" as though they are a single thing. They are not. There is an important and often elided distinction between an autonomous agent and a directed agent, and that distinction has direct consequences for how you build, deploy and trust them.
 
-Those decisions matter more than model excitement because they determine whether the product becomes useful in the real world.
+A directed agent is given a task with a defined scope, a defined set of permitted actions and a defined point at which it stops and returns to the human. It executes. It does not decide whether to widen its own authority. The human sets the aperture; the agent operates within it.
 
-## Working note
+An autonomous agent is given a goal, possibly some constraints, and enough latitude to determine its own path to completion — including, in the more ambitious versions, the ability to modify its own tool access, spawn sub-agents or decide that its original goal needs reinterpreting. The human sets the direction; the agent decides how to travel.
 
-MSG should study model progress closely, but translate it into operating systems, performance systems and creative tools rather than copying the language of AI marketing.
+Both have legitimate applications. But conflating them in product thinking creates a particular kind of confusion. Teams building what they call autonomous agents are often actually building directed agents with good marketing. Teams building directed agents often discover, mid-deployment, that they have quietly created something more autonomous than they intended. The boundary between the two is not always clean in implementation, which is exactly why it needs to be explicit in design.
+
+The control plane question is, at its core, a question about where that boundary sits and who has authority to move it.
+
+## What the control plane actually is
+
+The phrase "control plane" is borrowed from networking architecture, where it refers to the part of the system that decides how data should flow, as distinct from the data plane, which is where the data actually moves. The control plane sets the rules; the data plane follows them.
+
+The analogy holds well for agent systems. Every agent deployment — even a simple one — has an implicit control plane: the set of decisions about what the agent can touch, what it must ask permission for, what it is categorically forbidden from doing and what happens when it encounters situations outside its defined scope. The control plane determines whether the agent can read data or write it; whether it can send communications on behalf of a user or only draft them; whether it can execute code or only suggest it; whether it can take irreversible actions or only reversible ones.
+
+The problem in most early agent deployments is that this control plane exists informally. It lives in the prompt. It lives in the developer's assumptions. It lives in the fact that the scaffolding hasn't been built yet to let the agent do anything more consequential. That is fine as an early-stage position. It becomes dangerous when the capability of the system outpaces the formality of the control plane.
+
+What we are watching in January 2024 is that capability gap beginning to close faster than the design discipline around control planes is closing. Models are becoming more capable. Tool integrations are becoming more extensive. Agent frameworks are making it easier to string together complex multi-step workflows with less code. All of which is useful — and all of which makes the absence of a deliberate control plane more consequential than it was six months ago.
+
+## The human-in-the-loop question
+
+There is a version of this conversation that frames human oversight as friction — as the legacy reflex of organisations not yet ready to trust AI. That framing is wrong in an important way.
+
+Human oversight is not friction. It is information architecture.
+
+When a human remains in the loop at a decision point, they are not slowing the system down. They are feeding it a signal that cannot be encoded in advance: the current state of their priorities, their relationships, their tolerance for risk, their judgement about context that the agent does not have. The loop is a data pathway. Removing it does not make the system faster at achieving the right outcome — it makes it faster at achieving whatever outcome the model's training, the prompt author's assumptions and the tool designer's affordances happen to converge on.
+
+The practical question is therefore not "should humans be in the loop?" but "at which decision points does human input change the outcome enough to justify the latency cost?" That is a design question. It requires knowing what the stakes of each action are, what the reversibility of each action is, and what signal a human actually adds at each point versus what they are simply rubber-stamping because the right answer is obvious anyway.
+
+Some decisions benefit enormously from human input. Some are purely mechanical. Most are somewhere in the middle, and the skill of building good agent systems is mapping that terrain accurately — not defaulting to maximum autonomy because it feels like progress, and not defaulting to maximum oversight because it feels like safety.
+
+## Benediction Lab's angle
+
+Benediction Lab, MSG's research arm, has been working this problem from the research side. The questions it cares about are not primarily performance questions — how fast can an agent complete a task — but structural ones: how do memory systems interact with agent authority? What happens when an agent's context window is carrying outdated state about permissions or constraints? How should GUI-control capabilities, which are particularly consequential because they can touch systems that have no agent-aware API, be bounded?
+
+These are not hypothetical questions. They are questions that arise directly in agent deployment, including in the kind of internal tool development that TUXX runs for clients. The gap between what a capable agent can do and what it should do in a given context is not primarily a model quality problem. It is a systems design problem. And systems design problems benefit from research discipline — from building testable hypotheses, running experiments, and documenting what fails, not only what succeeds.
+
+The research angle matters because the commercial world right now is moving largely on intuition and iteration. Which produces learning, but at a cost that accumulates in unexpected places: the agent deployment that seemed fine in testing and produced a bad outcome in production; the permission model that worked for one use case and quietly created a security surface in another; the autonomy level that felt appropriate for one user and catastrophically inappropriate for another with a different risk profile. Research discipline does not eliminate these problems, but it creates a better map of where they are likely to occur.
+
+## Orbit's position
+
+Orbit's philosophy has always been execution-first: build the operating surface that commercial teams need, and build it around how work actually moves rather than how people think it should move in theory. That philosophy interacts with the agent question in a specific way.
+
+Orbit is not trying to be an agent platform. It is trying to be the environment in which agents — where they make sense — can operate with clear scope. The difference matters. An agent platform asks: how do we give agents as much autonomy as possible? An agent-aware operating system asks: for each kind of work, what is the right level of agency, and how do we make that choice legible to the person responsible for the outcome?
+
+The answer varies by workflow. Some parts of commercial execution are well-suited to directed agents operating with high confidence and low oversight: gathering and structuring information, generating first-draft outputs, flagging anomalies in a known dataset. Others — anything touching client relationships, anything involving commitments, anything with significant downstream consequences that are difficult to reverse — require tighter control and human judgement at the decision point.
+
+Orbit's job is to make that distinction explicit in the interface, not to leave it as an invisible assumption baked into the model configuration.
+
+## What 2024 will resolve and what it won't
+
+If the trajectory of 2023 continues, 2024 will see the agent category mature in a specific direction: more capable tool use, longer context windows enabling more persistent agent state, and a proliferation of agent frameworks making it easier to build complex pipelines. The models themselves will continue improving, and the gap between what is theoretically possible and what is practically deployable will narrow.
+
+What 2024 is unlikely to resolve is the governance question — the industry-wide agreement on what good control plane design looks like, who is responsible for it and how to make it legible to the end users of systems that agents are operating inside. That conversation is starting, in research labs and in policy discussions and in the quieter post-mortems of teams that shipped agent deployments and found the edges of their assumptions. But it will take longer than one year.
+
+The institutions that come out of this period well are the ones that build their own answer to the control plane question, deliberately and early — before the gap between capability and governance widens enough to cause the kind of failures that make the whole category harder to work in.
+
+That is the framing we are carrying into this year's work. Not "how much can we automate?" but "what does it look like to get this right?"

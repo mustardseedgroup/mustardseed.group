@@ -16,24 +16,77 @@ tags:
   - '2018'
   - research
 ---
-## The model layer is changing
 
-February 2018 is a useful point to look at the model layer rather than only the product layer. The public AI conversation is moving quickly, but the deeper pattern is slower: models are becoming a new kind of infrastructure.
+## Before the headlines land
 
-That does not mean every company needs to talk about models. It means every serious product company has to understand what models make possible, what they make fragile and where the human still needs control.
+It is February 2018 and the models that will define the next few years have not yet been announced. ELMo is still months away. BERT will not appear until October. The term "pre-training" is understood by researchers but has not yet entered the product conversation. Yet something is clearly moving. Reading the public research output, watching the benchmark curves, observing what teams at large labs are quietly building: the direction is legible even before the specific papers drop.
 
-## What changes for MSG
+This is the useful window. Not after the announcement, when everyone is reacting at once. Not years later, when the trajectory is obvious. Now, when the pattern is visible but not yet loud.
 
-For Orbit, models influence how work is understood, summarised and moved forward. For Orion, they influence memory, planning and tool use. For TUXX, they influence how quickly custom systems can be designed and delivered. For CheekyGains and Naira, they influence coaching, reflection and accountability.
+What that pattern is, and what it demands from product builders, is what this note is about.
 
-The model is not the product. It is one layer inside the product.
+## The shift that predates the headlines
 
-## The operating question
+For most of recent NLP history, models were trained for specific tasks. You wanted to classify sentiment: you built a sentiment model. You needed named-entity recognition: you trained on labelled entity data. Each task required its own dataset, its own training run, its own maintenance as the world changed.
 
-The practical question is what the system should know, what it should do, what it should ask permission for and what it should never touch.
+The emerging alternative is different in kind, not just in degree. The idea: train a large model on vast amounts of general text, let it develop a rich internal representation of language, and then adapt, fine-tune, that base for specific tasks with far less labelled data and far less effort. The base model does the heavy lifting. Task-specific adaptation sits on top.
 
-Those decisions matter more than model excitement because they determine whether the product becomes useful in the real world.
+This is not just a technical improvement. It is a different relationship between general capability and specific application. The implication is that the most valuable thing to build, and the hardest thing to replicate, becomes the base representation. Everything else is downstream.
 
-## Working note
+The first generation of products to understand this will be positioned differently from those that do not.
 
-MSG should study model progress closely, but translate it into operating systems, performance systems and creative tools rather than copying the language of AI marketing.
+## Why representations matter
+
+A language model that has been trained well on general text develops something more than pattern-matching over tokens. It develops a working model of what words mean in context: how meaning shifts depending on what surrounds it, how the same phrase carries different weight depending on what came before, how certain structures signal certain kinds of content.
+
+This is what researchers are calling contextual representations, and it is worth pausing on what that means practically. A word is not just a word. It is a word in a sentence, in a paragraph, in a document, in a genre, in a conversation. The meaning is relational. A model that captures this contextuality can generalise in ways that a purely statistical word-frequency model cannot.
+
+For product builders, this matters because it changes what is possible at the application layer. You no longer need enormous amounts of labelled training data to get a working system for a specific language task. You need a capable base model and a modest amount of domain-specific signal. The economics of building intelligent language features shift accordingly.
+
+## The wrong lesson to take from this
+
+There is a version of this moment where companies look at the emerging capability curve and conclude they need to train their own large models. This is, for almost everyone, the wrong conclusion.
+
+Training large language models requires resources (compute, data, research talent) that only a handful of institutions in the world actually possess. The organisations genuinely in that position are a specific set: the large American technology companies, a few well-capitalised research labs, some national programmes. Everyone else who thinks they are competing at that layer is largely doing expensive imitation with inferior data.
+
+The more valuable question for the vast majority of builders is not "how do we train a better base model" but "what can we build on top of capable base models that creates something distinctly useful." The distinction matters. It points toward system design, domain knowledge, workflow integration and user understanding, capabilities that are genuinely hard to copy, rather than toward a raw compute race that most participants cannot win.
+
+## What the pre-training trajectory suggests about products
+
+If the field is moving toward general pre-training followed by task-specific fine-tuning, a few things follow for how products should think about language.
+
+First: the cost of adding language capability to a product is going to decrease substantially. Tasks that previously required dedicated NLP teams and significant training data budgets will become accessible with much less overhead. This lowers barriers in a way that will surface new kinds of products.
+
+Second: commoditisation of capability does not mean commoditisation of usefulness. The fact that language understanding becomes cheaper does not mean every product that uses it becomes equivalent. What differentiates will be the same things that always differentiate software: how well it fits into a real workflow, how reliably it behaves under conditions that matter to the user, how thoughtfully it handles the cases the model gets wrong.
+
+Third: the interface between model capability and product design will become one of the central design problems. Not "can the model do this" but "how does the model's behaviour integrate into something a person actually wants to use." This is harder than it sounds. Models that are impressive in isolation can be disorienting inside products if the integration is careless.
+
+## The specific texture of language work
+
+There is something worth being careful about when building language-aware systems: language is where people live. It is where they think, where they express things imprecisely and expect to be understood anyway, where they mean things they do not quite say. Systems that treat language as a clean data format tend to produce outputs that feel slightly wrong in ways users cannot always articulate: technically accurate but somehow off.
+
+The models that are developing now are getting meaningfully better at the contextual and relational dimensions of language. They are not perfect and they will not be for a long time. But the direction is toward something more like comprehension and less like retrieval. That is a real change, and it has implications for how systems should be designed around them.
+
+It also raises the question of where the human still belongs. Not every language task should be automated, even when automation is technically possible. There are categories of communication, consequential decisions, complex negotiations, sensitive contexts, where the value is not just in the output but in the human judgement that produced it. Systems designed well around language models should be honest about this boundary rather than obscuring it.
+
+## What this means in practice for this work
+
+The interest here is not in language models as objects of fascination. It is in what they enable at the operating and product layer.
+
+For a system like Orbit, which is ultimately about how work is understood, coordinated and moved forward, language capability changes what is possible. Summarising context. Identifying what is relevant. Surfacing what has been agreed and what remains open. These are language tasks, and they sit inside workflows that humans still own and direct. The model does not replace the judgement; it handles the parts of the language work that do not require judgement, so the parts that do get more attention.
+
+For a research project like Orion, what is emerging in the model landscape is infrastructure. The capability to understand context, maintain state across interactions, and reason over language-heavy data is foundational to what an intelligence layer is supposed to do. The current trajectory makes that layer more capable and more economically viable to build.
+
+For TUXX, which works in live client environments, the emerging economics of language capability mean that more of what clients need can be delivered without requiring them to fund research. Capability that was previously expensive to build is becoming accessible. That changes what is practical to propose.
+
+## The slower pattern underneath the faster one
+
+The public conversation about AI moves at the speed of announcements. Each paper, each benchmark result, each product launch produces a reaction cycle. This is fine: some of those reactions are useful.
+
+But the deeper pattern is slower. A capability builds up over years. Early signals appear that something is changing at a structural level. Then specific demonstrations make it legible. Then products are built on it. Then it becomes infrastructure that most people do not think about at all.
+
+February 2018 sits in the middle of that slower arc. The models that will be announced later this year will make the trajectory obvious to many more people. The work that is useful to do now is to understand the trajectory before it becomes obvious: to have already thought through what it means, already made decisions about where to focus, already developed the design sensibility that the capability requires.
+
+That is not prescience. It is just reading carefully and thinking the implications through.
+
+The model layer is changing. What matters is what you build on it.

@@ -17,22 +17,83 @@ tags:
   - '2024'
   - founder-letter
 ---
-## The thesis underneath the work
 
-The portfolio only makes sense if the centre is clear. Mustard Seed Group is not organised around one app, one model provider or one trend.
+There is a particular discipline required when you build in public without building in the open.
 
-It is organised around capability: helping people and organisations think better, move better, create better and execute better.
+Not everything should be private. But not everything should be shared. The question worth sitting with is: what exactly should be visible, and why? The answer shapes how an institution presents itself, what it attracts, and what it protects.
 
-## Why AI matters, but is not the whole story
+This month we formalised something that had been implicit in how we work for some time — a deliberate architecture for what becomes public and what stays inside. The principle is straightforward once named: publish examples, protect systems.
 
-AI changes the tools available to us. It affects language, code, voice, images, planning, research and operations. But the common thread is still human capability.
+## The difference between an example and a system
 
-The question is not whether every product should become an AI product. The question is whether intelligence can make the product more useful without making the person less capable.
+An example demonstrates a behaviour. A system produces that behaviour reliably, at scale, under conditions the example never encounters.
 
-## How this shapes the portfolio
+When you share an example of how a component works, you share the shape of the idea. When you share the full system, you share the machine — the scheduling logic, the error surfaces, the accumulated context, the judgement calls baked into the configuration, the specific choices that took months to arrive at through painful iteration.
 
-Benediction Lab researches. Orbit productises. TUXX proves patterns commercially. All Purpose explores consumer behaviour, performance and culture. Chiko Shire holds the founder-level narrative together.
+These are not the same thing. Conflating them is one of the more common mistakes in how software organisations handle openness. Open-sourcing an example and calling it transparency. Keeping a demo repo fresh whilst the real codebase diverges silently. Publishing docs that describe a version of the product that no longer exists.
 
-## Working note
+We wanted to avoid all of that.
 
-The role of the group is to keep connecting the work without flattening it. Different products can have different audiences and still share one thesis.
+## What the public repos are actually for
+
+The repositories available under the MSG public GitHub presence are not the product. They are demonstration artefacts — patterns, community documentation, examples of interface design decisions, worked examples of how certain capabilities can be approached.
+
+They are genuinely useful. Someone building their own internal tooling can learn from them. Someone evaluating whether our thinking is sound can inspect them. Someone we might want to work with can read them as a signal of craft and intent.
+
+But the job they do is different from the job the internal systems do. The internal systems carry real data. They embed the specific reasoning layers we have built through Orion. They carry the accumulated decisions about memory architecture, orchestration sequencing, and context management that are the actual product. Those are not in the public repos, and they will not be.
+
+This is not secrecy for its own sake. It is good information architecture.
+
+## Competitive position and trust are not opposites
+
+There is a view — common enough in certain corners of the technology industry — that openness and competitive position are fundamentally in tension. Share too much and you lose your edge. Share too little and you seem untrustworthy. The supposed answer is to calibrate a middle position and hold it awkwardly.
+
+We do not think the tension is real, or at least not in the form usually described.
+
+Trust comes from demonstrating that you can think clearly and build well. That requires showing real work, not curated press releases. But the level of granularity needed to establish trust is much lower than the level that would actually give away competitive advantage. You can demonstrate sound judgment about data architecture without exposing your schema. You can show that you understand agent orchestration without open-sourcing your orchestration layer.
+
+The public artefacts we publish are chosen specifically because they do the trust-building work without handing over the system. They show the thinking. They show the aesthetic sensibility. They give someone enough to evaluate whether working with us would be valuable. And they stop there.
+
+## Why this matters more now
+
+The general shift toward AI-powered tooling in this period has made the question of what to expose considerably more fraught.
+
+When software was primarily deterministic code acting on explicit inputs, sharing a codebase shared the logic. Anyone could read it, run it, and understand exactly how it behaved. The IP lived substantially in the data and the business model, not in the code itself.
+
+With systems built around AI inference layers — memory, reasoning, context management, tool orchestration — the situation is different. The code is often the less proprietary part. The proprietary elements are the specific configuration of prompts and contexts, the memory schemas, the sequencing of reasoning steps, the agent architecture decisions. None of that is easily inspected just by reading a codebase, but it is still exposable if you are not deliberate about what you share.
+
+We have built a real intelligence layer inside our operating systems. The reasoning patterns embedded in Orion, and the way they surface through Orbit's commercial workflows, represent months of iteration. They are not going into a public repository. But the shape of the product — how it handles certain classes of work, how it surfaces information, how it structures the interaction between the person and the system — that can be demonstrated publicly, because demonstration and exposure are not the same thing.
+
+## The design choices this forces
+
+Deciding to be genuinely open about some things whilst protecting others forces you to design carefully across several dimensions simultaneously.
+
+**Documentation discipline.** Public documentation needs to accurately describe what is publicly available, not accidentally leak what is not. This seems obvious. In practice it requires ongoing attention, because the fastest way to write documentation is to describe how the system actually works, and the system is not the thing you are documenting publicly.
+
+**Repository maintenance.** A public example repository that is stale is worse than no repository at all. It suggests either that the internal system is also stale, or that the public materials are not taken seriously. We treat our public repos as actual artefacts worth maintaining, not as marketing assets left to decay.
+
+**Communication clarity.** When someone asks what a public repo contains, the answer should be honest and specific. These are community examples and interface patterns. They are not the core product. If someone wants to understand the core product, the way to do that is to work with us directly.
+
+**Contribution handling.** When external contributors interact with public materials, the boundary between public and internal needs to be clear enough that contributions can be accepted without accidentally importing them into contexts where they would create exposure problems.
+
+None of this is particularly complicated in theory. The discipline is in the execution — staying consistent about it over time, especially as the team grows and the number of people who touch public materials increases.
+
+## The broader pattern
+
+What we are describing is not unique to software. Every institution that builds something genuinely proprietary whilst maintaining a credible public presence has to solve this problem in some form.
+
+Academic research labs publish papers but protect experimental methods. Law firms share public legal analysis but protect client work. Manufacturers publish product specifications but protect manufacturing processes. The pattern — demonstrate capability publicly, protect the systems that produce that capability — is how institutions maintain both credibility and competitive position simultaneously.
+
+For us, the specific application is to software and AI systems. But the underlying logic is the same: the public presence should accurately represent the quality and direction of the work, without exposing the implementation detail that constitutes real competitive advantage.
+
+We have deliberately built a portfolio that operates across research, product and services. Benediction Lab researches in areas — agents, memory systems, autonomous product development — where the research output is itself the valuable thing, and there are appropriate ways to share findings. Orbit is a product where the user experience and the intelligence layer underneath it together constitute the value, and the distinction between demonstrable interface and protected system is particularly important. TUXX works in live client environments where confidentiality is part of the engagement.
+
+Each of those contexts has its own version of the public/protected boundary. What we formalised this month is a coherent framework for thinking about that boundary across all of them, rather than solving it differently in each context ad hoc.
+
+## What changes
+
+The immediate outputs are modest. Cleaner documentation on what the public repositories are and are not. A more deliberate process for what gets added to public materials and who reviews it before publication. Clearer communication about the relationship between public examples and internal systems.
+
+The longer-term effect is institutional. The habit of thinking explicitly about the public/protected boundary becomes part of how we make decisions about what to build and how to talk about it. That habit is harder to build than any specific artefact, and considerably more valuable.
+
+Institutions that maintain trust over the long term do so because they are consistently honest about what they share and consistent about protecting what they have built. Neither half of that is optional. The discipline of holding both at once is worth developing early.

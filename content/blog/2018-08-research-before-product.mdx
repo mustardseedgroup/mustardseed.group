@@ -17,24 +17,73 @@ tags:
   - '2018'
   - research
 ---
-## The model layer is changing
 
-August 2018 is a useful point to look at the model layer rather than only the product layer. The public AI conversation is moving quickly, but the deeper pattern is slower: models are becoming a new kind of infrastructure.
+## The temptation to build immediately
 
-That does not mean every company needs to talk about models. It means every serious product company has to understand what models make possible, what they make fragile and where the human still needs control.
+The strongest pull in any product team is towards making something visible. A screen. A flow. A clickable thing that can be demonstrated. There is real social pressure behind this: investors want to see progress, founders want to feel productive, and teams want to know their work is accumulating into something real.
 
-## What changes for MSG
+The problem is that screens are expensive to change. Not in the sense of the time it takes to redesign them, a competent team can iterate a UI in a day, but in the sense of the embedded assumptions they carry. Once a team has built a surface, they begin defending it. They optimise around it. They hire for it. The surface becomes load-bearing before anyone has tested whether the structure underneath it is sound.
 
-For Orbit, models influence how work is understood, summarised and moved forward. For Orion, they influence memory, planning and tool use. For TUXX, they influence how quickly custom systems can be designed and delivered. For CheekyGains and Naira, they influence coaching, reflection and accountability.
+This is the core argument for research before product: not that building is bad, but that building before you understand the problem costs you more than the research ever would.
 
-The model is not the product. It is one layer inside the product.
+## What research actually means
 
-## The operating question
+There is a version of "research" that product teams do that is not really research at all. They conduct five user interviews, confirm the assumptions they already held, and proceed to build what they planned to build anyway. This is not research. It is a ritual that provides cover for decisions already made.
 
-The practical question is what the system should know, what it should do, what it should ask permission for and what it should never touch.
+Real research is uncomfortable because it is genuinely open. You begin without knowing what the answer will be. You look for evidence that contradicts your working hypothesis, not just evidence that supports it. You sit with ambiguity longer than feels productive, because the ambiguity is where the real problem lives.
 
-Those decisions matter more than model excitement because they determine whether the product becomes useful in the real world.
+The discipline is in resisting the urge to resolve that ambiguity prematurely by committing to a surface. The research phase is specifically the time when no surfaces should exist: when the team's only job is to understand the problem at a level of depth that makes design decisions obvious rather than arbitrary.
 
-## Working note
+## The cost of skipping it
 
-MSG should study model progress closely, but translate it into operating systems, performance systems and creative tools rather than copying the language of AI marketing.
+Small teams are particularly prone to skipping research, and this is understandable. Research takes time that a small team does not feel it has. The competitive pressure of a market, the burn rate of a runway, the energy cost of sustained uncertainty: all of these push towards action. Building something, even the wrong thing, feels better than not building.
+
+But small teams also pay the sharpest penalty for building on misunderstood problems. A large company can absorb the cost of a wrong product direction because it has other revenue, other products, other teams. A small team that builds for six months in the wrong direction has spent its most valuable resource, time and concentrated attention, on something it has to partially or entirely redo.
+
+The rework is not just technical. It is demoralising. The team that has to tear down something it built has to reconstitute the belief that the next version will be worth the effort. Teams that have experienced this once are often more cautious about research the second time. The ones who never learned the lesson tend to cycle through the same mistake with different product names.
+
+## The depth problem
+
+Even teams that commit to research often misidentify what depth means in that context. They believe that gathering more data points, more interviews, more surveys, more analytics, constitutes going deeper. What it actually constitutes is going wider. The width is useful; it helps identify whether a pattern is rare or common. But width does not tell you why the pattern exists.
+
+Depth in research means understanding the mechanism. Why does the problem occur? What structure in the world, in workflows, in incentives, in existing tools, in human behaviour under pressure, produces this problem reliably? When you understand the mechanism, you can design a solution that intervenes at the right point in the system rather than papering over a symptom at the surface.
+
+This distinction matters especially in B2B contexts, where the problem is often organisational rather than purely technical. The surface-level symptom might be that teams cannot track leads effectively. The mechanism might be that accountability for lead follow-up is distributed across three people with different tools, none of whom owns the outcome. Building a better lead tracking tool without addressing the accountability structure does not solve the problem. It adds a fourth tool to the stack.
+
+Understanding that requires more than a survey. It requires sitting inside the workflow long enough to see how it actually operates, as opposed to how the people inside it believe it operates.
+
+## Benediction Lab's role in this
+
+MSG's research arm, Benediction Lab, exists because of this conviction. The lab is not primarily a product-building function. It is a knowledge-building function. Its job is to develop understanding of a class of problems: agents, memory systems, how AI systems can take durable, reliable actions in real-world environments, before those capabilities are built into products.
+
+The reason for that separation is deliberate. When research lives inside a product team, it tends to get colonised by the product team's immediate needs. The research question becomes: how should we build this feature? rather than: what is actually true about this problem? The former is useful but narrow. The latter is more broadly valuable because it survives the lifecycle of any single product decision.
+
+Building a dedicated research function at this stage, when the products are still early, is an investment in not repeating avoidable mistakes later. Every significant capability that goes into Orbit or Orion eventually requires a richer understanding of memory, of reasoning under uncertainty, of how human-AI collaboration actually works in practice. Benediction Lab is the place where that understanding is built before it is needed urgently.
+
+## What knowledge looks like before it becomes a product
+
+There is a useful distinction between knowledge that is tacit and knowledge that has been made explicit. A team can accumulate tacit knowledge about a problem, intuitions about what users find frustrating, instincts about where systems break down, without ever externalising it in a form that survives personnel changes or cross-team communication.
+
+The research layer is where tacit knowledge gets made explicit. This means writing things down in a way that preserves the reasoning, not just the conclusions. It means building models of the problem that can be tested and revised. It means creating a shared vocabulary for the problem that keeps the team's thinking aligned as the complexity grows.
+
+For a small team building across multiple products, as MSG is, this is particularly important. Insights about how people track accountability in commercial workflows (relevant to Orbit) and insights about how people reflect on physical performance over time (relevant to CheekyGains) might seem entirely unrelated. But there are structural patterns in both: the relationship between measurement and motivation, the design of feedback that is honest without being discouraging, the friction that prevents people from acting on information they already have. Making that knowledge explicit means it can travel between products rather than being siloed within each one.
+
+## The discipline
+
+The real argument for research before product is that it is a form of discipline. It is the discipline of not defaulting to what is comfortable, which is building, in preference for what is necessary, which is understanding.
+
+Building without understanding feels productive but often is not. It generates output, but output and progress are not the same thing. Progress means moving towards a solution that actually works in the world. That requires knowing what the world looks like before you design for it.
+
+This is not an argument for research without end. At some point, building is the only way to learn certain things. You cannot fully understand how users will respond to a system until they are responding to a real system. There is knowledge that only comes from putting something into the world.
+
+But that kind of learning is expensive if the foundational understanding is wrong. The user who responds to a product built on a misunderstood problem is not just giving feedback about the product: they are revealing that the premise of the product needs revisiting. That is an expensive way to discover something that better upfront research might have surfaced months earlier.
+
+The discipline is in knowing the sequence. Research. Design from that research. Build from those design decisions. Test in the world. Learn. Revise. The loop is necessary and continuous. But sequence matters. What you learn in the research phase cannot be recovered cheaply after you have committed to a direction.
+
+## August 2018
+
+We are at a stage where Benediction Lab is defining what it studies rather than what it builds. That is the appropriate posture for a research function that is being established carefully rather than rushed into deliverables.
+
+The value of that work will not be visible in this quarter. It will be visible when we are eighteen months further into building Orbit, when a design decision that would otherwise have cost us three months of rework is obvious because we already did the thinking. That is the return on research: not immediate, not dramatic, but compounding in a way that nothing else in the product development stack quite matches.
+
+Small teams that skip it pay for it. We intend to be the ones who did not.

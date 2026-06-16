@@ -17,24 +17,73 @@ tags:
   - '2017'
   - research
 ---
-## The model layer is changing
 
-July 2017 is a useful point to look at the model layer rather than only the product layer. The public AI conversation is moving quickly, but the deeper pattern is slower: models are becoming a new kind of infrastructure.
+## What better means, in practice
 
-That does not mean every company needs to talk about models. It means every serious product company has to understand what models make possible, what they make fragile and where the human still needs control.
+The Transformer paper landed in June. By July, the conversation around it, inside research communities, in industry circles, at the edges of product teams, was already diverging into two types of thinking.
 
-## What changes for MSG
+The first type treated better models as a capability competition. Who has the biggest model. Who trained on the most data. Who will cross some threshold first. That conversation is interesting if you are a lab. It is mostly noise if you are building operating systems.
 
-For Orbit, models influence how work is understood, summarised and moved forward. For Orion, they influence memory, planning and tool use. For TUXX, they influence how quickly custom systems can be designed and delivered. For CheekyGains and Naira, they influence coaching, reflection and accountability.
+The second type asked a simpler question: what does a meaningfully better model actually change about what an operator can do? Not a future model. Not a theoretical ceiling. The models improving right now, in this quarter, in this year. What becomes possible that was previously impossible, or possible only at a cost that made it commercially absurd?
 
-The model is not the product. It is one layer inside the product.
+That second question is the one worth sitting with.
 
-## The operating question
+## The leverage ratio shifts
 
-The practical question is what the system should know, what it should do, what it should ask permission for and what it should never touch.
+There is a way to think about models that does not require any particular reverence for the technology. A model is a compression of capability. It does not invent capacity: it reorganises how existing human capacity gets applied across a system.
 
-Those decisions matter more than model excitement because they determine whether the product becomes useful in the real world.
+When models are weak, that reorganisation is modest. A spelling correction, a suggestion, a filter that removes obviously bad options from a list. These are useful at the margins but they do not change the fundamental structure of how a small team operates. A team of four people still has four people's worth of reasoning, drafting, synthesis, coordination and context-switching bandwidth. The model trims some friction; it does not multiply the team.
 
-## Working note
+When models improve, not incrementally, but meaningfully, qualitatively, the arithmetic starts to change. Not because the model replaces people. It does not. Experienced operators know better than to build a system premised on replacement. What shifts is the leverage ratio: how much ground a given amount of human attention can cover.
 
-MSG should study model progress closely, but translate it into operating systems, performance systems and creative tools rather than copying the language of AI marketing.
+A small team with good models and well-designed systems can do the analytical and communicative work that previously required a team twice its size. Not because the humans become twice as fast, they do not, but because the model absorbs a different category of work. The rote synthesis. The first draft of a document that needs iterating. The extraction of structured data from unstructured input. The summarisation of a week's worth of material into a decision-ready brief.
+
+These are not glamorous tasks. They are, however, the tasks that quietly consume most of the available hours in a commercial operation.
+
+## The threshold problem
+
+The difficulty with model progress is that it does not feel gradual when you are living through it. From the outside, the trajectory appears smooth. From inside a working system, the experience is more discontinuous: models are inadequate for a task, then suddenly they are not.
+
+That discontinuity creates a planning problem. If you are building a product or a workflow that relies on a model capability that does not quite exist yet, you have to make a judgement call about timing. Build too early, and you are constructing around a model that cannot do what you need. Build too late, and the pattern has already been established by someone else.
+
+The Transformer architecture matters here not because of what it can do today but because of what it clarifies about the path. The attention mechanism, the ability to weigh the relevance of every part of a context against every other part, is not a clever trick. It is a structurally better way to reason about sequences. Which means the performance ceiling on tasks that require genuine contextual reasoning just moved substantially upward. The question is not whether models will get materially better at understanding and generating coherent, relevant text. They will. The question is when that capability crosses the threshold of being commercially useful for a specific kind of work, at a specific cost, at a sufficient level of reliability.
+
+For some tasks, that threshold was crossed earlier than most product teams noticed. For others, it has not been crossed yet. Knowing the difference matters.
+
+## Reading what the model cannot do
+
+An operator who takes model capabilities seriously will eventually learn to read what a model cannot do as carefully as they read what it can.
+
+This is harder than it sounds. Models fail in ways that are not obviously marked as failure. A weak model will produce a plausible-sounding answer to a question it cannot actually answer. It will summarise a document in a way that sounds accurate but drops the detail that matters most. It will draft a paragraph that flows well but misses the point. The output looks like competence. The error is structural.
+
+Good product design around models accounts for this. It does not ask the model to operate unsupervised in zones where its failure modes are invisible to the human downstream. It builds the system so that model errors surface quickly, can be caught before they compound, and do not require the human to audit everything in order to trust anything.
+
+This is a design challenge, not a model challenge. Better models will reduce the error rate on many tasks. They will not eliminate the design problem. An operator who builds with the assumption that a sufficiently good model can run without oversight is building something fragile, regardless of how good the model eventually becomes.
+
+## What this means for the work here
+
+For Orbit, the question is how models can compress the overhead of commercial execution, not by automating the decisions, but by reducing the distance between having context and acting on it. The commercial workflow has a significant load of synthesis, documentation, tracking and communication that happens between the decisions. Models that can carry more of that load without requiring constant correction are meaningfully useful.
+
+For Orion, the Transformer's clarity about how context works at a mechanical level is directly relevant to how memory and reasoning should be structured. A model that can handle longer context, reason across more pieces of information simultaneously and maintain coherence over extended interactions changes what an intelligence layer can actually do in a working session.
+
+For TUXX, better models change the economics of custom system delivery. More capability in a smaller system. Faster iteration between a client's requirement and a working prototype. Less of the engagement spent on tasks that a good model can now carry. The services work becomes denser: fewer billable hours consumed by groundwork, more of the value captured at the layer of judgement and design.
+
+For Naira inside CheekyGains, the coaching conversation is one of the domains where contextual reasoning matters most. A coach that cannot hold the thread of a person's goals, progress and setbacks across time is not really coaching, but generating generic encouragement. Models that handle context more coherently get meaningfully closer to something a person could actually rely on.
+
+## The wrong conclusions to draw
+
+It is worth being explicit about what not to take from a period of rapid model improvement.
+
+The first wrong conclusion is that model capability is a competitive moat. It is not, at the product layer. Models are becoming more accessible, not less. The moat has never been the model. It has always been the system design, the accumulated context, the operational know-how that sits around the model. Those things take time to build and are not replicated by API access.
+
+The second wrong conclusion is that better models mean less need for domain expertise inside the team. The opposite is closer to true. A better model raises the ceiling on what an expert can do. It does not substitute for the expert. The team that has genuine understanding of the domain, how commercial operations actually work, how people actually perform, how decisions actually get made, will extract far more from improved models than a team that treats the model as a substitute for that understanding.
+
+The third wrong conclusion is that the right response to improving models is to wait. To watch progress, keep notes, and start building seriously once the capability is clearly there. That reasoning leads to being consistently late. The operators who use model-augmented tools fluently in 2019 will be the ones who started building with imperfect models in 2017 and learned through the friction.
+
+## Where this leaves us
+
+July 2017 is early. The practical gap between what the research shows and what can be deployed reliably in a commercial context is still significant. But the direction of travel is clear, and the Transformer result is a meaningful signal about the shape of progress to come.
+
+The sensible position is not excitement and it is not scepticism. It is the kind of attention an engineer gives to a change in the underlying material properties of something they are building with. You update your mental model of what the material can do. You revise your designs accordingly. You keep building.
+
+Better models are coming. The operator's job is to be ready to use them, and to already understand, through practice, which problems they are worth pointing at.

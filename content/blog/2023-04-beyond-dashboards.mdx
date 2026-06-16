@@ -17,22 +17,69 @@ tags:
   - '2023'
   - product
 ---
-## The friction
 
-The useful product question in April 2023 is not "what can we build?" It is "where is the friction repeating?"
+Ask any team in any company to describe the software problem they need solved, and within a few exchanges the request tends to converge on the same thing: they need to see what is happening. They want visibility. They want numbers they can trust, in a format they can read, updated without someone having to manually pull data from three places and paste it into a spreadsheet.
 
-Repeated friction is a signal. It tells us where teams lose momentum, where people abandon standards and where a better system would change the outcome.
+That request is reasonable. Fulfilling it produces a dashboard.
 
-## The operating surface
+And yet the dashboard rarely solves the actual problem. The data becomes visible. The spreadsheets persist. The decisions that were unclear before the dashboard was built remain unclear after it. Something is being missed, and the gap is structural, not cosmetic.
 
-That is the shared thread between Orbit and TUXX. Orbit turns commercial execution into an operating surface. TUXX tests real constraints through services and custom systems. One creates product clarity; the other keeps the work honest.
+## What the request is really asking
 
-This is how the portfolio should behave. Services expose patterns. Research explains them. Products make them repeatable.
+The problem with "we need visibility" as a brief is that it contains a hidden assumption: that the bottleneck is access to information. That if someone could only see the number clearly enough, they would know what to do.
 
-## What this changes
+This is rarely true. The number is usually known, at least approximately. The decision underneath it — which deal to prioritise, which project is about to go sideways, which customer has quietly moved on — is what remains hard. Information does not automatically produce action. Knowing that pipeline is down fifteen per cent does not tell you what to do this afternoon.
 
-The more capable models become, the more important the surrounding product becomes. A model can answer. A product has to direct, remember, measure, recover and help people finish.
+The confusion between information and direction has shaped an enormous amount of business software in the wrong direction. It has produced a generation of tools that are very good at showing you what happened and almost entirely passive about helping you do anything about it. The dashboard is the purest expression of this: a highly polished rear-view mirror installed where a steering wheel should be.
 
-## Working note
+## Observability is not operability
 
-Build the product where the pain repeats. Use AI where it genuinely improves the operating loop. Keep the system understandable enough for people to trust it.
+The engineering world has a cleaner version of this distinction. Observability describes how well you can understand a system's internal state from its external outputs — logs, metrics, traces that tell you what is going on. Operability describes something different: how well a system is designed to be acted upon. The levers available to you. The feedback you get when you pull them. The way the system guides you when something is degrading or wrong.
+
+You can have extremely high observability and very low operability. A monitoring tool that surfaces every possible signal but provides no prioritisation, no interpretation, no clear next step — that is a highly observable system where the operator is left doing all the reasoning work themselves. The tool is watching them whilst they try to figure out what to do.
+
+Business software has the same failure mode. Dashboards create observability. The majority of them stop there.
+
+Operability in a product surface means something specific. It means the product carries a model of the work — not just a schema for the data, but an understanding of what the workflow is, where the user is within it, what is behind schedule, what is at risk, what is genuinely urgent and what can wait. It means the default state of the product is a prioritised view of what matters now, not a neutral view of everything that exists.
+
+That is a harder product to build. It requires taking positions. It requires that the software have opinions that some users will disagree with. A dashboard avoids this problem entirely by refusing to have opinions. It shows everything, ranks nothing, and leaves the interpretation entirely to whoever is looking at it. That neutrality feels like safety but it is actually the abdication of the product's responsibility.
+
+## The wrong way to add intelligence
+
+In April 2023, many teams looking at this problem are being handed a new tool: a language model, bolted onto the existing dashboard. Ask questions, get answers. Instead of navigating filters and date pickers, you can type "show me which deals haven't been updated in two weeks" and receive a response.
+
+This is a genuine improvement over a rigid query interface. It lowers the friction of retrieval. But it is still organised around retrieval — still structured around the assumption that the user knows what to ask.
+
+The user who knows exactly what to ask already has a reasonably clear picture of their situation. The genuinely hard moments are the ones where you do not know what you are missing. Where the risk is invisible precisely because nobody thought to look for it. A more conversational interface for the same retrieval model does not address that problem. It makes the known unknowns more accessible without touching the unknown unknowns at all.
+
+Intelligence in a product surface has to go further than a smarter search box. It has to mean the system actively narrows the gap between what happened and what you should do next — surfacing the things that need attention without waiting to be asked, understanding enough about the workflow to have a view on what is urgent, and making action the path of least resistance rather than something the user has to assemble from fragments of retrieved data.
+
+## What Orbit is built around
+
+This distinction — between knowing and doing, between a surface that shows you state and one that helps you change it — is the organising principle behind Orbit.
+
+The commercial workflow it covers runs from first contact through to a delivered, running product or ongoing engagement. Across that arc there is a lot of data: contacts, communications, proposals, project stages, decisions made and deferred. Most existing tools would display this as a pipeline view, a project board, a CRM record, a revenue dashboard. Each of those views describes a slice of reality. None of them tell you what needs to happen today.
+
+Orbit is built to have a position on that question. Not as a feature layered onto an observation surface, but as the foundational design premise. The product should know where a deal stands not just in terms of stage label but in terms of context — what was last discussed, what is outstanding, what is likely to determine whether it moves or stalls. It should surface the right work at the right moment rather than requiring the user to manually patrol every record to find what needs attention.
+
+This requires the product to carry genuine context across time, not just current state. A conversation from six months ago might be load-bearing in a renewal call tomorrow. A decision deferred in a project kickoff might be the thing that surfaces as a risk three weeks later. Building a product that holds that kind of continuity is a different engineering and design problem from building a dashboard. It is why the research work at Benediction Lab is focused on memory systems and persistent context rather than on interface polish.
+
+## The proliferation trap
+
+There is one more dimension of the dashboard problem worth naming. Over the past decade, the point-solution model of business software has created an environment where a typical company has a dozen separate tools, each with its own data model, each with its own dashboard, and none of which speak to each other in any meaningful way.
+
+The operational picture — the thing a company actually needs to reason about — is distributed across all of them. Pipeline lives in the CRM. Projects live in the project tool. Customer health lives in the success platform. Invoicing is somewhere else entirely. Each of these tools is observing its own slice of reality. The operator is left in the position of assembling a complete picture manually, from twelve separate surfaces, none of which knows what the others are doing.
+
+Consolidation alone does not solve this. Putting twelve dashboards inside one dashboard is not an operating system, it is just a wider rear-view mirror. The fix requires designing around the work rather than around the data — building a system that understands the full workflow and supports execution across it, rather than reporting states across siloed domains.
+
+This is genuinely difficult. It requires the product to have a view on what the work actually is, which means making decisions that are visible and correctable but also potentially wrong. It means the software has to be accountable in a way that a neutral data display never is.
+
+## The right question
+
+The question that separates dashboard-thinking from operability-thinking is this: after a user interacts with your product, do they know what to do next?
+
+Not because they retrieved the right data and interpreted it correctly. Because the product told them. Because the surface was designed around the answer to that question, not around the elegance of the charts.
+
+The failure mode is well understood at this point. Dashboards are not going to go away — retrieval is real value and there will always be a need to look at data clearly. But the opportunity is in what comes after the display: a product surface that takes responsibility for the gap between what happened and what should happen next, that carries enough context to have a genuine position on what matters, and that makes acting on that position as straightforward as possible.
+
+That is the product worth building. Everything else is a very good-looking chart.

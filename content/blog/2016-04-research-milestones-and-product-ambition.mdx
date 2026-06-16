@@ -17,24 +17,87 @@ tags:
   - '2016'
   - research
 ---
-## The model layer is changing
 
-April 2016 is a useful point to look at the model layer rather than only the product layer. The public AI conversation is moving quickly, but the deeper pattern is slower: models are becoming a new kind of infrastructure.
+## What a game told us about everything else
 
-That does not mean every company needs to talk about models. It means every serious product company has to understand what models make possible, what they make fragile and where the human still needs control.
+In March 2016, a Go-playing system defeated one of the world's strongest human players across a professional match series. DeepMind's AlphaGo did not win with brute force. It won by evaluating positions with a kind of intuition-shaped judgement that traditional computer search could not replicate. It won using neural networks trained on human games, then improved through self-play. It won through a combination of learned pattern and deliberate exploration that had not existed in a computer system before.
 
-## What changes for MSG
+The Go community was shaken. Experts had believed this particular challenge was decades away. The board is too large, the branching factor too vast, for conventional search algorithms to crack. That prediction was wrong by a significant margin.
 
-For Orbit, models influence how work is understood, summarised and moved forward. For Orion, they influence memory, planning and tool use. For TUXX, they influence how quickly custom systems can be designed and delivered. For CheekyGains and Naira, they influence coaching, reflection and accountability.
+The reaction in the wider technology world was predictable in form: articles asking whether artificial intelligence would now achieve general intelligence in weeks, thinkpieces on machines replacing human creativity, and excited LinkedIn posts from people who had been working in spreadsheets an hour earlier. The noise was understandable. A concrete, visible, spectacular achievement will do that.
 
-The model is not the product. It is one layer inside the product.
+But the noise was also dangerous in a specific way. It compresses the distance between a research milestone and a finished product. It suggests that what just happened in a controlled research environment is immediately applicable to whatever you are trying to build.
 
-## The operating question
+It almost never is.
 
-The practical question is what the system should know, what it should do, what it should ask permission for and what it should never touch.
+## The gap is where most people get lost
 
-Those decisions matter more than model excitement because they determine whether the product becomes useful in the real world.
+There is a structure to how AI research milestones travel into the world.
 
-## Working note
+First, there is the research result itself: a system that achieves something previously thought impossible, or achieves something familiar but far better than anything before it. The result is real. The achievement is real.
 
-MSG should study model progress closely, but translate it into operating systems, performance systems and creative tools rather than copying the language of AI marketing.
+Then there is a wave of interpretation: what this means, what it implies, what will now follow. Some of this interpretation is from researchers with a carefully developed view of what the achievement does and does not indicate. Most of it is from people who have read a summary and are fitting the news to a story they already wanted to tell.
+
+Then there is the long, unglamorous stretch where people who are actually building things have to figure out what, specifically, they can do with what has changed. This part rarely makes headlines. It requires a different kind of intelligence than announcing that intelligence has arrived.
+
+The gap between "AlphaGo beat Lee Sedol" and "we can now build a useful product for real users in a specific domain" is large. It is not infinite, but the techniques involved are real, transferable, improving. But the gap requires work that cannot be skipped: understanding the architecture, understanding what the technique requires to generalise, understanding what domain-specific adaptations are needed, understanding what data you have versus what the method assumes.
+
+Builders who skip the gap do not actually build faster. They build things that look impressive in a demo and fail in deployment.
+
+## What research milestones actually do
+
+The most useful thing a research milestone does for a product builder is not hand them a new component. It is shift what is imaginable.
+
+Before AlphaGo, the implicit assumption in most AI product thinking was that machine intelligence would be narrow, procedural, and limited to domains with clear rules and cheap data. If the problem required the kind of judgement that humans developed through long practice, reading a situation, weighing possibilities that cannot be enumerated, recognising a pattern without being able to explain it, computers were not going to help much.
+
+After AlphaGo, that assumption was weaker. Not gone, but weaker. And the particular techniques used, deep neural networks combined with reinforcement learning and planning, had a broader relevance than Go. They pointed towards a category of problem, not just a single game.
+
+That shift in what is imaginable is valuable. But it is most valuable when you hold it loosely rather than cling to it literally.
+
+The builder's job is not to say: "AlphaGo won at Go, therefore I will build an AlphaGo for my domain." That kind of direct analogy produces projects that inherit the research constraints rather than the research insights. The builder's job is to say: "What does this tell me about the shape of what is becoming possible? Where does that shape touch real problems that real people have? What would it take to close the gap?"
+
+That is a slower question. It does not generate a press release on the day of the breakthrough. But it is the question that produces products that work.
+
+## The difference between studying research and chasing it
+
+There is a version of research engagement that is essentially a form of intellectual fashion. You stay close to the announcements. You adopt the vocabulary as it appears. You find ways to connect the latest paper to whatever you are currently building, whether or not the connection is genuine. The presence of a credible-sounding research reference makes the work feel serious.
+
+This mode is easy to fall into and hard to exit once you are in it, because it produces the feeling of staying current without the discipline of understanding.
+
+A more useful relationship with research requires something closer to translation. Not literal translation of the technique into your codebase, but translation of the underlying idea into the domain where you are actually operating.
+
+What does this achievement tell us about how information can be structured for machine reasoning? What does it say about the relationship between training data and generalisation? What does it imply about the level of domain specificity required for a method to work? Where does the human remain essential, and not as a fallback but as a genuine part of the design?
+
+These are slower questions. They do not produce a product in a month. But they produce a clearer view of where the next real progress might come from, and what it will require.
+
+For Mustard Seed Group, this is the stance that makes sense: stay close to research, understand it seriously, and then ask what it means for the specific systems being built: operating tools, coaching products, commercial workflows, intelligence layers. Not in the abstract, but in the concrete particulars of what those systems need to do.
+
+## The imagination gap runs in both directions
+
+One failure mode is to overestimate what a research milestone immediately makes possible. But there is a mirror failure: to assume that because a product does not exist yet, the research does not point towards something real.
+
+The builders who are most consistently ahead of the curve are not the ones who move fastest after each announcement. They are the ones who understand the underlying trajectory well enough that they are not surprised when the announcement arrives. They have been building in that direction for long enough that the milestone confirms something they already suspected rather than revealing something they did not know.
+
+This requires a kind of patience that product environments make difficult. There is always pressure towards the visible result, the demo, the thing that can be shown to a potential client or posted to a product community. Research, by contrast, is often invisible until it is not. The insight that eventually shapes a product may sit in your thinking for months or years before you find the surface where it fits.
+
+The discipline here is to keep both moving simultaneously: the long translation work that builds genuine understanding of where technology is heading, and the short work of building real products for real users with what is available today. These are not in tension if you are honest about what each requires.
+
+## What this year is asking of serious builders
+
+April 2016 is an odd moment to be building AI-adjacent products. The research is accelerating visibly. The public imagination is running well ahead of what is deployable. Investment is beginning to follow the attention. And the gap between the research frontier and the average product environment is still very large, large enough that most of what is being announced publicly has limited immediate relevance to the kind of operational tools that businesses actually use.
+
+That gap is not a reason to wait. It is a reason to be deliberate.
+
+The most useful thing a builder can do in a moment like this is not pivot towards the milestone or away from it. It is to be clear about what is being built and why, and then ask honestly where the new capability matters to that specific problem and where it does not.
+
+For operating systems built around commercial execution, the question is where intelligence reduces friction in the actual workflow rather than adding novelty. For coaching and performance products, the question is where intelligence helps someone understand their own patterns rather than replacing the accountability relationship that makes change possible. For research and delivery work, the question is where automation improves quality rather than compressing the judgement that quality depends on.
+
+These are unglamorous questions. They do not benefit from the AlphaGo announcement in the short term. But they are the right questions, and the research that is now developing will eventually speak to them directly.
+
+The task is to be ready for that moment, not by waiting for it, but by building the understanding and the product foundations that will allow it to land in something useful rather than something that merely mentions the right words.
+
+Research milestones shift what is imaginable. Products shift what is possible for the people using them. The distance between those two things is where the actual work lives.
+
+## Sources
+
+- [AlphaGo, DeepMind](https://www.deepmind.com/research/highlighted-research/alphago)

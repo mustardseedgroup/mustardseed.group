@@ -16,22 +16,83 @@ tags:
   - '2020'
   - product
 ---
-## The friction
 
-The useful product question in November 2020 is not "what can we build?" It is "where is the friction repeating?"
+## The pile versus the system
 
-Repeated friction is a signal. It tells us where teams lose momentum, where people abandon standards and where a better system would change the outcome.
+Most commercial teams do not have a system for commercial work. They have a pile.
 
-## The operating surface
+A CRM for the contacts. A project board for the tasks. A spreadsheet tracking the pipeline. A shared inbox stitching deals together. A document editor for the proposals. A separate tool for invoicing, another for resourcing, another for reporting back to the client. Each of these tools works. None of them constitute an operating layer. They constitute an accumulation — and the gaps between them are where commercial work quietly falls apart.
 
-That is the shared thread between Orbit and TUXX. Orbit turns commercial execution into an operating surface. TUXX tests real constraints through services and custom systems. One creates product clarity; the other keeps the work honest.
+Leads go cold because no-one could see the handoff. Proposals take three weeks because the brief lived in someone's notes and the commercial context lived somewhere else. Post-project reviews never happen because there is no surface that connects what was promised to what was delivered. The experienced account manager who knows which client is quietly unhappy is not drawing on the system. They are drawing on years of context the system never captured.
 
-This is how the portfolio should behave. Services expose patterns. Research explains them. Products make them repeatable.
+This is not a marginal complaint about tool choice. It is a structural problem with how commercial software evolved — product by product, layer by layer, each tool solving one slice of the problem without regard for the arc that surrounds it.
 
-## What this changes
+The case for a business operating system begins there. Not with a feature comparison, but with a diagnosis.
 
-The more capable models become, the more important the surrounding product becomes. A model can answer. A product has to direct, remember, measure, recover and help people finish.
+## What the category is not
 
-## Working note
+Before building the positive case, it is worth being precise about the category, because the term will attract comparisons to things that are adjacent but wrong.
 
-Build the product where the pain repeats. Use AI where it genuinely improves the operating loop. Keep the system understandable enough for people to trust it.
+A business operating system is not a CRM. CRMs are contact databases with pipeline views bolted on. They were designed for high-volume, repeatable transactional sales — contexts where a record of the contact and a stage in a funnel is the most useful thing the system can surface. They do not handle the complexity of a commercial relationship that evolves across months, involves multiple stakeholders, requires delivery coordination and produces outputs that need to be measured against what was originally scoped. A CRM is a lens on contacts. An operating system is a layer across everything.
+
+It is not project management software. Project management tools organise tasks. They are genuinely good at that. But they are not commercial systems. They do not know about leads, about revenue targets, about the health of a client relationship or whether the project they are organising was scoped correctly in the first place. They pick up where commercial work ends, which means the most important commercial moments — qualification, brief, proposal, negotiation — happen entirely outside them.
+
+It is not a productivity suite. Document editors and shared drives solve writing and collaboration at the document level. They do not surface the commercial context surrounding the document. A proposal in a shared drive is inert. It does not know whether the client opened it, what stage the deal is at, or whether the scope it describes bears any relationship to what eventually got built.
+
+And it is not, in 2020, another AI writing assistant. The wave of tools offering AI-assisted drafting and scheduling produces useful individual outputs. But they are tools in the same sense a calculator is a tool — capable of specific operations, disconnected from the broader system in which those operations occur.
+
+The category is different in kind, not just in scope. A business operating system is the layer that connects commercial execution end to end — from the first signal of interest through to delivery, measurement and renewal — in a single coherent structure.
+
+## The integration argument does not hold
+
+The obvious counter to this framing is integration. Modern software can be connected. APIs exist. Automation platforms exist. Developers build custom pipelines. Why define a new category when the existing tools can, in principle, talk to one another?
+
+The integration argument misunderstands where the value is.
+
+The value in a genuine operating system is not in connecting existing data — it is in designing the workflow so that the right data is produced at the right moment, in the right context, without requiring the person doing the commercial work to maintain the plumbing separately. Every integration layer adds friction. Someone has to configure it, maintain it when a tool updates its API, and debug it when a deal lands in an unexpected state and the automation breaks. In most commercial teams, that person does not exist as a dedicated role. So integrations stay brittle, underused, or dependent on one technically-minded person who eventually leaves.
+
+More fundamentally, no integration layer can impose commercial structure retrospectively. You can pipe data from a CRM into a project board, but you cannot make the CRM understand project scope or the project board understand commercial context by running data between them. The conceptual assumptions of each tool are built in at the design level. Integration works at the data layer. It cannot work at the logic layer.
+
+This is why assembling a tighter stack does not solve the problem. The gap is not primarily about data connectivity. It is about whether the system was designed with the full commercial arc in mind from the start.
+
+## The arc as the data structure
+
+The right mental model for a business operating system is the commercial arc itself as the fundamental data structure.
+
+A lead becomes a brief. A brief becomes a proposal. A proposal becomes a project. A project produces outcomes — deliverables, relationships, revenue, learning — that should feed directly back into the capacity to pursue the next lead more intelligently. This loop exists in every commercial organisation. Most of them have no software that treats it as a coherent thing.
+
+When the data about a commercial relationship lives across four separate tools, no single surface can tell you anything meaningful about the health of that relationship. You can see the tasks in the project board but not whether the deal that created those tasks is tracking against its original scope. You can see the contact record but not whether the delivery on the previous engagement gave you any reasonable basis for confidence in the next one. You can see the invoices but not easily connect them to the specific commitments made in the proposal.
+
+This opacity means that most commercial teams are operating on instinct and memory more than they would admit. When the person who carries that memory leaves, the institutional knowledge leaves with them. What the system retains is a set of disconnected records with no coherent story between them.
+
+A business operating system changes this not by adding more tools but by treating the commercial arc as the unit of design. Leads, proposals, projects, deliverables, client signals, revenue outcomes: these are not separate objects in separate databases. They are moments in a continuous operating flow. The system should surface them as such.
+
+## Where Orbit fits into this framing
+
+The work on Orbit in 2020 is, at this point, a design and framing exercise more than a built product. But the framing is becoming more confident.
+
+The category question — is this a CRM, a project tool, an ERP, something else? — comes up repeatedly. The honest answer is that none of the existing categories fully describe it. Orbit is being designed as an operating surface for the full lead-to-launched-product flow. The language matters: not a database, not a board, not a suite — a surface. Something you work on, not simply a place where records accumulate.
+
+The early architecture is built around the idea that the commercial arc has a shape, and the system should make that shape legible. Not by importing data from other tools, and not by being a more sophisticated records system, but by designing the workflow so that moving through the arc naturally produces the record.
+
+TUXX operates alongside Orbit in this framing as the place where commercial and delivery patterns are tested in live conditions. Services work exposes the real constraints that product work can only theorise around. The logic is deliberate: build the pattern first in a real commercial environment, then harden it into product. What TUXX learns about what breaks down in delivery, where context gets lost between proposal and execution, which handoffs reliably produce confusion — all of that feeds directly into what Orbit is designed to prevent.
+
+## Late 2020 is a clarifying moment
+
+November 2020 is not an obvious moment to be launching new commercial infrastructure software. The pandemic has disrupted most professional sales cycles, compressed decision-making timelines and forced an improvisation of working arrangements that has left little appetite for rethinking the fundamental tool stack.
+
+But the pandemic has also exposed the brittleness of the assembled stack more vividly than normal. When teams went remote, the informal coordination that had papered over the gaps in their systems disappeared. The hallway update, the ambient awareness of where a deal stood, the desk-side check-in — all of it evaporated. What remained was whatever the system actually recorded. In many teams, that turned out to be very little.
+
+The case for a genuine operating system is clearest when the informal scaffolding is removed. That is what the pandemic did. The argument that commercial teams need a real system — not a pile of tools held together by memory and habit — is easier to make in late 2020 than it was twelve months earlier. Not because the technology has changed, but because the experience of operating without informal scaffolding has made the gap visible in a way it was not before.
+
+This is the kind of moment where categories get defined. Not because someone invents a new word, but because enough people have now felt the problem clearly enough that a credible solution has somewhere to land.
+
+## A working definition
+
+The closest working definition of a business operating system, as of this writing, is: a single integrated layer through which a commercial team manages the full arc from first contact to completed outcome, where each stage of that arc is visible to every relevant participant, and where transitions between stages are native to the system rather than dependent on external coordination or shared memory.
+
+It is not sophisticated by the standards of what software can theoretically do. But relative to how most commercial teams currently operate, it is a significant shift.
+
+The underlying bet is simple: teams that operate on a genuine system will accumulate commercial intelligence faster than teams operating on disconnected tools. They will have better recall of what was promised, clearer sight of what is at risk, and a more reliable capacity to improve — because the system will have captured enough of the pattern to make improvement possible.
+
+That is the early case. It is not yet proven. But the gap it is designed to close is real, the inadequacy of existing tools is demonstrable, and the direction of travel is clear enough to build towards it.

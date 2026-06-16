@@ -16,24 +16,71 @@ tags:
   - '2016'
   - research
 ---
-## The model layer is changing
 
-February 2016 is a useful point to look at the model layer rather than only the product layer. The public AI conversation is moving quickly, but the deeper pattern is slower: models are becoming a new kind of infrastructure.
+## Something is surfacing
 
-That does not mean every company needs to talk about models. It means every serious product company has to understand what models make possible, what they make fragile and where the human still needs control.
+There is a particular quality to a technology when it stops being theoretical and starts being visible. Not product launches, not press releases, but something subtler: the moment when engineers at non-AI companies start paying serious attention to a paper, when a capability that existed in research form for years starts appearing inside things people actually use.
 
-## What changes for MSG
+That moment is happening now, in early 2016, with machine learning.
 
-For Orbit, models influence how work is understood, summarised and moved forward. For Orion, they influence memory, planning and tool use. For TUXX, they influence how quickly custom systems can be designed and delivered. For CheekyGains and Naira, they influence coaching, reflection and accountability.
+It is not that the field appeared suddenly. The foundational work has been building for years, deep learning's resurgence goes back to 2012 at minimum, when results on the ImageNet benchmark started to shift the field's assumptions about what neural networks could accomplish at scale. But there is a difference between research progress that is legible to practitioners and research progress that reorganises what product teams think is possible. The latter is what is happening now.
 
-The model is not the product. It is one layer inside the product.
+The clearest signal is Google. DeepMind's work on Go, a game long considered categorically different from chess in its resistance to classical game-tree approaches, produced a result in the last few weeks that the field had not expected this decade. AlphaGo defeating a professional player at a standard 19x19 board is not a stunt. It is a demonstration that a combination of deep learning and reinforcement learning can acquire genuine strategic competence in a domain with more possible positions than atoms in the observable universe. The technique itself matters less than what it implies: that the bottleneck on machine capability is narrowing, and it is narrowing faster than most people expected.
 
-## The operating question
+That change in the speed of narrowing is what product teams need to understand.
 
-The practical question is what the system should know, what it should do, what it should ask permission for and what it should never touch.
+## What the benchmark results actually tell you
 
-Those decisions matter more than model excitement because they determine whether the product becomes useful in the real world.
+The ImageNet results from the last few years are worth sitting with, even if you did not follow them in real time. The competition measures how accurately a system can identify objects in images, a task that was, for most of computing history, deeply difficult for machines and trivially easy for people. In 2012, a deep learning approach cut the previous best error rate roughly in half. By 2015, systems were performing at or above human-level accuracy on the standard benchmark.
 
-## Working note
+That is a meaningful sentence to say clearly: on a well-defined visual classification task, software now performs at least as well as people. Not on everything. Not on open-ended interpretation. Not on the kind of perceptual intelligence that involves context, history, and intent. But on a narrowly defined, well-measured task. And that matters, because product problems decompose into narrowly defined tasks all the time.
 
-MSG should study model progress closely, but translate it into operating systems, performance systems and creative tools rather than copying the language of AI marketing.
+If you build a product that involves categorising images, moderating content, extracting text from photographs, or matching objects across a catalogue, you are looking at a set of capabilities that have crossed a threshold. Not a future threshold. A current one.
+
+The subtler lesson from the benchmark history is about trajectory. The improvement rate between 2012 and 2016 is not incremental. It is the kind of curve that, once you have seen it, you cannot unsee. Research teams are not converging on a ceiling. They are iterating toward capabilities that did not appear achievable three years ago. This rate matters for anyone reasoning about where the model layer will be in 2018 or 2020.
+
+## The gap between hype and infrastructure
+
+Something unusual is happening in public discourse about machine learning this year. The technology is becoming a topic for generalist media, with articles about AI written for audiences who have no background in statistics or systems. That coverage is a reasonable signal that a capability has crossed a cultural threshold, but it is a poor guide to what the capability actually is.
+
+The public narrative tends to oscillate between two modes. One is incredulity: machine learning as a parlour trick, pattern-matching mistaken for intelligence, bound to plateau. The other is apocalypse: the AGI timeline, the labour displacement thesis, the civilisational risk framing. Both modes share a quality: they make it harder to ask the practical question, which is what changes in how software is built and what it can do.
+
+The practical change, right now, is that a set of techniques that required deep specialist knowledge to apply is becoming more tractable. Frameworks are improving. Pre-trained models are beginning to circulate. The gap between reading a paper and running an experiment is shrinking. This does not mean the work is easy. It means the bottleneck is shifting from access to expertise to clarity about what problem you are actually trying to solve.
+
+For product teams, this shift has a specific implication: the most important capability you need right now is the ability to translate a product problem into a form that machine learning can engage with. That is not a machine learning skill. It is a systems thinking skill and a product thinking skill. Teams that develop it will have options that others do not.
+
+## What is and is not changing
+
+It is worth being precise about what machine learning makes different in early 2016, because precision is the best defence against both excessive excitement and excessive dismissal.
+
+What is changing: tasks that involve pattern recognition at scale, in images, text, speech, structured data, are becoming more tractable. The threshold of training data required to achieve useful performance on specific tasks is falling. Capabilities that required bespoke engineering a few years ago are beginning to look like components.
+
+What is not changing: the fundamental challenge of building products that earn trust, maintain quality, and solve real problems. A better pattern-matching layer does not automatically produce a better product. It produces a new kind of leverage that can be used well or poorly. The product decisions, what to build, for whom, with what constraints, and with what degree of human oversight in the loop, are unchanged in their importance.
+
+There is a version of the machine learning conversation that treats the capability as a destination. As though the interesting question is whether your company has "adopted AI." This framing produces the wrong work. The more useful frame is: given these emerging capabilities, what becomes possible in our domain that was not tractable before, and is that worth pursuing?
+
+That is a more demanding question. It requires knowing your domain well enough to identify the specific places where better pattern recognition could change something. But it is the question that leads to durable work rather than capability theatre.
+
+## The model as one layer inside the product
+
+Within MSG's own work, the shift in model capability is interesting not because it changes the fundamental problems we are working on, but because it changes what is available in the toolbox.
+
+The work that matters is building systems that increase human capability, giving people more leverage over their time, their decisions, their creative output. Models are one component inside that architecture, not the architecture itself.
+
+For something like Orbit, the relevant question is where a model can do real work inside a commercial workflow, not to automate the workflow, but to handle the parts that are genuinely mechanical: routing, summarising, surfacing the right context at the right moment, reducing the time between an action and its consequences. That question does not require models to be remarkable. It requires them to be reliable and appropriately constrained.
+
+For research work like what Benediction Lab is beginning to explore, the question is more forward-looking: what happens to the agent architecture when the model layer improves? When the bottleneck on autonomous task completion is less about raw capability and more about planning, memory, and error recovery? These are questions worth sitting with now because the work to answer them takes time.
+
+For something like TUXX, the practical value of improving models is speed of delivery. Custom systems that required months of specialist work may begin to require weeks. That compression changes what is economically viable to build for clients, which changes the range of problems worth taking on.
+
+None of this is about chasing model progress. It is about building coherent systems on top of a layer that is becoming more capable, and remaining clear about which layer is doing which work.
+
+## The useful posture
+
+The technology is becoming visible. That is not nothing: visibility precedes adoption, and adoption precedes maturity. The fact that machine learning is now a topic in generalist media means that the next three to five years will involve a significant increase in the number of teams trying to build with it. Some of that work will be good. Much of it will be poorly conceived.
+
+The useful posture is neither to follow the wave uncritically nor to dismiss it as overhyped. It is to develop a clear understanding of what current capabilities actually are, where they are reliable, where they are fragile, and how they change the cost structure of specific types of problem.
+
+That understanding takes time to develop. It requires reading the research, running experiments, and being honest about failure. Teams that invest in it now, in early 2016, when the field is still specialist enough that serious study is required, will be in a meaningfully different position in two or three years than teams that wait until the capability is commoditised.
+
+The window for developing genuine understanding rather than surface familiarity is not permanent. It is worth using.

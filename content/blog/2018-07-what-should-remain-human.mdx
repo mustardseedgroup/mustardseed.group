@@ -17,24 +17,61 @@ tags:
   - '2018'
   - research
 ---
-## The model layer is changing
 
-July 2018 is a useful point to look at the model layer rather than only the product layer. The public AI conversation is moving quickly, but the deeper pattern is slower: models are becoming a new kind of infrastructure.
+The more capable systems become, the more important the question of delegation gets. Not whether to delegate, that decision is already made, at scale, across most industries, but what to delegate, and what to withhold.
 
-That does not mean every company needs to talk about models. It means every serious product company has to understand what models make possible, what they make fragile and where the human still needs control.
+This is not a question that automation answers for you. It is a question that the humans building systems have to answer first. And right now, in July 2018, most builders are not asking it with enough seriousness.
 
-## What changes for MSG
+## Capability outpacing intention
 
-For Orbit, models influence how work is understood, summarised and moved forward. For Orion, they influence memory, planning and tool use. For TUXX, they influence how quickly custom systems can be designed and delivered. For CheekyGains and Naira, they influence coaching, reflection and accountability.
+The last eighteen months have produced a steady accumulation of research that demonstrates machine learning systems performing well on tasks previously assumed to require human judgement. Translation. Summarisation. Image classification. Legal document review. Medical image analysis. Customer support routing. Each new demonstration comes with a performance number, a benchmark exceeded, a headline written.
 
-The model is not the product. It is one layer inside the product.
+What is rarely included in these announcements is the harder question: even where the system performs well on average, what are the failure modes? What does the system not understand about what it is doing? And, crucially: who absorbs the consequences when it is wrong?
 
-## The operating question
+Capability and accountability are being decoupled. That is the real tension. As systems become more capable, the temptation to hand over more decisions to them grows. But the accountability for those decisions, to real people, in real circumstances, with real consequences, does not transfer along with the task. It remains with whoever built the system, deployed it, and chose not to supervise it.
 
-The practical question is what the system should know, what it should do, what it should ask permission for and what it should never touch.
+## What the system cannot hold
 
-Those decisions matter more than model excitement because they determine whether the product becomes useful in the real world.
+There is a category of things that automated systems genuinely cannot do, and it is useful to be precise about what is actually in that category, rather than reaching for vague humanism as a defence.
 
-## Working note
+Systems are very good at pattern completion across large datasets. They are very good at finding correlations and generalising from historical examples. They are good at producing fluent outputs that match a statistical distribution. These are not small things. They are enormously useful.
 
-MSG should study model progress closely, but translate it into operating systems, performance systems and creative tools rather than copying the language of AI marketing.
+What systems cannot do, not today, not in the architectures that exist as of this writing, is hold genuine consequence. They cannot understand what it means for a decision to matter to a person. They cannot feel the weight of being wrong in a way that shapes future behaviour in the way that weight shapes humans. They do not have interests, so they cannot advocate. They do not have relationships, so they cannot be trusted.
+
+This is not a moral argument against automation. It is a functional description of where the current tools actually sit. The limit is not one of effort or compute. It is structural: consequence, relationship, and genuine judgement require a self that is affected by outcomes. Systems optimise for signals. They do not bear the cost of what those signals represent.
+
+## Judgement is not a feature
+
+One of the more significant confusions in how AI capability is discussed is the conflation of pattern recognition with judgement. A system that correctly identifies the most common next action in a given situation is not exercising judgement: it is completing a pattern. Judgement involves weighing competing considerations that may not be reducible to a distribution, under conditions of uncertainty, where the outcome genuinely matters to you.
+
+This distinction has practical consequences for product design. A system that tells a user what to do, based on a pattern completion over historical data, is not a judgement aid. It is a pattern mirror. If the historical data reflects poor decisions, the system will confidently recommend poor decisions. If the context being evaluated is genuinely novel, the system will reach for the nearest familiar pattern and present it as appropriate.
+
+The question of what should remain human, then, is partly a question about the design of the human-system interface. Not just what the system does, but how the system presents its outputs to the human who has to act on them. A system that makes recommendations should look like a system making recommendations. A system that asks for confirmation should genuinely require it, not as a formality, but as a meaningful check in a chain of consequence.
+
+## Direction, taste, and relationship
+
+Three things seem clearly irreducible to automation at any level of capability the current trajectory can plausibly reach: direction, taste, and relationship.
+
+Direction is the decision about what to build, what to pursue, what counts as success. Automated systems can tell you how to achieve a goal more efficiently. They cannot tell you whether the goal is worth pursuing. They can optimise a metric. They cannot decide which metrics should be optimised, or what should be sacrificed to optimise them. Direction is a human responsibility not because machines lack the compute to form a view, but because direction is the point where values are enacted. Values cannot be inherited from a dataset. They have to be held by someone who will be accountable for them.
+
+Taste operates similarly. A system trained on what has been produced before will gravitate toward the centre of that distribution. It will be competent and recognisable. It will not take the risk of being genuinely unfamiliar, because unfamiliarity is not a pattern it can complete. Taste, at the level that distinguishes work worth making from work that fills a brief, requires a perspective that goes beyond the training set. It requires someone who has strong views about what is not yet in the world and is willing to accept the judgement that comes with asserting those views.
+
+Relationship is perhaps the most straightforward of the three. Trust between people is built over time through a combination of demonstrated reliability, mutual understanding, and genuine interest in each other's outcomes. These are not conditions that a system can fulfil because a system does not have outcomes it cares about. When a system appears to listen, it is processing. When a system appears to understand, it is pattern-matching. When a system appears to respond with care, it is producing output that resembles care. The distinction matters not as a philosophical point but as a practical one: people sense the difference, and rightly so.
+
+## What this means for how we build
+
+At MSG, this question is live and operational, not theoretical. Every system we are developing, whether inside Orbit, Orion, TUXX's client work, or the coaching infrastructure being built into CheekyGains, requires a specific and deliberate answer to the question of what the system should own and what the human should own.
+
+The instinct to automate everything that can be automated is not always wrong, but it is often premature. Automation without a clear theory of where human judgement re-enters the loop is not efficiency: it is abdication. It creates systems that produce outputs but no one who is genuinely accountable for them.
+
+The principle we return to: systems should increase human capability, not replace human decision-making. This is not a constraint we are under because our systems are not capable enough yet. It is a design commitment that holds regardless of capability level. The goal is a human who can do more, think more clearly, act with better information, not a human who has been removed from the chain.
+
+This shapes the interface. It shapes what Orbit shows and what it asks. It shapes how Orion surfaces context rather than conclusions. It shapes how Naira coaches rather than instructs. The difference between a system that informs and a system that decides is not always dramatic in implementation, but it is profound in terms of who is responsible for the outcome.
+
+## The question as infrastructure
+
+As the field matures, the organisations that will build lasting systems are not the ones that automate the most. They are the ones that have thought most carefully about where automation genuinely serves human capability and where it substitutes for it in ways that erode rather than enhance.
+
+That line is not static. As tools develop and understanding deepens, some things that require human involvement today will be safely delegable. Others will remain irreducibly human for structural reasons that capability improvements will not resolve. The task is to know which is which, and to keep asking the question even as the competitive pressure to simply move faster makes asking feel like a luxury.
+
+It is not a luxury. It is the question. And for us, it remains open.

@@ -18,22 +18,83 @@ tags:
   - '2020'
   - research
 ---
-## The shift
 
-GPT-3 makes a new product pattern easier to imagine: software that responds to intent rather than only to predefined buttons.
+## What 175 billion parameters actually means
 
-That does not remove the need for design. It raises the bar for design. If language can become an interface, the surrounding system must decide what the model can access, what it should remember, when it should ask, and how the human stays in control.
+In May 2020, OpenAI published a paper describing a language model trained on 175 billion parameters — roughly one hundred times the scale of GPT-2. The number itself is not the interesting part. What matters is what happened to the behaviour at that scale.
 
-## Why it matters for Orbit
+GPT-2 was impressive in a contained way. It could produce fluent prose. It could continue a passage. Held up to scrutiny, though, it was obviously statistical — good at the surface of language without much grip on the structure underneath. You could see the seams.
 
-Business execution is full of language: emails, proposals, sales notes, requirements, delivery notes, feedback, support and internal decisions.
+GPT-3 was different in kind, not just degree. The paper demonstrated something called few-shot learning: give the model a handful of examples of a task — a format, a pattern, a transformation — and it would generalise. No fine-tuning. No gradient updates. Just examples in the input, and the model would continue the logic.
 
-A model that can reason over language suggests that the operating system for a business should not be only tables and forms. It should understand the work being described.
+The technical explanation for why this emerges at scale is not fully understood, even by the researchers who built it. What the paper documents is that it does emerge, reliably, across a surprisingly broad range of tasks — translation, question answering, arithmetic, simple reasoning, code completion, table filling, analogical reasoning. Not perfectly. Not always. But enough that the behaviour cannot be explained away as interpolation.
 
-## Why it matters for TUXX
+That is the thing worth sitting with. A single model, trained once, exhibiting task-general capability through prompting alone. The implications for what software can become are genuinely significant.
 
-For client work, this points to faster custom systems, clearer internal tools and better ways to reduce repetitive coordination. The lesson is not to automate everything. The lesson is to remove the work that prevents people from doing the higher-value part.
+## Few-shot learning as a product primitive
 
-## Working note
+The standard model for building software capability is: define the task, gather training data, train a model for that task, deploy it. It is expensive, slow, and brittle when the task shifts even slightly. Most organisations cannot afford to do this for more than a handful of use cases, and most of those use cases have to be narrow enough to make the problem tractable.
 
-GPT-3 increases imagination. The job now is discipline: product boundaries, review loops, memory and interfaces that do not collapse under their own flexibility.
+Few-shot learning changes the cost structure. If a model can generalise from examples provided at runtime, then the marginal cost of adapting it to a new task drops dramatically. You do not need a new training run. You need good examples and a well-structured prompt.
+
+This is not a complete solution. Prompt engineering has its own discipline, and the model's reliability varies across task types. GPT-3 is not equally capable at everything. It can produce confident nonsense. It struggles with multi-step reasoning that requires keeping tight constraints in mind across many inference steps. The failure modes are not always predictable.
+
+But the direction of the capability is clear. The model is not a narrow tool trained for a fixed output. It is something closer to a general-purpose reasoning surface that can be steered through language. That is a fundamentally different object to work with.
+
+## Not just writing
+
+The mistake in early reactions to GPT-3 was to frame it as a writing tool. That is the most visible demonstration — generate a paragraph, write a cover letter, summarise a document. These are real uses, but they are the least interesting ones.
+
+What GPT-3 demonstrated in its paper, and what became clearer in the months following publication, was that the capability extended well beyond prose generation. It could complete code. Fill structured tables from natural language descriptions. Classify text into categories. Answer questions over a given passage. Translate between languages it had not been explicitly fine-tuned for. Generate structured outputs — JSON, CSV, HTML — from prose instructions.
+
+Each of those is a product capability in its own right. Taken together, they suggest something broader: a model that has internalised a general representation of human knowledge tasks, one that can be steered towards a specific task by showing it what that task looks like.
+
+The product question is not "can we use GPT-3 to generate content?" It is "what changes when language becomes a programmable interface to a reasoning system?"
+
+## The foundational model concept
+
+GPT-3 is one of the clearest early demonstrations of what researchers would later formalise as the "foundation model" idea — a large model trained broadly that can be adapted, steered, or fine-tuned towards specific downstream uses without being retrained from scratch.
+
+The significance of this for software architecture is considerable. For most of the history of machine learning in products, capability was bespoke: a recommendation model trained on user behaviour, a classifier trained on labelled documents, a search ranking model trained on clickthrough data. Each required its own data infrastructure, its own training pipeline, its own maintenance cycle. Capability accumulated in isolated silos.
+
+Foundation models introduce a different architecture. The general capability lives in the base model. The product-specific behaviour lives in the adaptation layer — the prompt, the fine-tune, the retrieval context. The cost of adding a new capability is no longer a new training run; it is a new adaptation. The organisational and economic implications of that shift are still being worked out, but the direction is clear: the fixed cost of capability acquisition falls, and the variable cost of application rises in its place.
+
+For teams thinking about what to build, this changes the question from "can we acquire the capability?" to "can we design the right adaptation and the right surrounding system?"
+
+## Discipline, not just imagination
+
+It would be easy, in May 2020, to list everything GPT-3 might be applied to and call it product strategy. The capability is broad enough that almost any application of language — which is to say, almost any application in knowledge work — is technically within scope. That breadth is precisely what makes it dangerous to think about carelessly.
+
+The interesting design questions are not about capability. They are about constraint.
+
+What does the model have access to? A language model operating without access controls can summarise anything it is given — which means the design of what it is given matters enormously. Access boundaries, permissions, and scoping are not security afterthoughts; they are core product decisions.
+
+What does it remember? GPT-3 has no persistent memory. Every conversation starts clean. For most product uses, that is a serious limitation. Business execution depends on context that accumulates over time — prior conversations, existing records, stated preferences, history of decisions. A model that cannot carry context across sessions is limited to single-interaction tasks. Memory architecture becomes a product problem, not just a model problem.
+
+When does the human stay in the loop? The model's confidence does not track its accuracy. It can produce a well-structured, grammatically clean, entirely incorrect output with no signal that anything has gone wrong. Review mechanisms, confirmation steps, and surfaced uncertainty are not UX niceties; they are essential for building systems people can rely on.
+
+How do you handle failure gracefully? GPT-3 is not deterministic in the way a traditional API is. The same prompt can produce different outputs. The model can misfire in ways that are hard to anticipate. Fallback logic, output validation, and graceful degradation are design requirements, not edge cases.
+
+Getting these right is harder than imagining the applications. The applications are obvious. The systems thinking required to make them reliable is not.
+
+## What this means for the things we are building
+
+For Orbit, GPT-3 is a signal about what a business operating system can eventually become. Business execution is dense with language — proposals, briefs, sales correspondence, delivery notes, feedback, internal decisions, requirements. Systems that only organise this content into tables and fields are leaving most of it unaddressed. A model that can reason over language suggests an operating layer that understands what the work is about, not just where it is stored.
+
+This is not a near-term feature claim. In mid-2020, the infrastructure to deploy GPT-3 reliably in a product context is not settled. The costs are high, the latency is significant, and the failure modes are not well understood. But the capability exists as a research artefact, and that matters. The product imagination can now proceed with the knowledge that the underlying reasoning surface is real.
+
+For TUXX's client work, the implication is more immediate. Custom internal tools — the kind that help a team co-ordinate, process information, or reduce repetitive decision-making — become meaningfully more tractable to build. Not because the model is plug-and-play, but because the core reasoning layer no longer needs to be purpose-trained. The design work shifts towards understanding the task, defining the adaptation, and building the surrounding system. That is design and engineering work that compounds across projects.
+
+For CheekyGains and Naira, the direction is towards coaching that can reason over what a person has actually said and done, rather than responding from fixed scripts. Performance coaching is fundamentally a language problem — the quality of the interaction depends on the quality of the understanding. A model that can reason generally over language, adapted to the specific domain, is a different kind of coaching substrate than anything previously available at the consumer scale.
+
+## Imagination earns nothing on its own
+
+The temptation with a research publication like this is to treat imagination as the deliverable. GPT-3 inspires a list of applications, and the list becomes a substitute for the hard work of building.
+
+The capability increases what is imaginable. It does not change what actually ships. That still requires the same things it always required: clear product boundaries, rigorous system design, feedback loops, iteration, and a willingness to discard the idea that does not survive contact with real use.
+
+What GPT-3 does is raise the ceiling. It expands the set of problems worth attempting because the underlying reasoning surface is good enough to attempt them. That is genuinely significant. But the work of translating that capability into something reliable and useful is, if anything, more demanding than it was before — because the flexibility of the model makes it easy to build something that looks impressive and works poorly.
+
+The discipline now is to hold both things at once: the expanded imagination that a model like this makes possible, and the rigour required to turn any part of it into something that actually functions. One without the other produces either timid incrementalism or enthusiastic prototypes that never leave the demo stage.
+
+Neither is the point.

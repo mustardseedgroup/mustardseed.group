@@ -109,7 +109,7 @@ function collectRemoteUpdateFiles(config: SourceConfig) {
 function writeReport(items: ReportItem[]) {
   const lines = ["# Content Draft Safety Report", "", `Dry run: \`${dryRun}\``, ""];
   for (const item of items) {
-    lines.push(`- \`${item.status}\` ${item.source}${item.reason ? ` — ${item.reason}` : ""}${item.draft ? ` — ${item.draft}` : ""}`);
+    lines.push(`- \`${item.status}\` ${item.source}${item.reason ? `: ${item.reason}` : ""}${item.draft ? `: ${item.draft}` : ""}`);
   }
   fs.writeFileSync(reportPath, `${lines.join("\n")}\n`, "utf8");
 }

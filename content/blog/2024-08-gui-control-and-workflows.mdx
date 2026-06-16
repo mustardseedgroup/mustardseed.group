@@ -19,22 +19,69 @@ tags:
   - '2024'
   - research
 ---
-## The agent problem
 
-Most work does not happen inside one perfect API. It happens across browsers, forms, dashboards, calendars, inboxes, files and half-finished systems.
+Most software built for humans was never designed to be operated by anything other than a human. The button exists because a finger or a cursor will press it. The dropdown exists because someone will scan its options and select. The form exists because a person will read each field label, decide what to enter, and submit. These interfaces encode workflow assumptions — sequence, decision, confirmation — that are visible only to someone who already knows what they are doing.
 
-That is why GUI control matters. If agents can only talk, they are assistants. If they can operate interfaces with permission and supervision, they become closer to execution systems.
+The question that began surfacing seriously in 2024 was whether an AI agent could come to understand those assumptions well enough to operate within them. Not to consume the data underneath the interface via an API, but to operate the interface itself — to see what a human sees, decide what a human would decide, and act accordingly.
 
-## Why this matters for Orbit
+This is what GUI control means in practice. And it is a more interesting capability than it first appears.
 
-Orbit is about movement from prospect to launched product. That movement often crosses many tools. A practical agent needs to understand the workflow and operate inside the messy surface where the work lives.
+## What changed in 2024
 
-## Why it belongs in research
+The technical shift that made this a live research area rather than a speculative one was the combination of two capabilities maturing simultaneously: vision models that could interpret interface screenshots with meaningful accuracy, and action-generation models that could map a goal to a sequence of reliable interface operations.
 
-GUI control is powerful and risky. It needs boundaries, visibility, confirmation and clear recovery when something goes wrong.
+Anthropic's computer use capability — released in public preview in October 2024 — demonstrated what this looked like in a laboratory setting. An agent given a high-level task could take screenshots, reason about what was on screen, move a cursor, type, click, and navigate towards completing the task. The capability was imperfect, sometimes fragile, and required careful supervision. But it was real, and it pointed at something important: the interface layer, which had previously been a hard boundary between what AI systems could touch and what they could not, was becoming permeable.
 
-Benediction Lab is the right place to explore those constraints before the pattern becomes product.
+OpenAI had been developing analogous patterns through function-calling and browser-oriented tooling. The underlying insight was consistent across different approaches: if a model can see an interface and produce structured descriptions of what actions to take, you can close the loop with a runtime that executes those actions. The agent becomes an operator of software, not merely a responder to prompts.
 
-## Working note
+What matters is not the specific technical implementation but the category of capability it opens. An agent that can operate a GUI can work inside the real environment where work actually happens — not a sanitised API surface purpose-built for machine consumption, but the same browser window, the same desktop application, the same web form that a human colleague would use.
 
-The useful agent is not the one that sounds clever. It is the one that can complete bounded work reliably without hiding what it is doing.
+## The surface where work lives
+
+This matters because of where work actually lives.
+
+The assumption embedded in most enterprise AI tooling as of 2024 was that if you could connect AI to structured data — CRM records, calendar entries, project management fields — you had connected AI to work. In some domains that was true enough to be useful. But real operational work, the kind that moves a commercial relationship from first contact through to delivered outcome, is rarely contained within one well-structured system.
+
+It lives in inboxes that contain half-negotiated terms, in browser tabs open to competitor pricing pages, in spreadsheets that are really decision-making surfaces rather than data stores, in project management tools where the status field says one thing and the comment thread says another. It lives in the gaps between systems — in the copy-paste moment, in the tab-switch moment, in the moment where a human has to reconcile information from three sources before they can type a single sentence.
+
+An agent limited to one API endpoint, however powerful that endpoint, cannot operate across that surface. GUI control, at least in principle, can.
+
+The practical implication is not that agents should be let loose to operate arbitrary interfaces without oversight. The practical implication is that bounded, supervised agents operating specific interfaces within defined workflows become a more realistic building block than they were before. The agent does not need to handle every possible state the interface might be in. It needs to handle the states that appear in a specific workflow, reliably enough to be trustworthy.
+
+## The word "practical"
+
+There is a meaningful distinction between two kinds of AI agent that sometimes gets collapsed in how these systems are discussed.
+
+The first is the general-purpose assistant — a system that can help with a wide range of tasks, whose value is primarily in reducing the cost of producing text, and whose reliability varies with the specificity of the request. This is the assistant as tool.
+
+The second is the practical agent — a system directed at a specific workflow, operating with defined permissions, within boundaries that allow a human to understand, verify, and if necessary reverse what it has done. This is the agent as operator.
+
+GUI control is mostly irrelevant to the first category. It is central to the second. A general-purpose assistant does not need to operate your CRM. A practical agent directed at the task of ensuring a new lead is correctly entered, followed up on schedule, and its status kept current — that agent benefits enormously from being able to operate the interface where that work actually lives.
+
+The practical agent is defined by its constraints as much as its capabilities. It works within a bounded domain. It operates with supervision. It produces visible, traceable outputs. It fails loudly rather than quietly. These are not limitations — they are the conditions that make trust possible, and trust is the prerequisite for any agent doing real work in a real organisation.
+
+## What Benediction Lab is exploring
+
+Benediction Lab, as the research arm of this group, is the appropriate place to push on these questions before they become product decisions.
+
+The research interest is not in replicating what major labs are publishing about GUI control. It is in understanding what the constraints look like in practice — particularly in the context of commercial workflows rather than general desktop operation.
+
+What does bounded GUI control look like for a specific category of task? What kinds of interface state are predictable enough to be navigated reliably, and which ones introduce too much variability to trust? What does a recovery path look like when an agent reaches a state it does not recognise? How should confirmation gates be designed so that human oversight is real rather than nominal — a genuine checkpoint rather than a rubber stamp?
+
+These are questions that only become concrete when you are building against real interfaces rather than toy examples. The general patterns in the research literature are useful orientation. The specifics only emerge through work.
+
+There is also a more fundamental question about the relationship between memory and GUI operation. An agent that can operate an interface in a single session is useful. An agent that can operate an interface with awareness of what it has done in previous sessions, what the state of a workflow was when it last touched it, and what has changed in between — that is a different order of capability. How memory systems interact with GUI control is one of the more interesting open problems in this research area.
+
+## The shape of the useful agent
+
+August 2024 felt like a moment where the theoretical question — can agents operate real software? — was becoming an engineering question: given that they can, to what degree and under what conditions?
+
+That shift in framing is significant. Engineering questions have answers that can be iterated towards. You can define success criteria, run experiments, measure reliability, identify failure modes, and improve. Theoretical questions often resist that kind of progress.
+
+The useful agent that emerges from this — the one worth building around, rather than simply demonstrating — will not be defined by the breadth of interfaces it can navigate. It will be defined by the depth of reliability it achieves within specific, bounded operations.
+
+That means the design question is not "which interfaces can this agent see?" but "which workflows can this agent own reliably enough to be trusted with them?" The second question is harder. It requires knowing the workflow well, understanding where variability enters, building in appropriate checkpoints, and being honest about where human involvement remains necessary rather than optional.
+
+The vision of the practically useful agent is not a general operator of all software. It is a directed executor of specific operations, within an environment its owners understand well enough to verify what it is doing.
+
+That is a less dramatic framing than what AI marketing tends towards in 2024. It is also the version worth actually building.

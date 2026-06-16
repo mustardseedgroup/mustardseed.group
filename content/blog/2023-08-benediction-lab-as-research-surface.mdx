@@ -19,22 +19,79 @@ tags:
   - '2023'
   - research
 ---
-## Why open models matter
 
-Llama makes the open model conversation more practical. The point is not only cost. It is ownership, portability and experimentation.
+## The moment the question changed
 
-Closed frontier models are powerful. Open-weight models create a different kind of leverage: the ability to test locally, customise more deeply and understand the shape of the system.
+In February 2023, Meta released the weights for Llama 1. It was not the most capable model available — it was not designed to be. What it did was collapse the cost of entry for serious local experimentation. For the first time, a research-grade language model could run on hardware that people actually owned.
 
-## Why Benediction Lab cares
+That alone would have been notable. Then in July 2023, Meta released Llama 2 — larger, more capable, explicitly dual-licensed for commercial use. The open-weight model question was no longer theoretical. It had a working implementation with documentation, quantisation options, fine-tuning tutorials and a growing community. The question shifted from "is this possible?" to "what do we do with this?"
 
-Benediction Lab is the right place to think about this because the question is still partly research. Which capabilities need frontier models? Which can be handled locally? Which should be private? Which should be fast, cheap and specialised?
+That shift is what this piece is about. Not Llama specifically — Meta's model is a vehicle, not the destination. The destination is a clearer understanding of what organisations building on AI actually need to think about when they consider the model layer.
 
-These choices matter for Orion, Orbit and any future personal operating system.
+## What "open-weight" actually means in practice
 
-## Product implication
+The phrase "open source AI" gets used imprecisely. There is an important distinction worth holding onto: open-weight models release the trained parameters — the numerical weights that define the model's behaviour. This is not the same as releasing the full training code, dataset, data curation logic and infrastructure required to reproduce the model from scratch. Open-weight is a meaningful but bounded form of openness.
 
-The future is unlikely to be one model. It is more likely to be a routing problem: choosing the right model, memory, tool and interface for the job.
+What it enables, practically, is this: you can download the weights, run inference locally, and modify the model's behaviour through fine-tuning — adjusting it to perform better on a specific task, in a specific domain, with a specific tone — without routing any data through an external provider's servers. That is the relevant capability for most organisations thinking about the model layer.
 
-## Working note
+The alternative — calling frontier models through an API — offers capability that local models currently cannot match on raw benchmarks. But it comes with a different set of constraints: your prompts, your context, your data, and the structure of your queries all pass through infrastructure you do not control. For many use cases that is entirely acceptable. For some it is not. Knowing which category you are in is increasingly a strategic question, not just a technical one.
 
-The best AI system may not always use the biggest model. It should use the right capability at the right point in the workflow.
+## The ownership problem that closed models create
+
+There is a less-discussed risk in building too deeply on a single closed model provider: capability dependency at a layer you cannot inspect or adjust.
+
+When the model changes — and frontier models do change, through updates, through policy adjustments, through shifts in RLHF — your product changes with it. Not always visibly. Not always in ways you can anticipate. You are, in effect, deploying a component that someone else controls and updates on a schedule you do not set. For a narrow application this may be fine. For a product whose output depends on consistent model behaviour, it introduces fragility.
+
+Open-weight models do not eliminate this problem entirely — model behaviour is still complex and fine-tuning can introduce its own instabilities — but they do give you a snapshot. A specific set of weights is a specific behaviour profile. You can freeze it. You can test against it. You can update deliberately, on your own terms, rather than absorbing someone else's update cycle.
+
+This is a different kind of stability than raw benchmark performance. It is the stability of knowing what you shipped.
+
+## What local experimentation surfaces
+
+Running models locally is slower and more involved than calling an API. That is largely a feature rather than a bug for research purposes.
+
+When you run a model locally, you are forced into contact with things that API abstractions smooth over: memory requirements, inference speed, the relationship between quantisation and output quality, the practical cost of context length. These are not irrelevant details. They are the actual operating conditions of a deployed system.
+
+At Benediction Lab, the orientation has always been toward understanding systems rather than consuming them. The research questions that matter — how memory works across a session, how tool use changes the effective capability of a model, how agent architectures should be structured — all benefit from being able to pull a system apart rather than treating it as a black box. Open-weight models make that possible at the model level in a way that closed APIs do not.
+
+The fine-tuning question is also practically important. Adjusting model behaviour through prompting alone has limits. When those limits matter — when a domain is specialised enough, or a behaviour specific enough, that prompt engineering cannot reliably produce the right output — fine-tuning is the lever. Access to weights is a prerequisite.
+
+## The routing thesis
+
+One thing becomes clearer once you have experimented with models of different sizes and capabilities: the assumption that you should always use the most capable model for every task is wrong.
+
+A large frontier model is remarkable at tasks that require broad knowledge, complex reasoning, and subtle judgement. It is meaningfully slower and more expensive than a smaller model for tasks that require neither. If you are building a system that does many different things — which any real product does — you need to think about which capability is appropriate for which step, and route accordingly.
+
+This is a design problem, not just an infrastructure problem. It requires you to have a clear enough understanding of your task decomposition to know which steps need what. Experimentation with models of varying sizes is one way to develop that understanding. You learn where scale matters by seeing what breaks without it.
+
+The practical shape of a capable AI system in 2023, for anyone building seriously, is probably not a single model. It is a set of decisions about when to call what, held together by orchestration logic and memory management. Open-weight models expand the option set. They also make it more necessary to think clearly about when each option is appropriate.
+
+## Where Benediction Lab sits in this
+
+Benediction Lab is the right surface for working through these questions because the questions are still partly open research. The academic and industrial research community is producing findings at a pace that makes it genuinely difficult to have stable, confident answers about what will work in a year's time. The right response to that is not to pick a direction and commit to it prematurely. It is to maintain a research posture: build enough to test real hypotheses, observe what breaks, revise.
+
+The questions that matter for Orion — the intelligence layer behind Orbit — are not purely abstract. They are questions about which capabilities need to be handled by frontier models, which can be handled locally, which should be kept private, and how memory and context interact with model selection across a workflow. These are questions that benefit from hands-on experimentation more than from reading benchmarks.
+
+The Llama 2 release makes that experimentation more practical than it was six months ago. The models are capable enough to be instructive. The tooling around quantisation and fine-tuning is usable. The commercial licence removes legal ambiguity for product-oriented research.
+
+## What organisations should actually consider
+
+For organisations trying to think clearly about the model layer, the open-weight question is really a set of sub-questions worth separating.
+
+The first is about data sensitivity. Which tasks involve data that you are not comfortable routing through a third-party API? This is partly a regulatory question, partly a competitive one, and partly a cultural one. The answer varies significantly by sector and use case.
+
+The second is about capability thresholds. What is the minimum capability required for each task in your system? Many tasks that people route to frontier models by default would be handled adequately — and substantially more cheaply — by smaller, more specialised models.
+
+The third is about stability and control. How much do you depend on consistent model behaviour? If the answer is "a lot," the case for having weights you control becomes stronger.
+
+The fourth is about experimentation cost. What is your capacity to run and maintain local inference? This is a real operational question that many organisations underestimate. API abstraction exists partly because running models well requires infrastructure expertise that not every team has.
+
+These questions do not all resolve in the same direction. For many workloads, closed frontier models accessed via API are the right answer, and the overhead of managing open-weight alternatives is not justified. The point is not that open-weight is always better. The point is that the decision should be made deliberately, based on what the use case actually requires, rather than by default.
+
+## August 2023
+
+Llama 2 is two months old. The ecosystem around it is moving quickly — quantisation methods improving, fine-tuning frameworks becoming more accessible, the range of tasks people are demonstrating it on widening. The open-weight model question has become concrete enough to require concrete answers.
+
+The work at Benediction Lab through this period is about building enough of a foundation to make those answers more reliable. Not by chasing every new release, but by understanding the underlying dynamics well enough that when the landscape shifts — and it will shift — the response is informed rather than reactive.
+
+The best AI systems will not be those that use the biggest model. They will be those that use the right capability at the right point, with a clear enough understanding of the task to know the difference. That understanding is not something you get from reading about models. It is something you earn by working with them.

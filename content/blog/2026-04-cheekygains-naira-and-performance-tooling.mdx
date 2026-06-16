@@ -16,22 +16,81 @@ tags:
   - '2026'
   - performance
 ---
+
 ## Performance is an interface problem
 
-The mistake is to treat performance as motivation. Motivation rises and falls. Systems endure.
+Most fitness products try to solve a motivation problem. They push notifications. They add streaks. They surface your stats when you open the app, hope that the number creates enough friction to stop you walking away, and call that coaching.
 
-A good performance product helps someone notice the pattern, make the better choice easier and return to the standard after a miss.
+The problem is not motivation. Motivation is temporary by design. It spikes and it falls and every app that builds its retention model around sustaining the spike is building on an unstable foundation. The person who is intermittently excited about their training is not the person the product should be built for. The product should be built for the person who is trying to build something durable — a standard of living, a physical identity, a set of consistent behaviours they can return to after disruption.
 
-## What AI changes
+That is a different problem. It is an interface problem. It is a design problem. And it is exactly what CheekyGains has been working through in 2026.
 
-Language, voice and memory models can make coaching more continuous. They can help someone log quickly, reflect honestly and receive support in the moment rather than after the fact.
+The question at the centre of the product is not "how do we keep people engaged?" It is "what does a person need, in the actual moment of a decision, to make the better choice?" Those two questions produce entirely different products.
 
-That is the Naira opportunity inside CheekyGains: not replacing effort, but supporting it when the decision is still live.
+## What the stack looks like now
 
-## The product standard
+CheekyGains has settled into a clearer product shape over the last year. The core offering is a performance environment built around three pillars: standards, accountability and coaching.
 
-The system should not nag. It should be precise. It should know when to encourage, when to challenge and when to simplify.
+Standards are not targets. A target is a number you reach or miss. A standard is a behaviour pattern you maintain or re-establish. The distinction matters because it changes how the system responds to a miss. A target system penalises and resets. A standards system observes and reorients. One of the persistent design challenges has been encoding this correctly — not just in the language the product uses, but in the actual logic of what the system does when someone slips.
 
-## Working note
+The accountability loop is the most structurally important part of the product. It is what makes CheekyGains something other than a tracking app. Tracking apps are passive. They record what happened. CheekyGains is trying to be active without being prescriptive — aware of the pattern, capable of naming it, present at the moment when the decision is still open. The technical challenge here is knowing when to speak and when to stay out of the way. That is genuinely difficult. Most products resolve this by defaulting to more communication, which is the wrong answer. The right answer requires knowing the user, knowing the pattern, and having enough contextual awareness to tell the difference between a miss that needs acknowledgement and a miss that needs silence.
 
-Human performance tools should increase agency. If the system makes the person dependent, it has failed.
+Naira is where that intelligence lives.
+
+## Naira in 2026
+
+The early conception of Naira was relatively modest: an AI assistant inside CheekyGains that could help with logging, answer questions about programming, and respond to direct prompts. That version worked but it was not particularly distinctive. The version that exists now is more considered.
+
+What changed is not primarily the model capability — though that has improved substantially across the industry. What changed is the coaching architecture: how the system understands what a person is doing, what they have done historically, what standard they are trying to hold, and how they tend to respond to different kinds of feedback. The gap between a system that responds to inputs and a system that holds context across a relationship is the gap between a chatbot and a coach.
+
+Naira's coaching capability has developed around a few specific ideas that emerged from how the product was being used in practice.
+
+The first is that delivery timing matters more than content volume. A technically excellent insight delivered at the wrong moment is useless. The pattern across most AI coaching tools is to deliver the insight when the system has it, which is almost never the right time for the person. The more useful approach is to hold it until the person is positioned to receive it — before a session, after a miss, at the point of logging rather than thirty minutes later. Timing is not a feature. It is the product.
+
+The second is that tone cannot be static. A coach who speaks to you the same way regardless of what you are going through is not a very good coach. This is not a particularly controversial observation in human coaching, but it has proven to be a meaningful design challenge in software. The system needs to read the state, not just the input. The design challenge is deciding how that reading happens and how the system expresses what it has read without being intrusive about it.
+
+The third is agency preservation. This one is more philosophical but it is operationally important. A performance system that creates dependency has failed at the core task. The person should feel more capable when they use the product, not less capable when they do not. That design constraint rules out a number of obvious product directions. It keeps the product honest about what it is actually for.
+
+## Where AI coaching has arrived
+
+It is worth stepping back from the specific product and observing what has changed in the broader space over the last several years, because the context shapes the design decisions.
+
+The early wave of AI wellness applications — roughly 2021 to 2023 — produced a lot of chat interfaces layered onto existing products. They were plausible but shallow. They could answer questions but they could not really hold a conversation across time. They responded to what was said but not to what was meant. They were reactive by nature and the coaching that emerged from them was reactive too.
+
+The second wave, which is where most serious products are now, has focused on context and memory. The difference is material. A system that remembers what you logged last Tuesday, knows that you consistently under-recover on weeks when work is heavy, and can connect those observations to what you are trying to build over the next three months is a categorically different tool than a system that responds to whatever you type right now. Naira has been developed with this distinction as the guiding principle.
+
+The thing that remains genuinely hard — not solved, not near-solved, still actively being worked on — is the interpretive layer. Knowing that someone logged a missed session is straightforward. Understanding why they missed it, whether that reason is structural or circumstantial, and what the most useful response would be is not straightforward at all. The data is available. The inference is the hard part.
+
+Progress here is real but incremental. The industry as a whole has advanced significantly on the mechanical capabilities — the quality of generation, the coherence across a conversation, the ability to work with structured logging data. The interpretive problem requires something more than scale. It requires good design decisions about what the system should be trying to infer and careful constraints on what it should do with those inferences.
+
+## The standards system in practice
+
+One of the things that has crystallised through building CheekyGains is that standards need to be owned by the person using the product, not defined by the product itself. This sounds obvious but most fitness applications violate it constantly. They tell you what you should do. They give you a plan. They define the goal.
+
+There is a role for structure and programming — the product can absolutely help someone think through what a reasonable standard looks like given their situation. But the standard has to be theirs, agreed to by them, revisited by them when circumstances change. A system that hands you a standard and then monitors you against it is surveillance with a fitness wrapper. That is not coaching.
+
+The standards system inside CheekyGains has been built around this principle. The person articulates the standard. The product holds it, reflects it back, and helps the person notice when they are diverging from it. The accountability loop is built on top of that ownership, not around it.
+
+This also changes the failure mode. When someone misses a standard, the relevant question is not "did you hit the number?" The relevant question is "what happened, and what does that tell you about whether the standard is right?" Sometimes the standard needs to be held. Sometimes the standard needs to be revised. A good coach knows the difference. A good product should too.
+
+## What the design challenges remain
+
+None of this is finished work. There are open problems that remain genuinely difficult.
+
+Personalisation at the coaching layer is still more art than science. The system has access to more context than it did a year ago, but translating that context into the right response, in the right voice, at the right moment, is a problem that yields to careful iteration rather than to any clean technical solution. Each version gets closer. None of them is complete.
+
+The tension between structure and flexibility is persistent. People who are early in building a training habit often need more scaffolding. People who are experienced often need less. The product has to serve both, and a single interface shape does not serve both equally well. This is a product design problem as much as it is a technical one, and the solution probably involves the system reading where the person is rather than offering a single fixed experience.
+
+And the agency question does not go away. Every time the product adds a capability — a new insight, a new prompt, a new way the system can engage — the design team has to ask whether it increases the person's capability or substitutes for it. That is not always an easy call and the honest answer is that some decisions will turn out, in retrospect, to have been the wrong ones. The commitment is to keep asking the question.
+
+## The broader picture
+
+CheekyGains sits inside All Purpose, and All Purpose exists as the consumer layer of the broader Mustard Seed Group portfolio. That context is relevant because it shapes what the product is for.
+
+The thesis across the portfolio is that capability — commercial, creative, physical, cognitive — can be built systematically. Not wished for, not performed, but actually constructed through the right tools, the right feedback loops, and the right standards. Orbit is doing this for commercial execution. Benediction Lab is doing this for the underlying technology. CheekyGains is doing this for personal performance.
+
+The products are different but the underlying logic is the same: systems that increase human agency are durable. Systems that substitute for it are not.
+
+That principle is the clearest answer to the question of what AI coaching should actually be doing. Not replacing the person's effort or judgement. Not manufacturing the feeling of progress. Building the conditions under which the person can perform better, more consistently, over a longer period. That is a harder product to build than a streak counter. It is also a more useful one.
+
+The work in April 2026 is a long way from where the ideas started. What has not changed is what the product is actually for.

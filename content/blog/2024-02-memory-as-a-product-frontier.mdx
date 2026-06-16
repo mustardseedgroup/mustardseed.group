@@ -22,22 +22,104 @@ tags:
   - '2024'
   - research
 ---
-## Context is becoming a product feature
 
-Longer context windows make AI systems feel more useful because they can hold more of the work in view. Documents, notes, transcripts, code and plans can sit together in the same interaction.
+## What happens when the window gets very large
 
-But context length is not the same as memory. A model can read more without knowing what should persist, what should be forgotten and what should require permission.
+There is a moment that becomes possible when a model can hold a hundred thousand tokens of context, or a million, that is genuinely different from anything before it.
 
-## Why this matters for Orion
+You can give it your company's entire correspondence with a client. Every email, every call note, every proposal draft, every revision, every version of the brief. You can load the whole ledger and ask a question. The model has seen everything. It does not have to infer from fragments.
 
-Orion needs more than recall. It needs useful continuity: what happened, what changed, what matters now and what should be acted on next.
+That sounds like it solves memory. It does not.
 
-That is a product design problem as much as a model problem.
+Anthropic's Claude family and Google's Gemini 1.5, both prominent in early 2024, made larger context windows a serious product topic. Gemini 1.5 demonstrated a context capacity of around one million tokens — enough to hold an entire codebase, or several books, or many months of business correspondence in a single pass. Claude was pushing well past a hundred thousand tokens with increasingly reliable retrieval at the edges of those long windows.
 
-## Why this matters for users
+The engineering behind this is significant. Models trained only on short contexts often degrade as windows expand — they lose track of information buried far from the current position. Making large context actually work, rather than merely possible on paper, is a genuine technical challenge.
 
-Trust comes from predictable behaviour. If a system remembers too little, it feels shallow. If it remembers too much, it feels invasive. The right memory system should be clear, useful and controllable.
+But the engineering achievement and the product design problem are separate questions. And 2024 is the moment where the product design problem becomes unavoidable.
 
-## Working note
+## Context is not memory
 
-The next frontier is not only bigger context. It is better judgement about what context deserves to become memory.
+The distinction matters more than it might appear.
+
+A model given a large context window can reason across everything inside it, but only for that session. Close the window, start again, and it is gone. The model has no continuity. It does not know you. It does not know what changed yesterday. It does not know which decisions were made last quarter. Every new conversation begins at zero.
+
+Memory, properly understood, is what persists. It is what a system knows about you before you tell it anything. It is the background that makes a new interaction feel like a continuation rather than an introduction.
+
+Human organisations have always had memory problems. Decisions get made without documentation. Context lives in one person's head and leaves when they do. A client is understood by the account manager but opaque to anyone else in the company. New team members spend months absorbing institutional knowledge that should have been captured but was not.
+
+A system with long context can help within a session. A system with genuine memory can help across time. The two are different capabilities and require different design.
+
+The practical implication is this: giving a model a very large context window does not make it a memory system. It makes it a very capable reader of information you have already organised and can always locate. That is genuinely valuable. But it is not the same as a system that knows what matters, knows what changed, knows what should carry forward, and knows what should be discarded.
+
+## The design questions that context length defers
+
+Here is what a long context window does not answer.
+
+It does not tell you what the system should remember between sessions. It does not tell you who should have access to which memories. It does not tell you when a piece of context should expire. It does not tell you how to handle conflicting signals — when older information contradicts newer information, which should take precedence? It does not tell you how to represent things a user said privately versus things shared with a team. It does not tell you when a system should forget something the user later corrected.
+
+These are not model architecture questions. They are product design questions. They require decisions about trust, permission, relevance, and time.
+
+The temptation in early 2024 is to treat the expanding context window as a solution to the memory problem. It is more accurate to say it reveals the memory problem more clearly. When a model can hold vastly more information, you are immediately confronted with which information should be held, when, for how long, and by whose authority.
+
+This is where serious AI product work begins. Not with the model's capacity, but with the governance of what that capacity is used for.
+
+## What useful memory actually requires
+
+When you think about the people and systems you trust with your context — a good assistant, a long-standing adviser, a trusted partner — a few properties stand out.
+
+They know what matters to you without needing to be reminded every time. They know the difference between context that is still current and context that has changed. They know some things are private even within a relationship. They know when to surface a past decision and when that decision is simply no longer relevant. And they know when to ask rather than assume.
+
+These are not intelligence properties. They are judgement properties. They require a model of what the user values, what they are trying to accomplish, what has changed recently, and what is sensitive.
+
+For Orion, the intelligence layer inside Orbit, this is the central problem. A business operating system knows a great deal about how a company works: who the leads are, what has been proposed, which projects are in flight, which clients are difficult, which opportunities were declined and why, what the team's bandwidth looks like, what the quality standards are. That is exactly the kind of context that becomes operationally powerful if it can be reasoned across.
+
+But it also has to be structured, bounded and controlled. A sales lead's contact details should not be visible to everyone. A note from one team member about another should not surface without the right context. A declined opportunity should inform future decisions without being presented as an active record. The context has to be useful, but it has to also be trustworthy in how it is accessed and shared.
+
+That is not a single technical feature. It is a design system for memory: what gets stored, how it is categorised, how it is retrieved, who can see what, how long it persists, and how it can be corrected or removed.
+
+## The trust equation
+
+Users will tolerate a system that remembers too little. They will adapt. They will repeat themselves. They will regard the experience as shallow.
+
+But users will not forgive a system that remembers the wrong thing in the wrong moment. The feeling of being watched rather than served — of having context you shared in one setting surfaced inappropriately in another — is a product failure that is very difficult to recover from. It does not matter if the system is technically correct. If it feels invasive, trust is broken.
+
+This is the trust equation that long context windows make urgent.
+
+As context capacity expands, the potential for that wrong-moment retrieval also expands. A model that can hold everything can also surface everything. Without careful product design, that capacity becomes a liability.
+
+The better products in this space will earn trust not by demonstrating that they remember more, but by demonstrating clear judgment about what to surface and when. The user should feel that the system understands the difference between useful context and intrusive recall. That understanding has to be visible in the interface, in the controls the user has, and in the consistency of the system's behaviour.
+
+A system that asks permission before surfacing sensitive context is building trust. A system that asks whether a past decision is still relevant before presenting it as current is building trust. A system that lets users correct, categorise and delete what it holds is building trust.
+
+These are not only ethical requirements. They are product requirements, because the products that earn trust will be the ones people actually use.
+
+## Memory as a research frontier
+
+Benediction Lab's focus on memory systems reflects a genuine belief that this is one of the more consequential open problems in applied AI.
+
+The question is not whether models can be given access to more information. The question is how you build a memory architecture that is useful, honest, controllable, and appropriate across a range of people, roles and contexts.
+
+That requires thinking about memory at multiple timescales. Within a session, across sessions, across weeks, across years. It requires thinking about memory across roles — what an individual user knows, what a team knows, what an organisation knows, and where those layers can and cannot share. It requires thinking about memory decay: the idea that some context should become less prominent over time, unless something renews its relevance.
+
+And it requires thinking about the relationship between memory and action. A system that remembers well but does nothing useful with the memory has solved the wrong problem. The goal is memory that informs better reasoning, better recommendations, and better execution — not memory for its own sake.
+
+The practical tests for this kind of thinking come through live product work. Orion's development inside Orbit is where these questions are tested against real commercial workflows. TUXX provides additional environments where memory-adjacent features are built for specific client contexts, with the feedback loops that only come from deployment.
+
+## The context window is a capability, not a strategy
+
+It is worth being direct about the risk of mistaking a capability increase for a product strategy.
+
+Longer context windows are genuinely valuable. They expand what is possible. They allow richer, more connected reasoning. They reduce the friction of having to summarise and re-introduce context repeatedly. For certain tasks — legal review, research synthesis, code auditing across a large codebase — they represent a step change in what AI assistance can accomplish.
+
+But they do not, by themselves, constitute a product. A product requires judgement about what to do with the capability. It requires constraints, design, evaluation and trust.
+
+The teams that will build lasting value from this moment are not the ones who simply deploy the largest context window available. They are the ones who design the memory layer: what to keep, what to forget, how to structure it, how to control access, how to surface it usefully, and how to earn the trust that lets users share more.
+
+That is a harder problem than making the window bigger. It is also a more durable one.
+
+The context window is growing. The question of what deserves to live inside it is what will define the next generation of serious AI products.
+
+## Sources
+
+- [Anthropic — Claude 3 model family](https://www.anthropic.com/news/claude-3-family)
+- [Google — Gemini 1.5 announcement, February 2024](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/)
