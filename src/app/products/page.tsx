@@ -18,8 +18,8 @@ const solutionCards = [
     bullets: [
       "Organises commercial execution from lead to launch.",
       "Turns repeatable work into visible workflows and operating surfaces.",
-      "Uses Orion as the intelligence layer for agents, runbooks and execution support.",
-      "Public docs and examples can be shared without exposing private orchestration.",
+      "Uses Orion as the intelligence layer for agents and execution support.",
+      "Helps teams move from opportunity to delivery with fewer dropped handovers.",
     ],
     href: "/companies/orbit",
     cta: "Explore Orbit",
@@ -192,15 +192,15 @@ export default function ProductsPage() {
         <section className="border-y border-[var(--line)] bg-[#fbfaf7]">
           <div className="mx-auto grid max-w-7xl gap-8 px-5 py-20 md:grid-cols-[0.6fr_1.4fr] md:px-8">
             <div>
-              <p className="text-sm uppercase tracking-[0.16em] text-[var(--accent)]">Product boundary</p>
-              <h2 className="mt-5 text-5xl leading-none tracking-[-0.03em]">Public surfaces only.</h2>
+              <p className="text-sm uppercase tracking-[0.16em] text-[var(--accent)]">How it fits together</p>
+              <h2 className="mt-5 text-5xl leading-none tracking-[-0.03em]">One ecosystem, different surfaces.</h2>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
               {[
-                "No private source code.",
-                "No prompts, runbooks or agent orchestration.",
-                "No lead scoring or memory schemas.",
-                "No client data or private workflows.",
+                "Benediction Lab explores the research questions.",
+                "Orbit turns execution into a product surface.",
+                "TUXX proves systems in commercial environments.",
+                "All Purpose brings capability into consumer life.",
               ].map((item) => (
                 <div key={item} className="rounded-[12px] border border-[var(--soft-line)] bg-white p-6 text-xl">
                   {item}

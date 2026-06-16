@@ -24,28 +24,28 @@ const companyBrandBySlug = {
 const companyContextBySlug = {
   "benediction-lab": {
     role: "Research layer",
-    publicSurface: "Papers, notes, experiments, demos and concept documents.",
-    privateBoundary: "Private prompts, memory schemas, agent orchestration and runbooks stay internal.",
+    focus: "Papers, notes, experiments, demos and concept documents.",
+    connectedWork: "Orion research, agent systems and future product exploration.",
   },
   orbit: {
     role: "Product layer",
-    publicSurface: "Product philosophy, documentation, examples and selected updates.",
-    privateBoundary: "Core source code, execution logic, lead intelligence and internal workflows stay private.",
+    focus: "Product philosophy, documentation, examples and selected updates.",
+    connectedWork: "Commercial execution, Orion and lead-to-launch workflows.",
   },
   "all-purpose": {
     role: "Consumer layer",
-    publicSurface: "Consumer products, media, performance systems and public product stories.",
-    privateBoundary: "Private product strategy, unreleased systems and internal operating workflows stay private.",
+    focus: "Consumer products, media, performance systems and public product stories.",
+    connectedWork: "CheekyGains, Naira, Relay, Horizon, Made It Out and All Purpose Music.",
   },
   tuxx: {
     role: "Services layer",
-    publicSurface: "Commercial positioning, public case studies and selected delivery patterns.",
-    privateBoundary: "Client data, private workflows, implementation details and commercial systems stay private.",
+    focus: "Commercial positioning, case studies and selected delivery patterns.",
+    connectedWork: "Custom AI systems, client delivery and Pattern Up.",
   },
   "chiko-shire": {
     role: "Founder layer",
-    publicSurface: "Founder writing, public profiles and high-level ecosystem thinking.",
-    privateBoundary: "Private strategy, internal operating notes and proprietary systems stay private.",
+    focus: "Founder writing, public profiles and high-level ecosystem thinking.",
+    connectedWork: "Mustard Seed Group, Orbit, Benediction Lab, All Purpose and TUXX.",
   },
 } as const;
 

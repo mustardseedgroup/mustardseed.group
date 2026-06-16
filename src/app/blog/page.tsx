@@ -65,10 +65,10 @@ export default function BlogPage() {
             <SectionIntro
               kicker="Editorial standard"
               title="Useful, restrained, public-safe."
-              summary="Updates should help people understand the institution without revealing private code, prompts, client information or internal commercial execution logic."
+              summary="Updates should help people understand the institution, the thinking behind its products and the research shaping future work."
             />
             <div className="editorial-grid md:grid-cols-3">
-              {["British English", "No fake claims", "No private systems"].map((item) => (
+              {["British English", "No fake claims", "Clear public context"].map((item) => (
                 <div key={item} className="editorial-panel min-h-48">
                   <h2 className="text-3xl">{item}</h2>
                 </div>

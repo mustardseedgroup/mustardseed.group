@@ -47,8 +47,8 @@ export default async function BlogEntryPage({ params }: PageProps) {
               <p className="mt-5 text-2xl">{entry.date ?? "Undated"}</p>
             </div>
             <div className="bg-[#0b0b09] p-6 text-[#fbfaf7]">
-              <p className="text-xs uppercase tracking-[0.16em] text-[#c8c0b2]">Boundary</p>
-              <p className="mt-5 leading-7">Public update. No private product code, runbooks, prompts or client systems.</p>
+              <p className="text-xs uppercase tracking-[0.16em] text-[#c8c0b2]">Context</p>
+              <p className="mt-5 leading-7">A public note from the Mustard Seed Group ecosystem.</p>
             </div>
           </aside>
         </section>

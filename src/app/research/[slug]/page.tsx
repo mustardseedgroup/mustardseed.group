@@ -47,8 +47,8 @@ export default async function ResearchEntryPage({ params }: PageProps) {
               <p className="mt-5 text-2xl">{entry.date ?? "Undated"}</p>
             </div>
             <div className="bg-[#0b0b09] p-6 text-[#fbfaf7]">
-              <p className="text-xs uppercase tracking-[0.16em] text-[#c8c0b2]">Public boundary</p>
-              <p className="mt-5 leading-7">Direction and principles only. Private schemas, prompts and orchestration remain internal.</p>
+              <p className="text-xs uppercase tracking-[0.16em] text-[#c8c0b2]">Research context</p>
+              <p className="mt-5 leading-7">A public research note from Benediction Lab and the wider Mustard Seed Group ecosystem.</p>
             </div>
           </aside>
         </section>

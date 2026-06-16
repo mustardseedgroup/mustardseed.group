@@ -104,7 +104,7 @@ export default function Home() {
             <SectionIntro
               kicker="Updates"
               title="Research notes and public updates."
-              summary="Updates combine founder letters, product notes and public research without exposing private prompts, memory schemas or orchestration."
+              summary="Updates combine founder letters, product notes and public research from across the group."
             />
             <div className="grid gap-5 md:grid-cols-3">
               {research.map((entry) => (
@@ -119,7 +119,7 @@ export default function Home() {
             <SectionIntro
               kicker="Products"
               title="Active product surfaces."
-              summary="Only public-safe positioning is shown here. Core source code, private systems and client workflows remain private."
+              summary="Explore the active product surfaces across execution, research, performance and consumer software."
             />
             <div className="editorial-grid md:grid-cols-3">
               {products.map((product) => (

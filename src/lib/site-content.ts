@@ -110,15 +110,7 @@ export const timeline = [
 
 export const researchTracks = [
   ["Agentic operating systems", "Agents that remember, coordinate work, operate interfaces and support real commercial execution."],
-  ["Memory and context", "How systems preserve useful history without exposing private schemas or internal implementation."],
+  ["Memory and context", "How systems preserve useful history and become more helpful over time."],
   ["Human behaviour", "Motivation, accountability, standards, environment design and performance systems."],
-  ["Research-led products", "How ideas move from lab exploration to product surfaces without leaking proprietary advantage."],
-] as const;
-
-export const publicBoundaries = [
-  "No private source code.",
-  "No prompts, runbooks or agent orchestration.",
-  "No lead scoring, lead intelligence or pricing logic.",
-  "No memory schemas or internal workflows.",
-  "No client data or private delivery systems.",
+  ["Research-led products", "How ideas move from lab exploration to product surfaces."],
 ] as const;
