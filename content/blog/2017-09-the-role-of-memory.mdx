@@ -16,24 +16,83 @@ tags:
   - '2017'
   - research
 ---
-## The model layer is changing
 
-September 2017 is a useful point to look at the model layer rather than only the product layer. The public AI conversation is moving quickly, but the deeper pattern is slower: models are becoming a new kind of infrastructure.
+## What organisations do with context
 
-That does not mean every company needs to talk about models. It means every serious product company has to understand what models make possible, what they make fragile and where the human still needs control.
+Every organisation has a version of the same meeting. Someone walks into a room — new to the project, new to the relationship, or simply returning after three weeks away — and spends the first twenty minutes being caught up. Not on decisions. On context. On the logic behind the decisions, the conversations that shaped them, the constraints that were never written down.
 
-## What changes for MSG
+This is not a failure of communication. It is a failure of memory. The organisation forgot, so the people inside it have to remember on its behalf — in real time, at the cost of attention and momentum.
 
-For Orbit, models influence how work is understood, summarised and moved forward. For Orion, they influence memory, planning and tool use. For TUXX, they influence how quickly custom systems can be designed and delivered. For CheekyGains and Naira, they influence coaching, reflection and accountability.
+The strange thing is how accepted this is. The re-explanation meeting. The onboarding document that goes stale before it is finished. The context that lives only in the head of the one person who was there. We have built elaborate workflows around the assumption that institutional memory is mostly unavailable, and so we compensate with repetition. We re-explain. We reconstruct. We ask again.
 
-The model is not the product. It is one layer inside the product.
+The question worth sitting with is not how to document more. It is why systems are designed to forget in the first place.
 
-## The operating question
+## The leak
 
-The practical question is what the system should know, what it should do, what it should ask permission for and what it should never touch.
+Energy is the wrong word for what organisations lose through repeated explanation, but it is close enough to be useful. The more precise word is attention — and attention, unlike money, cannot be recovered. When a capable person spends forty minutes reconstructing the background of a project that already exists somewhere in a shared folder, or in someone's email, or in their own memory from six months ago, that is not inefficiency in the accounting sense. It is a kind of structural waste that compounds over time without appearing on any balance sheet.
 
-Those decisions matter more than model excitement because they determine whether the product becomes useful in the real world.
+Organisations that grow quickly tend to develop this problem faster than organisations that grow slowly. Each new person added to a team multiplies the surface area across which context must travel. The original understanding — the reason the thing was built the way it was, the constraint that shaped the product, the conversation that changed direction — does not scale with headcount. It dilutes.
 
-## Working note
+The conventional response is documentation. Write it down, keep it somewhere findable, update it when things change. This is not wrong. But it is insufficient, because the problem is not that information is absent. It is that information exists in a form that cannot be retrieved usefully in the moment it is needed.
 
-MSG should study model progress closely, but translate it into operating systems, performance systems and creative tools rather than copying the language of AI marketing.
+A document sitting in a shared drive is not the same as memory. Memory is contextual. It surfaces at the right moment, with the right level of detail, for the right person. A folder of documents does the opposite: it presents everything indiscriminately and makes the person do the work of retrieval and relevance judgement themselves.
+
+That is still a human doing the job of a system.
+
+## What memory actually requires
+
+Genuine institutional memory has three properties that filing systems almost never provide.
+
+The first is continuity. Memory is not a snapshot. It is a thread — a record of how things were, how they changed, and why. A document captures a state. Memory captures the path that led to that state. The distinction matters enormously when someone is trying to understand whether a decision is still valid or whether the circumstances that justified it have shifted.
+
+The second is accessibility. Memory that cannot be found quickly enough to be useful is not functioning memory. The relevant question is not whether the information exists but whether it can surface at the right moment — during the meeting, before the call, in the minute before a decision is made. Speed of retrieval determines whether memory actually changes behaviour.
+
+The third is relevance. Raw information retrieval is not memory. Memory filters. It surfaces what matters for the current moment and suppresses what does not. A system that returns everything it knows is not helping anyone think — it is creating a new search problem on top of the original one.
+
+These three properties — continuity, accessibility, relevance — are difficult to achieve simultaneously. Achieving one tends to compromise the others. Continuity creates large, rich records that are slow to retrieve. Fast retrieval systems tend to flatten context, sacrificing continuity for speed. Relevance filtering is hard because relevance changes depending on who is asking and why.
+
+Software has not solved this. Most tools solve one property and ignore the other two. Wikis offer continuity but poor relevance. Search tools offer fast retrieval but poor continuity. Neither surfaces the right context at the right moment without a human mediating the process.
+
+## The operating surface that forgets
+
+The deeper issue is that most software is not designed to remember at all. It is designed to record, which is a different thing.
+
+A CRM records contacts and deal stages. An email client records correspondence. A project management tool records tasks and comments. These are all logs — accurate accounts of what happened, written to be queried by a human. They are not memory systems. They do not connect across themselves. They do not surface relevant context when it becomes relevant. They do not distinguish between what matters and what is noise.
+
+When someone sits down to make a decision in the context of a project, they typically draw on at least four or five distinct systems simultaneously — email, notes, project tools, previous documents, memory of conversations — and synthesise them manually. The synthesis is the cognitive work, and software has largely left that work entirely to the human.
+
+This is a design assumption more than a technical limitation. The assumption is that humans are the right agents for integrating context across systems, and that software's job is to store and surface information cleanly at the point of request. That assumption has been stable for long enough that most interface design treats it as a given.
+
+It is worth questioning whether it should continue to be.
+
+## The question of who holds what
+
+Not all memory should be held by the same system or the same person. This is obvious when stated plainly but rarely designed for in practice.
+
+Some context belongs to a person — understanding of a specific relationship, judgement about a client's real priorities, intuition built up through experience. That kind of memory is legitimate to leave in human hands. It is personal, nuanced, and changes with each encounter.
+
+Some context belongs to the organisation — the decisions made and why, the direction that was set and the logic behind it, the constraints that shape what is possible. This kind of memory is institutional. It should not be locked in one person's head. When that person leaves, takes a break, or simply is not in the room, the organisation should not have to start again.
+
+Some context belongs to the system — what happened when, in what order, at what stage of what process. This is transactional memory. It is the most straightforward to capture and the most underused. Systems that know their own history are genuinely more useful than systems that do not, and yet most software products treat each session as a fresh start.
+
+The question of what should be remembered, by whom, for how long, is a design question. It does not have a universal answer. But it has to be asked deliberately, because the default is always forgetting.
+
+## Why this matters now
+
+September 2017 is not the beginning of thinking about memory in software. The problem has been recognisable for years. What is shifting is the plausibility of doing something about it.
+
+The techniques that make contextual retrieval possible — embedding representations of meaning rather than just indexing keywords, connecting information across sources rather than within single systems, surfacing relevance based on current context rather than explicit queries — are becoming more tractable. The underlying research is moving. The gap between what is theoretically possible and what a product team can reasonably build is narrowing.
+
+This matters to how we think about Orion. The initial conception of Orion is partly a research question about what a genuine memory layer would look like — not for a consumer app, but for an operating system built for professional and commercial contexts. What does it mean for a system to know what matters, for whom, and when? What are the right boundaries between human memory and system memory? What should never be delegated to a machine?
+
+These are not AI questions in the narrow sense of the term. They are questions about how systems relate to time, to history, and to the humans working through them.
+
+## A working position
+
+Institutional memory is currently one of the most expensive hidden costs in organisations. It does not appear on any reporting line. It shows up as repeated conversations, misaligned teams, decisions made without access to relevant history, and projects that start from scratch because no one knows what was already tried.
+
+The answer is not more documentation. Documentation without retrieval and relevance is just a quieter form of forgetting.
+
+The answer is systems that remember with continuity, that surface context when it becomes relevant, and that understand the difference between what a person needs to know and what merely exists on record.
+
+Building that is hard. The hardest part is not the technology. It is the decision about what memory should feel like — what it surfaces, how it presents itself, what it elides, and when it steps back entirely. That design problem is where the real work is, and it is one we intend to stay close to.

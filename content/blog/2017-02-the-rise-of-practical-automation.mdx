@@ -16,24 +16,65 @@ tags:
   - '2017'
   - research
 ---
-## The model layer is changing
 
-February 2017 is a useful point to look at the model layer rather than only the product layer. The public AI conversation is moving quickly, but the deeper pattern is slower: models are becoming a new kind of infrastructure.
+## Not a future state
 
-That does not mean every company needs to talk about models. It means every serious product company has to understand what models make possible, what they make fragile and where the human still needs control.
+Automation has spent too long living in the future tense. It has been discussed as something arriving, something that will change work once it matures, something to prepare for rather than act on. In February 2017, that framing is becoming visibly wrong.
 
-## What changes for MSG
+What is happening right now is not a preview. Tools that automate rule-based workflows — data extraction, form completion, record synchronisation, report generation — are being adopted inside ordinary professional environments. Not at research institutions, not at technology companies experimenting with proprietary infrastructure, but at mid-sized firms with conventional IT budgets. The category commonly called Robotic Process Automation has moved from proof-of-concept to procurement decision. Workflow tools with conditional logic, API connectors, and trigger-based execution have become standard dependencies rather than innovation projects.
 
-For Orbit, models influence how work is understood, summarised and moved forward. For Orion, they influence memory, planning and tool use. For TUXX, they influence how quickly custom systems can be designed and delivered. For CheekyGains and Naira, they influence coaching, reflection and accountability.
+This shift matters because it changes the question. The question is no longer whether automation is viable. The question is what specifically it should be applied to, who bears the cost of failure when it goes wrong, and what the human layer looks like once the routine layer has been removed.
 
-The model is not the product. It is one layer inside the product.
+## The gap between automation as theory and automation as practice
 
-## The operating question
+There is a version of the automation conversation that operates almost entirely at the level of abstraction. It concerns macroeconomic displacement, the nature of labour, the moral claims of efficiency, the politics of who benefits from productivity gains. These are serious questions and they deserve serious treatment.
 
-The practical question is what the system should know, what it should do, what it should ask permission for and what it should never touch.
+But the practitioner's version of the conversation is considerably more granular. It is about which specific step in a specific workflow consumes time without producing meaningful judgement. It is about which data transfer happens between two systems that could be taught to speak to each other directly. It is about whether the bottleneck in a weekly report is the analysis or the assembly — and if it is the assembly, why a person is doing it.
 
-Those decisions matter more than model excitement because they determine whether the product becomes useful in the real world.
+That granularity is precisely where value is being created in early 2017. The organisations extracting practical benefit from automation are not the ones with the grandest theories about it. They are the ones that identified a concrete repetitive process, applied a tool with appropriate scope, and measured whether the output quality held. The theory tells you why to care. The practice tells you where to start.
 
-## Working note
+## What small teams actually face
 
-MSG should study model progress closely, but translate it into operating systems, performance systems and creative tools rather than copying the language of AI marketing.
+Large organisations can absorb automation failures. They have redundancy, they have dedicated IT departments, and they have enough volume in any given process that a partial success still produces meaningful throughput. Small teams operate under different constraints. A failed automation that breaks a client-facing workflow is not an acceptable failure mode when there is no backup layer to catch the error.
+
+This asymmetry has kept automation at arm's length for small professional teams longer than it should have. The tools available in 2015 and 2016 required enough technical configuration that the cost of set-up was difficult to justify unless the process in question was high-volume. The break-even point was too far out.
+
+What has changed is the accessibility of the tooling. The generation of workflow automation platforms that has emerged over the past eighteen months lowers the configuration cost substantially. Connecting two cloud services no longer requires a developer. Defining trigger conditions is no longer a programming exercise. The interface has moved close enough to business logic — as opposed to technical logic — that the person who understands the process is increasingly capable of building the automation that handles it.
+
+That does not mean complexity has disappeared. Edge cases still accumulate. Unexpected data formats still break assumptions. The gap between "it works in testing" and "it works reliably in production" is still real. But the entry cost has dropped enough that the calculus has shifted for teams operating at small scale.
+
+## AI-assisted tooling as a distinct category
+
+Alongside the expansion of rule-based workflow automation, a related and distinct category is forming: AI-assisted professional tooling. The distinction is worth holding clearly.
+
+Rule-based automation follows deterministic logic. If this condition is met, take this action. The system does exactly what it was configured to do, and failures are usually failures of configuration rather than failures of reasoning. The value proposition is consistency and throughput — doing the same thing correctly many times without variation.
+
+AI-assisted tooling introduces probabilistic reasoning into the loop. It is being applied, in early 2017, to tasks that involve interpretation: classifying documents, drafting responses to structured enquiries, extracting meaning from unstructured text, flagging anomalies in data where the definition of anomalous is not perfectly expressible as a rule. The output is not guaranteed to be correct in every instance, which changes the design requirement. Human review remains in the loop not as a redundancy but as a structural component.
+
+The professional environments where this is being tested are specific: legal research, financial analysis, customer correspondence triage, compliance documentation. In each case, the AI-assisted layer handles volume and the human layer handles judgement on anything the system flags as uncertain or high-stakes. The arrangement is not human versus machine; it is a division of labour that plays to the strengths of each.
+
+## Where the human layer goes
+
+The concern most frequently raised about practical automation is displacement — the worry that tasks removed from human workloads result in reduced need for human work overall. That concern is legitimate and not to be dismissed. But it is not the only pattern visible in early 2017.
+
+The more common pattern in small and mid-sized professional environments is reallocation rather than reduction. When the routine layer of a role is automated, what tends to emerge is not a smaller team but a team spending more of its time on the portions of the work that actually require human presence: client relationships, strategic interpretation, quality decisions at the margins, creative problem-solving. These are not trivial residuals. In most professional contexts they are the portions of the work that determine outcomes.
+
+The risk worth watching is that this reallocation does not happen automatically. Removing a routine task from a workflow creates capacity, but capacity is not the same as higher-value work. If the work that fills the newly available time is equally routine — simply sourced from a longer to-do list — the efficiency gain is real but the capability gain is not. The discipline required is to be intentional about what the human layer is being freed up to do, and to ensure that the resulting work actually demands the human capabilities that automation cannot replicate.
+
+## The TUXX thesis taking shape
+
+The services work being done through TUXX in this period is developing a particular orientation toward automation. It is not oriented toward selling automation as an idea or a category. It is oriented toward pattern-testing — taking a specific professional workflow, understanding it at the level of individual steps, identifying which steps carry genuine decision-making weight and which are process overhead, and then building lightweight systems to handle the overhead so that the decision-making work can be done properly.
+
+The thesis underneath that approach is simple: patterns that work in live client environments are more valuable than patterns that work in controlled demonstrations. The environment imposes constraints, edge cases, and unpredictable inputs that no demonstration can replicate. Surviving those conditions is what makes a pattern worth building into a more durable product.
+
+The lesson that is accumulating from this work is not that automation is uniformly beneficial or that every process should be automated. The lesson is more specific: there is a class of workflow overhead that exists in nearly every professional environment, that consumes time disproportionate to its contribution, and that can be handled more reliably by a well-designed system than by a person treating it as an interruption to more important work. Finding that class of work and addressing it with appropriate tooling is where practical value is being created.
+
+## The right unit of analysis
+
+The most common mistake in the automation conversation — at both the macro and the organisational level — is choosing too large a unit of analysis. Asking whether "work" will be automated is not a useful question. Asking whether a specific set of steps in a specific workflow could be handled more reliably and efficiently by a configured system is a useful question, and it has a concrete answer that can be tested.
+
+The second most common mistake is treating tooling as the primary variable. The tooling matters, and the accessibility of the tooling in 2017 is genuinely improved relative to what was available two years ago. But the primary variable is understanding of the process. A well-understood process can be automated with modest tools. A poorly understood process will fail regardless of how sophisticated the automation layer is, because the edge cases that break it will not have been anticipated.
+
+What practical automation actually requires is process clarity first, tooling selection second, and ongoing human oversight third — not as a concession to the limitations of automation but as a recognition that no automated system should be left to operate without accountability. That accountability structure is what separates automation that increases human capability from automation that simply removes human presence from a workflow.
+
+The difference between those two outcomes is not determined by the technology. It is determined by how the technology is deployed and by whom.
