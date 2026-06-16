@@ -17,7 +17,19 @@ const streams = [
   ["Experiments", "Selected concepts, prototypes and lessons from the lab."],
 ] as const;
 
-const filters = ["All", "Research", "Product", "Founder letters", "Experiments"] as const;
+const filters = [
+  { label: "All", slug: "all", matches: () => true },
+  { label: "Research", slug: "research", matches: (entry: ContentEntry) => entry.collection === "research" || entry.category === "Research" },
+  { label: "Product", slug: "product", matches: (entry: ContentEntry) => entry.category === "Product" },
+  { label: "Performance", slug: "performance", matches: (entry: ContentEntry) => entry.category === "Performance" },
+  { label: "Culture", slug: "culture", matches: (entry: ContentEntry) => entry.category === "Culture" },
+  { label: "Founder letters", slug: "founder", matches: (entry: ContentEntry) => entry.category === "Founder letter" },
+  {
+    label: "Experiments",
+    slug: "experiments",
+    matches: (entry: ContentEntry) => entry.category === "Experiments" || entry.tags.includes("experiment") || entry.tags.includes("experiments"),
+  },
+] as const;
 
 function articleHref(entry: ContentEntry) {
   return `/${entry.collection}/${entry.slug}`;
@@ -73,14 +85,28 @@ function ResourceCard({ entry, featured = false }: { entry: ContentEntry; featur
   );
 }
 
-export default function BlogPage() {
+type BlogPageProps = {
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+};
+
+function filterHref(slug: string) {
+  return slug === "all" ? "/blog" : `/blog?filter=${slug}`;
+}
+
+export default async function BlogPage({ searchParams }: BlogPageProps) {
+  const params = await searchParams;
+  const rawFilter = params?.filter;
+  const selectedSlug = typeof rawFilter === "string" ? rawFilter : "all";
   const entries = [...getCollection("blog"), ...getCollection("research")].sort((a, b) => {
     if (!a.date || !b.date) return a.title.localeCompare(b.title);
     return b.date.localeCompare(a.date);
   });
-  const featured = entries[0];
-  const secondary = entries.slice(1, 4);
-  const archive = entries.slice(4);
+  const selectedFilter = filters.find((filter) => filter.slug === selectedSlug) ?? filters[0];
+  const filteredEntries = entries.filter(selectedFilter.matches);
+  const featured = filteredEntries[0];
+  const secondary = filteredEntries.slice(1, 4);
+  const archive = filteredEntries.slice(4);
+  const filterCounts = new Map(filters.map((filter) => [filter.slug, entries.filter(filter.matches).length]));
 
   return (
     <SiteShell>
@@ -93,18 +119,27 @@ export default function BlogPage() {
           <p className="mx-auto mt-8 max-w-3xl text-xl leading-8 text-[var(--muted)] md:text-2xl">
             Public writing on the companies, products, research systems and experiments being built across the group.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            {filters.map((filter, index) => (
-              <span
-                key={filter}
-                className={`rounded-full border px-5 py-2 text-sm ${
-                  index === 0 ? "border-[var(--foreground)] bg-[var(--foreground)] text-[#fbfaf7]" : "border-[var(--soft-line)] text-[var(--muted)]"
-                }`}
-              >
-                {filter}
-              </span>
-            ))}
-          </div>
+          <nav aria-label="Filter updates" className="mt-10 flex flex-wrap justify-center gap-3">
+            {filters.map((filter) => {
+              const active = filter.slug === selectedFilter.slug;
+
+              return (
+                <Link
+                  aria-current={active ? "page" : undefined}
+                  href={filterHref(filter.slug)}
+                  key={filter.slug}
+                  className={`rounded-full border px-5 py-2 text-sm ${
+                    active
+                      ? "border-[var(--foreground)] bg-[var(--foreground)] text-[#fbfaf7]"
+                      : "border-[var(--soft-line)] text-[var(--muted)] transition hover:border-[var(--foreground)] hover:text-[var(--foreground)]"
+                  }`}
+                >
+                  {filter.label}
+                  <span className="ml-2 opacity-60">{filterCounts.get(filter.slug) ?? 0}</span>
+                </Link>
+              );
+            })}
+          </nav>
         </section>
 
         {featured ? (
@@ -120,7 +155,17 @@ export default function BlogPage() {
             </div>
             <ResourceCard entry={featured} featured />
           </section>
-        ) : null}
+        ) : (
+          <section className="mx-auto max-w-7xl px-5 pb-24 md:px-8">
+            <div className="border border-[var(--soft-line)] bg-[#fbfaf7] p-8 text-center">
+              <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent)]">{selectedFilter.label}</p>
+              <h2 className="mt-4 text-3xl">No updates in this stream yet.</h2>
+              <p className="mx-auto mt-4 max-w-xl leading-7 text-[var(--muted)]">
+                This filter is ready, but there are no published notes assigned to it yet.
+              </p>
+            </div>
+          </section>
+        )}
 
         {secondary.length ? (
           <section className="content-band">
