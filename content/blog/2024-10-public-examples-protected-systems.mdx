@@ -22,13 +22,13 @@ There is a particular discipline required when you build in public without build
 
 Not everything should be private. But not everything should be shared. The question worth sitting with is: what exactly should be visible, and why? The answer shapes how an institution presents itself, what it attracts, and what it protects.
 
-This month we formalised something that had been implicit in how we work for some time — a deliberate architecture for what becomes public and what stays inside. The principle is straightforward once named: publish examples, protect systems.
+This month we formalised something that had been implicit in how we work for some time: a deliberate architecture for what becomes public and what stays inside. The principle is straightforward once named: publish examples, protect systems.
 
 ## The difference between an example and a system
 
 An example demonstrates a behaviour. A system produces that behaviour reliably, at scale, under conditions the example never encounters.
 
-When you share an example of how a component works, you share the shape of the idea. When you share the full system, you share the machine — the scheduling logic, the error surfaces, the accumulated context, the judgement calls baked into the configuration, the specific choices that took months to arrive at through painful iteration.
+When you share an example of how a component works, you share the shape of the idea. When you share the full system, you share the machine: the scheduling logic, the error surfaces, the accumulated context, the judgement calls baked into the configuration, the specific choices that took months to arrive at through painful iteration.
 
 These are not the same thing. Conflating them is one of the more common mistakes in how software organisations handle openness. Open-sourcing an example and calling it transparency. Keeping a demo repo fresh whilst the real codebase diverges silently. Publishing docs that describe a version of the product that no longer exists.
 
@@ -36,7 +36,7 @@ We wanted to avoid all of that.
 
 ## What the public repos are actually for
 
-The repositories available under the MSG public GitHub presence are not the product. They are demonstration artefacts — patterns, community documentation, examples of interface design decisions, worked examples of how certain capabilities can be approached.
+The repositories available under the MSG public GitHub presence are not the product. They are demonstration artefacts: patterns, community documentation, examples of interface design decisions, worked examples of how certain capabilities can be approached.
 
 They are genuinely useful. Someone building their own internal tooling can learn from them. Someone evaluating whether our thinking is sound can inspect them. Someone we might want to work with can read them as a signal of craft and intent.
 
@@ -46,7 +46,7 @@ This is not secrecy for its own sake. It is good information architecture.
 
 ## Competitive position and trust are not opposites
 
-There is a view — common enough in certain corners of the technology industry — that openness and competitive position are fundamentally in tension. Share too much and you lose your edge. Share too little and you seem untrustworthy. The supposed answer is to calibrate a middle position and hold it awkwardly.
+There is a view, common enough in certain corners of the technology industry, that openness and competitive position are fundamentally in tension. Share too much and you lose your edge. Share too little and you seem untrustworthy. The supposed answer is to calibrate a middle position and hold it awkwardly.
 
 We do not think the tension is real, or at least not in the form usually described.
 
@@ -60,9 +60,9 @@ The general shift toward AI-powered tooling in this period has made the question
 
 When software was primarily deterministic code acting on explicit inputs, sharing a codebase shared the logic. Anyone could read it, run it, and understand exactly how it behaved. The IP lived substantially in the data and the business model, not in the code itself.
 
-With systems built around AI inference layers — memory, reasoning, context management, tool orchestration — the situation is different. The code is often the less proprietary part. The proprietary elements are the specific configuration of prompts and contexts, the memory schemas, the sequencing of reasoning steps, the agent architecture decisions. None of that is easily inspected just by reading a codebase, but it is still exposable if you are not deliberate about what you share.
+With systems built around AI inference layers, memory, reasoning, context management, tool orchestration, the situation is different. The code is often the less proprietary part. The proprietary elements are the specific configuration of prompts and contexts, the memory schemas, the sequencing of reasoning steps, the agent architecture decisions. None of that is easily inspected just by reading a codebase, but it is still exposable if you are not deliberate about what you share.
 
-We have built a real intelligence layer inside our operating systems. The reasoning patterns embedded in Orion, and the way they surface through Orbit's commercial workflows, represent months of iteration. They are not going into a public repository. But the shape of the product — how it handles certain classes of work, how it surfaces information, how it structures the interaction between the person and the system — that can be demonstrated publicly, because demonstration and exposure are not the same thing.
+We have built a real intelligence layer inside our operating systems. The reasoning patterns embedded in Orion, and the way they surface through Orbit's commercial workflows, represent months of iteration. They are not going into a public repository. But the shape of the product, how it handles certain classes of work, how it surfaces information, how it structures the interaction between the person and the system, can be demonstrated publicly, because demonstration and exposure are not the same thing.
 
 ## The design choices this forces
 
@@ -76,17 +76,17 @@ Deciding to be genuinely open about some things whilst protecting others forces 
 
 **Contribution handling.** When external contributors interact with public materials, the boundary between public and internal needs to be clear enough that contributions can be accepted without accidentally importing them into contexts where they would create exposure problems.
 
-None of this is particularly complicated in theory. The discipline is in the execution — staying consistent about it over time, especially as the team grows and the number of people who touch public materials increases.
+None of this is particularly complicated in theory. The discipline is in the execution: staying consistent about it over time, especially as the team grows and the number of people who touch public materials increases.
 
 ## The broader pattern
 
 What we are describing is not unique to software. Every institution that builds something genuinely proprietary whilst maintaining a credible public presence has to solve this problem in some form.
 
-Academic research labs publish papers but protect experimental methods. Law firms share public legal analysis but protect client work. Manufacturers publish product specifications but protect manufacturing processes. The pattern — demonstrate capability publicly, protect the systems that produce that capability — is how institutions maintain both credibility and competitive position simultaneously.
+Academic research labs publish papers but protect experimental methods. Law firms share public legal analysis but protect client work. Manufacturers publish product specifications but protect manufacturing processes. The pattern, demonstrate capability publicly, protect the systems that produce that capability, is how institutions maintain both credibility and competitive position simultaneously.
 
 For us, the specific application is to software and AI systems. But the underlying logic is the same: the public presence should accurately represent the quality and direction of the work, without exposing the implementation detail that constitutes real competitive advantage.
 
-We have deliberately built a portfolio that operates across research, product and services. Benediction Lab researches in areas — agents, memory systems, autonomous product development — where the research output is itself the valuable thing, and there are appropriate ways to share findings. Orbit is a product where the user experience and the intelligence layer underneath it together constitute the value, and the distinction between demonstrable interface and protected system is particularly important. TUXX works in live client environments where confidentiality is part of the engagement.
+We have deliberately built a portfolio that operates across research, product and services. Benediction Lab researches in areas, agents, memory systems, autonomous product development, where the research output is itself the valuable thing, and there are appropriate ways to share findings. Orbit is a product where the user experience and the intelligence layer underneath it together constitute the value, and the distinction between demonstrable interface and protected system is particularly important. TUXX works in live client environments where confidentiality is part of the engagement.
 
 Each of those contexts has its own version of the public/protected boundary. What we formalised this month is a coherent framework for thinking about that boundary across all of them, rather than solving it differently in each context ad hoc.
 

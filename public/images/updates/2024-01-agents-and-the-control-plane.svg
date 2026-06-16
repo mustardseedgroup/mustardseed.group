@@ -1,23 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Agents and the control plane</title>
   <desc id="desc">Agents needing clear control planes</desc>
-  <rect width="1200" height="630" fill="#e8e6df"/>
-  <rect x="36" y="36" width="1128" height="558" fill="#fbfaf7" stroke="#0b0b09" stroke-width="2"/>
-  <rect x="72" y="76" width="170" height="46" fill="#8c877e" opacity="0.18" stroke="#8c877e" stroke-width="1"/>
-  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#0b0b09">RESEARCH</text>
-  <text x="72" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#64615b">JAN 2024</text>
-  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">Agents and the</text>
-  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="500" fill="#0b0b09">control plane</text>
-  <text x="72" y="535" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#64615b">Agents needing clear control planes</text>
   
-      <circle cx="880" cy="315" r="190" fill="none" stroke="#8c877e" stroke-width="2" opacity="0.32"/>
-      <circle cx="880" cy="315" r="112" fill="none" stroke="#c8c3b7" stroke-width="2"/>
-      <path d="M690 315 C755 170 1010 170 1070 315 C1010 460 755 460 690 315Z" fill="none" stroke="#c69386" stroke-width="3" opacity="0.65"/>
-      <circle cx="880" cy="315" r="18" fill="#0b0b09"/>
-      <circle cx="715" cy="315" r="10" fill="#0b0b09"/>
-      <circle cx="1045" cy="315" r="10" fill="#0b0b09"/>
+    <defs>
+      <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#fff0c7"/>
+        <stop offset="58%" stop-color="#e8e6df"/>
+        <stop offset="100%" stop-color="#b8d7ff"/>
+      </linearGradient>
+      <radialGradient id="fieldGradient" cx="68%" cy="42%" r="70%">
+        <stop offset="0%" stop-color="#ff7a45" stop-opacity="0.92"/>
+        <stop offset="55%" stop-color="#e86bd6" stop-opacity="0.54"/>
+        <stop offset="100%" stop-color="#11110f" stop-opacity="0.86"/>
+      </radialGradient>
+      <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#e86bd6"/>
+        <stop offset="50%" stop-color="#b8d7ff"/>
+        <stop offset="100%" stop-color="#4f7cff"/>
+      </linearGradient>
+      <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="28" stdDeviation="26" flood-color="#0b0b09" flood-opacity="0.18"/>
+      </filter>
+    </defs>
+  
+  <rect width="1200" height="630" fill="url(#backgroundGradient)"/>
+  <rect x="34" y="34" width="1132" height="562" rx="0" fill="rgba(251,250,247,0.76)" stroke="#c8c3b7" stroke-width="2"/>
+  <circle cx="947" cy="241" r="293" fill="#e86bd6" opacity="0.18"/>
+  <circle cx="873" cy="297" r="203" fill="#4f7cff" opacity="0.16"/>
+  <g filter="url(#softShadow)">
     
-  <line x1="624" y1="94" x2="624" y2="536" stroke="#c8c3b7" stroke-width="1"/>
-  <rect x="868" y="498" width="86" height="58" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
-  <text x="889" y="535" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#c69386">MS</text>
+    <rect x="604" y="122" width="486" height="402" rx="28" fill="#fbfaf7" stroke="#c8c3b7"/>
+    <path d="M650 462 H1032" stroke="#0b0b09" stroke-width="3"/>
+    <rect x="660" y="370" width="48" height="90" fill="#0b0b09" opacity="0.94"/><rect x="742" y="304" width="48" height="156" fill="#4f7cff" opacity="0.94"/><rect x="824" y="344" width="48" height="116" fill="#b8d7ff" opacity="0.94"/><rect x="906" y="250" width="48" height="210" fill="#4f7cff" opacity="0.94"/><rect x="988" y="320" width="48" height="140" fill="#b8d7ff" opacity="0.94"/>
+    <path d="M652 244 C720 160 786 330 850 244 S992 168 1056 236" fill="none" stroke="#e86bd6" stroke-width="6" opacity="0.82"/>
+    <circle cx="850" cy="244" r="13" fill="#0b0b09"/>
+    <circle cx="1056" cy="236" r="13" fill="#0b0b09"/>
+  
+  </g>
+  <rect x="70" y="76" width="184" height="48" rx="24" fill="rgba(255,255,255,0.72)" stroke="#c8c3b7"/>
+  <text x="96" y="107" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" letter-spacing="3.4" fill="#0b0b09">RESEARCH</text>
+  <text x="74" y="184" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#706c64">JAN 2024</text>
+  <text x="72" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="500" fill="#0b0b09">Agents and the</text>
+  <text x="72" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="500" fill="#0b0b09">control plane</text>
+  <text x="74" y="536" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#706c64">Agents needing clear control planes</text>
+  <rect x="1030" y="500" width="74" height="58" rx="0" fill="#fbfaf7" stroke="#c8c3b7" stroke-width="2"/>
+  <text x="1048" y="537" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800" fill="#4f7cff">MS</text>
 </svg>

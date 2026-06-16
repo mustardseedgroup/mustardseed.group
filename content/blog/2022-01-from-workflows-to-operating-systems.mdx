@@ -20,11 +20,11 @@ tags:
 
 ## Where the tools stop short
 
-There is a category of software that earns the description "useful" without earning the description "transformative." Workflow tools mostly live in that category. They capture process. They move things forward. They remove a few points of friction. But they leave a particular kind of problem unsolved — the problem of operating.
+There is a category of software that earns the description "useful" without earning the description "transformative." Workflow tools mostly live in that category. They capture process. They move things forward. They remove a few points of friction. But they leave a particular kind of problem unsolved: the problem of operating.
 
 A workflow tool handles a sequence. An operating system handles a state.
 
-This distinction matters more than it first appears, and working through it in January 2022 — with AI capability rapidly expanding and our own product work sharpening — feels like the right moment to make it explicit. The conceptual step from workflow to operating system is not just a product decision. It is a claim about what kind of institution we are building and what kind of capability we are actually trying to increase.
+This distinction matters more than it first appears, and working through it in January 2022, with AI capability rapidly expanding and our own product work sharpening, feels like the right moment to make it explicit. The conceptual step from workflow to operating system is not just a product decision. It is a claim about what kind of institution we are building and what kind of capability we are actually trying to increase.
 
 ## What a workflow does
 
@@ -36,15 +36,15 @@ That is not a critique of workflow tools. They are not trying to do those things
 
 ## What an operating system adds
 
-An operating system — in the general sense, not just the software sense — adds several things that workflows structurally cannot provide.
+An operating system, in the general sense and not just the software sense, adds several things that workflows structurally cannot provide.
 
 **Memory.** Not just a log of events, but accessible, structured recall. The ability to say "here is where things stand" in a way that reflects everything that has happened, not just the last action taken. Memory allows a system to be context-aware rather than just process-compliant.
 
 **Context.** Memory alone is insufficient if it cannot be interpreted. An operating system knows not just what happened, but what it means in the current situation. A lead came in six weeks ago; it was qualified; it stalled; the contact then responded to a different campaign. A workflow sees four separate events. An operating system sees a relationship with a pattern.
 
-**Permissions and connected state.** A workflow step either proceeds or it does not. An operating system knows who can see what, who should be involved at which point, what is visible across the team and what is personal. These are not administrative niceties — they shape how information flows and where accountability sits.
+**Permissions and connected state.** A workflow step either proceeds or it does not. An operating system knows who can see what, who should be involved at which point, what is visible across the team and what is personal. These are not administrative niceties: they shape how information flows and where accountability sits.
 
-**Recovery.** Things go wrong. People miss steps. Data goes stale. An operating system can surface when something has fallen out of acceptable range, prompt the right person, and resume from a recoverable state. A workflow typically cannot — it either completes or it does not.
+**Recovery.** Things go wrong. People miss steps. Data goes stale. An operating system can surface when something has fallen out of acceptable range, prompt the right person, and resume from a recoverable state. A workflow typically cannot. It either completes or it does not.
 
 **History and oversight.** The ability to look back, not just to audit, but to learn. What led to this outcome? Where did a deal stall and why? What did we try with this type of client before? History is the substrate for improving the system rather than just running it.
 
@@ -52,11 +52,11 @@ These properties together are what make a system genuinely capable of supporting
 
 ## The cost of the gap
 
-When businesses run on workflow tools rather than operating systems, they typically compensate with people. Someone becomes the keeper of context — the person who knows the history of a relationship, who can be asked "where did things stand with this," who holds the institutional memory that the software does not. Someone else becomes the recovery mechanism — the person who notices when things have gone quiet and chases the queue.
+When businesses run on workflow tools rather than operating systems, they typically compensate with people. Someone becomes the keeper of context, the person who knows the history of a relationship, who can be asked "where did things stand with this," who holds the institutional memory that the software does not. Someone else becomes the recovery mechanism, the person who notices when things have gone quiet and chases the queue.
 
 This is a meaningful cost, and it compounds. The organisation becomes dependent on specific individuals rather than on reliable systems. When those individuals leave or become overwhelmed, context evaporates. Decisions that should be informed by history are made again from scratch.
 
-The more capability-intensive the work — the higher the stakes per interaction, the longer the cycles, the more complex the relationships — the more expensive this gap becomes. Commercial execution in particular, which involves long sales cycles, complex product development decisions and ongoing client relationships, suffers acutely from workflow-only infrastructure.
+The more capability-intensive the work, the higher the stakes per interaction, the longer the cycles, the more complex the relationships, the more expensive this gap becomes. Commercial execution in particular, which involves long sales cycles, complex product development decisions and ongoing client relationships, suffers acutely from workflow-only infrastructure.
 
 ## What this means for Orbit
 
@@ -64,7 +64,7 @@ Orbit has to be more than a workflow tool to be genuinely useful. That is not a 
 
 The full lead-to-launched-product commercial workflow is long. It crosses weeks and months. It involves multiple people with different roles. It produces decisions that have downstream consequences for other decisions. It requires the kind of memory and context that makes the whole arc legible, not just the individual steps visible.
 
-Building Orbit as a collection of workflows would be building the right shape in the wrong material. You would get something that looks like a business operating system — it has stages, it has steps, it moves things forward — but that behaves like a workflow tool when it matters: it forgets, it loses context, it cannot recover, it requires a person to carry the institutional memory that the product should hold.
+Building Orbit as a collection of workflows would be building the right shape in the wrong material. You would get something that looks like a business operating system, with stages, steps, and forward motion, but that behaves like a workflow tool when it matters: it forgets, it loses context, it cannot recover, it requires a person to carry the institutional memory that the product should hold.
 
 The design work in this period is explicitly about refusing that shortcut. The operating surface has to be coherent, not just sequential. That means thinking carefully about how memory is structured and surfaced, how context travels across the system, how history is accessible without being buried, and how recovery is handled when the normal path breaks down.
 
@@ -80,16 +80,16 @@ This is part of what makes the Orion work relevant at the product level, not jus
 
 ## The right abstraction level
 
-None of this means that workflows are the wrong unit. Workflows are part of what an operating system runs. They are components, not the whole. The mistake is conflating the component with the system — treating the ability to define and run a sequence as equivalent to having built the infrastructure for sustained commercial operation.
+None of this means that workflows are the wrong unit. Workflows are part of what an operating system runs. They are components, not the whole. The mistake is conflating the component with the system: treating the ability to define and run a sequence as equivalent to having built the infrastructure for sustained commercial operation.
 
-The architecture question is at which level the system primarily operates. Does it primarily manage sequences, with memory and context as secondary features? Or does it primarily manage state — the current condition of a portfolio of relationships, decisions and actions — with workflows as one of the tools it uses to advance that state?
+The architecture question is at which level the system primarily operates. Does it primarily manage sequences, with memory and context as secondary features? Or does it primarily manage state, the current condition of a portfolio of relationships, decisions and actions, with workflows as one of the tools it uses to advance that state?
 
-That distinction shapes every product decision downstream. What gets stored and how. What gets surfaced and when. What happens when a step fails or a person is unavailable or a relationship goes quiet. What a user sees when they log in — is it a list of tasks, or is it a picture of the current operating situation?
+That distinction shapes every product decision downstream. What gets stored and how. What gets surfaced and when. What happens when a step fails or a person is unavailable or a relationship goes quiet. What a user sees when they log in: is it a list of tasks, or is it a picture of the current operating situation?
 
 ## Working forward
 
 The honest position in January 2022 is that we are building towards a genuine operating system whilst working with the practical constraints of what can be shipped now. The architecture is pointed in the right direction. The design intent is clear. The gap between that intent and a fully realised operating system is real, and it will take time to close.
 
-What matters is that the gap is named, not papered over. Building a workflow tool with operating-system branding would be the easier path in the short term. It is also the wrong path — both for the people who use it, who need more than that, and for the institution we are building, which should be capable of more.
+What matters is that the gap is named, not papered over. Building a workflow tool with operating-system branding would be the easier path in the short term. It is also the wrong path: both for the people who use it, who need more than that, and for the institution we are building, which should be capable of more.
 
 The friction that repeats tells you where the product needs to go. The friction here is not in the steps. It is in the space between the steps, where context lives, memory should persist, and recovery has to be possible. That is the operating system problem. That is what we are building.

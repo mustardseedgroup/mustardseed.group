@@ -37,6 +37,8 @@ The result is that most of their energy goes toward coordination overhead rather
 
 The person we are building for is not disorganised. They are over-extended. Those are not the same problem, and they require different solutions.
 
+There is also a third dimension of constraint that rarely gets named: cognitive load. The over-extended executor is not just short on time and money. They are short on the kind of focused attention that produces quality decisions. Every hour spent wrestling with a tool that wasn't designed for them is an hour not spent on the actual judgement calls that determine whether their work succeeds or fails. That cost is invisible in product metrics and almost never appears in user research, but it is real and it compounds. Tools designed for the wrong person do not just waste time — they deplete the very thing that makes capable people capable.
+
 ## Infrastructure versus features
 
 A feature is something a product does. Infrastructure is the surface that makes doing possible.
@@ -47,25 +49,29 @@ Infrastructure is harder to build and harder to communicate. It doesn't demo wel
 
 This is why the decision to build for people who want to execute, rather than for everyone, is not a positioning decision. It is a product decision that flows all the way down into architecture. What data needs to persist? What actions need to be fast? What decisions need to surface without the user going looking for them? These questions only have good answers if you have a clear picture of who is on the other side of the screen.
 
+There is also a failure mode that infrastructure thinking helps avoid: the tendency to solve the symptom rather than the cause. When someone tells you their biggest problem is that they can't keep track of their tasks, the instinct is to build a better task manager. But in many cases the real problem is that they have no reliable way of knowing which tasks matter most right now, which depend on something else, and which can safely wait. A better list does not address that. A surface that organises work by its actual dependencies and consequences might. The difference requires knowing your user well enough to ask the harder question.
+
 ## The shape of the problem in 2015
 
-The tooling landscape in early 2015 has not yet caught up with the reality of how capable, small operations actually run. There are excellent tools for managing tasks. There are excellent tools for storing documents. There are excellent tools for communicating with teams. But the connective tissue between those activities, the layer where commercial intent becomes organised action, where a lead becomes a relationship, where a project becomes a delivered product, is either missing or buried inside enterprise software that was never designed for speed.
+The tooling landscape in early 2015 has not yet caught up with the reality of how capable, small operations actually run. There are excellent tools for managing tasks. There are excellent tools for storing documents. There are excellent tools for communicating with teams. But the connective tissue between those activities — the layer where commercial intent becomes organised action, where a lead becomes a relationship, where a project becomes a delivered product — is either missing or buried inside enterprise software that was never designed for speed.
 
 Enterprise software is designed for compliance and visibility. Leadership needs to see what is happening. Finance needs audit trails. HR needs approvals. These are real requirements for large organisations and they make large organisations function. But they make small, fast operations dysfunctional. The overhead is not incidental to the software. It is the purpose of the software, packaged as a feature.
 
-The motivated, capable, resource-constrained person does not have time to maintain the system the software wants them to maintain. So they either do less than they could, or they maintain parallel workarounds, spreadsheets beside the CRM, notes beside the project tool, calendar reminders beside the task manager, that accomplish what the tools should have done natively.
+The motivated, capable, resource-constrained person does not have time to maintain the system the software wants them to maintain. So they either do less than they could, or they maintain parallel workarounds — spreadsheets beside the CRM, notes beside the project tool, calendar reminders beside the task manager — that accomplish what the tools should have done natively.
 
-We are looking at that gap and asking whether it is possible to close it properly, not with another feature layer on top of existing complexity, but with a different design premise from the start.
+The irony is that these workarounds are often more effective than the tools they supplement. A well-constructed personal spreadsheet, built around the actual shape of the work, often outperforms a feature-rich platform that wasn't designed with that shape in mind. The lesson is not that spreadsheets are better than software. It is that design specificity matters more than feature count. The person making the spreadsheet is, without framing it this way, designing a tool for themselves with a clarity that most software teams never achieve because they are not willing to commit to a specific user.
+
+We are looking at that gap and asking whether it is possible to close it properly — not with another feature layer on top of existing complexity, but with a different design premise from the start.
 
 ## Not a CRM. Not a project tool. Something else.
 
 Orbit, the commercial operating system we are developing, is not a CRM. It is not a project management tool. It is an attempt to build the missing layer: the surface that covers lead-to-launched-product as a single coherent workflow rather than a sequence of disconnected tools.
 
-The insight driving it is not complicated: the same person who sources business usually also delivers it. In large organisations those are separate departments with separate software. In lean operations they are the same person in the same week, frequently in the same day. Building tools as if those functions are separate, as if sales ends before delivery begins, produces a gap that costs that person hours every single week.
+The insight driving it is not complicated: the same person who sources business usually also delivers it. In large organisations those are separate departments with separate software. In lean operations they are the same person in the same week, frequently in the same day. Building tools as if those functions are separate — as if sales ends before delivery begins — produces a gap that costs that person hours every single week.
 
 The opportunity is to build a tool that treats the full commercial workflow as one continuous surface. Where the context from winning a piece of business flows directly into the delivery process without being re-entered or reconstructed. Where the history of a relationship is available when it is relevant rather than locked in a separate system. Where reporting is not a separate task but a natural consequence of the work already done.
 
-None of this requires sophisticated technology. It requires an honest understanding of who the user is and what they actually need.
+None of this requires sophisticated technology. It requires an honest understanding of who the user is and what they actually need. The sophistication, if it belongs anywhere, belongs in the quality of that understanding.
 
 ## The portfolio thesis, early form
 
@@ -75,7 +81,7 @@ That question has more than one answer. The commercial operations problem, which
 
 These things connect not because we planned a diversified portfolio but because they are all expressions of the same underlying thesis: that capability is the leverage point, and that the tools people have access to substantially determine how much of their capability they can actually deploy.
 
-The portfolio grows from that thesis, not from a list of markets we decided to enter. Products get added when we find a meaningful gap: a place where the right person is being underserved in a way we know how to address. Products that don't belong to the thesis don't belong in the portfolio.
+The portfolio grows from that thesis, not from a list of markets we decided to enter. Products get added when we find a meaningful gap: a place where the right person is being underserved in a way we know how to address. Products that don't belong to the thesis don't belong in the portfolio. That discipline matters. It is easy to accumulate projects. It is harder to maintain the thread of an argument across everything you build. We want the portfolio to be legible — to someone looking at it from the outside and asking what this institution is actually for, the answer should be clear.
 
 ## What this means in practice
 
@@ -89,11 +95,15 @@ They cannot use tools that create maintenance overhead proportional to their ben
 
 And they should not have to forgive the tool for existing. Every session with the tool should feel like time invested in the work, not time managing the tool itself.
 
-These are not aspirational statements. They are constraints that drive real decisions at the product level. What to build first. What to cut. What to leave out entirely until the core earns its place.
+These are not aspirational statements. They are constraints that drive real decisions at the product level — what to build first, what to cut, what to leave out entirely until the core earns its place. They are also the kind of constraints that expose whether a team genuinely knows its user or is simply claiming to. Anyone can write a user persona. Fewer teams will make a costly product decision because their specific user genuinely cannot afford the overhead. The willingness to cut is the test.
 
 ## The bet
 
-The bet at the centre of all of this is simple: that there is a meaningful number of people in the world who have the intent and the capacity to do great things, who are being held back not by lack of motivation but by lack of the right infrastructure, and that building genuinely for those people, at the level of specificity they deserve, is both worthwhile and commercially sound.
+The bet at the centre of all of this is simple: that there is a meaningful number of people in the world who have the intent and the capacity to do great things, who are being held back not by lack of motivation but by lack of the right infrastructure, and that building genuinely for those people — at the level of specificity they deserve — is both worthwhile and commercially sound.
+
+That last phrase matters. This is not charity. It is not a social mission to serve the underdog. It is a belief that the right user, served well, is a durable business. The motivated executor who finds a tool that actually works for them does not churn. They integrate it. They defend it. They do not ask whether there is something cheaper. They ask whether they can do more with it.
+
+Building for that person, rather than for a mass market, means accepting a smaller initial audience. It also means building something that actually holds, rather than something that attracts attention briefly and then loses it to the next thing that promises more.
 
 Not tools for everyone. Tools for the person who already knows what they want to do and needs the surface to do it from.
 

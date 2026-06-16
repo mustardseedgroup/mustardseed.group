@@ -23,7 +23,7 @@ Most performance tools have a logging problem that is not, at its core, a techni
 
 You open the app. You scroll past your history. You find the right input field. You type something approximating what happened. You wonder if it is worth doing because no-one will check and the pattern won't be visible until you have done this sixty more times. You close the app.
 
-The result is that the log becomes a record of motivated days rather than actual behaviour. The data you most need — the data from the hard weeks, the weeks where compliance slipped — is precisely what never gets captured. This is not a user failure. It is a design failure. The interface asked for too much at the wrong moment.
+The result is that the log becomes a record of motivated days rather than actual behaviour. The data you most need, the data from the hard weeks, the weeks where compliance slipped, is precisely what never gets captured. This is not a user failure. It is a design failure. The interface asked for too much at the wrong moment.
 
 If performance tooling is going to be useful, logging has to be fast enough that it does not become a decision. The action should feel closer to a tap than a task.
 
@@ -33,11 +33,11 @@ A standard is a specific, pre-agreed benchmark that defines what acceptable perf
 
 This sounds obvious until you look at how most fitness and productivity tools implement it. They tend to offer goals, streaks, challenges and leaderboards. These are motivational mechanisms, not standards. They reward consistency when things are going well and quietly collapse when they are not. A streak resets. A goal becomes irrelevant the moment life disrupts the pace.
 
-A standard is different because it persists through disruption. Missing it once does not end the standard — it creates a data point and an obligation to return. The accountability is not to a streak counter. It is to a defined level of behaviour that you have agreed, in advance, is what you do.
+A standard is different because it persists through disruption. Missing it once does not end the standard: it creates a data point and an obligation to return. The accountability is not to a streak counter. It is to a defined level of behaviour that you have agreed, in advance, is what you do.
 
 The interface challenge for a performance product is making this distinction legible without making the product feel punishing. A system that simply records misses without context quickly becomes demoralising, which is the opposite of what accountability is meant to achieve. The goal is honest tracking that does not collapse into either false optimism or performative severity.
 
-This is partly a data presentation problem. What you show, when you show it, and how you contextualise performance data within a broader trend — these are interface decisions with meaningful psychological weight.
+This is partly a data presentation problem. What you show, when you show it, and how you contextualise performance data within a broader trend: these are interface decisions with meaningful psychological weight.
 
 ## The honest dashboard
 
@@ -45,7 +45,7 @@ The assumption most productivity interfaces make is that more data is better. Su
 
 What performance data actually needs to communicate is simpler: are you above or below the standard, and for how long? The trend matters more than the snapshot. A single bad day is noise. Three weeks of incremental drift is a signal.
 
-A well-designed performance dashboard probably shows less than most teams building performance tools currently believe. It shows the standard, the current position relative to it, and the recent trajectory. Everything else is secondary — accessible, but not leading. The instinct to surface everything is understandable; it can make the product feel comprehensive. But comprehensiveness and clarity are often in opposition, and clarity usually wins in regular use.
+A well-designed performance dashboard probably shows less than most teams building performance tools currently believe. It shows the standard, the current position relative to it, and the recent trajectory. Everything else is secondary: accessible, but not leading. The instinct to surface everything is understandable; it can make the product feel comprehensive. But comprehensiveness and clarity are often in opposition, and clarity usually wins in regular use.
 
 The demoralisation risk is real. An interface that leads with what you missed, every time you open it, trains the user to avoid opening it. The cadence and framing of negative data is a design problem that teams often underestimate because it feels like a product philosophy question rather than a UX one. It is both.
 
@@ -55,41 +55,41 @@ Honesty in tracking has two failure modes that pull in opposite directions.
 
 The first is the optimistic failure: the system rounds up, celebrates effort regardless of output, and frames every session as a success regardless of whether the standard was met. This feels supportive in the short term. It is dishonest in a way that compounds over time. If the standard means nothing on a bad day, it means very little on a good one either.
 
-The second is the punitive failure: the system treats every deviation from the standard as a problem requiring correction. Coaching messages that begin with what went wrong. Dashboards that lead with deficits. Notifications timed to make the user feel behind. This produces a specific kind of avoidance — people stop logging because the log has become a record of failure rather than a map of behaviour.
+The second is the punitive failure: the system treats every deviation from the standard as a problem requiring correction. Coaching messages that begin with what went wrong. Dashboards that lead with deficits. Notifications timed to make the user feel behind. This produces a specific kind of avoidance: people stop logging because the log has become a record of failure rather than a map of behaviour.
 
 The narrow path between these is tracking that is accurate, contextualised and free of editorial pressure. Log what happened. Show where it sits relative to the standard. Let the user draw their own conclusions about what to do next. The system should hold the data with a degree of neutrality that makes it safe to return to even after a hard stretch.
 
-The coaching function, when it exists, is separate from the tracking function. Tracking records. Coaching reflects. Conflating the two — making every log entry an implicit evaluation — is where most tools lose the plot.
+The coaching function, when it exists, is separate from the tracking function. Tracking records. Coaching reflects. Conflating the two, making every log entry an implicit evaluation, is where most tools lose the plot.
 
 ## The interface design challenge
 
 Designing for performance is harder than designing for productivity because the failure states are more personal. Productivity tools fail when they are too slow or too cluttered. Performance tools fail when they create the wrong emotional relationship to data about the self.
 
-The logging interface has to be fast and low-friction almost as a prerequisite — if it is slow, it does not get used, and everything downstream is compromised. But speed is the minimum. The deeper challenge is designing the emotional arc of regular use: what does it feel like to open this product after a week where the standard was met? After a week where it was not? After a month away?
+The logging interface has to be fast and low-friction almost as a prerequisite: if it is slow, it does not get used, and everything downstream is compromised. But speed is the minimum. The deeper challenge is designing the emotional arc of regular use: what does it feel like to open this product after a week where the standard was met? After a week where it was not? After a month away?
 
 A product that only feels good when performance is good is a product for people who do not need it. The users who need it most are the ones navigating a difficult patch, trying to re-establish a baseline, looking for a structure that will hold even when motivation has not yet returned. That is the use case the interface has to be designed for.
 
-This shapes decisions that go all the way down to copy, colour and sequencing. The return state — the screen you see when you open the app after a gap — is probably the most important and least designed screen in most performance products.
+This shapes decisions that go all the way down to copy, colour and sequencing. The return state, the screen you see when you open the app after a gap, is probably the most important and least designed screen in most performance products.
 
 ## CheekyGains as the test environment
 
-CheekyGains is the place where these questions are being worked through in a live product context. It sits inside the All Purpose ecosystem as the fitness and performance vertical — a consumer product where accountability, standards and coaching intersect in a way that surfaces all of these design tensions directly.
+CheekyGains is the place where these questions are being worked through in a live product context. It sits inside the All Purpose ecosystem as the fitness and performance vertical, a consumer product where accountability, standards and coaching intersect in a way that surfaces all of these design tensions directly.
 
-The practical challenge with CheekyGains is that the population of users is not homogeneous. The same interface decisions that work for someone building a consistent training practice will feel oppressive to someone who has just returned after an injury. Flexibility in how the standard is held — without undermining the concept of holding it at all — is genuinely difficult to design.
+The practical challenge with CheekyGains is that the population of users is not homogeneous. The same interface decisions that work for someone building a consistent training practice will feel oppressive to someone who has just returned after an injury. Flexibility in how the standard is held, without undermining the concept of holding it at all, is genuinely difficult to design.
 
-What the product needs is a system that treats the standard as stable and the context as variable. The standard does not change because life is hard. But the way the product responds to a period of difficulty can acknowledge that difficulty without suspending the standard entirely. This is a coaching philosophy translated into an interface behaviour, which means it cannot simply be specified in a document — it has to be modelled in the actual product decisions.
+What the product needs is a system that treats the standard as stable and the context as variable. The standard does not change because life is hard. But the way the product responds to a period of difficulty can acknowledge that difficulty without suspending the standard entirely. This is a coaching philosophy translated into an interface behaviour, which means it cannot simply be specified in a document: it has to be modelled in the actual product decisions.
 
-Naira, the AI coaching layer inside CheekyGains, is where the more continuous version of this support lives. The particular advantage of an AI coach over a static notification system is the capacity to respond to context — to the pattern of what has happened recently, not just whether today's log was submitted. That contextual responsiveness is what makes the difference between a system that nags and a system that actually supports.
+Naira, the AI coaching layer inside CheekyGains, is where the more continuous version of this support lives. The particular advantage of an AI coach over a static notification system is the capacity to respond to context, to the pattern of what has happened recently, not just whether today's log was submitted. That contextual responsiveness is what makes the difference between a system that nags and a system that actually supports.
 
 ## The dependency trap
 
 There is one principle that overrides most of the design considerations here: the system should increase the user's agency over their own behaviour, not substitute for it.
 
-Tools that become load-bearing for performance — where the user cannot function without the notification, cannot remember their standard without the dashboard, cannot make a decision about effort without the AI's input — have failed in a specific way. They have moved the locus of control outward, which is the opposite of what a genuine performance product is supposed to achieve.
+Tools that become load-bearing for performance, where the user cannot function without the notification, cannot remember their standard without the dashboard, cannot make a decision about effort without the AI's input, have failed in a specific way. They have moved the locus of control outward, which is the opposite of what a genuine performance product is supposed to achieve.
 
 The best outcome is a user who understands their own standard clearly enough that they hold it even when the product is unavailable. The product's job is to help establish that understanding, reinforce it during periods of pressure, and surface patterns that the user might not notice on their own. It is a supporting layer, not a replacement for self-knowledge.
 
-This is a harder product philosophy to maintain than it sounds. The commercial incentive is towards engagement and daily active use. But the performance incentive is towards internalisation — towards a user who needs to open the app less frequently because the standard is clearer. These two things are not always in opposition, but the tension is worth naming explicitly, because most performance products resolve it in the wrong direction.
+This is a harder product philosophy to maintain than it sounds. The commercial incentive is towards engagement and daily active use. But the performance incentive is towards internalisation: towards a user who needs to open the app less frequently because the standard is clearer. These two things are not always in opposition, but the tension is worth naming explicitly, because most performance products resolve it in the wrong direction.
 
 The tooling should be fast, honest, specific and light. The standard should be clear, held consistently, and never suspended simply because circumstances made it inconvenient. The coaching should respond to context without removing the user's responsibility for the decision. These three things, designed well together, are what a serious performance product looks like.
 
