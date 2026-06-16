@@ -31,21 +31,21 @@ That observation — not a trend, not a stat, but a pattern seen up close — is
 
 There is a difference between a CRM and a business operating system. A CRM is a database with a workflow layer around it. It records what happened. It reminds you what to do next. At its best, it keeps things from falling through gaps.
 
-A business operating system is something different. It should handle the full arc of commercial execution — from the moment someone becomes a real prospect to the moment a product is live in their hands. That arc has structure. It has stages with different requirements, different information needs, different kinds of decisions. A good operating surface makes that structure legible and navigable without turning it into bureaucracy.
+A business operating system is something different. It should handle the full arc of commercial execution, from the moment someone becomes a real prospect to the moment a product is live in their hands. That arc has structure. It has stages with different requirements, different information needs, different kinds of decisions. A good operating surface makes that structure legible and navigable without turning it into bureaucracy.
 
-The distinction matters because the failure mode of a CRM is different from the failure mode Orbit is designed to prevent. CRMs fail by becoming data entry systems — things people update after the fact to satisfy a reporting requirement, not tools that actively help them do the work. The record of what happened becomes the product, rather than the execution itself.
+The distinction matters because the failure mode of a CRM is different from the failure mode Orbit is designed to prevent. CRMs fail by becoming data entry systems: things people update after the fact to satisfy a reporting requirement, not tools that actively help them do the work. The record of what happened becomes the product, rather than the execution itself.
 
-Orbit's thesis is that the product has to live inside the execution. It should be useful at every stage — during the call, during the handoff, during delivery — not as a place to log what already happened, but as an environment where the work actually takes place.
+Orbit's thesis is that the product has to live inside the execution. It should be useful at every stage, during the call, during the handoff, during delivery, not as a place to log what already happened, but as an environment where the work actually takes place.
 
 This is a more demanding design brief than it might appear. It is straightforward to build a tool that captures information well. It is considerably harder to build one that makes the right information available at the right moment without requiring someone to manually reconstruct it. The former is a filing system. The latter is an operating surface. Orbit is designed to be the latter.
 
 ## What TUXX made visible
 
-TUXX — the custom AI systems and software studio inside the MSG portfolio — has always been the environment where these patterns get tested in live conditions. Services work is honest in a particular way. There is no time to build the ideal version. There is only the version that works under real constraints, with real clients, on real schedules.
+TUXX, the custom AI systems and software studio inside the MSG portfolio, has always been the environment where these patterns get tested in live conditions. Services work is honest in a particular way. There is no time to build the ideal version. There is only the version that works under real constraints, with real clients, on real schedules.
 
-What TUXX made visible, over time, was how much commercial execution depends on continuity of context. When everyone working on something shares a clear picture of where things stand — what was said, what was promised, what has changed, what needs to happen next — the work moves. When that picture is fragmented across emails, documents, and notes that live in different tools, the team spends energy reconstructing context that should already be available.
+What TUXX made visible, over time, was how much commercial execution depends on continuity of context. When everyone working on something shares a clear picture of where things stand, what was said, what was promised, what has changed, what needs to happen next, the work moves. When that picture is fragmented across emails, documents, and notes that live in different tools, the team spends energy reconstructing context that should already be available.
 
-That reconstruction cost is invisible in any single instance. Spread across a team, across multiple active engagements, across weeks of delivery, it becomes a significant drag — not on output, exactly, but on coherence. Projects drift not because people stop caring but because the shared understanding that holds them on course quietly degrades.
+That reconstruction cost is invisible in any single instance. Spread across a team, across multiple active engagements, across weeks of delivery, it becomes a significant drag, not on output exactly, but on coherence. Projects drift not because people stop caring but because the shared understanding that holds them on course quietly degrades.
 
 That is the pattern Orbit is designed to address. Not with a dashboard that summarises information after the fact, but with a surface that keeps context intact as work moves through stages.
 
@@ -57,31 +57,31 @@ Building a product that covers a workflow rather than a task is hard for a speci
 
 Prospecting is fundamentally about discovery and qualification. The questions being asked are: is this real, is this worth pursuing, is there a genuine fit? The product surface for that stage needs to support judgment and sensemaking. It should help someone develop and hold a view about a potential client or opportunity, and it should make it easy to carry that view forward rather than reconstruct it from notes.
 
-Handoff — the transition from business development into delivery — is about transfer of knowledge. The questions are different: what exactly was agreed, what does the client expect, who needs to know what, and how does the delivery team pick up the thread without losing it? The product surface for that stage needs to make the accumulated context from the prospecting phase usable by people who weren't part of it. This is, in practice, one of the most reliably broken stages in commercial execution. The information exists. The transfer doesn't happen cleanly.
+Handoff, the transition from business development into delivery, is about transfer of knowledge. The questions are different: what exactly was agreed, what does the client expect, who needs to know what, and how does the delivery team pick up the thread without losing it? The product surface for that stage needs to make the accumulated context from the prospecting phase usable by people who weren't part of it. This is, in practice, one of the most reliably broken stages in commercial execution. The information exists. The transfer doesn't happen cleanly.
 
 Active delivery is about coordination and progress. The questions shift again: what is the current state, what is blocking progress, what decisions need to be made and by whom? This stage needs a surface that supports momentum without adding overhead.
 
-Getting the interaction model right for each of these stages — without making them feel like three separate products stitched together — is the central design problem. Orbit is not solving a single well-defined task. It is supporting a workflow that changes shape as it advances. The challenge is to make the product feel unified across that variation: one environment, multiple modes, no seams that force manual effort to cross.
+Getting the interaction model right for each of these stages, without making them feel like three separate products stitched together, is the central design problem. Orbit is not solving a single well-defined task. It is supporting a workflow that changes shape as it advances. The challenge is to make the product feel unified across that variation: one environment, multiple modes, no seams that force manual effort to cross.
 
 ## Orion as the intelligence layer
 
 Orbit would be a capable workflow tool without AI. The stages are real, the surface is useful, the context management problem is real and worth solving on structural grounds alone. But the ambition from the beginning was higher than that.
 
-Orion is the AI intelligence layer that powers Orbit commercially. It handles memory, reasoning, context, and the orchestration of information across the operating workflow. The intuition behind it is that AI is most useful not when it replaces decisions but when it keeps the decision-maker better informed — when it surfaces the right context at the right moment, flags things that might otherwise get missed, and reduces the cognitive load of tracking a complex, multi-stage process.
+Orion is the AI intelligence layer that powers Orbit commercially. It handles memory, reasoning, context, and the orchestration of information across the operating workflow. The intuition behind it is that AI is most useful not when it replaces decisions but when it keeps the decision-maker better informed: when it surfaces the right context at the right moment, flags things that might otherwise get missed, and reduces the cognitive load of tracking a complex, multi-stage process.
 
-The design question Orion poses is: what should AI actually be responsible for inside a business operating system? Not everything. Not the relationship, not the judgment call, not the client interaction that requires a person. But the background work of keeping things coherent, the pattern recognition across multiple active engagements, the memory that doesn't depend on one person staying involved — those are real contributions, and they are contributions that compound over time as the system accumulates context.
+The design question Orion poses is: what should AI actually be responsible for inside a business operating system? Not everything. Not the relationship, not the judgment call, not the client interaction that requires a person. But the background work of keeping things coherent, the pattern recognition across multiple active engagements, the memory that doesn't depend on one person staying involved: those are real contributions, and they are contributions that compound over time as the system accumulates context.
 
 The failure mode to avoid is an AI layer that becomes its own surface to manage. The intelligence should serve the work, not demand attention in order to function. Orion is built to make those contributions without becoming the thing everyone is managing. The AI layer should recede when it is working well. It becomes visible when something needs attention.
 
-That distinction — between AI as assistant and AI as infrastructure — shapes how Orion is built. Infrastructure does not ask to be noticed. It simply makes what is built on top of it more capable.
+That distinction, between AI as assistant and AI as infrastructure, shapes how Orion is built. Infrastructure does not ask to be noticed. It simply makes what is built on top of it more capable.
 
 ## What the product solves
 
-Orbit is a product for teams doing serious commercial work. Not for massive enterprise sales organisations with dedicated operations functions — those teams have resources to build internal systems. Not for freelancers working alone — the coordination problem doesn't arise at that scale.
+Orbit is a product for teams doing serious commercial work. Not for massive enterprise sales organisations with dedicated operations functions: those teams have resources to build internal systems. Not for freelancers working alone, either: the coordination problem doesn't arise at that scale.
 
 Orbit is for the range in between: teams where commercial execution actually determines whether the business works, where the people doing the selling are often also the people doing the delivery, where context is constantly at risk of being lost, and where the cost of a dropped thread is not just a missed task but a damaged relationship or a project that starts on the wrong foot.
 
-The product covers the full lead-to-launched-product workflow. The coverage is intentional. Partial tools create the same fragmentation problem they are supposed to solve — if the prospecting data lives in one place and the delivery data lives in another, the handoff is still a manual reconstruction, just between two branded systems instead of a spreadsheet and an email thread. The join between systems is where context dies.
+The product covers the full lead-to-launched-product workflow. The coverage is intentional. Partial tools create the same fragmentation problem they are supposed to solve: if the prospecting data lives in one place and the delivery data lives in another, the handoff is still a manual reconstruction, just between two branded systems instead of a spreadsheet and an email thread. The join between systems is where context dies.
 
 Orbit is designed to be the single operating environment where commercial execution happens. Not a place to record it. A place to do it.
 
@@ -89,7 +89,7 @@ Orbit is designed to be the single operating environment where commercial execut
 
 Products at this stage are not finished. They are working. There is a difference.
 
-The thesis is held, the architecture is built, and the surface is real. The work now is the ordinary, unglamorous work of making it more useful in more situations — learning from real usage, refining interactions, extending coverage, making the intelligence layer more effective as it encounters more varied conditions. That work does not make for a dramatic announcement. It is also the work that compounds most reliably.
+The thesis is held, the architecture is built, and the surface is real. The work now is the ordinary, unglamorous work of making it more useful in more situations: learning from real usage, refining interactions, extending coverage, making the intelligence layer more effective as it encounters more varied conditions. That work does not make for a dramatic announcement. It is also the work that compounds most reliably.
 
 Benediction Lab, the MSG research division focused on agents, memory systems, and autonomous product development, continues to push on the harder problems that Orbit and Orion will eventually draw on. The research runway and the product runway are connected, even when they operate on different timescales. What gets solved in the lab at one level of abstraction becomes infrastructure at the product level a few cycles later.
 
