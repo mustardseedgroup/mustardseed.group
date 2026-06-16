@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { EditorialHeader, SectionIntro, StoryCard } from "@/components/editorial";
 import { SiteShell } from "@/components/site-shell";
-import { getCollection } from "@/lib/content";
+import { getCollection, type ContentEntry } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Updates",
@@ -16,8 +16,12 @@ const streams = [
 ] as const;
 
 export default function BlogPage() {
-  const entries = getCollection("blog");
+  const entries = [...getCollection("blog"), ...getCollection("research")].sort((a, b) => {
+    if (!a.date || !b.date) return a.title.localeCompare(b.title);
+    return b.date.localeCompare(a.date);
+  });
   const featured = entries[0];
+  const hrefFor = (entry: ContentEntry) => `/${entry.collection}/${entry.slug}`;
 
   return (
     <SiteShell>
@@ -32,10 +36,10 @@ export default function BlogPage() {
           <section className="mx-auto grid max-w-7xl gap-10 px-5 pb-24 md:grid-cols-[0.55fr_1.45fr] md:px-8">
             <SectionIntro kicker="Latest" title="Recent writing." />
             <div className="grid gap-5 md:grid-cols-2">
-              <StoryCard entry={featured} href={`/blog/${featured.slug}`} featured />
+              <StoryCard entry={featured} href={hrefFor(featured)} featured />
               <div className="grid gap-5">
                 {entries.slice(1).map((entry) => (
-                  <StoryCard key={entry.slug} entry={entry} href={`/blog/${entry.slug}`} />
+                  <StoryCard key={`${entry.collection}-${entry.slug}`} entry={entry} href={hrefFor(entry)} />
                 ))}
               </div>
             </div>

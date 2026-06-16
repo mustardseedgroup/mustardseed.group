@@ -2,35 +2,42 @@ import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
 
 const nav = [
-  { href: "/ecosystem", label: "Ecosystem" },
-  { href: "/research", label: "Research" },
+  { href: "/products", label: "Products" },
   { href: "/blog", label: "Updates" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
-export function SiteShell({ children }: { children: React.ReactNode }) {
+export function SiteShell({
+  children,
+  tone = "light",
+}: {
+  children: React.ReactNode;
+  tone?: "light" | "dark";
+}) {
+  const isDark = tone === "dark";
+
   return (
-    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
-      <header className="sticky top-0 z-40 border-b border-[var(--line)] bg-[rgba(232,230,223,0.88)] backdrop-blur-xl">
+    <div className={isDark ? "min-h-screen bg-black text-white" : "min-h-screen bg-[var(--background)] text-[var(--foreground)]"}>
+      <header className={`sticky top-0 z-40 border-b backdrop-blur-xl ${isDark ? "border-[#252525] bg-[rgba(0,0,0,0.88)]" : "border-[var(--line)] bg-[rgba(232,230,223,0.88)]"}`}>
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
           <Link href="/" className="focus-ring font-medium tracking-tight">
             <BrandLogo brand="msg" className="text-base md:text-lg" />
           </Link>
-          <nav className="hidden items-center gap-8 text-sm text-[var(--muted)] md:flex">
+          <nav className={`hidden items-center gap-8 text-sm md:flex ${isDark ? "text-[#a8a8a8]" : "text-[var(--muted)]"}`}>
             {nav.map((item) => (
-              <Link key={item.href} href={item.href} className="focus-ring transition hover:text-[var(--foreground)]">
+              <Link key={item.href} href={item.href} className={`focus-ring transition ${isDark ? "hover:text-white" : "hover:text-[var(--foreground)]"}`}>
                 {item.label}
               </Link>
             ))}
           </nav>
-          <div className="hidden items-center gap-3 text-xs text-[var(--muted)] lg:flex">
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--foreground)]" />
+          <div className={`hidden items-center gap-3 text-xs lg:flex ${isDark ? "text-[#a8a8a8]" : "text-[var(--muted)]"}`}>
+            <span className={`h-1.5 w-1.5 rounded-full ${isDark ? "bg-white" : "bg-[var(--foreground)]"}`} />
             Building for the long term
           </div>
           <Link
             href="/contact"
-            className="button button-secondary focus-ring lg:hidden"
+            className={`button focus-ring lg:hidden ${isDark ? "border-[#3a3a3a] bg-[#1f1f1f] text-white" : "button-secondary"}`}
           >
             Contact
           </Link>
@@ -57,7 +64,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <div>
             <p className="text-sm font-medium">Resources</p>
             <div className="mt-4 grid gap-2 text-sm text-[#c8c0b2]">
-              <Link href="/research">Research</Link>
+              <Link href="/products">Products</Link>
               <Link href="/blog">Updates</Link>
               <Link href="/contact">Contact</Link>
             </div>

@@ -29,7 +29,7 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="#latest" className="button button-primary focus-ring">Latest updates</Link>
-                <Link href="/ecosystem" className="button button-secondary focus-ring">Explore ecosystem</Link>
+                <Link href="/products" className="button button-secondary focus-ring">Explore products</Link>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function Home() {
         <section className="mx-auto max-w-7xl px-5 py-24 md:px-8">
           <div className="grid gap-10 md:grid-cols-[0.65fr_1.35fr]">
             <SectionIntro
-              kicker="Ecosystem"
+              kicker="Products"
               title="Four operating layers."
               summary="Each part of the group has a distinct job. Together they form a loop from research to product to commercial proof."
             />
@@ -102,9 +102,9 @@ export default function Home() {
         <section className="mx-auto max-w-7xl px-5 py-24 md:px-8">
           <div className="grid gap-10 md:grid-cols-[0.65fr_1.35fr]">
             <SectionIntro
-              kicker="Latest research"
-              title="Research before product."
-              summary="Public research notes explain direction and principles without exposing private prompts, memory schemas or orchestration."
+              kicker="Updates"
+              title="Research notes and public updates."
+              summary="Updates combine founder letters, product notes and public research without exposing private prompts, memory schemas or orchestration."
             />
             <div className="grid gap-5 md:grid-cols-3">
               {research.map((entry) => (
