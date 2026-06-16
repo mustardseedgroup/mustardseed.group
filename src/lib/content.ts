@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import { editorialThumbnails } from "./editorial-thumbnails";
 
 export type Collection = "blog" | "research" | "companies" | "pages" | "drafts";
 
@@ -53,7 +54,7 @@ export function getCollection(collection: Collection): ContentEntry[] {
         status: data.status,
         featured: Boolean(data.featured),
         category: data.category,
-        thumbnail: data.thumbnail,
+        thumbnail: editorialThumbnails[slug] ?? data.thumbnail,
         tags: Array.isArray(data.tags) ? data.tags : [],
         body: content,
       };

@@ -1,0 +1,15 @@
+export const editorialThumbnails: Record<string, string> = {
+  "2017-06-transformers-and-language-systems": "/images/editorial/transformers-language-systems.png",
+  "2021-02-automation-as-a-studio-capability": "/images/editorial/codex-operating-surface.png",
+  "2021-08-creative-tooling-and-distribution": "/images/editorial/clip-dalle-creative-search.png",
+  "2022-07-public-ai-tools-become-accessible": "/images/editorial/stable-diffusion-creative-models.png",
+  "2022-11-chatgpt-resets-expectations": "/images/editorial/chatgpt-interface-moment.png",
+  "2024-02-memory-as-a-product-frontier": "/images/editorial/memory-product-trust.png",
+  "2024-05-cheekygains-and-naira": "/images/editorial/naira-performance-coach.png",
+  "2024-07-tuxx-delivery-patterns-and-pattern-up": "/images/editorial/tuxx-pattern-up-systems.png",
+  "2024-08-gui-control-and-workflows": "/images/editorial/gui-control-practical-agent.png",
+  "2025-04-cheekygains-seasons": "/images/editorial/cheekygains-seasons.png",
+  "2025-08-ai-capability-and-adoption": "/images/editorial/model-choice-product-strategy.png",
+  "2026-02-orbit-as-execution-infrastructure": "/images/editorial/orbit-execution-infrastructure.png",
+  "2026-03-orion-and-commercial-execution-agents": "/images/editorial/orion-commercial-execution.png",
+};

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { MdxContent } from "@/components/mdx-content";
 import { SiteShell } from "@/components/site-shell";
@@ -16,10 +17,31 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const entry = getEntry("blog", slug);
   if (!entry) return {};
+
+  const socialImage = entry.thumbnail
+    ? {
+        url: entry.thumbnail,
+        width: 1600,
+        height: 900,
+        alt: entry.title,
+      }
+    : undefined;
+
   return {
     title: entry.title,
     description: entry.summary,
     alternates: { canonical: `/blog/${entry.slug}` },
+    openGraph: {
+      title: entry.title,
+      description: entry.summary,
+      images: socialImage ? [socialImage] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: entry.title,
+      description: entry.summary,
+      images: entry.thumbnail ? [entry.thumbnail] : undefined,
+    },
   };
 }
 
@@ -52,6 +74,21 @@ export default async function BlogEntryPage({ params }: PageProps) {
             </div>
           </aside>
         </section>
+        {entry.thumbnail ? (
+          <section className="mx-auto max-w-7xl px-5 pb-16 md:px-8">
+            <figure className="overflow-hidden border border-[var(--line)] bg-[#efebe2]">
+              <Image
+                src={entry.thumbnail}
+                alt=""
+                width={1600}
+                height={900}
+                priority
+                sizes="(min-width: 1280px) 1216px, calc(100vw - 40px)"
+                className="h-auto w-full"
+              />
+            </figure>
+          </section>
+        ) : null}
         <section className="mx-auto max-w-5xl px-5 pb-24 md:px-8">
           <MdxContent source={entry.body} />
         </section>
