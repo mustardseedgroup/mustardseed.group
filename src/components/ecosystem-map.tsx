@@ -28,8 +28,8 @@ export function EcosystemMap() {
           <circle key={x} cx={x} cy={index % 2 === 0 ? 34 : 66} r="0.75" fill="#0b0b09" />
         ))}
       </svg>
-      <div className="absolute left-1/2 top-1/2 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-[#fbfaf7] text-[#c69386] shadow-[0_20px_70px_rgba(11,11,9,0.12)]">
-        <span className="font-mono text-5xl font-bold leading-none tracking-[-0.18em]">MS</span>
+      <div className="absolute left-1/2 top-1/2 flex h-28 w-36 -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-[#fbfaf7] px-4 text-center shadow-[0_20px_70px_rgba(11,11,9,0.12)]">
+        <BrandLogo brand="msg" className="text-xl" />
       </div>
       {nodes.map((node) => (
         <div

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
-import { EcosystemMap } from "@/components/ecosystem-map";
+import { CapabilityConsole } from "@/components/capability-console";
 import { SiteShell } from "@/components/site-shell";
 import { getCollection, getFeatured } from "@/lib/content";
 
@@ -130,7 +130,7 @@ export default function Home() {
             <div>
               <div className="mb-10 inline-flex items-center gap-3 border border-[var(--soft-line)] bg-[#f3f0e8] px-3 py-2 text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
                 <span className="h-2 w-2 bg-[var(--clay)]" />
-                Parent company and institution
+                Systems, research and products
               </div>
               <h1 className="max-w-3xl font-serif text-[4.4rem] font-medium leading-[0.88] tracking-normal md:text-[8.5rem]">
                 Mustard Seed Group
@@ -144,13 +144,13 @@ export default function Home() {
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
                   href="#ecosystem"
-                  className="focus-ring inline-flex bg-[var(--foreground)] px-5 py-3 text-sm text-[var(--background)] transition hover:opacity-85"
+                  className="button button-primary focus-ring"
                 >
                   Explore the ecosystem
                 </Link>
                 <Link
                   href="#latest"
-                  className="focus-ring inline-flex border border-[var(--foreground)] px-5 py-3 text-sm transition hover:bg-[var(--foreground)] hover:text-[var(--background)]"
+                  className="button button-secondary focus-ring"
                 >
                   Read the latest
                 </Link>
@@ -165,7 +165,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <EcosystemMap />
+          <CapabilityConsole />
         </section>
 
         <section id="latest" className="border-y border-[var(--line)] bg-[#fbfaf7]">
@@ -413,7 +413,7 @@ export default function Home() {
               <p className="max-w-3xl text-xl leading-9 text-[var(--muted)]">
                 Mustard Seed Group exists to build the systems that make that possible.
               </p>
-              <Link href="/contact" className="focus-ring mt-9 inline-flex bg-[var(--foreground)] px-5 py-3 text-sm text-[var(--background)] transition hover:opacity-80">
+              <Link href="/contact" className="button button-primary focus-ring mt-9">
                 Get in touch
               </Link>
             </div>

@@ -90,6 +90,51 @@ a {
   outline-offset: 4px;
 }
 
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--foreground);
+  padding: 0.78rem 1.15rem;
+  font-size: 0.9rem;
+  line-height: 1;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.button-primary {
+  background: var(--foreground);
+  color: #fbfaf7;
+}
+
+.button-primary:hover {
+  opacity: 0.86;
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--foreground);
+}
+
+.button-secondary:hover {
+  background: var(--foreground);
+  color: #fbfaf7;
+}
+
+.button-subtle {
+  border-color: var(--soft-line);
+  background: #f5f2ea;
+  color: var(--foreground);
+}
+
+.button-subtle:hover {
+  border-color: var(--foreground);
+  transform: translateY(-1px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

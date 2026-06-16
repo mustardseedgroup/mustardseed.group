@@ -30,7 +30,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           </div>
           <Link
             href="/contact"
-            className="focus-ring border border-[var(--foreground)] px-4 py-2 text-sm transition hover:bg-[var(--foreground)] hover:text-[var(--background)] lg:hidden"
+            className="button button-secondary focus-ring lg:hidden"
           >
             Contact
           </Link>
@@ -40,9 +40,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <footer className="bg-[#0b0b09] text-[#fbfaf7]">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:px-8">
           <div>
-            <div className="mb-7 flex h-14 w-14 items-center justify-center bg-[#fbfaf7] text-[#c69386]">
-              <span className="font-mono text-3xl font-bold leading-none tracking-[-0.18em]">MS</span>
-            </div>
             <BrandLogo brand="msg" className="text-2xl" />
             <p className="mt-4 max-w-sm text-sm leading-6 text-[#c8c0b2]">
               Building systems that increase human capability.

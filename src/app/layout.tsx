@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Mustard Seed Group",
   },
   description:
-    "Mustard Seed Group is the parent company behind research, software, consumer products and creative systems focused on increasing human capability.",
+    "Mustard Seed Group builds research, software, consumer products and creative systems focused on increasing human capability.",
   alternates: {
     canonical: "/",
   },

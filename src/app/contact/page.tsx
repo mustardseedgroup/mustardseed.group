@@ -14,8 +14,21 @@ export default function ContactPage() {
     <SiteShell>
       <main>
         <PageHero title="Contact" summary="For serious enquiries across research, products, partnerships and commercial systems." />
-        <section className="mx-auto max-w-3xl px-5 pb-24 md:px-8">
-          <form action="/api/contact" method="post" className="grid gap-5">
+        <section className="mx-auto grid max-w-7xl gap-12 px-5 pb-24 md:grid-cols-[0.8fr_1.2fr] md:px-8">
+          <div className="grid gap-px self-start bg-[var(--line)]">
+            {[
+              ["Research", "Benediction Lab, Orion and public research collaborations."],
+              ["Products", "Orbit, All Purpose, CheekyGains, Naira and related ecosystem work."],
+              ["Commercial systems", "TUXX enquiries for custom AI systems and internal tools."],
+              ["Founder / press", "Founder-led opportunities, interviews and public writing."],
+            ].map(([title, copy]) => (
+              <div key={title} className="bg-[#fbfaf7] p-6">
+                <h2 className="text-2xl">{title}</h2>
+                <p className="mt-4 leading-7 text-[var(--muted)]">{copy}</p>
+              </div>
+            ))}
+          </div>
+          <form action="/api/contact" method="post" className="grid gap-5 border border-[var(--line)] bg-[#fbfaf7] p-6">
             <label className="grid gap-2 text-sm">
               Name
               <input name="name" required className="border border-[var(--line)] bg-white px-4 py-3 text-base" />
@@ -39,7 +52,7 @@ export default function ContactPage() {
               <textarea name="message" required rows={7} className="border border-[var(--line)] bg-white px-4 py-3 text-base" />
             </label>
             {siteKey ? <div className="cf-turnstile" data-sitekey={siteKey} /> : null}
-            <button className="focus-ring border border-[var(--foreground)] px-5 py-3 text-sm transition hover:bg-[var(--foreground)] hover:text-[var(--background)]" type="submit">
+            <button className="button button-primary focus-ring" type="submit">
               Send enquiry
             </button>
           </form>

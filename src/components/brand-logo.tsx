@@ -61,7 +61,7 @@ const imageBrands: Partial<Record<Brand, { src: string; alt: string; className: 
 export function BrandLogo({ brand, className }: { brand: Brand; className?: string }) {
   if (brand === "msg") {
     return (
-      <span className={clsx("font-serif text-[1.6rem] leading-none tracking-[-0.02em]", className)}>
+      <span className={clsx("font-serif text-[1.6rem] font-semibold leading-none tracking-normal", className)}>
         Mustard Seed Group
       </span>
     );

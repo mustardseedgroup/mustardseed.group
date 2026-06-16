@@ -30,13 +30,31 @@ export default async function ResearchEntryPage({ params }: PageProps) {
 
   return (
     <SiteShell>
-      <article className="mx-auto max-w-5xl px-5 py-20 md:px-8 md:py-28">
-        <p className="text-sm text-[var(--accent)]">{entry.category}</p>
-        <h1 className="mt-5 font-serif text-5xl font-medium leading-none md:text-7xl">{entry.title}</h1>
-        <p className="mt-8 max-w-3xl text-xl leading-9 text-[var(--muted)]">{entry.summary}</p>
-        <div className="mt-14">
+      <article>
+        <section className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-8 md:py-28">
+          <div>
+            <p className="text-sm uppercase tracking-[0.16em] text-[var(--accent)]">{entry.category}</p>
+            <h1 className="mt-5 font-serif text-5xl font-medium leading-none md:text-8xl">{entry.title}</h1>
+            <p className="mt-8 max-w-3xl text-xl leading-9 text-[var(--muted)]">{entry.summary}</p>
+          </div>
+          <aside className="grid gap-px self-start bg-[var(--line)]">
+            <div className="bg-[#fbfaf7] p-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent)]">Research area</p>
+              <p className="mt-5 text-2xl">{entry.category ?? "Research"}</p>
+            </div>
+            <div className="bg-[#fbfaf7] p-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent)]">Published</p>
+              <p className="mt-5 text-2xl">{entry.date ?? "Undated"}</p>
+            </div>
+            <div className="bg-[#0b0b09] p-6 text-[#fbfaf7]">
+              <p className="text-xs uppercase tracking-[0.16em] text-[#c8c0b2]">Public boundary</p>
+              <p className="mt-5 leading-7">Direction and principles only. Private schemas, prompts and orchestration remain internal.</p>
+            </div>
+          </aside>
+        </section>
+        <section className="mx-auto max-w-5xl px-5 pb-24 md:px-8">
           <MdxContent source={entry.body} />
-        </div>
+        </section>
       </article>
     </SiteShell>
   );
