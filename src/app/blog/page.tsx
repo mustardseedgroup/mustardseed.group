@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { EditorialHeader, SectionIntro, StoryCard } from "@/components/editorial";
+import Link from "next/link";
+import { formatDisplayDate, SectionIntro } from "@/components/editorial";
 import { SiteShell } from "@/components/site-shell";
 import { getCollection, type ContentEntry } from "@/lib/content";
 
@@ -9,11 +10,53 @@ export const metadata: Metadata = {
 };
 
 const streams = [
-  ["Founder letters", "Notes on the thesis, direction and operating philosophy of the group."],
-  ["Product updates", "Public-safe updates from Orbit, All Purpose, TUXX and related products."],
-  ["Research notes", "Public writing from Benediction Lab and Orion-facing research."],
-  ["Experiments", "Selected concepts, prototypes and lessons that can be discussed publicly."],
+  ["Founder letters", "The group thesis, operating notes and long-term decisions."],
+  ["Product updates", "Public updates from Orbit, All Purpose, TUXX and related products."],
+  ["Research notes", "Benediction Lab essays on agents, memory and systems."],
+  ["Experiments", "Selected concepts, prototypes and lessons from the lab."],
 ] as const;
+
+const filters = ["All", "Research", "Product", "Founder letters", "Experiments"] as const;
+
+function articleHref(entry: ContentEntry) {
+  return `/${entry.collection}/${entry.slug}`;
+}
+
+function UpdateArtwork({ entry, size = "standard" }: { entry: ContentEntry; size?: "standard" | "large" }) {
+  const tone = entry.collection === "research" ? "research" : "companies";
+
+  return (
+    <div
+      className={`art-card relative flex items-end justify-between overflow-hidden p-5 ${size === "large" ? "min-h-[28rem]" : "min-h-64"}`}
+      data-tone={tone}
+    >
+      <div className="relative z-10 max-w-[14rem]">
+        <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent)]">{entry.category ?? entry.collection}</p>
+        <p className="mt-3 font-serif text-4xl leading-none text-[var(--foreground)]">{entry.title.split(" ").slice(0, 3).join(" ")}</p>
+      </div>
+      <div className="relative z-10 grid h-16 w-16 place-items-center border border-[var(--soft-line)] bg-[#fbfaf7] text-sm uppercase tracking-[0.14em] text-[var(--clay)]">
+        MSG
+      </div>
+    </div>
+  );
+}
+
+function ResourceCard({ entry, featured = false }: { entry: ContentEntry; featured?: boolean }) {
+  return (
+    <Link href={articleHref(entry)} className={`group block ${featured ? "md:grid md:grid-cols-[1.12fr_0.88fr]" : ""}`}>
+      <UpdateArtwork entry={entry} size={featured ? "large" : "standard"} />
+      <div className={`border-x border-b border-[var(--soft-line)] bg-[#fbfaf7] p-6 ${featured ? "md:border-y md:border-l-0 md:p-8" : ""}`}>
+        <div className="flex items-center justify-between gap-6 text-xs uppercase tracking-[0.16em] text-[var(--accent)]">
+          <span>{entry.category ?? entry.collection}</span>
+          <span>{formatDisplayDate(entry.date)}</span>
+        </div>
+        <h2 className={`mt-6 leading-tight ${featured ? "font-serif text-5xl md:text-6xl" : "text-2xl"}`}>{entry.title}</h2>
+        <p className="mt-5 max-w-2xl leading-7 text-[var(--muted)]">{entry.summary}</p>
+        <span className="mt-8 inline-flex text-sm transition group-hover:translate-x-1">Read update</span>
+      </div>
+    </Link>
+  );
+}
 
 export default function BlogPage() {
   const entries = [...getCollection("blog"), ...getCollection("research")].sort((a, b) => {
@@ -21,58 +64,100 @@ export default function BlogPage() {
     return b.date.localeCompare(a.date);
   });
   const featured = entries[0];
-  const hrefFor = (entry: ContentEntry) => `/${entry.collection}/${entry.slug}`;
+  const secondary = entries.slice(1, 4);
+  const archive = entries.slice(4);
 
   return (
     <SiteShell>
       <main>
-        <EditorialHeader
-          kicker="Updates"
-          title="Public notes from across the group."
-          summary="A live surface for founder letters, research notes, product updates and selected experiments."
-        />
+        <section className="mx-auto max-w-7xl px-5 py-20 text-center md:px-8 md:py-28">
+          <p className="text-sm text-[var(--muted)]">Research, products and company notes</p>
+          <h1 className="mx-auto mt-8 max-w-5xl text-5xl leading-[0.98] md:text-7xl">
+            Updates from across Mustard Seed Group
+          </h1>
+          <p className="mx-auto mt-8 max-w-3xl text-xl leading-8 text-[var(--muted)] md:text-2xl">
+            Public writing on the companies, products, research systems and experiments being built across the group.
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            {filters.map((filter, index) => (
+              <span
+                key={filter}
+                className={`rounded-full border px-5 py-2 text-sm ${
+                  index === 0 ? "border-[var(--foreground)] bg-[var(--foreground)] text-[#fbfaf7]" : "border-[var(--soft-line)] text-[var(--muted)]"
+                }`}
+              >
+                {filter}
+              </span>
+            ))}
+          </div>
+        </section>
 
         {featured ? (
-          <section className="mx-auto grid max-w-7xl gap-10 px-5 pb-24 md:grid-cols-[0.55fr_1.45fr] md:px-8">
-            <SectionIntro kicker="Latest" title="Recent writing." />
-            <div className="grid gap-5 md:grid-cols-2">
-              <StoryCard entry={featured} href={hrefFor(featured)} featured />
-              <div className="grid gap-5">
-                {entries.slice(1).map((entry) => (
-                  <StoryCard key={`${entry.collection}-${entry.slug}`} entry={entry} href={hrefFor(entry)} />
+          <section className="mx-auto max-w-7xl px-5 pb-24 md:px-8">
+            <div className="mb-8 flex items-end justify-between gap-6 border-b border-[var(--line)] pb-5">
+              <div>
+                <p className="text-xs uppercase tracking-[0.18em] text-[var(--accent)]">Featured</p>
+                <h2 className="mt-3 text-3xl">Latest public note</h2>
+              </div>
+              <Link href="/contact" className="hidden text-sm text-[var(--muted)] transition hover:text-[var(--foreground)] md:inline-flex">
+                Submit an update
+              </Link>
+            </div>
+            <ResourceCard entry={featured} featured />
+          </section>
+        ) : null}
+
+        {secondary.length ? (
+          <section className="content-band">
+            <div className="mx-auto max-w-7xl px-5 py-24 md:px-8">
+              <div className="mb-10 flex items-end justify-between gap-6">
+                <SectionIntro kicker="Latest" title="New writing." />
+                <p className="hidden max-w-sm text-sm leading-6 text-[var(--muted)] md:block">
+                  A public surface for what can be safely shared: ideas, releases, research and product thinking.
+                </p>
+              </div>
+              <div className="grid gap-5 md:grid-cols-3">
+                {secondary.map((entry) => (
+                  <ResourceCard key={`${entry.collection}-${entry.slug}`} entry={entry} />
                 ))}
               </div>
             </div>
           </section>
         ) : null}
 
-        <section className="content-band">
-          <div className="mx-auto grid max-w-7xl gap-10 px-5 py-24 md:grid-cols-[0.55fr_1.45fr] md:px-8">
-            <SectionIntro kicker="Streams" title="What gets shared publicly." />
-            <div className="editorial-grid md:grid-cols-4">
+        <section className="mx-auto max-w-7xl px-5 py-24 md:px-8">
+          <div className="grid gap-10 md:grid-cols-[0.55fr_1.45fr]">
+            <SectionIntro kicker="Streams" title="Browse by surface." />
+            <div className="grid gap-4 md:grid-cols-2">
               {streams.map(([title, copy]) => (
-                <div key={title} className="editorial-panel min-h-72">
-                  <h2 className="text-2xl">{title}</h2>
-                  <p className="mt-16 text-sm leading-7 text-[var(--muted)]">{copy}</p>
+                <div key={title} className="border border-[var(--soft-line)] bg-[#fbfaf7] p-6">
+                  <h2 className="text-3xl">{title}</h2>
+                  <p className="mt-12 text-sm leading-7 text-[var(--muted)]">{copy}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-5 py-24 md:px-8">
-          <div className="grid gap-10 md:grid-cols-[0.55fr_1.45fr]">
+        <section className="content-band">
+          <div className="mx-auto grid max-w-7xl gap-10 px-5 py-24 md:grid-cols-[0.55fr_1.45fr] md:px-8">
             <SectionIntro
-              kicker="Editorial standard"
-              title="Useful, restrained, public-safe."
-              summary="Updates should help people understand the institution, the thinking behind its products and the research shaping future work."
+              kicker="Archive"
+              title="A long view, built carefully."
+              summary="The historical archive will be drafted from sourced public information, reviewed before publication and written in the voice of its period."
             />
-            <div className="editorial-grid md:grid-cols-3">
-              {["British English", "No fake claims", "Clear public context"].map((item) => (
-                <div key={item} className="editorial-panel min-h-48">
-                  <h2 className="text-3xl">{item}</h2>
-                </div>
-              ))}
+            <div className="grid gap-5 md:grid-cols-2">
+              {archive.length
+                ? archive.map((entry) => <ResourceCard key={`${entry.collection}-${entry.slug}`} entry={entry} />)
+                : ["2015-2020", "2021-2023", "2024-2025", "2026 onward"].map((period) => (
+                    <div key={period} className="border border-[var(--soft-line)] bg-[#fbfaf7] p-6">
+                      <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent)]">Planned archive</p>
+                      <h2 className="mt-6 text-4xl">{period}</h2>
+                      <p className="mt-8 leading-7 text-[var(--muted)]">
+                        Monthly essays will be added after source research, image generation and editorial review.
+                      </p>
+                    </div>
+                  ))}
             </div>
           </div>
         </section>

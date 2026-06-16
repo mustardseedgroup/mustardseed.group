@@ -5,7 +5,6 @@ const nav = [
   { href: "/products", label: "Products" },
   { href: "/blog", label: "Updates" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export function SiteShell({
@@ -37,7 +36,7 @@ export function SiteShell({
           </div>
           <Link
             href="/contact"
-            className={`button focus-ring md:hidden ${isDark ? "border-[#3a3a3a] bg-[#1f1f1f] text-white" : "button-secondary"}`}
+            className={`button focus-ring ${isDark ? "border-[#3a3a3a] bg-[#1f1f1f] text-white hover:bg-white hover:text-black" : "button-secondary"}`}
           >
             Contact
           </Link>
