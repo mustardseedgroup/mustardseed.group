@@ -20,27 +20,27 @@ tags:
 
 ## Coaching is not content
 
-The fitness industry has a content problem. Not a shortage of it. An excess. If someone wants a training plan, a meal framework, a recovery protocol, a motivational talk, a habit checklist, or a breakdown of periodisation methods, all of that already exists, in abundance, for free. The information is not the bottleneck. The behaviour is.
+The fitness industry has a content problem. Not a shortage of it — an excess. If someone wants a training plan, a meal framework, a recovery protocol, a motivational talk, a habit checklist, or a breakdown of periodisation methods, all of that already exists, in abundance, for free. The information is not the bottleneck. The behaviour is.
 
-That distinction matters because most digital fitness products are still content products at their core. They arrange the information differently, cleaner UI, better photography, a streak counter on the home screen, but the underlying model is the same. Give the person knowledge. Hope they act on it. Celebrate when they do. Prompt them when they don't.
+That distinction matters because most digital fitness products are still content products at their core. They arrange the information differently — cleaner UI, better photography, a streak counter on the home screen — but the underlying model is the same. Give the person knowledge. Hope they act on it. Celebrate when they do. Prompt them when they don't.
 
-A coaching relationship is structurally different from that. A good coach is not someone who hands you a document. They are someone who has internalised your standard, watches your behaviour over time, and intervenes, selectively, precisely, at the moments when you are most likely to drift from it. The intervention is not a notification. It is a response to something specific that just happened, or is about to happen.
+A coaching relationship is structurally different from that. A good coach is not someone who hands you a document. They are someone who has internalised your standard, watches your behaviour over time, and intervenes — selectively, precisely — at the moments when you are most likely to drift from it. The intervention is not a notification. It is a response to something specific that just happened, or is about to happen.
 
 That is the design premise behind Naira.
 
 ## What the interface is not
 
-Before describing what the coaching interface is, it helps to be clear about what it is not: because the category is crowded with versions of the same wrong idea.
+Before describing what the coaching interface is, it helps to be clear about what it is not — because the category is crowded with versions of the same wrong idea.
 
 It is not a chatbot. A chatbot is reactive by default. The user speaks, the system responds. There is no state, no continuity, no knowledge of what happened last Tuesday. Each conversation begins fresh. That might be useful for answering questions about exercises or macros. It is not coaching.
 
-It is not a recommendation engine. Recommendation engines work by presenting options: suggest this workout, try this meal, consider this recovery method. The user still makes every decision individually, from scratch, without any accumulated knowledge of who they are or what they are trying to do. The personalisation is shallow: it reflects recent usage patterns, not personal standards.
+It is not a recommendation engine. Recommendation engines work by presenting options — suggest this workout, try this meal, consider this recovery method. The user still makes every decision individually, from scratch, without any accumulated knowledge of who they are or what they are trying to do. The personalisation is shallow: it reflects recent usage patterns, not personal standards.
 
 And it is not a content library with a better search box. Surfacing the most relevant article at the right moment is a navigation problem, not a coaching problem.
 
 The distinction matters because each of those categories has a clear user expectation and a clear failure mode. Chatbots are expected to be responsive and available. Recommendation engines are expected to be relevant and well-curated. Content libraries are expected to be comprehensive and searchable. None of those expectations map to what coaching actually is.
 
-Coaching requires memory. It requires standards. It requires timing. And it requires restraint: knowing when not to intervene just as much as knowing when to.
+Coaching requires memory. It requires standards. It requires timing. And it requires restraint — knowing when not to intervene just as much as knowing when to.
 
 ## What the system needs to know
 
@@ -50,17 +50,17 @@ Not just what they have logged. What they said they were aiming for. What their 
 
 This is not a novel observation about performance. Every serious coach, in any domain, builds this model of a person over time. The question is whether a software system can hold it and use it with enough nuance to be genuinely useful rather than annoying.
 
-The answer depends on the quality of the state. A coaching system that only knows your last three logged sessions is not coaching. A system that knows you have been consistently under-sleeping on Sunday nights, that your training quality drops on Mondays as a result, and that you have described energy management as your main barrier three times in the past six weeks. That system has something to work with.
+The answer depends on the quality of the state. A coaching system that only knows your last three logged sessions is not coaching. A system that knows you have been consistently under-sleeping on Sunday nights, that your training quality drops on Mondays as a result, and that you have described energy management as your main barrier three times in the past six weeks — that system has something to work with.
 
 Voice input is one piece of this. When someone speaks a check-in after training rather than filling in a form, the texture of what they say is different. The detail is different. Whisper-class transcription has made this practically usable, not just theoretically interesting. Someone can talk for ninety seconds in the car after a session and give the system more context than a month of checkbox logging. That context is what allows the system to behave like a coaching relationship rather than a database.
 
 ## The design principle behind when Naira speaks
 
-There is a concept in coaching that maps roughly to signal-to-noise: the more frequently a coach intervenes, the less weight each intervention carries. A coach who comments on everything eventually becomes background noise. The athlete stops hearing it. The comments that should land, the ones delivered at a decisive moment, get lost in the volume.
+There is a concept in coaching that maps roughly to signal-to-noise: the more frequently a coach intervenes, the less weight each intervention carries. A coach who comments on everything eventually becomes background noise. The athlete stops hearing it. The comments that should land — the ones delivered at a decisive moment — get lost in the volume.
 
 This is a design constraint, not just an observation about human psychology. Naira should not be loud. Loudness is the default failure mode for AI assistants that have been optimised for engagement rather than effectiveness. More messages, more prompts, more streaks broken, more badges earned, more things to tap. That approach treats retention as the goal. Coaching treats the standard as the goal.
 
-The timing question is more demanding than it looks. The right moment to deliver feedback is not always immediately after something happens. Sometimes it is before the decision point, not as a command, but as a frame. Sometimes it is the following day, when someone has had time to process. Sometimes it is not for three sessions, until a pattern has confirmed itself clearly enough that naming it lands rather than annoys.
+The timing question is more demanding than it looks. The right moment to deliver feedback is not always immediately after something happens. Sometimes it is before the decision point — not as a command, but as a frame. Sometimes it is the following day, when someone has had time to process. Sometimes it is not for three sessions, until a pattern has confirmed itself clearly enough that naming it lands rather than annoys.
 
 Getting that timing right requires the system to have a model of the person that goes beyond event logging. It requires an understanding of where in their week they are most receptive, where they tend to be defensive, and what they have already tried versus what they have only talked about trying.
 
@@ -68,23 +68,23 @@ None of this can be prescribed in a rule. It emerges from accumulated knowledge 
 
 ## Standards are the anchor
 
-One thing that distinguishes serious performance work from general fitness content is the concept of a personal standard: a specific definition of what good looks like for this person, in their context, with their current baseline. Not a generalised goal ("get fitter") and not a metric target lifted from a generic framework ("hit 10,000 steps"), but a specific, earned description of what performing to standard means for this individual.
+One thing that distinguishes serious performance work from general fitness content is the concept of a personal standard — a specific definition of what good looks like for this person, in their context, with their current baseline. Not a generalised goal ("get fitter") and not a metric target lifted from a generic framework ("hit 10,000 steps"), but a specific, earned description of what performing to standard means for this individual.
 
-Standards change. They should. Part of what a coach does over a long engagement is help someone develop the accuracy of their own self-assessment: to close the gap between what they think they are doing and what they are actually doing, and then to raise the ceiling of what they are aiming for.
+Standards change. They should. Part of what a coach does over a long engagement is help someone develop the accuracy of their own self-assessment — to close the gap between what they think they are doing and what they are actually doing, and then to raise the ceiling of what they are aiming for.
 
-Naira's role is to be the keeper of those standards when the person cannot hold them themselves. Not to enforce them mechanically, but to know them well enough to notice when behaviour is drifting from them, and to say something useful, specific, honest, non-judgmental, when that drift is becoming a pattern.
+Naira's role is to be the keeper of those standards when the person cannot hold them themselves. Not to enforce them mechanically, but to know them well enough to notice when behaviour is drifting from them, and to say something useful — specific, honest, non-judgmental — when that drift is becoming a pattern.
 
 The worst version of this system would be one that gamifies compliance. Points for hitting the standard. Penalties for missing it. Leaderboards. Badges. That approach conflates measurement with coaching. It creates the appearance of accountability without the substance of it. Someone can hit every metric on the dashboard and be doing exactly the wrong thing for where they actually are.
 
-The better version is quieter and more demanding to build. It holds the standard clearly, updates it when the person genuinely develops, and delivers feedback that the person would not have been able to give themselves, because the system sees the pattern across time in a way that is hard to see from inside it.
+The better version is quieter and more demanding to build. It holds the standard clearly, updates it when the person genuinely develops, and delivers feedback that the person would not have been able to give themselves — because the system sees the pattern across time in a way that is hard to see from inside it.
 
 ## What this means for the product
 
-CheekyGains as a consumer fitness product exists in a genuinely crowded market. The differentiation is not the feature set. It is the coaching model: the bet that AI can do something meaningfully different to what content and tracking alone can do, if the system is designed around the coaching relationship rather than around engagement mechanics.
+CheekyGains as a consumer fitness product exists in a genuinely crowded market. The differentiation is not the feature set. It is the coaching model — the bet that AI can do something meaningfully different to what content and tracking alone can do, if the system is designed around the coaching relationship rather than around engagement mechanics.
 
 That is a harder design problem than building a good content library or a clean tracking interface. It requires making decisions about when to be quiet. It requires a state model that respects the complexity of a person's actual life rather than flattening it into log entries. It requires trusting that a timely, specific, accurate intervention is worth more than ten generic reminders.
 
-The work in May 2024 is still early in that direction. There are rough edges in the interface, in the timing logic, in how context is surfaced and used. But the premise is clear enough to build toward, and the failures are instructive rather than ambiguous. When Naira says something that feels like a form letter, the problem is usually in the state: the system did not have enough specific knowledge of the person to say anything better. When it says something that lands, it is because it knew something true and waited for the right moment to say it.
+The work in May 2024 is still early in that direction. There are rough edges in the interface, in the timing logic, in how context is surfaced and used. But the premise is clear enough to build toward, and the failures are instructive rather than ambiguous. When Naira says something that feels like a form letter, the problem is usually in the state — the system did not have enough specific knowledge of the person to say anything better. When it says something that lands, it is because it knew something true and waited for the right moment to say it.
 
 That ratio is what we are working to move.
 
@@ -92,6 +92,6 @@ That ratio is what we are working to move.
 
 Performance coaching is a high-trust, high-specificity relationship. The reason most digital products have not succeeded in replicating it is not that the interface was wrong or the content was poor. It is that the system did not know enough about the person, and it spoke too often with too little to say.
 
-AI makes a different version of this possible, not because models are magic, but because memory, context, and timing can finally be built into the product in a way that was not practical before. The infrastructure exists. The design challenge is using it with enough restraint and accuracy that the system behaves like something worth listening to.
+AI makes a different version of this possible — not because models are magic, but because memory, context, and timing can finally be built into the product in a way that was not practical before. The infrastructure exists. The design challenge is using it with enough restraint and accuracy that the system behaves like something worth listening to.
 
 That is what Naira is attempting to be.

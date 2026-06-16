@@ -21,25 +21,25 @@ tags:
 
 There is a category of AI announcement that lands quietly and reshapes everything over the following months. GPT-4, released in March 2023, belongs to that category.
 
-The public response focused on benchmarks: bar exam scores, medical licensing results, graduate-level reasoning tests. These made for compelling headlines, and rightly so. But the more interesting shift was structural. GPT-4 did not simply score higher on difficult tests. It demonstrated something qualitatively different: the ability to hold a complex problem in view, reason through it across multiple steps, and produce output that accounted for context in a way previous models reliably could not.
+The public response focused on benchmarks — bar exam scores, medical licensing results, graduate-level reasoning tests. These made for compelling headlines, and rightly so. But the more interesting shift was structural. GPT-4 did not simply score higher on difficult tests. It demonstrated something qualitatively different: the ability to hold a complex problem in view, reason through it across multiple steps, and produce output that accounted for context in a way previous models reliably could not.
 
-That distinction matters because there are two very different thresholds in AI capability. The first is the threshold where a model becomes useful for simple, well-scoped tasks: draft this email, summarise this text, rewrite this paragraph. Most commercial language models crossed that threshold somewhere in 2021 and 2022. The second threshold is harder to define and considerably more significant: the point where a model becomes useful for complex work. By complex work, I mean tasks that require context retention across multiple inputs, the ability to hold competing considerations simultaneously, and judgment about how to sequence or trade off decisions. GPT-4 moved meaningfully toward that second threshold.
+That distinction matters because there are two very different thresholds in AI capability. The first is the threshold where a model becomes useful for simple, well-scoped tasks — draft this email, summarise this text, rewrite this paragraph. Most commercial language models crossed that threshold somewhere in 2021 and 2022. The second threshold is harder to define and considerably more significant: the point where a model becomes useful for complex work. By complex work, I mean tasks that require context retention across multiple inputs, the ability to hold competing considerations simultaneously, and judgment about how to sequence or trade off decisions. GPT-4 moved meaningfully toward that second threshold.
 
 ## Why complexity is the real frontier
 
 To understand why this matters, it helps to be precise about what "complex" actually means in commercial workflows.
 
-Most valuable professional work is not a single operation. It is a chain of operations that depend on each other. A sales process is not one conversation: it is a sequence of discovery, qualification, proposal, negotiation, follow-through, and handoff. A product development cycle is not one decision: it is a structured movement through brief, scoping, architecture, build, review, and delivery, with judgment required at each stage. A research task is not one search: it is a recursive process of hypothesis, investigation, revision, and synthesis.
+Most valuable professional work is not a single operation. It is a chain of operations that depend on each other. A sales process is not one conversation — it is a sequence of discovery, qualification, proposal, negotiation, follow-through, and handoff. A product development cycle is not one decision — it is a structured movement through brief, scoping, architecture, build, review, and delivery, with judgment required at each stage. A research task is not one search — it is a recursive process of hypothesis, investigation, revision, and synthesis.
 
 These chains have always been difficult for AI systems to assist with, not because any individual step was beyond reach, but because the context required to move from one step to the next was not being retained or reasoned across. Models would respond to the immediate prompt but lose the thread of the broader situation. Each query had to be constructed as if from scratch.
 
-GPT-4 does not entirely solve this, but it pushes the boundary considerably further. The expanded context window, the amount of text a model can process and reference in a single pass, is part of the story. But the more important element is that the model's reasoning quality improved enough to make better use of the context it has. It is not just that GPT-4 can hold more information; it is that it does more sensible things with that information.
+GPT-4 does not entirely solve this, but it pushes the boundary considerably further. The expanded context window — the amount of text a model can process and reference in a single pass — is part of the story. But the more important element is that the model's reasoning quality improved enough to make better use of the context it has. It is not just that GPT-4 can hold more information; it is that it does more sensible things with that information.
 
 ## From prompt to process
 
 The practical consequence is a shift in how AI can participate in workflows.
 
-Prior to GPT-4, the most reliable use pattern for language models in commercial settings was narrow and well-defined: give the model a single, bounded task with clear inputs and expected outputs, and you could build something useful. The fragility appeared as soon as the task required any real sequential judgment: the model would either hallucinate its way through the gap or produce responses that were locally coherent but globally wrong.
+Prior to GPT-4, the most reliable use pattern for language models in commercial settings was narrow and well-defined: give the model a single, bounded task with clear inputs and expected outputs, and you could build something useful. The fragility appeared as soon as the task required any real sequential judgment — the model would either hallucinate its way through the gap or produce responses that were locally coherent but globally wrong.
 
 GPT-4 does not eliminate that fragility entirely. It is still a language model operating within the constraints of its architecture. It has no persistent memory of its own. It cannot independently take actions in the world. It still needs careful prompting and appropriate structure to perform well on genuinely demanding work. But the range of tasks where it produces genuinely useful output has expanded substantially, and that expansion has a compounding effect on what is worth building.
 
@@ -47,17 +47,17 @@ The interesting design question shifts. With earlier models, the question was of
 
 ## Multimodal, but not equally
 
-GPT-4 was announced with multimodal capability: the ability to accept images as input alongside text. This is genuinely new territory and its longer-term implications are significant. A model that can reason across visual and textual inputs opens entirely different surfaces for AI participation in work: diagrams, screenshots, documents, design files, data visualisations.
+GPT-4 was announced with multimodal capability — the ability to accept images as input alongside text. This is genuinely new territory and its longer-term implications are significant. A model that can reason across visual and textual inputs opens entirely different surfaces for AI participation in work: diagrams, screenshots, documents, design files, data visualisations.
 
-That said, in March 2023, image input remained restricted to limited access, and the more immediate and widely accessible improvement was in the text reasoning capability. The multimodal dimension is worth tracking carefully, as it matters for how systems interact with the real working environment, which is rarely purely textual, but the near-term changes to what is possible in commercial software are coming from the reasoning and context improvements first.
+That said, in March 2023, image input remained restricted to limited access, and the more immediate and widely accessible improvement was in the text reasoning capability. The multimodal dimension is worth tracking carefully — it matters for how systems interact with the real working environment, which is rarely purely textual — but the near-term changes to what is possible in commercial software are coming from the reasoning and context improvements first.
 
 ## What this means for the intelligence layer
 
 For Orion, GPT-4's capability improvement raises the ceiling on what the intelligence layer can do, but it also clarifies where the real design work lives.
 
-A more capable model does not automatically produce a more capable system. The model is one component. The system around it, how context is structured and passed in, how outputs are validated and routed, how the model's capabilities are connected to real actions in the user's workflow, determines whether the improvement in model quality translates into improvement in what the product can do.
+A more capable model does not automatically produce a more capable system. The model is one component. The system around it — how context is structured and passed in, how outputs are validated and routed, how the model's capabilities are connected to real actions in the user's workflow — determines whether the improvement in model quality translates into improvement in what the product can do.
 
-This is not a limitation unique to AI. A more powerful engine does not automatically produce a better vehicle. The engineering around it matters. The same principle applies here: a more capable model creates more room to build something genuinely useful, but the architecture of the system has to be designed to take advantage of that room. Orion's role is exactly that: not to be the model, but to provide the structure through which the model's capabilities become operationally useful in Orbit's commercial workflows.
+This is not a limitation unique to AI. A more powerful engine does not automatically produce a better vehicle. The engineering around it matters. The same principle applies here: a more capable model creates more room to build something genuinely useful, but the architecture of the system has to be designed to take advantage of that room. Orion's role is exactly that — not to be the model, but to provide the structure through which the model's capabilities become operationally useful in Orbit's commercial workflows.
 
 The step change in model quality is, in that sense, both an opportunity and a prompt. It means more is now possible, which means the work of defining and building what should be possible becomes more important, not less.
 
@@ -67,9 +67,9 @@ One effect of GPT-4 that is easy to underestimate is what it does to expectation
 
 When a technology improves enough to become genuinely impressive, the reference point for "impressive" moves. People who have spent time with GPT-4 in early March 2023 are working with a different intuition about what AI should be able to do. That shift in expectation propagates through conversations about products, through client discussions, through internal debates about what to build.
 
-For TUXX, this is the sharpest edge of the change. The value of custom AI systems built on previous-generation models was partly the scarcity of the capability. Rough functionality was enough to stand out because rough was the state of the art. GPT-4 raises the floor of what clients will expect as baseline. The advantage in building on top of these models does not disappear. It moves. It moves from "having access to capable AI" toward "knowing how to deploy capable AI in a way that produces real outcomes." Architecture, taste, and execution discipline matter more when the underlying capability is less of a differentiator on its own.
+For TUXX, this is the sharpest edge of the change. The value of custom AI systems built on previous-generation models was partly the scarcity of the capability. Rough functionality was enough to stand out because rough was the state of the art. GPT-4 raises the floor of what clients will expect as baseline. The advantage in building on top of these models does not disappear — it moves. It moves from "having access to capable AI" toward "knowing how to deploy capable AI in a way that produces real outcomes." Architecture, taste, and execution discipline matter more when the underlying capability is less of a differentiator on its own.
 
-For Benediction Lab, GPT-4 is interesting for a different reason. The research questions around agents, memory, and autonomous product development become more tractable as model quality improves. A key constraint on agentic systems, systems where the AI is taking sequences of actions rather than responding to individual prompts, is the quality of the model's judgment at each step. Better judgment per step means longer reliable chains of action become possible. The research frontier moves.
+For Benediction Lab, GPT-4 is interesting for a different reason. The research questions around agents, memory, and autonomous product development become more tractable as model quality improves. A key constraint on agentic systems — systems where the AI is taking sequences of actions rather than responding to individual prompts — is the quality of the model's judgment at each step. Better judgment per step means longer reliable chains of action become possible. The research frontier moves.
 
 ## The model raises the ceiling
 
@@ -77,10 +77,10 @@ The working note from March 2023 is worth holding onto: the model raises the cei
 
 What GPT-4 provides is expanded possibility. What it requires, in return, is better product thinking about how to realise that possibility in systems that real people can use to do real work. The combination of a meaningfully better model and serious attention to system design is where the interesting work now lives.
 
-That was true before GPT-4, of course. But it becomes more urgently and obviously true after it. The distance between "impressive demo" and "genuinely useful system" has not gotten smaller with the model improving. If anything, it has grown, because the demo is now more impressive and the temptation to mistake demonstration for deployment is correspondingly higher.
+That was true before GPT-4, of course. But it becomes more urgently and obviously true after it. The distance between "impressive demo" and "genuinely useful system" has not gotten smaller with the model improving. If anything, it has grown — because the demo is now more impressive and the temptation to mistake demonstration for deployment is correspondingly higher.
 
-The right response to a capability step-change is not to announce that everything has changed. It is to ask, more carefully than before, what the change actually makes possible, and then to build toward it with the discipline that making things actually work requires.
+The right response to a capability step-change is not to announce that everything has changed. It is to ask, more carefully than before, what the change actually makes possible — and then to build toward it with the discipline that making things actually work requires.
 
 ---
 
-*Sources: OpenAI GPT-4 technical report, March 2023, openai.com/index/gpt-4-research/*
+*Sources: OpenAI GPT-4 technical report, March 2023 — openai.com/index/gpt-4-research/*

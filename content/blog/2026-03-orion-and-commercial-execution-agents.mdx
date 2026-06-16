@@ -22,25 +22,25 @@ tags:
 
 Somewhere in 2025, "agent" became the AI industry's word of the year. Every product demo showed something calling a tool, reading a file, drafting an email. The demos were impressive in isolation. In aggregate, they had a problem: they were all demos of capability, not of work being completed inside real operating environments. The agent would write a draft. It would not know whether the deal was worth pursuing. It would send a follow-up. It would not know whether the timing was right. It would generate a report. It would not know what decision was downstream of it.
 
-This is worth sitting with in March 2026, because the gap between agent capability and agent utility in commercial environments is still where most of the interesting questions live. What does it actually mean to deploy an agent inside a business operating system, not a toy pipeline, not a sandbox demo, but a live commercial workflow? What should the agent own? What should it surface for a human to decide? Where does autonomy become liability?
+This is worth sitting with in March 2026, because the gap between agent capability and agent utility in commercial environments is still where most of the interesting questions live. What does it actually mean to deploy an agent inside a business operating system — not a toy pipeline, not a sandbox demo, but a live commercial workflow? What should the agent own? What should it surface for a human to decide? Where does autonomy become liability?
 
 Orion is Mustard Seed Group's attempt to answer those questions from the inside.
 
 ## What commercial execution actually requires
 
-A business operating system like Orbit covers a specific territory: moving from the first signal of a potential client or product opportunity through to something that has been built, launched and is generating value. That territory has different textures at different points. Early on, it requires judgement: who is worth pursuing, what is the right framing, what does this person actually need. Further along, it requires coordination: who is doing what, what is blocked, what does the client need to know this week. At the end, it requires knowledge transfer: what was decided, why, what do we do when this happens again.
+A business operating system like Orbit covers a specific territory: moving from the first signal of a potential client or product opportunity through to something that has been built, launched and is generating value. That territory has different textures at different points. Early on, it requires judgement — who is worth pursuing, what is the right framing, what does this person actually need. Further along, it requires coordination — who is doing what, what is blocked, what does the client need to know this week. At the end, it requires knowledge transfer — what was decided, why, what do we do when this happens again.
 
 Each of those phases makes different demands on any intelligence layer sitting underneath them. Judgement phases are hard to automate without context. Coordination phases are labour-intensive but can be made much lighter with the right kind of assistance. Knowledge transfer phases are often neglected entirely, which means institutional memory walks out the door with the person who held it.
 
-The mistake most automation-adjacent products make is to pick one of those phases, usually the middle one, because it looks tractable, and call that "AI for business." Orion is not built around that constraint. It is built to operate across the full sequence, which means it has to handle memory, context, and reasoning that persists from the early judgement phase through to the end.
+The mistake most automation-adjacent products make is to pick one of those phases — usually the middle one, because it looks tractable — and call that "AI for business." Orion is not built around that constraint. It is built to operate across the full sequence, which means it has to handle memory, context, and reasoning that persists from the early judgement phase through to the end.
 
 ## Directed execution, not general automation
 
 There is a meaningful distinction between general-purpose automation and what we are calling directed commercial execution.
 
-General-purpose automation answers the question: what can an agent do? It demonstrates breadth: browse the web, write code, send email, call an API. The agent is the subject. Directed commercial execution inverts the frame. The commercial workflow is the subject. The agent is a participant with specific responsibilities inside that workflow. It has a role, a scope, and defined relationships with the humans around it.
+General-purpose automation answers the question: what can an agent do? It demonstrates breadth — browse the web, write code, send email, call an API. The agent is the subject. Directed commercial execution inverts the frame. The commercial workflow is the subject. The agent is a participant with specific responsibilities inside that workflow. It has a role, a scope, and defined relationships with the humans around it.
 
-The practical difference is significant. A general-purpose agent trying to help close a deal will tend to generate activity, drafts, summaries, suggestions, because activity is measurable and demonstrable. A directed execution agent operating inside Orbit asks a different set of questions: where are we in this process, what does the next meaningful step require, and what does the person leading this engagement actually need from me right now? That might mean generating a draft. It might mean flagging that three days have passed without a response and history suggests that is a signal worth acting on. It might mean surfacing context from a previous project that is directly relevant to what is being discussed today.
+The practical difference is significant. A general-purpose agent trying to help close a deal will tend to generate activity — drafts, summaries, suggestions — because activity is measurable and demonstrable. A directed execution agent operating inside Orbit asks a different set of questions: where are we in this process, what does the next meaningful step require, and what does the person leading this engagement actually need from me right now? That might mean generating a draft. It might mean flagging that three days have passed without a response and history suggests that is a signal worth acting on. It might mean surfacing context from a previous project that is directly relevant to what is being discussed today.
 
 The directed frame changes what counts as useful output. Orion is not trying to impress. It is trying to help specific work move forward.
 
@@ -48,9 +48,9 @@ The directed frame changes what counts as useful output. Orion is not trying to 
 
 The research question underneath a lot of this work is: what does an agent actually need to remember?
 
-This sounds like an infrastructure question, and partly it is. But it is also a product question and a philosophical one. Human commercial operators are effective not because they have access to more information than anyone else, but because they carry context across time: they remember what a client cares about, what was tried before, what the relationship has looked like at different moments, and what decisions were made under what conditions. That accumulated context is what allows them to make good judgements quickly.
+This sounds like an infrastructure question, and partly it is. But it is also a product question and a philosophical one. Human commercial operators are effective not because they have access to more information than anyone else, but because they carry context across time — they remember what a client cares about, what was tried before, what the relationship has looked like at different moments, and what decisions were made under what conditions. That accumulated context is what allows them to make good judgements quickly.
 
-Most AI systems today operate with context windows, a fixed amount of text that the model can attend to in a given interaction. The practical consequence is that every conversation starts cold unless someone explicitly provides the relevant history. For a one-off task, this is fine. For a commercial relationship that spans months and involves dozens of touchpoints, this is a serious limitation.
+Most AI systems today operate with context windows — a fixed amount of text that the model can attend to in a given interaction. The practical consequence is that every conversation starts cold unless someone explicitly provides the relevant history. For a one-off task, this is fine. For a commercial relationship that spans months and involves dozens of touchpoints, this is a serious limitation.
 
 Benediction Lab's research into memory systems is partly in service of this problem. What are the right structures for storing, retrieving and reasoning about commercial context over time? What should be retrieved automatically versus surfaced on request? What ages badly and should be deprecated? These are not questions that have clean answers yet, but they are the right questions if the goal is an intelligence layer that is genuinely useful inside a long-running commercial operating system.
 
@@ -64,11 +64,11 @@ This is also why the integration between Orion and Orbit is not an afterthought.
 
 ## What agents should not do
 
-It is worth being direct about scope. There are things that belong to the human in a commercial operating system, and a good architecture should protect those things rather than encroach on them.
+It is worth being direct about scope. There are things that belong to the human in a commercial operating system — and a good architecture should protect those things rather than encroach on them.
 
 Client relationships are built on judgement, trust, and communication that reflects genuine understanding of the other person. An agent can help prepare for a call, surface relevant context, draft follow-up notes, and track what was discussed. It should not pretend to be the relationship. The moment the agent is performing the relationship rather than supporting it, something important has been lost.
 
-Decisions with significant consequences, such as entering a project, committing to a scope, or making a representation to a client about what can be delivered, require a human to own them. The agent can surface relevant information, flag risks based on pattern recognition, and ensure the decision-maker has what they need. It should not make those calls.
+Decisions with significant consequences — entering a project, committing to a scope, making a representation to a client about what can be delivered — require a human to own them. The agent can surface relevant information, flag risks based on pattern recognition, and ensure the decision-maker has what they need. It should not make those calls.
 
 The framing we have found useful is: agents that augment human agency are valuable. Agents that substitute for human agency in high-stakes moments are not — not because the technology cannot perform the action, but because accountability cannot be shared with a system, and the person who bears the consequence of a decision should be the one who makes it.
 
