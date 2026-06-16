@@ -19,6 +19,11 @@ export type ContentEntry = {
 };
 
 const contentRoot = path.join(process.cwd(), "content");
+const datedTitlePrefix = /^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}:\s+/;
+
+function displayTitle(value: unknown, fallback: string) {
+  return String(value ?? fallback).replace(datedTitlePrefix, "");
+}
 
 function collectionPath(collection: Collection) {
   return path.join(contentRoot, collection);
@@ -42,7 +47,7 @@ export function getCollection(collection: Collection): ContentEntry[] {
       return {
         slug,
         collection,
-        title: data.title ?? slug,
+        title: displayTitle(data.title, slug),
         summary: data.summary ?? "",
         date: data.date,
         status: data.status,

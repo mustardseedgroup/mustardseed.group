@@ -22,6 +22,8 @@ const palette = {
   olive: "#8c877e",
 };
 
+const datedTitlePrefix = /^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}:\s+/;
+
 function xmlEscape(value: string) {
   return value
     .replaceAll("&", "&amp;")
@@ -133,12 +135,12 @@ function patternSvg(pattern: string, accent: string) {
 }
 
 function thumbnailSvg(entry: Entry) {
-  const title = String(entry.data.title ?? "Mustard Seed Group");
+  const title = String(entry.data.title ?? "Mustard Seed Group").replace(datedTitlePrefix, "");
   const category = String(entry.data.category ?? "Founder letter");
   const summary = String(entry.data.summary ?? "Public update from Mustard Seed Group.");
   const { accent, label, pattern } = categoryTone(category);
   const { month, year } = dateParts(String(entry.data.date ?? ""));
-  const titleLines = wrapWords(title.replace(/^\w+ \d{4}: /, ""), 18, 4);
+  const titleLines = wrapWords(title, 18, 4);
   const summaryLine = wrapWords(summary.replace(/^A historical MSG archive draft on /, ""), 48, 2)[0] ?? "";
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
