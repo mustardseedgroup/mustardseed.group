@@ -341,7 +341,7 @@ function writeDraft(year: number, plan: PlanItem) {
   const file = path.join(outDir, `${slug}.mdx`);
   const summary = `A historical MSG archive draft on ${plan.focus}.`;
   const tags = Array.from(new Set(["archive", String(year), plan.category.toLowerCase().replaceAll(" ", "-")]));
-  const thumbnail = `/images/updates/${slug}.svg`;
+  const thumbnail = `/images/generated-updates/${slug}.jpg`;
 
   const mdx = `---
 title: "${title.replaceAll('"', '\\"')}"
